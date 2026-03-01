@@ -1,0 +1,843 @@
+ /* ======================
+   WORKSHOP DETAIL PAGE - RAMI STYLE
+   Black date blocks like rami-ceramics.com
+   ====================== */
+
+/* Workshop Detail Container */
+.workshop-detail-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 2rem 4rem;
+  background-color: #fff;
+}
+
+/* Main Grid Layout */
+.workshop-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+/* LEFT COLUMN - Images */
+.workshop-images {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.workshop-main-image {
+  width: 100%;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+}
+
+.workshop-main-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+/* Thumbnail Gallery */
+.workshop-thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #000;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #000;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT COLUMN - Info Panel */
+.workshop-info-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0.75rem 3rem;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #aaa;
+}
+
+.breadcrumb a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+}
+
+.breadcrumb span {
+  margin: 0 0.4rem;
+}
+
+/* Page tag */
+.page-tag {
+  font-family: var(--sans, sans-serif);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* Workshop Title */
+.workshop-info-panel h1 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.5rem;
+  line-height: 1.15;
+}
+
+.workshop-info-panel h1 em {
+  font-style: italic;
+  color: #888;
+}
+
+/* Price Display */
+.workshop-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.price-amount {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: #000;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 300;
+}
+
+/* Workshop Intro */
+.workshop-intro {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+/* COURSE SCHEDULE (new editorial style) */
+.course-schedule {
+  background: #f7f5f2;
+  padding: 1.5rem 1.75rem;
+  margin: 0.5rem 0;
+}
+
+.schedule-label {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 0 0 0.75rem;
+  display: block;
+}
+
+.schedule-date {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 1.25rem;
+}
+
+.schedule-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #c8b8a2;
+  flex-shrink: 0;
+}
+
+.schedule-weeks {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ede9e3;
+}
+
+.schedule-week {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ede9e3;
+}
+
+.week-num {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.75rem;
+  color: #aaa;
+  font-weight: 400;
+}
+
+.week-topic {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.82rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.schedule-time {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.75rem;
+  color: #999;
+  margin: 0.75rem 0 0;
+  display: block;
+}
+
+/* DATES SECTION - RAMI STYLE (kept for backwards compat) */
+.dates-section {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
+.dates-section h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000;
+  margin: 0 0 1.5rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.dates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+/* Date Block - PILL STYLE */
+.date-block {
+  background-color: #fff;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  border: 1.5px solid #d0d0d0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: pointer;
+  min-height: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.date-block.available { cursor: pointer; }
+
+.date-block.available:hover {
+  border-color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.date-block input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.date-block:has(input[type="radio"]:checked) {
+  background-color: #000;
+  border-color: #000;
+}
+
+.date-block:has(input[type="radio"]:checked):hover {
+  background-color: #1a1a1a;
+}
+
+.date-block input[type="radio"]:checked ~ .date-content .date-text {
+  color: #fff;
+}
+
+.date-content {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+}
+
+.date-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000;
+  transition: color 0.25s ease;
+  line-height: 1;
+}
+
+.date-header { display: none; }
+.date-day { display: none; }
+.date-time { display: none; }
+
+/* Sold Out */
+.date-block.sold-out {
+  background-color: #fafafa;
+  color: #999;
+  border: 1.5px solid #e5e5e5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.date-block.sold-out:hover { transform: none; background-color: #fafafa; box-shadow: none; }
+.date-block.sold-out .date-text { color: #999; text-decoration: line-through; }
+
+.date-block.past-date {
+  background-color: #f5f5f5;
+  border-color: #d5d5d5;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.date-block.past-date .date-text { color: #aaa; }
+
+.sold-badge {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* MONTH SWITCHER */
+.month-switcher {
+  margin: 0.5rem 0;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.month-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.month-tab {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.month-tab:hover { color: #000; }
+
+.month-tab.active {
+  color: #000;
+  border-bottom-color: #000;
+  font-weight: 500;
+}
+
+.month-panel {
+  display: none;
+}
+
+.month-panel.active {
+  display: block;
+}
+
+/* Day label within month panel */
+.dates-day-label {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin: 1.25rem 0 0.75rem;
+}
+
+/* FLEXIBLE BOOKING SECTION */
+.flexible-booking {
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* WhatsApp button variant */
+.btn-whatsapp {
+  background: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #fff !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d !important;
+  border-color: #1ebe5d !important;
+  color: #fff !important;
+}
+
+/* Outline button variant */
+.btn-outline {
+  background: #fff !important;
+  color: #1a1a1a !important;
+  border: 2px solid #1a1a1a !important;
+}
+
+.btn-outline:hover {
+  background: #1a1a1a !important;
+  color: #fff !important;
+}
+
+/* QUANTITY SELECTOR */
+.quantity-section {
+  margin: 0.5rem 0;
+}
+
+.quantity-section label {
+  display: block;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #d0d0d0;
+  border-radius: 50px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.qty-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: none;
+  font-size: 1.2rem;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  font-weight: 300;
+}
+
+.qty-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.quantity-selector input[type="text"] {
+  width: 56px;
+  height: 44px;
+  text-align: center;
+  border: none;
+  border-left: 1.5px solid #d0d0d0;
+  border-right: 1.5px solid #d0d0d0;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #000;
+  background: #fff;
+  cursor: default;
+}
+
+/* Main Booking Button */
+.workshop-book-btn {
+  display: block;
+  width: 100%;
+  padding: 0.9rem 2rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid #1a1a1a;
+  border-radius: 0;
+  margin-bottom: 1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.workshop-book-btn:hover {
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Booking & Shipping Notes */
+.booking-note {
+  margin-top: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: #aaa;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.shipping-note {
+  font-size: 0.78rem;
+  color: #888;
+  line-height: 1.6;
+  margin-top: 0;
+  font-weight: 300;
+  padding-top: 1rem;
+  border-top: 1px solid #f0ece8;
+}
+
+/* DESCRIPTION SECTION */
+.workshop-description {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem;
+}
+
+.wd-section {
+  margin-bottom: 3.5rem;
+}
+
+.workshop-description h2,
+.wd-section h2 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.25rem;
+}
+
+.workshop-description h3,
+.wd-section h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.25rem;
+}
+
+.workshop-description p,
+.wd-section p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.workshop-description ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.workshop-description ul li {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 300;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.workshop-description ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #c8b8a2;
+  font-weight: 400;
+}
+
+.workshop-description ul li strong { font-weight: 500; color: #000; }
+
+/* Week by week */
+.wd-weeks {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+  margin-bottom: 1.5rem;
+}
+
+.wd-week {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.wd-week-num {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 0.82rem;
+  color: #c8b8a2;
+  min-width: 28px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.wd-week strong {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.wd-week p {
+  font-size: 0.83rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.wd-note {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.82rem;
+  color: #999;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Included grid */
+.wd-included-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #eee;
+}
+
+.wd-included-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.9rem 0.5rem 0.9rem 0;
+  border-bottom: 1px solid #f0ece8;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.84rem;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.5;
+}
+
+.wd-check { color: #c8b8a2; font-size: 0.9rem; flex-shrink: 0; }
+
+/* Info grid */
+.wd-info-grid {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #eee;
+}
+
+.wd-info-item {
+  display: flex;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #f0ece8;
+}
+
+.wd-info-label {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaa;
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.wd-info-value {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Note box */
+.wd-note-box,
+.workshop-note {
+  background-color: #f7f5f2;
+  border-left: 2px solid #c8b8a2;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.wd-note-box p,
+.workshop-note p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.75;
+}
+
+.wd-note-box strong,
+.workshop-note strong { font-weight: 500; color: #444; }
+
+/* FAQ STRIP */
+.faq {
+  background: #f7f5f2;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.faq h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0 0 1rem;
+}
+
+.faq p {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.9rem;
+  color: #444;
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.faq-button {
+  display: inline-block;
+  padding: 0.65rem 1.75rem;
+  border: 1px solid #1a1a1a;
+  background: transparent;
+  color: #1a1a1a;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.faq-button:hover { background: #1a1a1a; color: #fff; }
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+
+@media (max-width: 1024px) {
+  .workshop-detail-grid { gap: 3rem; }
+  .workshop-info-panel h1 { font-size: 1.75rem; }
+}
+
+@media (max-width: 900px) {
+  .workshop-detail-container { padding: 4rem 2rem 3rem; }
+  .workshop-detail-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .workshop-images { position: relative; top: 0; }
+  .workshop-thumbnails { grid-template-columns: repeat(4, 1fr); }
+  .workshop-description { padding: 3rem 1rem 2rem; }
+  .wd-included-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .breadcrumb { padding: 0.75rem 1.5rem; }
+  .dates-list { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+  .workshop-detail-container { padding: 3rem 1.5rem 2.5rem; }
+  .workshop-info-panel h1 { font-size: 1.5rem; }
+  .price-amount { font-size: 1.5rem; }
+  .workshop-book-btn { font-size: 0.85rem; }
+  .workshop-description { padding: 2.5rem 0 2rem; }
+  .wd-info-item { flex-direction: column; gap: 0.2rem; }
+  .wd-info-label { min-width: unset; }
+}
+
+/* ======================
+   ACCESSIBILITY
+   ====================== */
+
+.workshop-book-btn:focus { outline: 2px solid #000; outline-offset: 2px; }
+.date-block:focus-within { outline: 2px solid #666; outline-offset: 2px; }
+
+/* ======================
+   PRINT
+   ====================== */
+
+@media print {
+  .date-block { background-color: #fff; color: #000; border: 1px solid #ddd; }
+  .workshop-book-btn { display: none; }
+  .workshop-detail-grid { grid-template-columns: 1fr; }
+  .workshop-images { page-break-inside: avoid; }
+}

@@ -1,0 +1,292 @@
+/* ======================
+   EXPERIENCES PAGE – Editorial Style (2026)
+   ====================== */
+
+/* ══════════════════════════════════
+   PAGE HEADER
+   ══════════════════════════════════ */
+.page-header {
+  background: #f7f5f2;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.page-tag {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: #888;
+}
+
+.page-header p {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto 2rem;
+}
+
+.page-header-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-header-meta span {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid #d0d0d0;
+  padding: 0.4rem 1rem;
+}
+
+
+/* ══════════════════════════════════
+   EXPERIENCES GRID
+   ══════════════════════════════════ */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 5rem 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eee;
+  padding: 0 2rem 3rem;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.service-card:first-child { padding-left: 0; }
+.service-card:nth-child(3n) { border-right: none; padding-right: 0; }
+.service-card:nth-child(n+4) { 
+  border-top: 1px solid #eee; 
+  padding-top: 3rem; 
+}
+
+/* Image */
+.service-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.service-bild {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: grayscale(10%);
+}
+
+.service-card:hover .service-bild {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+/* Content */
+.service-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-card-num {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+  color: #ccc;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.service-card-content h3 {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+.service-card-content p {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+  flex-grow: 1;
+}
+
+/* Button – underline style wie Homepage */
+.service-button {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+  display: inline-block;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+}
+
+.service-button:hover {
+  opacity: 0.4;
+}
+
+
+/* ══════════════════════════════════
+   FAQ STRIP
+   ══════════════════════════════════ */
+.faq {
+  background:#f7f5f2;
+  color: #2a2a2a;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.faq h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: #2a2a2a;
+  margin: 0 0 1rem;
+}
+
+.faq p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(0,0,0,0.55);
+  margin: 0 0 2.5rem;
+  line-height: 1.8;
+}
+
+.faq-button {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid rgba(0,0,0,0.35);
+  color: #2a2a2a;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.faq-button:hover {
+  background: rgba(0,0,0,0.08);
+  border-color: #2a2a2a;
+}
+
+
+/* ══════════════════════════════════
+   ANIMATIONS
+   ══════════════════════════════════ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.service-card:nth-child(1) { animation-delay: 0.05s; }
+.service-card:nth-child(2) { animation-delay: 0.12s; }
+.service-card:nth-child(3) { animation-delay: 0.19s; }
+.service-card:nth-child(4) { animation-delay: 0.26s; }
+.service-card:nth-child(5) { animation-delay: 0.33s; }
+.service-card:nth-child(6) { animation-delay: 0.40s; }
+.service-card:nth-child(7) { animation-delay: 0.47s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card { animation: none; opacity: 1; }
+}
+
+
+/* ══════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════ */
+@media (max-width: 1000px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4rem 2rem;
+  }
+
+  .service-card:nth-child(3n) { 
+    border-right: 1px solid #eee; 
+    padding-right: 2rem;
+  }
+  .service-card:nth-child(2n) { 
+    border-right: none; 
+    padding-right: 0;
+  }
+  .service-card:nth-child(n+3) { 
+    border-top: 1px solid #eee; 
+    padding-top: 3rem; 
+  }
+  .service-card:nth-child(n+4) { 
+    border-top: 1px solid #eee; 
+  }
+  .service-card:first-child { padding-left: 0; }
+  .service-card:nth-child(2) { padding-right: 0; }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    padding: 4rem 1.5rem 3rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 0;
+  }
+
+  .service-card {
+    border-right: none !important;
+    border-top: 1px solid #eee;
+    padding: 2.5rem 0 !important;
+  }
+
+  .service-card:first-child {
+    border-top: none;
+    padding-top: 0 !important;
+  }
+}

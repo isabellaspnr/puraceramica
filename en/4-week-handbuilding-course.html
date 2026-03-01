@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PRIMARY META TAGS -->
+  <title>4-Week Handbuilding Pottery Workshop in Lisbon | PURACERÂMICA</title>
+  <meta name="description"
+    content="Learn pinching, coiling and slab-building in 4 Saturday sessions at PURACERÂMICA Lisbon. €120 total — all clay, materials, glazing and firing included. Beginner-friendly.">
+  <meta name="keywords"
+    content="4-week pottery course Lisbon, handbuilding pottery course, pottery classes Lisbon, coiling slab-building pinching, beginner ceramics course Lisbon, pottery course Alcântara, hand-building ceramics workshop, pottery techniques Lisbon">
+  <meta name="author" content="PURACERÂMICA">
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- CANONICAL & ALTERNATE LANGUAGES -->
+  <link rel="canonical" href="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
+  <link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
+  <link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/curso-modelagem-manual-4-semanas.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
+  <meta property="og:title" content="4-Week Handbuilding Pottery Workshop | PURACERÂMICA Lisbon">
+  <meta property="og:description"
+    content="Learn pinching, coiling and slab-building in 4 Saturday sessions. €120 total — all clay, materials, glazing and firing included. Beginner-friendly.">
+  <meta property="og:image" content="https://www.puraceramica.pt/assets/img/courses/handbuilding.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="PURACERÂMICA">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_PT">
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
+  <meta name="twitter:title" content="4-Week Handbuilding Pottery Workshop | PURACERÂMICA Lisbon">
+  <meta name="twitter:description"
+    content="Learn pinching, coiling and slab-building in 4 Saturday sessions. €120 — all materials & firing included.">
+  <meta name="twitter:image" content="https://www.puraceramica.pt/assets/img/courses/handbuilding.jpg">
+
+  <!-- ROBOTS -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="../assets/img/icons/LOGO.png" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/icons/LOGO.png">
+
+  <!-- PERFORMANCE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://puraceramicalisboa.simplybook.it">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/workshop.css">
+  <style>
+    /* ── Month Tabs ── */
+    .schedule-tabs {
+      display: flex;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 1.5rem;
+    }
+
+    .schedule-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      padding: 0.6rem 1.2rem 0.6rem 0;
+      margin-bottom: -1px;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #bbb;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .schedule-tab.active {
+      color: #000;
+      border-bottom-color: #000;
+    }
+
+    .schedule-tab:hover {
+      color: #555;
+    }
+
+    /* ── Month Panels ── */
+    .schedule-month {
+      display: none;
+    }
+
+    .schedule-month.active {
+      display: block;
+    }
+
+    .month-panel {
+      display: none;
+    }
+
+    .month-panel.active {
+      display: block;
+    }
+
+    /* ── Week images ── */
+    .wd-week {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .wd-week-content {
+      flex: 1;
+    }
+
+    .wd-week-img {
+      width: 90px;
+      height: 90px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .wd-week-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(20%);
+      transition: filter 0.3s ease;
+    }
+
+    .wd-week:hover .wd-week-img img {
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 480px) {
+      .wd-week-img {
+        width: 65px;
+        height: 65px;
+      }
+
+      .wd-week {
+        gap: 1rem;
+      }
+    }
+  </style>
+  <style>
+    .month-panel {
+      display: none;
+    }
+
+    .month-panel.active {
+      display: block;
+    }
+  </style>
+
+  <!-- SCHEMA.ORG -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Course",
+        "@id": "https://www.puraceramica.pt/en/4-week-handbuilding-course.html#course",
+        "name": "4-Week Handbuilding Pottery Course",
+        "description": "Intensive 4-week pottery course covering essential handbuilding techniques: pinch pots, coiling, and slab-building. Final session is a glazing workshop. Perfect for beginners wanting a solid foundation in ceramics.",
+        "provider": { "@id": "https://www.puraceramica.pt/#business" },
+        "courseMode": "https://schema.org/InPerson",
+        "image": "https://www.puraceramica.pt/assets/img/courses/handbuilding.jpg",
+        "timeRequired": "PT8H",
+        "educationalLevel": "Beginner",
+        "teaches": [
+          "Pinch pot technique",
+          "Coiling technique",
+          "Slab-building technique",
+          "Surface decoration and texturing",
+          "Joining clay parts",
+          "Glazing techniques — dipping, brushing, pouring"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "120.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/29/count/1/provider/12/date/2026-03-07/time/15:00:00/",
+          "priceValidUntil": "2026-12-31",
+          "description": "Complete 4-week course — all clay, materials, glazing and firing included."
+        },
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "https://schema.org/InPerson",
+            "startDate": "2026-03-07T15:00:00+00:00",
+            "endDate": "2026-03-28T17:00:00+00:00",
+            "courseWorkload": "PT8H",
+            "location": {
+              "@type": "Place",
+              "name": "PURACERÂMICA Studio",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Jau 23a",
+                "addressLocality": "Lisboa",
+                "postalCode": "1300-311",
+                "addressCountry": "PT"
+              }
+            }
+          },
+          {
+            "@type": "CourseInstance",
+            "courseMode": "https://schema.org/InPerson",
+            "startDate": "2026-04-04T15:00:00+00:00",
+            "endDate": "2026-04-25T17:00:00+00:00",
+            "courseWorkload": "PT8H",
+            "location": {
+              "@type": "Place",
+              "name": "PURACERÂMICA Studio",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Jau 23a",
+                "addressLocality": "Lisboa",
+                "postalCode": "1300-311",
+                "addressCountry": "PT"
+              }
+            }
+          },
+          {
+            "@type": "CourseInstance",
+            "courseMode": "https://schema.org/InPerson",
+            "startDate": "2026-05-02T15:00:00+00:00",
+            "endDate": "2026-05-23T17:00:00+00:00",
+            "courseWorkload": "PT8H",
+            "location": {
+              "@type": "Place",
+              "name": "PURACERÂMICA Studio",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rua Jau 23a",
+                "addressLocality": "Lisboa",
+                "postalCode": "1300-311",
+                "addressCountry": "PT"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is this course suitable for complete beginners?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, absolutely. The course is designed for beginners with no prior pottery experience. Each session builds on the previous one at a comfortable pace."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does the 4-week pottery course cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The complete 4-week course costs €120. This includes all clay, materials, instructor guidance, studio glazes, and the firing of all your pieces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What techniques will I learn in the handbuilding course?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The course covers three core handbuilding techniques: pinching (week 1), coiling (week 2), and slab-building (week 3). The final session (week 4) is dedicated to glazing all your pieces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When can I pick up my finished ceramics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your finished pieces are glazed and fired in our kiln after the course ends. They are ready to collect approximately 3 to 4 weeks after the final session."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.puraceramica.pt/#business",
+        "name": "PURACERÂMICA",
+        "url": "https://www.puraceramica.pt",
+        "telephone": "+351932523750",
+        "email": "info@puraceramica.pt",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Jau 23a",
+          "addressLocality": "Lisboa",
+          "postalCode": "1300-311",
+          "addressCountry": "PT"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "38.704721719093975",
+          "longitude": "-9.183755560897314"
+        },
+        "priceRange": "€€",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Wednesday", "Thursday", "Friday"],
+            "opens": "13:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "10:00",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/puraceramicalisboa/",
+          "https://www.facebook.com/puraceramicalisboa",
+          "https://www.tiktok.com/@puraceramica"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.puraceramica.pt/en/4-week-handbuilding-course.html#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.puraceramica.pt/en/index.html" },
+          { "@type": "ListItem", "position": 2, "name": "Pottery Workshops", "item": "https://www.puraceramica.pt/en/workshops.html" },
+          { "@type": "ListItem", "position": 3, "name": "4-Week Handbuilding Course", "item": "https://www.puraceramica.pt/en/4-week-handbuilding-course.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA – Pottery Studio Lisbon" />
+      </a>
+    </div>
+
+    <nav class="navbar" aria-label="Main navigation">
+      <ul class="nav-links" id="nav">
+
+        <li class="mobile-menu-header" aria-hidden="true">
+          <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA" class="mobile-logo" />
+        </li>
+
+        <li class="dropdown">
+          <a href="experiences.html" class="dropdown-toggle">POTTERY PAINTING</a>
+          <ul class="dropdown-menu">
+            <li><a href="experiences.html">EXPERIENCES</a></li>
+            <li><a href="ceramic-shop.html">OUR CERAMICS</a></li>
+            <li><a href="inspiration.html">INSPIRATION</a></li>
+            <li><a href="voucher.html">VOUCHER</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="workshops.html" class="dropdown-toggle">POTTERY WORKSHOPS</a>
+          <ul class="dropdown-menu">
+            <li><a href="workshops.html">ALL WORKSHOPS</a></li>
+            <li><a href="pottery-teambuilding.html">TEAMBUILDING</a></li>
+            <li><a href="voucher-pottery.html">VOUCHER</a></li>
+          </ul>
+        </li>
+
+        <li><a href="membership.html">MEMBERSHIP</a></li>
+
+        <li class="dropdown">
+          <a href="about.html" class="dropdown-toggle">ABOUT</a>
+          <ul class="dropdown-menu">
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="about.html">OUR STORY</a></li>
+          </ul>
+        </li>
+
+        <li><a href="faq.html">FAQ</a></li>
+
+        <li class="dropdown lang-switcher">
+          <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;" aria-label="Select language">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </a>
+          <ul class="dropdown-menu lang-menu">
+            <li><a href="../pt/curso-modelagem-manual-4-semanas.html" hreflang="pt">PT – Português</a></li>
+            <li><a href="../en/4-week-handbuilding-course.html" class="active-lang" hreflang="en">EN – English</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+
+      <div class="mobile-lang-switcher">
+        <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)" aria-label="Select language">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span class="mobile-lang-arrow">↑</span>
+        </button>
+        <div class="mobile-lang-options">
+          <a href="../pt/curso-modelagem-manual-4-semanas.html" hreflang="pt">PT – Português</a>
+          <a href="../en/4-week-handbuilding-course.html" class="active-lang" hreflang="en">EN – English</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ══ BREADCRUMB ══ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a>
+    <span aria-hidden="true">›</span>
+    <a href="workshops.html">Pottery Workshops</a>
+    <span aria-hidden="true">›</span>
+    <span aria-current="page">4-Week Handbuilding Course</span>
+  </nav>
+
+
+  <!-- ══ WORKSHOP DETAIL ══ -->
+  <div class="workshop-detail-container">
+    <div class="workshop-detail-grid">
+
+      <!-- LEFT — IMAGE -->
+      <div class="workshop-images">
+        <div class="workshop-main-image">
+          <img src="../assets/img/courses/handbuilding.jpg"
+            alt="4-week handbuilding pottery course at PURACERÂMICA Lisbon" width="800" height="600" loading="eager" />
+        </div>
+      </div>
+
+      <!-- RIGHT — INFO PANEL -->
+      <div class="workshop-info-panel">
+
+        <span class="page-tag">Pottery Workshops · Course</span>
+        <h1>4-Week Handbuilding <em>Pottery Course.</em></h1>
+
+        <div class="workshop-price">
+          <span class="price-amount">€120</span>
+          <span class="price-note">for the complete course</span>
+        </div>
+
+        <p class="workshop-intro">Learn the three basic handbuilding techniques for clay in 4 weeks. You will cover pinching, coiling, slab-building
+           and glaze or paint your pieces.</p>
+
+        <!-- COURSE SCHEDULE – Tabbed -->
+        <div class="course-schedule">
+
+          <div class="month-tabs">
+            <button class="month-tab active" onclick="switchMonth('march', this)">March</button>
+            <button class="month-tab" onclick="switchMonth('april', this)">April</button>
+            <button class="month-tab" onclick="switchMonth('may', this)">May</button>
+          </div>
+
+          <!-- March -->
+          <div class="month-panel active" id="month-march">
+            <div class="schedule-date">
+              <span class="schedule-dot"></span>
+              <span>Starts Sat. 07.03. — 15:00–17:00</span>
+            </div>
+            <div class="schedule-weeks">
+              <div class="schedule-week"><span class="week-num">Week 1 — 07.03.</span><span class="week-topic">Pinching
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 14.03.</span><span class="week-topic">Coiling
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 21.03.</span><span
+                  class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 28.03.</span><span class="week-topic">Glazing
+                  session</span></div>
+            </div>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/29/count/1/provider/12/date/2026-03-07/time/15:00:00/"
+              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book March round</a>
+          </div>
+
+          <!-- April -->
+          <div class="month-panel" id="month-april">
+            <div class="schedule-date">
+              <span class="schedule-dot"></span>
+              <span>Starts Sat. 04.04. — 15:00–17:00</span>
+            </div>
+            <div class="schedule-weeks">
+              <div class="schedule-week"><span class="week-num">Week 1 — 04.04.</span><span class="week-topic">Pinching
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 11.04.</span><span class="week-topic">Coiling
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 18.04.</span><span
+                  class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 25.04.</span><span class="week-topic">Glazing
+                  session</span></div>
+            </div>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/30/count/1/provider/13/date/2026-04-04/time/15:00:00/"
+              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book April round</a>
+          </div>
+
+          <!-- May -->
+          <div class="month-panel" id="month-may">
+            <div class="schedule-date">
+              <span class="schedule-dot"></span>
+              <span>Starts Sat. 02.05. — 15:00–17:00</span>
+            </div>
+            <div class="schedule-weeks">
+              <div class="schedule-week"><span class="week-num">Week 1 — 02.05.</span><span class="week-topic">Pinching
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 09.05.</span><span class="week-topic">Coiling
+                  technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 16.05.</span><span
+                  class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 23.05.</span><span class="week-topic">Glazing
+                  session</span></div>
+            </div>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/31/count/1/provider/14/date/2026-05-02/time/15:00:00/"
+              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book May round</a>
+          </div>
+
+          <p class="schedule-time">All sessions: Saturdays 15:00–17:00</p>
+        </div>
+
+        <p class="booking-note">Booking completed on our secure booking page.</p>
+        <p class="shipping-note">All materials, glaze & firing included. Pieces ready for pickup 3–4 weeks after the
+          final session.</p>
+
+      </div>
+    </div>
+
+
+    <!-- ══ DESCRIPTION ══ -->
+    <div class="workshop-description">
+
+      <div class="wd-section">
+        <h2>About this course</h2>
+        <p>Do you want to learn the basics of handbuilding out of clay? Our 4-week pottery course is a great opportunity for anyone who
+          wants to slow down, learn something new or refresh their skills. In this intensive course you will learn the essential
+          techniques that will give you the foundation to create out of clay: pinching, slab-building and
+          coiling. At the end, you will glaze or paint your pieces. Your teacher will guide you through the process while encouraging you to explore 
+          and experiment.</p>
+      </div>
+
+      <div class="wd-section">
+        <h3>What to expect, week by week</h3>
+        <div class="wd-weeks">
+          <div class="wd-week">
+            <span class="wd-week-num">01</span>
+            <div class="wd-week-content">
+              <strong>Pinching</strong>
+              <p>Introduction to ceramic processes and the pinch technique. </p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/handbuilding.jpg" alt="Pinching technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">02</span>
+            <div class="wd-week-content">
+              <strong>Coiling</strong>
+              <p>Introduction to the coiling technique. The ideal method for building larger objects by stacking rolled
+                ropes of clay.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/handbuilding.jpg" alt="Coiling technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">03</span>
+            <div class="wd-week-content">
+              <strong>Slab building</strong>
+              <p>Learning the slab-building technique using flat sheets of clay to create plates, tiles and
+                angular forms.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/handbuilding.jpg" alt="Slab building technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">04</span>
+            <div class="wd-week-content">
+              <strong>Glazing</strong>
+              <p>Glaze all your pieces in clear glaze using different techniques: dipping, brushing or pouring.
+                 Different colors of underglaze for painting are available.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/handbuilding.jpg" alt="Glazing session" loading="lazy" />
+            </div>
+          </div>
+        </div>
+        <p class="wd-note">Throughout this course you'll also learn decorating techniques such as texturing and stamping,
+          and how to join different clay parts such as adding handles to mugs.</p>
+      </div>
+
+      <div class="wd-section wd-included">
+        <h3>What's included</h3>
+        <div class="wd-included-grid">
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>4 × 2-hour sessions (8 hours total)</span>
+          </div>
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>Clay and materials for 4 weeks</span>
+          </div>
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>Professional guidance</span>
+          </div>
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>Studio glaze and colors for painting</span>
+          </div>
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>Decoration tools and supplies</span>
+          </div>
+          <div class="wd-included-item">
+            <span class="wd-check">—</span>
+            <span>Firing and glazing of your pieces</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wd-section">
+        <h3>Important information</h3>
+        <div class="wd-info-grid">
+          <div class="wd-info-item">
+            <span class="wd-info-label">Duration</span>
+            <span class="wd-info-value">4 weeks, one 2-hour session per week</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Schedule</span>
+            <span class="wd-info-value">Saturdays 15:00–17:00</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Dates</span>
+            <span class="wd-info-value"><strong>March:</strong> 07., 14., 21., 28.03.2026<br><strong>April:</strong> 04., 11., 18., 25.04.2026<br><strong>May:</strong>
+              02., 09., 16., 23.05.2026</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Price</span>
+            <span class="wd-info-value">€120 total</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Level</span>
+            <span class="wd-info-value">Beginner and intermediate</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Language</span>
+            <span class="wd-info-value">English</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Age</span>
+            <span class="wd-info-value">14+</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Group size</span>
+            <span class="wd-info-value">Maximum 8 participants</span>
+          </div>
+          <div class="wd-info-item">
+            <span class="wd-info-label">Pickup</span>
+            <span class="wd-info-value">3–4 weeks after the final session</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="wd-note-box">
+        <p><strong>Please note:</strong> This is a 4-week commitment. All sessions build upon each other, so consistent
+          attendance is important for the best learning experience. Colors and sizes may change slightly during the
+          drying and firing process.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer>
+
+    <section class="opening-sections" aria-label="Opening hours">
+      <div class="hours-box">
+        <div class="hours-inner">
+          <h2>Opening Hours</h2>
+          <div class="hours-list">
+            <div class="day"><span>Monday</span><span>Closed</span></div>
+            <div class="day"><span>Tuesday</span><span>Closed</span></div>
+            <div class="day"><span>Wednesday</span><span>13:00 – 20:00</span></div>
+            <div class="day"><span>Thursday</span><span>13:00 – 20:00</span></div>
+            <div class="day"><span>Friday</span><span>13:00 – 20:00</span></div>
+            <div class="day"><span>Saturday</span><span>10:00 – 20:00</span></div>
+            <div class="day"><span>Sunday</span><span>10:00 – 18:00</span></div>
+          </div>
+          <p class="note">Latest painting session starts 2 hours before closing. If no one is painting 1 hour before
+            closing, we may close early.</p>
+        </div>
+      </div>
+      <div class="hours-box">
+        <div class="hours-inner">
+          <h2>Pickup Hours</h2>
+          <div class="hours-list">
+            <div class="day"><span>Monday</span><span>Closed</span></div>
+            <div class="day"><span>Tuesday</span><span>Closed</span></div>
+            <div class="day"><span>Wednesday</span><span>14:00 – 18:00</span></div>
+            <div class="day"><span>Thursday</span><span>14:00 – 18:00</span></div>
+            <div class="day"><span>Friday</span><span>14:00 – 18:00</span></div>
+            <div class="day"><span>Saturday</span><span>11:00 – 16:00</span></div>
+            <div class="day"><span>Sunday</span><span>11:00 – 16:00</span></div>
+          </div>
+          <p class="note">
+            <strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>
+            Finished pieces can only be collected during pickup hours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-block" id="contact-block" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+        <h3 id="contact-heading">Contact us</h3>
+        <p class="address">
+          <a href="https://maps.google.com/?cid=3458042851736995832" target="_blank" rel="noopener"
+            style="text-decoration:none; color:inherit;">
+            Rua Jau 23a<br>1300-311 Lisboa
+          </a>
+        </p>
+        <p class="contact-info">
+          <a href="tel:+351932523750">+351 932 523 750</a>
+          &nbsp;|&nbsp;
+          <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eadadfd8cbc9cfd8cbc7c3c9cb84dade"><span class="__cf_email__"
+              data-cfemail="177e7971785767626576747265767a7e7476396763">[email&#160;protected]</span></a>
+        </p>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6635.497832040944!2d-9.183755560897314!3d38.704721719093975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1935310565b625%3A0x2ff8db9148d837f8!2sPURACER%C3%82MICA-LISBOA!5e0!3m2!1sen!2sat!4v1747118754743!5m2!1sen!2sat"
+            width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            title="PURACERÂMICA location – Rua Jau 23a, Lisbon"></iframe>
+        </div>
+        <div class="footer-social" aria-label="Social media">
+          <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">
+            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" />
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">
+            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" />
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">
+            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" />
+            <span>TikTok</span>
+          </a>
+        </div>
+        <div class="complaint-book">
+          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener"
+            aria-label="Livro de Reclamações Electrónico">
+            <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" width="80"
+              height="40" />
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>© PURACERÂMICA • 2022 – 2026 | Handmade with ❤️ in Lisbon</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>�

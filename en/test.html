@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offerings Grid – Varianten Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --serif: 'Cormorant Garamond', serif;
+      --sans: 'Montserrat', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--sans); background: #f0eeeb; }
+
+    /* ── SECTION LABELS ── */
+    .variant-label {
+      text-align: center;
+      padding: 3rem 2rem 2rem;
+      background: #f0eeeb;
+    }
+    .variant-label h2 {
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 0.4rem;
+    }
+    .variant-label p {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #000;
+    }
+    .variant-label p em { font-style: italic; color: #777; }
+
+    /* shared header */
+    .offerings-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 0 2rem;
+    }
+    .how-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .offerings-title {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 300;
+      color: #000;
+    }
+    .offerings-title em { font-style: italic; color: #555; }
+
+    /* ════════════════════════════
+       VARIANTE A – 3 Spalten Grid
+       (Desktop: nebeneinander,
+        Mobile: 2-spaltig wie Rami)
+    ════════════════════════════ */
+    .variant-a { background: #fff; padding: 5rem 2rem; }
+
+    .grid-a {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card-a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #eee;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .card-a:hover { border-color: #bbb; }
+
+    .card-a-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+      overflow: hidden;
+    }
+    .card-a:hover .card-a-photo { transform: scale(1.04); }
+
+    .card-a-body {
+      padding: 1.5rem;
+    }
+    .card-a-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .card-a-title {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 300;
+      line-height: 1.15;
+      color: #000;
+      margin-bottom: 0.8rem;
+    }
+    .card-a-title em { font-style: italic; color: #555; }
+    .card-a-desc {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #888;
+      margin-bottom: 1.2rem;
+    }
+    .card-a-link {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1px;
+    }
+
+    @media (max-width: 900px) {
+      .grid-a { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .grid-a { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+      .card-a-body { padding: 1rem; }
+      .card-a-title { font-size: 1.5rem; }
+      .card-a-desc { display: none; }
+    }
+
+
+    /* ════════════════════════════
+       VARIANTE B – Horizontal Scroll
+    ════════════════════════════ */
+    .variant-b { background: #f7f5f2; padding: 5rem 0 5rem 2rem; }
+    .variant-b .offerings-header { padding-right: 2rem; }
+
+    .scroll-b {
+      display: flex;
+      gap: 1.2rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+      scrollbar-width: none;
+    }
+    .scroll-b::-webkit-scrollbar { display: none; }
+
+    .card-b {
+      flex: 0 0 320px;
+      scroll-snap-align: start;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #eee;
+      overflow: hidden;
+      transition: border-color 0.3s ease;
+    }
+    .card-b:hover { border-color: #bbb; }
+
+    .card-b-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .card-b:hover .card-b-photo { transform: scale(1.04); }
+
+    .card-b-body { padding: 1.5rem; }
+    .card-b-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .card-b-title {
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      font-weight: 300;
+      line-height: 1.15;
+      color: #000;
+      margin-bottom: 0.8rem;
+    }
+    .card-b-title em { font-style: italic; color: #555; }
+    .card-b-desc {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #888;
+      margin-bottom: 1.2rem;
+    }
+    .card-b-link {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1px;
+    }
+
+    .scroll-hint {
+      font-family: var(--sans);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #bbb;
+      text-align: center;
+      margin-top: 1.5rem;
+      padding-right: 2rem;
+    }
+    @media (min-width: 900px) {
+      .card-b { flex: 0 0 380px; }
+    }
+
+
+    /* ════════════════════════════
+       VARIANTE C – Untereinander,
+       kleines quadratisches Foto
+    ════════════════════════════ */
+    .variant-c { background: #fff; padding: 5rem 2rem; }
+
+    .list-c {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .card-c {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0;
+      text-decoration: none;
+      color: inherit;
+      border-top: 1px solid #eee;
+      overflow: hidden;
+      transition: background 0.2s ease;
+      min-height: 200px;
+    }
+    .card-c:last-child { border-bottom: 1px solid #eee; }
+    .card-c:hover { background: #fafafa; }
+
+    .card-c-photo {
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .card-c:hover .card-c-photo { transform: scale(1.04); }
+
+    .card-c-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 2.5rem;
+    }
+    .card-c-tag {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #999;
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+    .card-c-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: #000;
+      margin-bottom: 0.8rem;
+    }
+    .card-c-title em { font-style: italic; color: #555; }
+    .card-c-desc {
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: #888;
+      margin-bottom: 1.2rem;
+      max-width: 440px;
+    }
+    .card-c-link {
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1px;
+      display: inline-block;
+    }
+
+    @media (max-width: 600px) {
+      .card-c {
+        grid-template-columns: 120px 1fr;
+        min-height: 140px;
+      }
+      .card-c-body { padding: 1.2rem; }
+      .card-c-title { font-size: 1.5rem; }
+      .card-c-desc { display: none; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ── VARIANTE A ── -->
+  <div class="variant-label">
+    <h2>Variante A</h2>
+    <p>3-Spalten Grid — <em>wie Rami Ceramics</em></p>
+  </div>
+
+  <section class="variant-a">
+    <div class="offerings-header">
+      <span class="how-tag">What we offer</span>
+      <h2 class="offerings-title">Find your <em>creative experience.</em></h2>
+    </div>
+    <div class="grid-a">
+      <a href="#" class="card-a">
+        <div class="card-a-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80');"></div>
+        <div class="card-a-body">
+          <span class="card-a-tag">No experience needed</span>
+          <h3 class="card-a-title">Pottery<br><em>Painting</em></h3>
+          <p class="card-a-desc">Choose from 100+ pieces and bring your design to life. Walk-ins welcome.</p>
+          <span class="card-a-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-a">
+        <div class="card-a-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80'); filter: grayscale(20%);"></div>
+        <div class="card-a-body">
+          <span class="card-a-tag">Hands-on pottery</span>
+          <h3 class="card-a-title">Clay<br><em>Workshops</em></h3>
+          <p class="card-a-desc">Learn to work with clay on the wheel or by hand. Beginners welcome.</p>
+          <span class="card-a-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-a">
+        <div class="card-a-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80'); filter: grayscale(40%);"></div>
+        <div class="card-a-body">
+          <span class="card-a-tag">Coming Spring 2026</span>
+          <h3 class="card-a-title">Studio<br><em>Membership</em></h3>
+          <p class="card-a-desc">Your studio, your rhythm. Full access to wheels, tools & glazes.</p>
+          <span class="card-a-link">Join waitlist →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ── VARIANTE B ── -->
+  <div class="variant-label">
+    <h2>Variante B</h2>
+    <p>Horizontal scrollen — <em>wischen</em></p>
+  </div>
+
+  <section class="variant-b">
+    <div class="offerings-header">
+      <span class="how-tag">What we offer</span>
+      <h2 class="offerings-title">Find your <em>creative experience.</em></h2>
+    </div>
+    <div class="scroll-b">
+      <a href="#" class="card-b">
+        <div class="card-b-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80');"></div>
+        <div class="card-b-body">
+          <span class="card-b-tag">No experience needed</span>
+          <h3 class="card-b-title">Pottery<br><em>Painting</em></h3>
+          <p class="card-b-desc">Choose from 100+ pieces and bring your design to life. Walk-ins welcome.</p>
+          <span class="card-b-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-b">
+        <div class="card-b-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80'); filter: grayscale(20%);"></div>
+        <div class="card-b-body">
+          <span class="card-b-tag">Hands-on pottery</span>
+          <h3 class="card-b-title">Clay<br><em>Workshops</em></h3>
+          <p class="card-b-desc">Learn to work with clay on the wheel or by hand. Beginners welcome.</p>
+          <span class="card-b-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-b">
+        <div class="card-b-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80'); filter: grayscale(40%);"></div>
+        <div class="card-b-body">
+          <span class="card-b-tag">Coming Spring 2026</span>
+          <h3 class="card-b-title">Studio<br><em>Membership</em></h3>
+          <p class="card-b-desc">Your studio, your rhythm. Full access to wheels, tools & glazes.</p>
+          <span class="card-b-link">Join waitlist →</span>
+        </div>
+      </a>
+    </div>
+    <p class="scroll-hint">← swipe →</p>
+  </section>
+
+
+  <!-- ── VARIANTE C ── -->
+  <div class="variant-label">
+    <h2>Variante C</h2>
+    <p>Untereinander — <em>kleines Foto links</em></p>
+  </div>
+
+  <section class="variant-c">
+    <div class="offerings-header">
+      <span class="how-tag">What we offer</span>
+      <h2 class="offerings-title">Find your <em>creative experience.</em></h2>
+    </div>
+    <div class="list-c">
+      <a href="#" class="card-c">
+        <div class="card-c-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80');"></div>
+        <div class="card-c-body">
+          <span class="card-c-tag">No experience needed</span>
+          <h3 class="card-c-title">Pottery<br><em>Painting</em></h3>
+          <p class="card-c-desc">Choose from 100+ pieces and bring your design to life. Walk-ins welcome.</p>
+          <span class="card-c-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-c">
+        <div class="card-c-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80'); filter: grayscale(20%);"></div>
+        <div class="card-c-body">
+          <span class="card-c-tag">Hands-on pottery</span>
+          <h3 class="card-c-title">Clay<br><em>Workshops</em></h3>
+          <p class="card-c-desc">Learn to work with clay on the wheel or by hand. Beginners welcome.</p>
+          <span class="card-c-link">Explore →</span>
+        </div>
+      </a>
+      <a href="#" class="card-c">
+        <div class="card-c-photo" style="background-image: url('https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&q=80'); filter: grayscale(40%);"></div>
+        <div class="card-c-body">
+          <span class="card-c-tag">Coming Spring 2026</span>
+          <h3 class="card-c-title">Studio<br><em>Membership</em></h3>
+          <p class="card-c-desc">Your studio, your rhythm. Full access to wheels, tools & glazes.</p>
+          <span class="card-c-link">Join waitlist →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>

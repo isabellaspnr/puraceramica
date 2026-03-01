@@ -1,0 +1,418 @@
+ /* ======================
+   ABOUT PAGE – about.css (2026)
+   Consistent with styles.css & index aesthetic
+   ====================== */
+
+
+/* ══════════════════════════════════
+   HERO WITH IMAGE
+   ══════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 480px;
+  max-height: 640px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.93);
+  padding: 3.5rem 4rem;
+  max-width: 860px;
+  width: 85%;
+}
+
+.page-tag {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: 1.25rem;
+}
+
+.hero-overlay h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.hero-overlay h1 em {
+  font-style: italic;
+  color: #888;
+}
+
+.hero-overlay p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.9;
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
+}
+
+.page-header-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-header-meta span {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  border: 1px solid #ddd;
+  padding: 0.4rem 1rem;
+}
+
+
+/* ══════════════════════════════════
+   SECTION TAG (shared)
+   ══════════════════════════════════ */
+.section-tag {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #bbb;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ══════════════════════════════════
+   EXPERIENCE SECTIONS (Our Story / Why Ceramics)
+   ══════════════════════════════════ */
+.experience-section {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+
+.experience-section.alt-bg {
+  background: #f7f5f2;
+}
+
+.experience-section-header {
+  max-width: 1200px;
+  margin: 0 auto 3.5rem;
+}
+
+.experience-section-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.experience-section-header h2 em {
+  font-style: italic;
+  color: #888;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-grid.reverse {
+  direction: rtl;
+}
+
+.experience-grid.reverse > * {
+  direction: ltr;
+}
+
+.experience-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.experience-text p {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.9;
+  margin: 0 0 1.1rem;
+}
+
+.experience-text p:last-of-type {
+  margin-bottom: 0;
+}
+
+p.highlight {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #888;
+  line-height: 1.7;
+  margin: 1.25rem 0 0 !important;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+}
+
+
+/* ══════════════════════════════════
+   VALUES GRID
+   ══════════════════════════════════ */
+.practical-info {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+
+.practical-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.practical-content > h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 3rem;
+  line-height: 1.15;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #eee;
+}
+
+.info-box {
+  padding: 2.5rem;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.info-box:nth-child(2n) {
+  border-right: none;
+}
+
+.info-box:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+.info-box h3 {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 1rem;
+}
+
+.info-box p {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.9;
+  margin: 0;
+}
+
+
+/* ══════════════════════════════════
+   FAQ STRIP
+   ══════════════════════════════════ */
+.faq {
+  background: #f7f5f2;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.faq h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1rem;
+}
+
+.faq p {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #888;
+  margin: 0 0 2.5rem;
+  line-height: 1.9;
+}
+
+.faq-button {
+  display: inline-block;
+  padding: 0.85rem 2.5rem;
+  border: 1px solid #000;
+  color: #000;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.faq-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* ══════════════════════════════════
+   RESPONSIVE – TABLET
+   ══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .experience-section,
+  .practical-info {
+    padding: 4rem 2.5rem;
+  }
+
+  .experience-grid {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .experience-grid.reverse {
+    direction: ltr;
+  }
+
+  .experience-image img {
+    height: 320px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-box {
+    border-right: none !important;
+    border-bottom: 1px solid #eee !important;
+  }
+
+  .info-box:last-child {
+    border-bottom: none !important;
+  }
+}
+
+
+/* ══════════════════════════════════
+   RESPONSIVE – MOBILE
+   ══════════════════════════════════ */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .hero-image {
+    height: 260px;
+  }
+
+  .hero-overlay {
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 3rem 1.5rem;
+    background: #f7f5f2;
+  }
+
+  .hero-overlay h1 { font-size: 2rem; }
+  .hero-overlay p  { font-size: 0.88rem; }
+
+  .experience-section,
+  .practical-info {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .experience-section-header {
+    margin-bottom: 2rem;
+  }
+
+  .experience-section-header h2,
+  .practical-content > h2 {
+    font-size: 1.8rem;
+  }
+
+  .experience-image img {
+    height: 240px;
+  }
+
+  .faq {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .hero-overlay h1 { font-size: 1.7rem; }
+
+  .info-box {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .page-header-meta span {
+    font-size: 9px;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .experience-grid {
+    gap: 2rem;
+  }
+}
