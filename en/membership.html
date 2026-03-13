@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -297,69 +297,77 @@
 </head>
 <body>
 
-    <!-- HEADER (copy your existing header here) -->
     <header class="main-header">
         <div class="logo">
             <a href="index.html">
-                <img src="../assets/img/icons/LOGO.png" alt="Logo Puracerâmica" />
+                <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA – Pottery Studio Lisbon" />
             </a>
         </div>
-        <nav class="navbar">
+
+        <nav class="navbar" aria-label="Main navigation">
             <ul class="nav-links" id="nav">
-                <div class="mobile-menu-header">
-                    <img src="../assets/img/icons/LOGO.png" alt="Puracerâmica" class="mobile-logo" />
-                </div>
-                 <li class="dropdown">
-        <a href="experiences.html" class="dropdown-toggle">POTTERY PAINTING</a>
-        <ul class="dropdown-menu">
-          <li><a href="experiences.html">EXPERIENCES</a></li>
-          <li><a href="ceramic-shop.html">OUR CERAMICS</a></li>
-          <li><a href="inspiration.html">INSPIRATION</a></li>
-          <li><a href="voucher.html">VOUCHER</a></li>
-        </ul>
-      </li>
 
-      <li class="dropdown">
-        <a href="workshops.html" class="dropdown-toggle">POTTERY WORKSHOPS</a>
-        <ul class="dropdown-menu">
-          <li><a href="workshops.html">ALL WORKSHOPS</a></li>
-          <li><a href="pottery-teambuilding.html">TEAMBUILDING</a></li>
-          <li><a href="voucher-pottery.html">VOUCHER</a></li>
-        </ul>
-      </li>
+                <li class="mobile-menu-header" aria-hidden="true">
+                    <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA" class="mobile-logo" />
+                </li>
 
-      <li><a href="membership.html">MEMBERSHIP</a></li>
+                <li class="dropdown">
+                    <a href="experiences.html" class="dropdown-toggle">POTTERY PAINTING</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="experiences.html">EXPERIENCES</a></li>
+                        <li><a href="ceramic-shop.html">OUR CERAMICS</a></li>
+                        <li><a href="inspiration.html">INSPIRATION</a></li>
+                        <li><a href="voucher.html">VOUCHER</a></li>
+                    </ul>
+                </li>
 
-      <li class="dropdown">
-        <a href="about.html" class="dropdown-toggle">ABOUT</a>
-        <ul class="dropdown-menu">
-          <li><a href="news.html">NEWS</a></li>
-          <li><a href="about.html">OUR STORY</a></li>
-        </ul>
-      </li>
+                <li class="dropdown">
+                    <a href="workshops.html" class="dropdown-toggle">POTTERY WORKSHOPS</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="workshops.html">ALL WORKSHOPS</a></li>
+                        <li><a href="pottery-teambuilding.html">TEAMBUILDING</a></li>
+                        <li><a href="voucher-pottery.html">VOUCHER</a></li>
+                    </ul>
+                </li>
 
-      <li><a href="faq.html">FAQ</a></li>
+                <li><a href="membership.html">MEMBERSHIP</a></li>
+
+                <li class="dropdown">
+                    <a href="about.html" class="dropdown-toggle">ABOUT</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="news.html">NEWS</a></li>
+                        <li><a href="about.html">OUR STORY</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="faq.html">FAQ</a></li>
+
                 <li class="dropdown lang-switcher">
-                    <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;">
+                    <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;" aria-label="Select language">
                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <circle cx="12" cy="12" r="10"/>
                             <line x1="2" y1="12" x2="22" y2="12"/>
                             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                         </svg>
                     </a>
                     <ul class="dropdown-menu lang-menu">
-                        <li><a href="../pt/estudio-aberto-membro.html">PT – Português</a></li>
-                        <li><a href="../en/membership-teaser.html" class="active-lang">EN – English</a></li>
+                        <li><a href="../pt/estudio-aberto-membro.html" hreflang="pt">PT – Português</a></li>
+                        <li><a href="../en/membership-teaser.html" class="active-lang" hreflang="en">EN – English</a></li>
                     </ul>
                 </li>
+
             </ul>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+
+            <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
         </nav>
+
         <div class="mobile-lang-switcher">
-            <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)">
+            <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)" aria-label="Select language">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <circle cx="12" cy="12" r="10"/>
                     <line x1="2" y1="12" x2="22" y2="12"/>
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -367,8 +375,8 @@
                 <span class="mobile-lang-arrow">↑</span>
             </button>
             <div class="mobile-lang-options">
-                <a href="../pt/estudio-aberto-membro.html">PT – Português</a>
-                <a href="../en/membership-teaser.html" class="active-lang">EN – English</a>
+                <a href="../pt/estudio-aberto-membro.html" hreflang="pt">PT – Português</a>
+                <a href="../en/membership-teaser.html" class="active-lang" hreflang="en">EN – English</a>
             </div>
         </div>
     </header>
@@ -387,7 +395,7 @@
 
             <p class="teaser-subtitle">
                 We're opening our studio to everybody wanting to work and learn independently:<br>
-                Work at your own pace, with everything you need — wheels, tools, glazes and clay.
+                Work at your own pace, with everything you need: wheels, tools, kiln firing and more.
             </p>
 
             <!-- Email form -->
@@ -396,9 +404,9 @@
 
                 <!--
                 =====================================================
-                BREVO FORMULAR:
+                BREVO FORM:
                 In Brevo → "Forms" → "Create a subscription form"
-                → Embed-Code kopieren und dieses <form> ersetzen.
+                → Copy embed code and replace this <form>.
                 =====================================================
                 -->
                 <form class="teaser-form" id="waitlistForm" onsubmit="handleSubmit(event)">
@@ -429,7 +437,6 @@
 
     <script src="../assets/js/main.js"></script>
     <script>
-        // Temporäre Form-Simulation bis Brevo eingebaut ist
         function handleSubmit(e) {
             e.preventDefault();
             document.getElementById('waitlistForm').style.display = 'none';

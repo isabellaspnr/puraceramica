@@ -1,86 +1,8 @@
-/* ============================================================
-   VOUCHER PAGE — editorial style, consistent with shop.css
+ /* ============================================================
+   VOUCHER PAGE — voucher-specific only
+   Global styles (breadcrumb, page-header, page-tag, faq,
+   footer etc.) are handled by styles.css
    ============================================================ */
-
-/* BREADCRUMB */
-.breadcrumb {
-  background: #fff;
-  border-bottom: 1px solid #eee;
-  padding: 0.75rem 3rem;
-  font-family: var(--font-sans, sans-serif);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #aaa;
-}
-
-.breadcrumb a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.breadcrumb a:hover {
-  color: #1a1a1a;
-}
-
-.breadcrumb span {
-  margin: 0 0.4rem;
-}
-
-@media (max-width: 768px) {
-  .breadcrumb {
-    padding: 0.75rem 1.5rem;
-  }
-}
-
-/* PAGE HEADER */
-.page-header {
-  background: #f7f5f2;
-  text-align: center;
-  padding: 6rem 2rem 5rem;
-  border-bottom: 1px solid #eee;
-}
-
-.page-tag {
-  font-family: var(--font-sans, sans-serif);
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #999;
-  display: block;
-  margin-bottom: 1.5rem;
-}
-
-.page-header h1 {
-  font-family: var(--font-serif, Georgia, serif);
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
-  color: #000;
-  margin: 0 0 1.5rem;
-  line-height: 1.1;
-}
-
-.page-header h1 em {
-  font-style: italic;
-  color: #888;
-}
-
-.page-header p {
-  font-family: var(--font-sans, sans-serif);
-  font-size: 0.95rem;
-  font-weight: 300;
-  color: #666;
-  line-height: 1.8;
-  max-width: 560px;
-  margin: 0 auto 0.75rem;
-}
-
-.page-header-sub {
-  font-size: 0.85rem !important;
-  color: #999 !important;
-}
 
 /* VOUCHER PREVIEW SECTION */
 .voucher-preview-section {
@@ -90,7 +12,7 @@
 }
 
 .voucher-label {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -99,7 +21,7 @@
 }
 
 .voucher-note {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.78rem;
   color: #aaa;
   margin-top: 0.75rem;
@@ -166,7 +88,7 @@
 }
 
 .voucher-box h3 {
-  font-family: var(--font-serif, Georgia, serif);
+  font-family: var(--serif);
   font-size: 1.15rem;
   font-weight: 400;
   color: #1a1a1a;
@@ -174,7 +96,7 @@
 }
 
 .voucher-box p {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.9rem;
   color: #555;
   line-height: 1.65;
@@ -200,21 +122,21 @@
 }
 
 .email-instructions li {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.88rem;
   color: #555;
   margin: 0.3rem 0;
 }
 
 .highlight {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.95rem;
   font-weight: 600;
   color: #1a1a1a;
 }
 
 .thanks {
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.85rem;
   color: #777;
   margin-top: 1rem;
@@ -229,7 +151,7 @@
   background: #1a1a1a;
   color: #fff;
   text-decoration: none;
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -243,28 +165,94 @@
   border-color: #333;
 }
 
-/* FAQ STRIP */
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .voucher-payment-section {
+    padding: 0 1.5rem 3rem;
+  }
+
+  .voucher-box {
+    padding: 1.5rem;
+  }
+
+  .voucher-flip {
+    width: 260px;
+    height: 165px;
+  }
+}
+
+/* ══════════════════════════════════
+   PAGE HEADER (alle Unterseiten)
+   ══════════════════════════════════ */
+.page-header {
+  background: #f7f5f2;
+  text-align: center;
+  padding: 6rem 2rem 5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.page-tag {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #999;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.page-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.page-header h1 em {
+  font-style: italic;
+  color: #888;
+}
+
+.page-header p {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto 0.75rem;
+}
+
+.page-header-sub {
+  font-size: 0.85rem !important;
+  color: #999 !important;
+}
+
+/* FAQ STRIP (alle Unterseiten) */
 .faq {
   background: #f7f5f2;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .faq h3 {
-  font-family: var(--font-serif, Georgia, serif);
+  font-family: var(--serif);
   font-size: clamp(1.8rem, 3vw, 2.8rem);
-  font-weight: 400;
+  font-weight: 300;
   color: #1a1a1a;
-  margin-bottom: 0.75rem;
+  margin: 0 0 1rem;
 }
 
 .faq p {
-  font-family: var(--font-sans, sans-serif);
-  font-size: 0.92rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
   color: #444;
   max-width: 480px;
-  margin: 0 auto 1.75rem;
-  line-height: 1.6;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
 }
 
 .faq-button {
@@ -273,7 +261,7 @@
   border: 1px solid #1a1a1a;
   background: transparent;
   color: #1a1a1a;
-  font-family: var(--font-sans, sans-serif);
+  font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -287,24 +275,40 @@
   color: #fff;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .voucher-intro-wrapper {
+@media (max-width: 600px) {
+  .page-header {
+    padding: 4rem 1.5rem 3rem;
+  }
+}
+
+.page-header-switch {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8e4df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: #999;
+}
+
+.page-header-switch a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 1px;
+  transition: opacity 0.2s;
+}
+
+.page-header-switch a:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .page-header-switch {
     flex-direction: column;
-    gap: 2.5rem;
-    padding: 2.5rem 1.5rem;
-  }
-
-  .voucher-payment-section {
-    padding: 0 1.5rem 3rem;
-  }
-
-  .voucher-box {
-    padding: 1.5rem;
-  }
-
-  .voucher-flip {
-    width: 260px;
-    height: 165px;
+    gap: 0.4rem;
   }
 }

@@ -123,8 +123,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://puraceramicalisboa.simplybook.it">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="../assets/css/styles.css">
@@ -136,15 +135,16 @@
 <header class="main-header">
   <div class="logo">
     <a href="index.html">
-      <img src="../assets/img/icons/LOGO.png" alt="Logo Puracerâmica" />
+      <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA – Pottery Studio Lisbon" />
     </a>
   </div>
 
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <ul class="nav-links" id="nav">
-      <div class="mobile-menu-header">
-        <img src="../assets/img/icons/LOGO.png" alt="Puracerâmica" class="mobile-logo" />
-      </div>
+
+      <li class="mobile-menu-header" aria-hidden="true">
+        <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA" class="mobile-logo" />
+      </li>
 
       <li class="dropdown">
         <a href="experiences.html" class="dropdown-toggle">POTTERY PAINTING</a>
@@ -178,29 +178,30 @@
       <li><a href="faq.html">FAQ</a></li>
 
       <li class="dropdown lang-switcher">
-        <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;">
+        <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;" aria-label="Select language">
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/>
             <line x1="2" y1="12" x2="22" y2="12"/>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
         </a>
         <ul class="dropdown-menu lang-menu">
-          <li><a href="../pt/canecas.html">PT – Português</a></li>
-          <li><a href="../en/mugs.html" class="active-lang">EN – English</a></li>
+          <li><a href="../pt/canecas.html" hreflang="pt">PT – Português</a></li>
+          <li><a href="../en/mugs.html" class="active-lang" hreflang="en">EN – English</a></li>
         </ul>
       </li>
+
     </ul>
 
-    <div class="hamburger" id="hamburger">
+    <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
       <span></span><span></span><span></span>
     </div>
 
     <div class="mobile-lang-switcher">
-      <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)">
+      <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)" aria-label="Select language">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/>
           <line x1="2" y1="12" x2="22" y2="12"/>
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -208,14 +209,14 @@
         <span class="mobile-lang-arrow">↑</span>
       </button>
       <div class="mobile-lang-options">
-        <a href="../pt/canecas.html">PT – Português</a>
-        <a href="../en/mugs.html" class="active-lang">EN – English</a>
+        <a href="../pt/canecas.html" hreflang="pt">PT – Português</a>
+        <a href="../en/mugs.html" class="active-lang" hreflang="en">EN – English</a>
       </div>
     </div>
   </nav>
 
   <div id="floating-booking-button">
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" target="_blank">
+    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" target="_blank" rel="noopener">
       <button>BOOK NOW</button>
     </a>
   </div>
@@ -224,10 +225,10 @@
 <!-- BREADCRUMB -->
 <nav class="breadcrumb" aria-label="Breadcrumb">
   <a href="index.html">Home</a>
-  <span>›</span>
+  <span aria-hidden="true">›</span>
   <a href="ceramic-shop.html">Our ceramics</a>
-  <span>›</span>
-  <span>Mugs</span>
+  <span aria-hidden="true">›</span>
+  <span aria-current="page">Mugs</span>
 </nav>
 
 <!-- PRODUCT HEADER -->
@@ -387,15 +388,14 @@
 <!-- CTA BANNER -->
 <section class="product-cta-banner">
   <h2>More pieces await in <em>the studio.</em></h2>
-  <p>Many exclusive pieces aren't available online - come visit us to see the full selection.</p>
+  <p>Many exclusive pieces aren't available online — come visit us to see the full selection.</p>
   <a href="#contact-block" class="cta-button">Find us</a>
 </section>
 
 
-
 <!-- FOOTER -->
 <footer>
-  <section class="opening-sections">
+  <section class="opening-sections" aria-label="Opening hours">
     <div class="hours-box">
       <div class="hours-inner">
         <h2>Opening Hours</h2>
@@ -429,39 +429,47 @@
     </div>
   </section>
 
-  <section class="vip-section">
-    <h2>VIP – Very Important Pottery</h2>
+  <section class="vip-section" aria-labelledby="vip-heading">
+    <h2 id="vip-heading">VIP – Very Important Pottery</h2>
     <p>Planning a private event? Take over the entire studio — two floors of creative space, exclusively yours. We can host up to 30 people.</p>
     <a href="viprequest.html" class="vip-button">Request now</a>
   </section>
 
-  <section class="contact-block" id="contact-block">
+  <section class="contact-block" id="contact-block" aria-labelledby="contact-heading">
     <div class="contact-inner">
-      <h3>Contact us</h3>
-      <p class="address">Rua Jau 23a<br>1300-311 Lisboa</p>
-      <p class="contact-info">+351 932 523 750 &nbsp;&nbsp;|&nbsp;&nbsp; <a href="mailto:info@puraceramica.pt">info@puraceramica.pt</a></p>
+      <h3 id="contact-heading">Contact us</h3>
+      <p class="address">
+        <a href="https://maps.google.com/?cid=3458042851736995832" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
+          Rua Jau 23a<br>1300-311 Lisboa
+        </a>
+      </p>
+      <p class="contact-info">
+        <a href="tel:+351932523750">+351 932 523 750</a>
+        &nbsp;|&nbsp;
+        <a href="mailto:info@puraceramica.pt">info@puraceramica.pt</a>
+      </p>
 
       <div class="footer-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6635.497832040944!2d-9.183755560897314!3d38.704721719093975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1935310565b625%3A0x2ff8db9148d837f8!2sPURACER%C3%82MICA-LISBOA!5e0!3m2!1sen!2sat!4v1747118754743!5m2!1sen!2sat"
           width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-          title="Puracerâmica Location Map"></iframe>
+          title="PURACERÂMICA location – Rua Jau 23a, Lisbon"></iframe>
       </div>
 
-      <div class="footer-social">
+      <div class="footer-social" aria-label="Social media">
         <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">
-          <img src="../assets/img/icons/instadone copy.png" alt="Instagram" /><span>Instagram</span>
+          <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" /><span>Instagram</span>
         </a>
         <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">
-          <img src="../assets/img/icons/facebook copy.png" alt="Facebook" /><span>Facebook</span>
+          <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" /><span>Facebook</span>
         </a>
         <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">
-          <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" /><span>TikTok</span>
+          <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" /><span>TikTok</span>
         </a>
       </div>
 
       <div class="complaint-book">
-        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener">
-          <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações" />
+        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" aria-label="Livro de Reclamações Electrónico">
+          <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" width="80" height="40" />
         </a>
       </div>
 
