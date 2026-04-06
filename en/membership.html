@@ -11,14 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../assets/css/styles.css">
 
     <style>
-        /* ── PAGE RESET ── */
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* ── HERO ── */
         .teaser-hero {
             min-height: 100vh;
             display: flex;
@@ -32,7 +29,6 @@
             background-color: #fff;
         }
 
-        /* Subtle animated grain texture */
         .teaser-hero::before {
             content: '';
             position: fixed;
@@ -50,7 +46,6 @@
             width: 100%;
         }
 
-        /* ── EYEBROW ── */
         .teaser-eyebrow {
             font-family: 'Montserrat', sans-serif;
             font-size: 11px;
@@ -63,7 +58,6 @@
             animation: fadeUp 0.8s ease forwards 0.2s;
         }
 
-        /* ── MAIN TITLE ── */
         .teaser-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: clamp(3rem, 8vw, 5.5rem);
@@ -80,7 +74,6 @@
             color: #555;
         }
 
-        /* ── DIVIDER ── */
         .teaser-divider {
             width: 40px;
             height: 1px;
@@ -90,7 +83,6 @@
             animation: fadeUp 0.8s ease forwards 0.6s;
         }
 
-        /* ── SUBTITLE ── */
         .teaser-subtitle {
             font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
@@ -102,54 +94,6 @@
             animation: fadeUp 0.8s ease forwards 0.7s;
         }
 
-        /* ── FEATURES GRID ── */
-        .teaser-features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3.5rem;
-            opacity: 0;
-            animation: fadeUp 0.8s ease forwards 0.85s;
-        }
-
-        .teaser-feature {
-            padding: 1.5rem 1rem;
-            border: 1px solid #eee;
-            border-radius: 2px;
-            text-align: center;
-            transition: border-color 0.3s ease;
-        }
-
-        .teaser-feature:hover {
-            border-color: #bbb;
-        }
-
-        .teaser-feature-icon {
-            font-size: 1.4rem;
-            margin-bottom: 0.6rem;
-            display: block;
-        }
-
-        .teaser-feature-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #999;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-
-        .teaser-feature-value {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #000;
-            display: block;
-        }
-
-        /* ── EMAIL FORM ── */
         .teaser-form-wrap {
             opacity: 0;
             animation: fadeUp 0.8s ease forwards 1s;
@@ -168,9 +112,8 @@
 
         .teaser-form {
             display: flex;
-            gap: 0;
             max-width: 440px;
-            margin: 0 auto 1rem;
+            margin: 0 auto 0.75rem;
             border: 1px solid #000;
         }
 
@@ -185,6 +128,7 @@
             color: #000;
             background: #fff;
             min-width: 0;
+            -webkit-appearance: none;
         }
 
         .teaser-form input[type="email"]::placeholder {
@@ -207,9 +151,8 @@
             flex-shrink: 0;
         }
 
-        .teaser-form button:hover {
-            background: #333;
-        }
+        .teaser-form button:hover { background: #333; }
+        .teaser-form button:disabled { background: #999; cursor: default; }
 
         .teaser-form-note {
             font-family: 'Montserrat', sans-serif;
@@ -219,18 +162,22 @@
             letter-spacing: 0.5px;
         }
 
-        /* Success message */
+        .teaser-form-error {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
         .teaser-success {
-            display: none;
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.3rem;
             font-weight: 300;
             color: #000;
             font-style: italic;
-            padding: 1rem;
+            padding: 0.5rem 0 1rem;
         }
 
-        /* ── LAUNCH BADGE ── */
         .teaser-launch {
             margin-top: 3rem;
             opacity: 0;
@@ -246,48 +193,23 @@
             color: #bbb;
         }
 
-        .teaser-launch strong {
-            color: #000;
-        }
+        .teaser-launch strong { color: #000; }
 
-        /* ── ANIMATIONS ── */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(20px); }
             to   { opacity: 1; transform: translateY(0); }
         }
 
-        /* ── MOBILE ── */
         @media (max-width: 600px) {
-            .teaser-features {
-                grid-template-columns: 1fr;
-                gap: 0.75rem;
-            }
-
-            .teaser-feature {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                text-align: left;
-                padding: 1rem 1.2rem;
-            }
-
-            .teaser-feature-icon {
-                margin-bottom: 0;
-                font-size: 1.2rem;
-                flex-shrink: 0;
-            }
-
             .teaser-form {
                 flex-direction: column;
                 border: none;
                 gap: 0.75rem;
             }
-
             .teaser-form input[type="email"] {
                 border: 1px solid #000;
                 width: 100%;
             }
-
             .teaser-form button {
                 width: 100%;
                 padding: 1rem;
@@ -372,20 +294,19 @@
                     <line x1="2" y1="12" x2="22" y2="12"/>
                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
                 </svg>
-                <span class="mobile-lang-arrow">↑</span>
+                <span class="mobile-lang-arrow">&#8593;</span>
             </button>
             <div class="mobile-lang-options">
-                <a href="../pt/estudio-aberto-membro.html" hreflang="pt">PT – Português</a>
-                <a href="../en/membership-teaser.html" class="active-lang" hreflang="en">EN – English</a>
+                <a href="../pt/estudio-aberto-membro.html" hreflang="pt">PT &ndash; Portugu&ecirc;s</a>
+                <a href="../en/membership-teaser.html" class="active-lang" hreflang="en">EN &ndash; English</a>
             </div>
         </div>
     </header>
 
-    <!-- TEASER HERO -->
     <section class="teaser-hero">
         <div class="teaser-inner">
 
-            <p class="teaser-eyebrow">Coming Soon — Spring 2026</p>
+            <p class="teaser-eyebrow">Coming Soon &mdash; Spring 2026</p>
 
             <h1 class="teaser-title">
                 Your studio,<br><em>your rhythm.</em>
@@ -394,59 +315,84 @@
             <div class="teaser-divider"></div>
 
             <p class="teaser-subtitle">
-                We're opening our studio to everybody wanting to work and learn independently:<br>
+                We&rsquo;re opening our studio to everybody wanting to work and learn independently:<br>
                 Work at your own pace, with everything you need: wheels, tools, kiln firing and more.
             </p>
 
-            <!-- Email form -->
             <div class="teaser-form-wrap">
                 <span class="teaser-form-label">Join the waitlist</span>
 
-                <!--
-                =====================================================
-                BREVO FORM:
-                In Brevo → "Forms" → "Create a subscription form"
-                → Copy embed code and replace this <form>.
-                =====================================================
-                -->
-                <form class="teaser-form" id="waitlistForm" onsubmit="handleSubmit(event)">
-                    <input type="email" placeholder="your@email.com" required autocomplete="email" />
-                    <button type="submit">Notify me</button>
+                <form class="teaser-form" id="waitlistForm" onsubmit="submitToBrevo(event)" novalidate>
+                    <input type="email" id="waitlistEmail" placeholder="your@email.com" required autocomplete="email" />
+                    <button type="submit" id="waitlistBtn">Notify me</button>
                 </form>
-
-                <div class="teaser-success" id="successMsg">
-                    You're on the list. We'll be in touch soon ✦
+                <p class="teaser-form-error" id="waitlistError" style="display:none;">Please enter a valid email address.</p>
+                <div class="teaser-success" id="waitlistSuccess" style="display:none;">
+                    You&rsquo;re on the list. We&rsquo;ll be in touch when we launch. &#10022;
                 </div>
 
                 <p class="teaser-form-note">No spam. Just one email when we launch.</p>
             </div>
 
             <div class="teaser-launch">
-                <span>Expected launch — <strong>April / May 2026</strong></span>
+                <span>Expected launch &mdash; <strong>April / May 2026</strong></span>
             </div>
 
         </div>
     </section>
 
-    <!-- FOOTER (simplified) -->
     <footer style="text-align:center; padding: 2rem; border-top: 1px solid #eee;">
         <p style="font-family:'Montserrat',sans-serif; font-size:0.8rem; color:#999; font-weight:300;">
-            © PURACERÂMICA • 2022 – 2026 | Handmade with ❤️ in Lisbon
+            &copy; PURACERÂMICA &bull; 2022 &ndash; 2026 | Handmade with &#10084;&#65039; in Lisbon
         </p>
     </footer>
 
     <script src="../assets/js/main.js"></script>
     <script>
-        function handleSubmit(e) {
+        async function submitToBrevo(e) {
             e.preventDefault();
-            document.getElementById('waitlistForm').style.display = 'none';
-            document.getElementById('successMsg').style.display = 'block';
+
+            const email = document.getElementById('waitlistEmail').value.trim();
+            const errorEl = document.getElementById('waitlistError');
+            const successEl = document.getElementById('waitlistSuccess');
+            const formEl = document.getElementById('waitlistForm');
+            const btnEl = document.getElementById('waitlistBtn');
+            const noteEl = document.querySelector('.teaser-form-note');
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                errorEl.style.display = 'block';
+                return;
+            }
+
+            errorEl.style.display = 'none';
+            btnEl.disabled = true;
+            btnEl.textContent = '...';
+
+            try {
+                const formData = new FormData();
+                formData.append('EMAIL', email);
+                formData.append('email_address_check', '');
+                formData.append('locale', 'en');
+
+                await fetch('https://c4495b75.sibforms.com/serve/MUIFAIIgjCa8ArmTpG9_MVq0rDYXCyJzZo_-DWZt7quR6xlaaEauZj9IGP1Givie9X2MoecE4NAMDhAGUw4fU_4Mz4GcFm5G5ewm6BooRVCbaGBk8Gx6rjOZwaA9rrz2UtmJZqRL-28Z6cznLHW8hK9UCniI7y2lD8B93FtFJiJAM0T68xC-F8rPYSvawWmmtQBvrucm5wKFIci0oA==', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+            } catch (err) {
+                // no-cors: can't read response but submission still works
+            }
+
+            formEl.style.display = 'none';
+            if (noteEl) noteEl.style.display = 'none';
+            successEl.style.display = 'block';
         }
 
         function toggleMobileLang(btn) {
             const switcher = btn.closest('.mobile-lang-switcher');
             const isOpen = switcher.classList.toggle('open');
-            btn.querySelector('.mobile-lang-arrow').textContent = isOpen ? '↓' : '↑';
+            btn.querySelector('.mobile-lang-arrow').textContent = isOpen ? '\u2193' : '\u2191';
         }
     </script>
 </body>
