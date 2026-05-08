@@ -308,8 +308,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ── WORKSHOP BOOKING ──
   disablePastDates();
-  const dateRadios = document.querySelectorAll('input[name="workshop-date"]');
-  dateRadios.forEach(radio => radio.addEventListener('change', updateBookingLink));
+  initMonthSwitcher();
+
+  // Event delegation on container — more reliable than change on individual radios
+  const monthSwitcher = document.querySelector('.month-switcher');
+  if (monthSwitcher) {
+    monthSwitcher.addEventListener('click', (e) => {
+      const block = e.target.closest('.date-block');
+      if (block && block.classList.contains('available')) {
+        setTimeout(updateBookingLink, 0); // wait for radio state to settle
+      }
+    });
+  }
+
+  // Fallback: direct radio change listeners
+  document.querySelectorAll('input[name="workshop-date"]').forEach(radio => {
+    radio.addEventListener('change', updateBookingLink);
+  });
+
   updateBookingLink();
 });
 
@@ -355,6 +371,44 @@ function disablePastDates() {
   if (!checkedDate) {
     const firstAvailable = document.querySelector('input[name="workshop-date"]:not(:disabled)');
     if (firstAvailable) { firstAvailable.checked = true; updateBookingLink(); }
+  }
+}
+
+// ── AUTO-HIDE PAST MONTHS ──
+function initMonthSwitcher() {
+  const monthMap = {
+    january: 0, february: 1, march: 2, april: 3,
+    may: 4, june: 5, july: 6, august: 7,
+    september: 8, october: 9, november: 10, december: 11
+  };
+  const currentMonth = new Date().getMonth();
+  const tabs = document.querySelectorAll('.month-tab');
+  if (!tabs.length) return; // Guard: no month switcher on this page
+
+  let firstVisible = null;
+
+  tabs.forEach(tab => {
+    const match = tab.getAttribute('onclick')?.match(/switchMonth\('(\w+)'/);
+    if (!match) return;
+    const monthName = match[1].toLowerCase();
+    const monthIndex = monthMap[monthName];
+    if (monthIndex === undefined) return;
+
+    if (monthIndex < currentMonth) {
+      tab.style.display = 'none';
+      const panel = document.getElementById('month-' + monthName);
+      if (panel) panel.style.display = 'none';
+    } else if (!firstVisible) {
+      firstVisible = { tab, name: monthName };
+    }
+  });
+
+  if (firstVisible) {
+    document.querySelectorAll('.month-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.month-panel').forEach(p => p.classList.remove('active'));
+    firstVisible.tab.classList.add('active');
+    const panel = document.getElementById('month-' + firstVisible.name);
+    if (panel) panel.classList.add('active');
   }
 }
 

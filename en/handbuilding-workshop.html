@@ -77,7 +77,7 @@
           "price": "40.00",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/date/2026-03-07/time/15:00:00/",
+          "url": "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/",
           "priceValidUntil": "2026-12-31"
         }
       },
@@ -132,7 +132,6 @@
 
 <body>
 
-  <!-- ══ HEADER ══ -->
   <header class="main-header">
     <div class="logo">
       <a href="index.html">
@@ -215,16 +214,9 @@
         </div>
       </div>
     </nav>
-
-    <div id="floating-booking-button">
-      <a href="https://puraceramicalisboa.simplybook.it/v2/#book" target="_blank" rel="noopener">
-        <button>BOOK NOW</button>
-      </a>
-    </div>
   </header>
 
-
-  <!-- ══ BREADCRUMB ══ -->
+  <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="index.html">Home</a>
     <span aria-hidden="true">›</span>
@@ -233,8 +225,7 @@
     <span aria-current="page">Handbuilding Class</span>
   </nav>
 
-
-  <!-- ══ WORKSHOP DETAIL ══ -->
+  <!-- WORKSHOP DETAIL -->
   <div class="workshop-detail-container">
     <div class="workshop-detail-grid">
 
@@ -258,44 +249,21 @@
           <span class="price-note">per person</span>
         </div>
 
-        <p class="workshop-intro">Discover the joy of handbuilding ceramics. Learn pinching, coiling, and slab-building in one hands-on session. No experience needed, just curiosity. <br>
-           <em>This course is taught in English.</em></p>
+        <p class="workshop-intro">Discover the joy of handbuilding ceramics. Learn pinching, coiling, and slab-building in one hands-on session. No experience needed, just curiosity. <br><em>This course is taught in English.</em></p>
 
         <!-- MONTH SWITCHER -->
         <div class="month-switcher">
-          <div class="month-tabs" role="tablist" aria-label="Select month">
-            <button class="month-tab active" role="tab" aria-selected="true" onclick="switchMonth('march', this)">March</button>
-            <button class="month-tab" role="tab" aria-selected="false" onclick="switchMonth('april', this)">April</button>
-            <button class="month-tab" role="tab" aria-selected="false" onclick="switchMonth('may', this)">May</button>
-          </div>
-
-          <!-- MARCH -->
-          <div class="month-panel active" id="month-march" role="tabpanel">
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-03-07" data-time="15:00:00" checked>
-                <div class="date-content"><span class="date-text">Sat. 07.03. &nbsp;15:00–17:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-03-14" data-time="15:00:00">
-                <div class="date-content"><span class="date-text">Sat. 14.03. &nbsp;15:00–17:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-03-21" data-time="15:00:00">
-                <div class="date-content"><span class="date-text">Sat. 21.03. &nbsp;15:00–17:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-03-28" data-time="15:00:00">
-                <div class="date-content"><span class="date-text">Sat. 28.03. &nbsp;15:00–17:30</span></div>
-              </label>
-            </div>
+          <div class="month-tabs">
+            <button class="month-tab active" onclick="switchMonth('april', this)">April</button>
+            <button class="month-tab" onclick="switchMonth('may', this)">May</button>
+            <button class="month-tab" onclick="switchMonth('june', this)">June</button>
           </div>
 
           <!-- APRIL -->
-          <div class="month-panel" id="month-april" role="tabpanel">
+          <div class="month-panel active" id="month-april">
             <div class="dates-list">
               <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-04" data-time="15:00:00">
+                <input type="radio" name="workshop-date" value="2026-04-04" data-time="15:00:00" checked>
                 <div class="date-content"><span class="date-text">Sat. 04.04. &nbsp;15:00–17:30</span></div>
               </label>
               <label class="date-block available">
@@ -314,7 +282,7 @@
           </div>
 
           <!-- MAY -->
-          <div class="month-panel" id="month-may" role="tabpanel">
+          <div class="month-panel" id="month-may">
             <div class="dates-list">
               <label class="date-block available">
                 <input type="radio" name="workshop-date" value="2026-05-02" data-time="15:00:00">
@@ -338,20 +306,30 @@
               </label>
             </div>
           </div>
-        </div>
 
-        <script>
-          function switchMonth(month, btn) {
-            document.querySelectorAll('.month-panel').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('.month-tab').forEach(t => {
-              t.classList.remove('active');
-              t.setAttribute('aria-selected', 'false');
-            });
-            document.getElementById('month-' + month).classList.add('active');
-            btn.classList.add('active');
-            btn.setAttribute('aria-selected', 'true');
-          }
-        </script>
+          <!-- JUNE -->
+          <div class="month-panel" id="month-june">
+            <div class="dates-list">
+              <label class="date-block available">
+                <input type="radio" name="workshop-date" value="2026-06-06" data-time="15:00:00">
+                <div class="date-content"><span class="date-text">Sat. 06.06. &nbsp;15:00–17:30</span></div>
+              </label>
+              <label class="date-block available">
+                <input type="radio" name="workshop-date" value="2026-06-13" data-time="15:00:00">
+                <div class="date-content"><span class="date-text">Sat. 13.06. &nbsp;15:00–17:30</span></div>
+              </label>
+              <label class="date-block available">
+                <input type="radio" name="workshop-date" value="2026-06-20" data-time="15:00:00">
+                <div class="date-content"><span class="date-text">Sat. 20.06. &nbsp;15:00–17:30</span></div>
+              </label>
+              <label class="date-block available">
+                <input type="radio" name="workshop-date" value="2026-06-27" data-time="15:00:00">
+                <div class="date-content"><span class="date-text">Sat. 27.06. &nbsp;15:00–17:30</span></div>
+              </label>
+            </div>
+          </div>
+
+        </div>
 
         <!-- QUANTITY -->
         <div class="quantity-section">
@@ -364,7 +342,7 @@
         </div>
 
         <!-- BOOKING -->
-        <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/date/2026-03-07/time/15:00:00/"
+        <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/"
           class="workshop-book-btn" id="booking-btn"
           data-category="2" data-provider="9"
           target="_blank" rel="noopener noreferrer">
@@ -389,51 +367,34 @@
       <div class="wd-section">
         <h3>What you'll learn</h3>
         <div class="wd-weeks">
-
           <div class="wd-week">
-            <img src="../assets/img/courses/handbuilding.jpg"
-              alt="Pinching technique – shaping clay by hand"
-              width="300" height="200" loading="lazy" class="wd-week-img" />
             <span class="wd-week-num">—</span>
             <div>
               <strong>Pinching</strong>
               <p>The most direct technique: squeeze and shape a ball of clay with your fingers to form bowls, cups, and organic forms.</p>
             </div>
           </div>
-
           <div class="wd-week">
-            <img src="../assets/img/courses/handbuilding.jpg"
-              alt="Coiling technique – building pottery with clay ropes"
-              width="300" height="200" loading="lazy" class="wd-week-img" />
             <span class="wd-week-num">—</span>
             <div>
               <strong>Coiling</strong>
               <p>Roll clay into long ropes and build up walls layer by layer. Great for larger, more sculptural pieces.</p>
             </div>
           </div>
-
           <div class="wd-week">
-            <img src="../assets/img/courses/handbuilding.jpg"
-              alt="Slab building technique – working with flat clay sheets"
-              width="300" height="200" loading="lazy" class="wd-week-img" />
             <span class="wd-week-num">—</span>
             <div>
               <strong>Slab building</strong>
               <p>Roll flat sheets of clay and fold, cut, and join them into forms. Perfect for plates, tiles, and angular shapes.</p>
             </div>
           </div>
-
           <div class="wd-week">
-            <img src="../assets/img/courses/handbuilding.jpg"
-              alt="Decoration and painting of handbuilt ceramics"
-              width="300" height="200" loading="lazy" class="wd-week-img" />
             <span class="wd-week-num">—</span>
             <div>
               <strong>Decoration & painting</strong>
               <p>Add texture, stamps, and painted details to personalise your piece before it goes into the kiln.</p>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -452,6 +413,7 @@
         <div class="wd-info-grid">
           <div class="wd-info-item"><span class="wd-info-label">Duration</span><span class="wd-info-value">2.5 hours</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Price</span><span class="wd-info-value">€40 per person</span></div>
+          <div class="wd-info-item"><span class="wd-info-label">Schedule</span><span class="wd-info-value">Saturdays 15:00–17:30</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Level</span><span class="wd-info-value">Beginner and intermediate friendly</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Language</span><span class="wd-info-value">English</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Age</span><span class="wd-info-value">14+</span></div>
@@ -468,18 +430,15 @@
     </div>
   </div>
 
-
-  <!-- ══ FAQ STRIP ══ -->
+  <!-- FAQ STRIP -->
   <section class="faq" aria-labelledby="faq-heading">
     <h3 id="faq-heading">Any questions?</h3>
     <p>Everything you need to know about our studio, the handbuilding process, and more.</p>
     <a href="faq.html" class="faq-button">Visit FAQ</a>
   </section>
 
-
-  <!-- ══ FOOTER ══ -->
+  <!-- FOOTER -->
   <footer>
-
     <section class="opening-sections" aria-label="Opening hours">
       <div class="hours-box">
         <div class="hours-inner">
@@ -508,10 +467,7 @@
             <div class="day"><span>Saturday</span><span>11:00 – 16:00</span></div>
             <div class="day"><span>Sunday</span><span>11:00 – 16:00</span></div>
           </div>
-          <p class="note">
-            <strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>
-            Finished pieces can only be collected during pickup hours.
-          </p>
+          <p class="note"><strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>Finished pieces can only be collected during pickup hours.</p>
         </div>
       </div>
     </section>
@@ -543,16 +499,13 @@
         </div>
         <div class="footer-social" aria-label="Social media">
           <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" />
-            <span>Instagram</span>
+            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" /><span>Instagram</span>
           </a>
           <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" />
-            <span>Facebook</span>
+            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" /><span>Facebook</span>
           </a>
           <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" />
-            <span>TikTok</span>
+            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" /><span>TikTok</span>
           </a>
         </div>
         <div class="complaint-book">

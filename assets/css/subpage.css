@@ -1,4 +1,4 @@
-/* ======================
+ /* ======================
    SUBPAGE – Detail Pages
    Shared by: adults, kids, teambuilding, schools, social, specials, painttogo
    ====================== */
@@ -126,7 +126,6 @@
   background: #f7f5f2;
 }
 
-/* Heading above the split */
 .experience-section-header {
   max-width: 1200px;
   margin: 0 auto 3.5rem;
@@ -166,7 +165,6 @@
   align-items: start;
 }
 
-/* Image */
 .experience-image {
   overflow: hidden;
 }
@@ -183,7 +181,6 @@
   transform: scale(1.03);
 }
 
-/* Text */
 .experience-text h3 {
   font-family: var(--sans);
   font-size: 10px;
@@ -304,11 +301,7 @@
   margin: 0 0 2.5rem;
 }
 
-.keepsake-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-}
+.keepsake-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
 
 .keepsake-detail {
   padding: 1.5rem 0;
@@ -460,9 +453,8 @@
   font-weight: 300;
   color: #555;
   line-height: 1.8;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0 0.5rem 1rem;
   border-bottom: 1px solid #f0f0f0;
-  padding-left: 1rem;
   position: relative;
 }
 
@@ -474,9 +466,7 @@
   font-size: 0.7rem;
 }
 
-.cta-center {
-  text-align: center;
-}
+.cta-center { text-align: center; }
 
 .cta-button {
   display: inline-block;
@@ -493,10 +483,7 @@
   transition: all 0.3s ease;
 }
 
-.cta-button:hover {
-  background: transparent;
-  color: #000;
-}
+.cta-button:hover { background: transparent; color: #000; }
 
 .cta-note {
   font-family: var(--sans);
@@ -536,10 +523,6 @@
    PAINT TO GO PAGE
    ====================== */
 
-
-/* ══════════════════════════════════
-   EXPERIENCE CONTENT CENTER
-   ══════════════════════════════════ */
 .experience-content-center {
   max-width: 1100px;
   margin: 0 auto;
@@ -555,15 +538,8 @@
   line-height: 1.2;
 }
 
-.experience-content-center h2 em {
-  font-style: italic;
-  color: #888;
-}
+.experience-content-center h2 em { font-style: italic; color: #888; }
 
-
-/* ══════════════════════════════════
-   STEPS GRID
-   ══════════════════════════════════ */
 .steps-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -583,7 +559,6 @@
 .step:nth-child(3n)  { border-right: none; }
 .step:nth-child(n+4) { border-top: 1px solid #e8e8e8; }
 
-/* Ghost number */
 .step::before {
   content: attr(data-num);
   position: absolute;
@@ -625,29 +600,472 @@
   margin: 0;
 }
 
+.booking-tier {
+  padding: 0.75rem 0;
+  border-bottom: 0.5px solid #e5e5e5;
+}
+.booking-tier:last-child { border-bottom: none; padding-bottom: 0; }
+.booking-size {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
 
-/* ══════════════════════════════════
-   RESPONSIVE
-   ══════════════════════════════════ */
 @media (max-width: 768px) {
-  .steps-grid {
-    grid-template-columns: 1fr;
-    border: none;
-  }
-
+  .steps-grid { grid-template-columns: 1fr; border: none; }
   .step {
     border-right: 1px solid #e8e8e8 !important;
     border-left: 1px solid #e8e8e8;
     border-top: 1px solid #e8e8e8;
   }
-
-  .steps-prev,
-  .steps-next,
-  .steps-indicators { display: none; }
 }
 
-@media (min-width: 769px) {
-  .steps-prev,
-  .steps-next,
-  .steps-indicators { display: none; }
+
+/* ══════════════════════════════════
+   KIDS PAGE – Card grid with images
+   ══════════════════════════════════ */
+.kids-occasions {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+
+.kids-occasions-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kids-occasions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+
+.kids-occasions-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.kids-occasions-header h2 em { font-style: italic; color: #888; }
+
+.kids-occasions-header p {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.8;
+  max-width: 380px;
+  margin: 0;
+}
+
+.kids-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.kids-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.kids-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.kids-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: grayscale(10%);
+}
+
+.kids-card:hover .kids-card-image img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+
+.kids-card-num {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.kids-card h3 {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+
+.kids-card h3 em { font-style: italic; color: #666; }
+
+.kids-card p {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+
+.kids-card-tag {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+
+/* Image strip between header and cards */
+.kids-image-strip {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.kids-image-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92);
+}
+
+/* Spec bar */
+.kids-details {
+  padding: 5rem 4rem;
+  background: #f7f5f2;
+}
+
+.kids-details-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kids-details-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.kids-details-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+}
+
+.kids-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 3rem;
+}
+
+.kids-spec {
+  padding: 2rem 1.75rem;
+  border-right: 1px solid #e0e0e0;
+}
+
+.kids-spec:last-child { border-right: none; }
+
+.kids-spec-label {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #aaa;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.kids-spec-value {
+  font-family: var(--sans);
+  font-size: 0.925rem;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+}
+
+.kids-cta { text-align: center; padding-top: 1rem; }
+
+.kids-cta .cta-note {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #aaa;
+  margin: 1rem 0 0;
+}
+
+.kids-cta .cta-note a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+@media (max-width: 900px) {
+  .kids-occasions { padding: 4rem 1.5rem; }
+  .kids-occasions-header { flex-direction: column; align-items: flex-start; }
+  .kids-occasions-header p { max-width: 100%; }
+  .kids-cards { grid-template-columns: 1fr; gap: 3rem; }
+  .kids-card-image { height: 220px; }
+  .kids-image-strip { height: 260px; }
+  .kids-details { padding: 4rem 1.5rem; }
+  .kids-specs { grid-template-columns: repeat(2, 1fr); }
+  .kids-spec:nth-child(2) { border-right: none; }
+  .kids-spec:nth-child(3) { border-top: 1px solid #e0e0e0; }
+  .kids-spec:nth-child(4) { border-top: 1px solid #e0e0e0; border-right: none; }
+}
+
+@media (max-width: 600px) {
+  .kids-specs { grid-template-columns: 1fr; }
+  .kids-spec { border-right: none !important; border-top: 1px solid #e0e0e0; }
+  .kids-spec:first-child { border-top: none; }
+}
+
+
+/* ══════════════════════════════════
+   EXPERIENCE SUBPAGES – Generic card layout
+   Used by: adults, kids, specials, schools, social (EN + PT)
+   ══════════════════════════════════ */
+
+/* Full-width image strip */
+.exp-image-strip {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+.exp-image-strip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.92);
+}
+
+/* Cards section wrapper */
+.exp-cards-section {
+  padding: 6rem 4rem;
+  background: #fff;
+}
+.exp-cards-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.exp-cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  gap: 2rem;
+}
+.exp-cards-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  line-height: 1.15;
+}
+.exp-cards-header h2 em { font-style: italic; color: #888; }
+.exp-cards-header p {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.8;
+  max-width: 380px;
+  margin: 0;
+}
+
+/* Card grid */
+.exp-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.exp-cards.two-col {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 860px;
+}
+.exp-card {
+  display: flex;
+  flex-direction: column;
+}
+.exp-card-image {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+.exp-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+  filter: grayscale(10%);
+}
+.exp-card:hover .exp-card-image img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+.exp-card-label {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.exp-card h3 {
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #000;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+.exp-card h3 em { font-style: italic; color: #666; }
+.exp-card p {
+  font-family: var(--sans);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #777;
+  line-height: 1.8;
+  margin: 0 0 1.25rem;
+  flex-grow: 1;
+}
+.exp-card-tag {
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+
+/* Spec bar */
+.exp-details {
+  padding: 5rem 4rem;
+  background: #f7f5f2;
+}
+.exp-details-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.exp-details-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.exp-details-header h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+}
+.exp-specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-bottom: 3rem;
+}
+.exp-spec {
+  padding: 2rem 1.75rem;
+  border-right: 1px solid #e0e0e0;
+}
+.exp-spec:last-child { border-right: none; }
+.exp-spec-label {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #aaa;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.exp-spec-value {
+  font-family: var(--sans);
+  font-size: 0.925rem;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+}
+.exp-spec-value a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+/* CTA */
+.exp-cta { text-align: center; padding-top: 1rem; }
+.exp-cta .cta-note {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #aaa;
+  margin: 1rem 0 0;
+}
+.exp-cta .cta-note a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .exp-cards-section { padding: 4rem 1.5rem; }
+  .exp-cards-header { flex-direction: column; align-items: flex-start; }
+  .exp-cards-header p { max-width: 100%; }
+  .exp-cards { grid-template-columns: 1fr; gap: 3rem; }
+  .exp-cards.two-col { grid-template-columns: 1fr; max-width: 100%; }
+  .exp-card-image { height: 220px; }
+  .exp-image-strip { height: 260px; }
+  .exp-details { padding: 4rem 1.5rem; }
+  .exp-specs { grid-template-columns: repeat(2, 1fr); }
+  .exp-spec:nth-child(2) { border-right: none; }
+  .exp-spec:nth-child(3) { border-top: 1px solid #e0e0e0; }
+  .exp-spec:nth-child(4) { border-top: 1px solid #e0e0e0; border-right: none; }
+}
+@media (max-width: 600px) {
+  .exp-specs { grid-template-columns: 1fr; }
+  .exp-spec { border-right: none !important; border-top: 1px solid #e0e0e0; }
+  .exp-spec:first-child { border-top: none; }
 }

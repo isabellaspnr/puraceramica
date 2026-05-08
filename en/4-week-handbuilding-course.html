@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- PRIMARY META TAGS -->
   <title>4-Week Handbuilding Pottery Workshop in Lisbon | PURACERÂMICA</title>
@@ -13,7 +14,6 @@
     content="4-week pottery course Lisbon, handbuilding pottery course, pottery classes Lisbon, coiling slab-building pinching, beginner ceramics course Lisbon, pottery course Alcântara, hand-building ceramics workshop, pottery techniques Lisbon">
   <meta name="author" content="PURACERÂMICA">
   <meta name="language" content="English">
-  <meta name="theme-color" content="#ffffff">
 
   <!-- CANONICAL & ALTERNATE LANGUAGES -->
   <link rel="canonical" href="https://www.puraceramica.pt/en/4-week-handbuilding-course.html">
@@ -62,55 +62,6 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/workshop.css">
   <style>
-    /* ── Month Tabs ── */
-    .schedule-tabs {
-      display: flex;
-      border-bottom: 1px solid #eee;
-      margin-bottom: 1.5rem;
-    }
-
-    .schedule-tab {
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      padding: 0.6rem 1.2rem 0.6rem 0;
-      margin-bottom: -1px;
-      font-family: var(--sans);
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #bbb;
-      cursor: pointer;
-      transition: color 0.2s, border-color 0.2s;
-    }
-
-    .schedule-tab.active {
-      color: #000;
-      border-bottom-color: #000;
-    }
-
-    .schedule-tab:hover {
-      color: #555;
-    }
-
-    /* ── Month Panels ── */
-    .schedule-month {
-      display: none;
-    }
-
-    .schedule-month.active {
-      display: block;
-    }
-
-    .month-panel {
-      display: none;
-    }
-
-    .month-panel.active {
-      display: block;
-    }
-
     /* ── Week images ── */
     .wd-week {
       display: flex;
@@ -142,24 +93,14 @@
       filter: grayscale(0%);
     }
 
+    /* Override: inside .course-schedule the book button needs top margin */
+    .course-schedule .workshop-book-btn {
+      margin-top: 1.25rem;
+    }
+
     @media (max-width: 480px) {
-      .wd-week-img {
-        width: 65px;
-        height: 65px;
-      }
-
-      .wd-week {
-        gap: 1rem;
-      }
-    }
-  </style>
-  <style>
-    .month-panel {
-      display: none;
-    }
-
-    .month-panel.active {
-      display: block;
+      .wd-week-img { width: 65px; height: 65px; }
+      .wd-week { gap: 1rem; }
     }
   </style>
 
@@ -191,7 +132,7 @@
           "price": "120.00",
           "priceCurrency": "EUR",
           "availability": "https://schema.org/InStock",
-          "url": "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/29/count/1/provider/12/date/2026-03-07/time/15:00:00/",
+          "url": "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/30/count/1/provider/13/",
           "priceValidUntil": "2026-12-31",
           "description": "Complete 4-week course — all clay, materials, glazing and firing included."
         },
@@ -199,9 +140,9 @@
           {
             "@type": "CourseInstance",
             "courseMode": "https://schema.org/InPerson",
-            "startDate": "2026-03-07T15:00:00+00:00",
-            "endDate": "2026-03-28T17:00:00+00:00",
-            "courseWorkload": "PT8H",
+            "startDate": "2026-05-02T15:00:00+01:00",
+            "endDate": "2026-05-23T17:30:00+01:00",
+            "courseWorkload": "PT10H",
             "location": {
               "@type": "Place",
               "name": "PURACERÂMICA Studio",
@@ -217,9 +158,9 @@
           {
             "@type": "CourseInstance",
             "courseMode": "https://schema.org/InPerson",
-            "startDate": "2026-04-04T15:00:00+00:00",
-            "endDate": "2026-04-25T17:00:00+00:00",
-            "courseWorkload": "PT8H",
+            "startDate": "2026-06-06T15:00:00+01:00",
+            "endDate": "2026-06-27T17:30:00+01:00",
+            "courseWorkload": "PT10H",
             "location": {
               "@type": "Place",
               "name": "PURACERÂMICA Studio",
@@ -235,9 +176,9 @@
           {
             "@type": "CourseInstance",
             "courseMode": "https://schema.org/InPerson",
-            "startDate": "2026-05-02T15:00:00+00:00",
-            "endDate": "2026-05-23T17:00:00+00:00",
-            "courseWorkload": "PT8H",
+            "startDate": "2026-07-04T15:00:00+01:00",
+            "endDate": "2026-07-25T17:30:00+01:00",
+            "courseWorkload": "PT10H",
             "location": {
               "@type": "Place",
               "name": "PURACERÂMICA Studio",
@@ -310,24 +251,9 @@
         },
         "priceRange": "€€",
         "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Wednesday", "Thursday", "Friday"],
-            "opens": "13:00",
-            "closes": "20:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "10:00",
-            "closes": "20:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "10:00",
-            "closes": "18:00"
-          }
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday","Friday"], "opens": "13:00", "closes": "20:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "20:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "18:00" }
         ],
         "sameAs": [
           "https://www.instagram.com/puraceramicalisboa/",
@@ -351,7 +277,6 @@
 
 <body>
 
-  <!-- ══ HEADER ══ -->
   <header class="main-header">
     <div class="logo">
       <a href="index.html">
@@ -400,8 +325,7 @@
         <li class="dropdown lang-switcher">
           <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;" aria-label="Select language">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
-              aria-hidden="true">
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10" />
               <line x1="2" y1="12" x2="22" y2="12" />
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
@@ -437,8 +361,7 @@
     </nav>
   </header>
 
-
-  <!-- ══ BREADCRUMB ══ -->
+  <!-- BREADCRUMB -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="index.html">Home</a>
     <span aria-hidden="true">›</span>
@@ -447,8 +370,7 @@
     <span aria-current="page">4-Week Handbuilding Course</span>
   </nav>
 
-
-  <!-- ══ WORKSHOP DETAIL ══ -->
+  <!-- WORKSHOP DETAIL -->
   <div class="workshop-detail-container">
     <div class="workshop-detail-grid">
 
@@ -471,99 +393,81 @@
           <span class="price-note">for the complete course</span>
         </div>
 
-        <p class="workshop-intro">Learn the three basic handbuilding techniques for clay in 4 weeks. You will cover pinching, coiling, slab-building
-           and glaze or paint your pieces.</p>
+        <p class="workshop-intro">Learn the three essential handbuilding techniques in 4 weeks: pinching, coiling, and slab-building. The final session is dedicated to glazing and painting your pieces.</p>
 
         <!-- COURSE SCHEDULE – Tabbed -->
-        <div class="course-schedule">
+        <div class="month-switcher">
 
           <div class="month-tabs">
-            <button class="month-tab active" onclick="switchMonth('march', this)">March</button>
-            <button class="month-tab" onclick="switchMonth('april', this)">April</button>
-            <button class="month-tab" onclick="switchMonth('may', this)">May</button>
+            <button class="month-tab active" onclick="switchMonth('may', this)">May</button>
+            <button class="month-tab" onclick="switchMonth('june', this)">June</button>
+            <button class="month-tab" onclick="switchMonth('july', this)">July</button>
           </div>
 
-          <!-- March -->
-          <div class="month-panel active" id="month-march">
+          <!-- MAY -->
+          <div class="month-panel active" id="month-may">
             <div class="schedule-date">
               <span class="schedule-dot"></span>
-              <span>Starts Sat. 07.03. — 15:00–17:00</span>
+              <span>Starts Sat. 02.05. — 15:00–17:30</span>
             </div>
             <div class="schedule-weeks">
-              <div class="schedule-week"><span class="week-num">Week 1 — 07.03.</span><span class="week-topic">Pinching
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 2 — 14.03.</span><span class="week-topic">Coiling
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 3 — 21.03.</span><span
-                  class="week-topic">Slab-building technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 4 — 28.03.</span><span class="week-topic">Glazing
-                  session</span></div>
+              <div class="schedule-week"><span class="week-num">Week 1 — 02.05.</span><span class="week-topic">Pinching technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 09.05.</span><span class="week-topic">Coiling technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 16.05.</span><span class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 23.05.</span><span class="week-topic">Glazing session</span></div>
             </div>
-            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/29/count/1/provider/12/date/2026-03-07/time/15:00:00/"
-              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book March round</a>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/31/count/1/provider/14/date/2026-05-02/"
+              class="workshop-book-btn" style="margin-top:1.25rem;" target="_blank" rel="noopener noreferrer">Book May round</a>
           </div>
 
-          <!-- April -->
-          <div class="month-panel" id="month-april">
+          <!-- JUNE -->
+          <div class="month-panel" id="month-june">
             <div class="schedule-date">
               <span class="schedule-dot"></span>
-              <span>Starts Sat. 04.04. — 15:00–17:00</span>
+              <span>Starts Sat. 06.06. — 15:00–17:30</span>
             </div>
             <div class="schedule-weeks">
-              <div class="schedule-week"><span class="week-num">Week 1 — 04.04.</span><span class="week-topic">Pinching
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 2 — 11.04.</span><span class="week-topic">Coiling
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 3 — 18.04.</span><span
-                  class="week-topic">Slab-building technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 4 — 25.04.</span><span class="week-topic">Glazing
-                  session</span></div>
+              <div class="schedule-week"><span class="week-num">Week 1 — 06.06.</span><span class="week-topic">Pinching technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 13.06.</span><span class="week-topic">Coiling technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 20.06.</span><span class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 27.06.</span><span class="week-topic">Glazing session</span></div>
             </div>
-            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/30/count/1/provider/13/date/2026-04-04/time/15:00:00/"
-              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book April round</a>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/34/count/1/"
+              class="workshop-book-btn" style="margin-top:1.25rem;" target="_blank" rel="noopener noreferrer">Book June round</a>
           </div>
 
-          <!-- May -->
-          <div class="month-panel" id="month-may">
+          <!-- JULY -->
+          <div class="month-panel" id="month-july">
             <div class="schedule-date">
               <span class="schedule-dot"></span>
-              <span>Starts Sat. 02.05. — 15:00–17:00</span>
+              <span>Starts Sat. 04.07. — 15:00–17:30</span>
             </div>
             <div class="schedule-weeks">
-              <div class="schedule-week"><span class="week-num">Week 1 — 02.05.</span><span class="week-topic">Pinching
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 2 — 09.05.</span><span class="week-topic">Coiling
-                  technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 3 — 16.05.</span><span
-                  class="week-topic">Slab-building technique</span></div>
-              <div class="schedule-week"><span class="week-num">Week 4 — 23.05.</span><span class="week-topic">Glazing
-                  session</span></div>
+              <div class="schedule-week"><span class="week-num">Week 1 — 04.07.</span><span class="week-topic">Pinching technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 2 — 11.07.</span><span class="week-topic">Coiling technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 3 — 18.07.</span><span class="week-topic">Slab-building technique</span></div>
+              <div class="schedule-week"><span class="week-num">Week 4 — 25.07.</span><span class="week-topic">Glazing session</span></div>
             </div>
-            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/31/count/1/provider/14/date/2026-05-02/time/15:00:00/"
-              class="workshop-book-btn" target="_blank" rel="noopener noreferrer">Book May round</a>
+            <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/35/count/1/"
+              class="workshop-book-btn" style="margin-top:1.25rem;" target="_blank" rel="noopener noreferrer">Book July round</a>
           </div>
 
-          <p class="schedule-time">All sessions: Saturdays 15:00–17:00</p>
+          <p class="schedule-time">All sessions: Saturdays 15:00–17:30</p>
+
         </div>
 
         <p class="booking-note">Booking completed on our secure booking page.</p>
-        <p class="shipping-note">All materials, glaze & firing included. Pieces ready for pickup 3–4 weeks after the
-          final session.</p>
+        <p class="shipping-note">All materials, glaze & firing included. Pieces ready for pickup 3–4 weeks after the final session.</p>
 
       </div>
     </div>
 
-
-    <!-- ══ DESCRIPTION ══ -->
+    <!-- DESCRIPTION -->
     <div class="workshop-description">
 
       <div class="wd-section">
         <h2>About this course</h2>
-        <p>Do you want to learn the basics of handbuilding out of clay? Our 4-week pottery course is a great opportunity for anyone who
-          wants to slow down, learn something new or refresh their skills. In this intensive course you will learn the essential
-          techniques that will give you the foundation to create out of clay: pinching, slab-building and
-          coiling. At the end, you will glaze or paint your pieces. Your teacher will guide you through the process while encouraging you to explore 
-          and experiment.</p>
+        <p>Do you want to learn the basics of handbuilding out of clay? Our 4-week pottery course is a great opportunity for anyone who wants to slow down, learn something new, or refresh their skills. In this intensive course you will learn the essential techniques that will give you the foundation to create from clay: pinching, coiling, and slab-building. In the final session you will glaze or paint your pieces. Your teacher will guide you through the process while encouraging you to explore and experiment.</p>
       </div>
 
       <div class="wd-section">
@@ -573,7 +477,7 @@
             <span class="wd-week-num">01</span>
             <div class="wd-week-content">
               <strong>Pinching</strong>
-              <p>Introduction to ceramic processes and the pinch technique. </p>
+              <p>Introduction to ceramic processes and the pinch technique.</p>
             </div>
             <div class="wd-week-img">
               <img src="../assets/img/courses/handbuilding.jpg" alt="Pinching technique" loading="lazy" />
@@ -583,8 +487,7 @@
             <span class="wd-week-num">02</span>
             <div class="wd-week-content">
               <strong>Coiling</strong>
-              <p>Introduction to the coiling technique. The ideal method for building larger objects by stacking rolled
-                ropes of clay.</p>
+              <p>Introduction to the coiling technique — the ideal method for building larger objects by stacking rolled ropes of clay.</p>
             </div>
             <div class="wd-week-img">
               <img src="../assets/img/courses/handbuilding.jpg" alt="Coiling technique" loading="lazy" />
@@ -594,8 +497,7 @@
             <span class="wd-week-num">03</span>
             <div class="wd-week-content">
               <strong>Slab building</strong>
-              <p>Learning the slab-building technique using flat sheets of clay to create plates, tiles and
-                angular forms.</p>
+              <p>Learning the slab-building technique using flat sheets of clay to create plates, tiles and angular forms.</p>
             </div>
             <div class="wd-week-img">
               <img src="../assets/img/courses/handbuilding.jpg" alt="Slab building technique" loading="lazy" />
@@ -605,16 +507,14 @@
             <span class="wd-week-num">04</span>
             <div class="wd-week-content">
               <strong>Glazing</strong>
-              <p>Glaze all your pieces in clear glaze using different techniques: dipping, brushing or pouring.
-                 Different colors of underglaze for painting are available.</p>
+              <p>Glaze all your pieces using different techniques: dipping, brushing or pouring. Underglaze colors for painting are available too.</p>
             </div>
             <div class="wd-week-img">
               <img src="../assets/img/courses/handbuilding.jpg" alt="Glazing session" loading="lazy" />
             </div>
           </div>
         </div>
-        <p class="wd-note">Throughout this course you'll also learn decorating techniques such as texturing and stamping,
-          and how to join different clay parts such as adding handles to mugs.</p>
+        <p class="wd-note">Throughout the course you'll also learn decorating techniques such as texturing and stamping, and how to join different clay parts — like adding handles to mugs.</p>
       </div>
 
       <div class="wd-section wd-included">
@@ -622,7 +522,7 @@
         <div class="wd-included-grid">
           <div class="wd-included-item">
             <span class="wd-check">—</span>
-            <span>4 × 2-hour sessions (8 hours total)</span>
+            <span>4 × 2.5-hour sessions (10 hours total)</span>
           </div>
           <div class="wd-included-item">
             <span class="wd-check">—</span>
@@ -652,16 +552,19 @@
         <div class="wd-info-grid">
           <div class="wd-info-item">
             <span class="wd-info-label">Duration</span>
-            <span class="wd-info-value">4 weeks, one 2-hour session per week</span>
+            <span class="wd-info-value">4 weeks, one 2.5-hour session per week</span>
           </div>
           <div class="wd-info-item">
             <span class="wd-info-label">Schedule</span>
-            <span class="wd-info-value">Saturdays 15:00–17:00</span>
+            <span class="wd-info-value">Saturdays 15:00–17:30</span>
           </div>
           <div class="wd-info-item">
             <span class="wd-info-label">Dates</span>
-            <span class="wd-info-value"><strong>March:</strong> 07., 14., 21., 28.03.2026<br><strong>April:</strong> 04., 11., 18., 25.04.2026<br><strong>May:</strong>
-              02., 09., 16., 23.05.2026</span>
+            <span class="wd-info-value">
+              <strong>May:</strong> 02., 09., 16., 23.05.2026<br>
+              <strong>June:</strong> 06., 13., 20., 27.06.2026<br>
+              <strong>July:</strong> 04., 11., 18., 25.07.2026
+            </span>
           </div>
           <div class="wd-info-item">
             <span class="wd-info-label">Price</span>
@@ -691,17 +594,21 @@
       </div>
 
       <div class="wd-note-box">
-        <p><strong>Please note:</strong> This is a 4-week commitment. All sessions build upon each other, so consistent
-          attendance is important for the best learning experience. Colors and sizes may change slightly during the
-          drying and firing process.</p>
+        <p><strong>Please note:</strong> This is a 4-week commitment. All sessions build upon each other, so consistent attendance is important for the best learning experience. Colors and sizes may change slightly during the drying and firing process.</p>
       </div>
 
     </div>
   </div>
 
-  <!-- ══ FOOTER ══ -->
-  <footer>
+  <!-- FAQ STRIP -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <h3 id="faq-heading">Any questions?</h3>
+    <p>Everything you need to know about our studio, handbuilding, and more.</p>
+    <a href="faq.html" class="faq-button">Visit FAQ</a>
+  </section>
 
+  <!-- FOOTER -->
+  <footer>
     <section class="opening-sections" aria-label="Opening hours">
       <div class="hours-box">
         <div class="hours-inner">
@@ -715,8 +622,7 @@
             <div class="day"><span>Saturday</span><span>10:00 – 20:00</span></div>
             <div class="day"><span>Sunday</span><span>10:00 – 18:00</span></div>
           </div>
-          <p class="note">Latest painting session starts 2 hours before closing. If no one is painting 1 hour before
-            closing, we may close early.</p>
+          <p class="note">Latest painting session starts 2 hours before closing. If no one is painting 1 hour before closing, we may close early.</p>
         </div>
       </div>
       <div class="hours-box">
@@ -731,12 +637,15 @@
             <div class="day"><span>Saturday</span><span>11:00 – 16:00</span></div>
             <div class="day"><span>Sunday</span><span>11:00 – 16:00</span></div>
           </div>
-          <p class="note">
-            <strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>
-            Finished pieces can only be collected during pickup hours.
-          </p>
+          <p class="note"><strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>Finished pieces can only be collected during pickup hours.</p>
         </div>
       </div>
+    </section>
+
+    <section class="vip-section" aria-labelledby="vip-heading">
+      <h2 id="vip-heading">VIP – Very Important Pottery</h2>
+      <p>Planning a private event? Take over the entire studio — two floors of creative space, exclusively yours. We can host up to 30 people.</p>
+      <a href="viprequest.html" class="vip-button">Request now</a>
     </section>
 
     <section class="contact-block" id="contact-block" aria-labelledby="contact-heading">
@@ -751,8 +660,7 @@
         <p class="contact-info">
           <a href="tel:+351932523750">+351 932 523 750</a>
           &nbsp;|&nbsp;
-          <a href="/cdn-cgi/l/email-protection#aac3c4ccc5eadadfd8cbc9cfd8cbc7c3c9cb84dade"><span class="__cf_email__"
-              data-cfemail="177e7971785767626576747265767a7e7476396763">[email&#160;protected]</span></a>
+          <a href="/cdn-cgi/l/email-protection#442d2a222b043431362527213625292d27256a3430"><span class="__cf_email__" data-cfemail="c1a8afa7ae81b1b4b3a0a2a4b3a0aca8a2a0efb1b5">[email&#160;protected]</span></a>
         </p>
         <div class="footer-map">
           <iframe
@@ -762,23 +670,19 @@
         </div>
         <div class="footer-social" aria-label="Social media">
           <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" />
-            <span>Instagram</span>
+            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" /><span>Instagram</span>
           </a>
           <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" />
-            <span>Facebook</span>
+            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" /><span>Facebook</span>
           </a>
           <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" />
-            <span>TikTok</span>
+            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" /><span>TikTok</span>
           </a>
         </div>
         <div class="complaint-book">
           <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener"
             aria-label="Livro de Reclamações Electrónico">
-            <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" width="80"
-              height="40" />
+            <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" width="80" height="40" />
           </a>
         </div>
         <div class="footer-bottom">

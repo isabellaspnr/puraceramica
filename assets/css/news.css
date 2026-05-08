@@ -423,3 +423,209 @@
   .detail-item { flex-direction: column; gap: 0.2rem; }
   .detail-label { min-width: unset; }
 }
+
+/* ==============================================
+   NEWS.CSS — ADDITIONS
+   Append these rules to the existing news.css
+   ============================================== */
+
+
+/* ── NEWS TAG (badge on cards and detail pages) ── */
+.news-tag {
+  display: inline-block;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  border: 1px solid #ddd;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+
+/* ── FEATURED CARD (first/hero card in grid) ── */
+.news-card--featured {
+  grid-column: 1 / -1;         /* spans full width */
+  flex-direction: row;
+  gap: 4rem;
+  border-right: none;
+  border-bottom: 1px solid #eee;
+  padding: 0 0 4rem;
+  margin-bottom: 1rem;
+}
+
+.news-card--featured .news-card-image {
+  width: 55%;
+  flex-shrink: 0;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 0;
+}
+
+.news-card--featured .news-content {
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.news-card--featured .news-content h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.news-card--featured .news-content p {
+  font-size: 0.9rem;
+  max-width: 480px;
+}
+
+@media (max-width: 900px) {
+  .news-card--featured {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .news-card--featured .news-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 0;
+  }
+}
+
+
+/* ── ARCHIVE LINK ── */
+.news-archive-link {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.news-archive-link p {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0;
+}
+
+.news-archive-link a {
+  color: #1a1a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1px;
+  transition: border-color 0.2s;
+}
+
+.news-archive-link a:hover { border-color: #1a1a1a; }
+
+
+/* ── NEWS DETAIL PAGE (new format) ── */
+.news-detail {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+.news-detail-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #f7f5f2;
+  margin-bottom: 0;
+}
+
+.news-detail-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.news-detail-body {
+  padding: 3rem 0 0;
+}
+
+.news-detail-body h1 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: #000;
+  line-height: 1.15;
+  margin: 0.5rem 0 2rem;
+}
+
+.news-detail-body h1 em {
+  font-style: italic;
+  color: #888;
+}
+
+.news-detail-body h2 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 2.5rem 0 0.75rem;
+  line-height: 1.2;
+}
+
+.news-detail-body p {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  margin: 0 0 1.5rem;
+  max-width: 680px;
+}
+
+.news-detail-body strong {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+
+/* ── CTA BUTTON (in detail pages) ── */
+.news-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 2rem;
+  background: #1a1a1a;
+  color: #fff;
+  font-family: var(--sans, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.news-cta:hover { background: #333; }
+
+
+/* ── BACK LINK (in detail pages) ── */
+.news-back {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.news-back a {
+  font-family: var(--sans, sans-serif);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #aaa;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.news-back a:hover { color: #1a1a1a; }
+
+
+/* ── RESPONSIVE — DETAIL ── */
+@media (max-width: 600px) {
+  .news-detail { padding: 0 1.5rem 4rem; }
+  .news-detail-body { padding: 2rem 0 0; }
+  .news-detail-body h1 { font-size: 1.9rem; }
+}
