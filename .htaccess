@@ -1,12 +1,9 @@
-RewriteEngine On
-
+ RewriteEngine On
 # Redirect only the root URL "/" to "/pt/"
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^$ pt/ [L,R=301]
-
+# RewriteCond %{REQUEST_URI} ^/$
+# RewriteRule ^$ pt/ [L,R=301]
 # Fix Google's automatic sitelinks
 # Redirect /gallery to inspiration page
 RewriteRule ^gallery/?$ /pt/inspiracao.html [R=301,L]
-
 # Redirect /products to shop page
 RewriteRule ^products/?$ /pt/ceramica-shop.html [R=301,L]
