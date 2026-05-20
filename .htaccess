@@ -1,9 +1,10 @@
  RewriteEngine On
-# Redirect only the root URL "/" to "/pt/"
-# RewriteCond %{REQUEST_URI} ^/$
-# RewriteRule ^$ pt/ [L,R=301]
+
+# Redirect everything to coming soon (root index.html)
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/index\.html$
+RewriteRule ^(.*)$ / [R=302,L]
+
 # Fix Google's automatic sitelinks
-# Redirect /gallery to inspiration page
 RewriteRule ^gallery/?$ /pt/inspiracao.html [R=301,L]
-# Redirect /products to shop page
 RewriteRule ^products/?$ /pt/ceramica-shop.html [R=301,L]
