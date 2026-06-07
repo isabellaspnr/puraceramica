@@ -277,202 +277,189 @@
           centering, pulling, and shaping in a 2-hour session. No experience needed, just each other. <br><em>This
             course is taught in English.</em></p>
 
-        <!-- MONTH SWITCHER -->
-        <div class="month-switcher">
+         <!-- MONTH SWITCHER -->
+<div class="month-switcher">
+  <div class="month-tabs">
+    <button class="month-tab active" onclick="switchMonth('june', this)">June</button>
+    <button class="month-tab" onclick="switchMonth('july', this)">July</button>
+    <button class="month-tab" onclick="switchMonth('august', this)">August</button>
+  </div>
 
-          <div class="month-tabs">
-            <button class="month-tab active" onclick="switchMonth('april', this)">April</button>
-            <button class="month-tab" onclick="switchMonth('may', this)">May</button>
-            <button class="month-tab" onclick="switchMonth('june', this)">June</button>
-          </div>
+  <!-- JUNE -->
+  <div class="month-panel active" id="month-june">
+    <p class="dates-day-label">Saturday</p>
+    <div class="dates-list">
+      <label class="date-block sold-out">
+        <input type="radio" name="workshop-date" value="2026-06-13" data-time="11:00:00" disabled>
+        <div class="date-content"><span class="date-text" style="text-decoration:line-through;">13.06. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-13" data-time="18:00:00" checked>
+        <div class="date-content"><span class="date-text">13.06. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block sold-out">
+        <input type="radio" name="workshop-date" value="2026-06-20" data-time="11:00:00" disabled>
+        <div class="date-content"><span class="date-text" style="text-decoration:line-through;">20.06. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-20" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">20.06. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-27" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">27.06. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-27" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">27.06. &nbsp;18:00–20:00</span></div>
+      </label>
+    </div>
+    <p class="dates-day-label">Thursday</p>
+    <div class="dates-list">
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-11" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">11.06. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-18" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">18.06. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-06-25" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">25.06. &nbsp;17:30–19:30</span></div>
+      </label>
+    </div>
+  </div>
 
-          <!-- APRIL -->
-          <div class="month-panel active" id="month-april">
-            <p class="dates-day-label">Saturday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-04" data-time="11:00:00" checked>
-                <div class="date-content"><span class="date-text">04.04. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-04" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">04.04. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-11" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">11.04. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-11" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">11.04. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-18" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">18.04. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-18" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">18.04. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-25" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">25.04. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-25" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">25.04. &nbsp;18:00–20:00</span></div>
-              </label>
-            </div>
-            <p class="dates-day-label">Thursday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-02" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">02.04. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-09" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">09.04. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-16" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">16.04. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-23" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">23.04. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-04-30" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">30.04. &nbsp;17:30–19:30</span></div>
-              </label>
-            </div>
-          </div>
+  <!-- JULY -->
+  <div class="month-panel" id="month-july">
+    <p class="dates-day-label">Saturday</p>
+    <div class="dates-list">
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-04" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">04.07. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-04" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">04.07. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-11" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">11.07. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-11" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">11.07. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-18" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">18.07. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-18" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">18.07. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-25" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">25.07. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-25" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">25.07. &nbsp;18:00–20:00</span></div>
+      </label>
+    </div>
+    <p class="dates-day-label">Thursday</p>
+    <div class="dates-list">
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-02" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">02.07. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-09" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">09.07. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-16" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">16.07. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-23" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">23.07. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-07-30" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">30.07. &nbsp;17:30–19:30</span></div>
+      </label>
+    </div>
+  </div>
 
-          <!-- MAY -->
-          <div class="month-panel" id="month-may">
-            <p class="dates-day-label">Saturday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-02" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">02.05. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-02" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">02.05. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-09" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">09.05. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-09" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">09.05. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-16" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">16.05. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-16" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">16.05. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-23" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">23.05. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-23" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">23.05. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-30" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">30.05. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-30" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">30.05. &nbsp;18:00–20:00</span></div>
-              </label>
-            </div>
-            <p class="dates-day-label">Thursday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-07" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">07.05. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-14" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">14.05. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-21" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">21.05. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-05-28" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">28.05. &nbsp;17:30–19:30</span></div>
-              </label>
-            </div>
-          </div>
+  <!-- AUGUST -->
+  <div class="month-panel" id="month-august">
+    <p class="dates-day-label">Saturday</p>
+    <div class="dates-list">
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-01" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">01.08. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-01" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">01.08. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-08" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">08.08. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-08" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">08.08. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-15" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">15.08. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-15" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">15.08. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-22" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">22.08. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-22" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">22.08. &nbsp;18:00–20:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-29" data-time="11:00:00">
+        <div class="date-content"><span class="date-text">29.08. &nbsp;11:00–13:00</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-29" data-time="18:00:00">
+        <div class="date-content"><span class="date-text">29.08. &nbsp;18:00–20:00</span></div>
+      </label>
+    </div>
+    <p class="dates-day-label">Thursday</p>
+    <div class="dates-list">
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-06" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">06.08. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-13" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">13.08. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-20" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">20.08. &nbsp;17:30–19:30</span></div>
+      </label>
+      <label class="date-block available">
+        <input type="radio" name="workshop-date" value="2026-08-27" data-time="17:30:00">
+        <div class="date-content"><span class="date-text">27.08. &nbsp;17:30–19:30</span></div>
+      </label>
+    </div>
+  </div>
 
-          <!-- JUNE -->
-          <div class="month-panel" id="month-june">
-            <p class="dates-day-label">Saturday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-06" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">06.06. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-06" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">06.06. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-13" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">13.06. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-13" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">13.06. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-20" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">20.06. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-20" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">20.06. &nbsp;18:00–20:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-27" data-time="11:00:00">
-                <div class="date-content"><span class="date-text">27.06. &nbsp;11:00–13:00</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-27" data-time="18:00:00">
-                <div class="date-content"><span class="date-text">27.06. &nbsp;18:00–20:00</span></div>
-              </label>
-            </div>
-            <p class="dates-day-label">Thursday</p>
-            <div class="dates-list">
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-04" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">04.06. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-11" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">11.06. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-18" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">18.06. &nbsp;17:30–19:30</span></div>
-              </label>
-              <label class="date-block available">
-                <input type="radio" name="workshop-date" value="2026-06-25" data-time="17:30:00">
-                <div class="date-content"><span class="date-text">25.06. &nbsp;17:30–19:30</span></div>
-              </label>
-            </div>
-          </div>
-
-        </div>
+</div>
 
         <script>
           function switchMonth(month, btn) {
