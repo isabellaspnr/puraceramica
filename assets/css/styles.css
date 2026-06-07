@@ -1312,7 +1312,7 @@ body.menu-open #floating-booking-button {
     width: 85px;
     height: 85px;
     z-index: 20;
-    background-color: rgba(247, 245, 242, 0.98);
+    background-color: #fff;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   }
 
