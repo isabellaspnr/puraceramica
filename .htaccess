@@ -1,9 +1,6 @@
  RewriteEngine On
 
-# Redirect everything to coming soon (root index.html)
-RewriteCond %{REQUEST_URI} !^/$
-RewriteCond %{REQUEST_URI} !^/index\.html$
-RewriteRule ^(.*)$ / [R=302,L]
+RewriteRule ^$ /pt/index.html [R=301,L]
 
 # Fix Google's automatic sitelinks
 RewriteRule ^gallery/?$ /pt/inspiracao.html [R=301,L]
