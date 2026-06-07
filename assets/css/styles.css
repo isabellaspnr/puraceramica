@@ -931,8 +931,8 @@ body.menu-open #floating-booking-button {
 }
 
 .how-step img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-bottom: 1.5rem;
   filter: grayscale(20%);
