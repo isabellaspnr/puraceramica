@@ -648,6 +648,7 @@ body.menu-open #floating-booking-button {
 .hero-cta:hover {
   background: rgba(255, 255, 255, 0.15);
   border-color: #fff;
+  color: #fff;
 }
 
 .hero-dots {
