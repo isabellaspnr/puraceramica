@@ -633,9 +633,9 @@ body.menu-open #floating-booking-button {
 .hero-cta {
   display: inline-block;
   padding: 0.8rem 2rem;
-  background: transparent;
+  background: #fff;
   border: 1px solid rgba(255, 255, 255, 0.7);
-  color: #fff;
+  color: #0a0a0a;
   font-family: var(--sans);
   font-size: 11px;
   font-weight: 500;
