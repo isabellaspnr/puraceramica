@@ -840,7 +840,7 @@ body.menu-open #floating-booking-button {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.9;
-  color: #555;
+  color: #464545;
   margin: 0 0 1.5rem;
 }
 
@@ -885,7 +885,7 @@ body.menu-open #floating-booking-button {
   font-weight: 500;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #999;
+  color: #464545;
   display: block;
   margin-bottom: 1rem;
 }
@@ -960,7 +960,7 @@ body.menu-open #floating-booking-button {
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.8;
-  color: #777;
+  color: #464545;
   margin: 0;
 }
 
@@ -969,7 +969,7 @@ body.menu-open #floating-booking-button {
    BOOK CTA
    ══════════════════════════════════ */
 .book-section {
-  background: #f7f5f2;
+  background: #fff;
   text-align: center;
   padding: 6rem 2rem;
 }
@@ -1340,7 +1340,7 @@ body.menu-open #floating-booking-button {
    ══════════════════════════════════ */
 .offerings-grid {
   padding: 6rem 2rem 2rem;
-  background: #fff;
+  background: #f7f5f2;
 }
 
 .offerings-header {
@@ -1405,7 +1405,7 @@ body.menu-open #floating-booking-button {
   font-weight: 500;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: #999;
+  color: #464545;
   display: block;
   margin-bottom: 0.6rem;
 }
@@ -1421,7 +1421,7 @@ body.menu-open #floating-booking-button {
 
 .offering-card-title em {
   font-style: italic;
-  color: #555;
+  color: #464545;
 }
 
 .offering-card-desc {
@@ -1429,7 +1429,7 @@ body.menu-open #floating-booking-button {
   font-size: 0.85rem;
   font-weight: 300;
   line-height: 1.8;
-  color: #888;
+  color: #464545;
   margin: 0 0 1.2rem;
 }
 
