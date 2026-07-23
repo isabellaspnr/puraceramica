@@ -629,3 +629,65 @@
   .news-detail-body { padding: 2rem 0 0; }
   .news-detail-body h1 { font-size: 1.9rem; }
 }
+
+/* ── Summer Party ── */
+.party-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1B4C9C;
+  padding: 1.2rem 0;
+  border-top: 1px solid rgba(27, 76, 156, 0.2);
+  border-bottom: 1px solid rgba(27, 76, 156, 0.2);
+  margin: 2rem 0;
+}
+
+.party-programme {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2.5rem;
+}
+.party-programme li {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(27, 76, 156, 0.15);
+}
+.party-programme strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #1B4C9C;
+  margin-bottom: 0.2rem;
+}
+.party-programme span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 300;
+}
+
+.party-limit {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  color: #1B4C9C;
+  margin: 1.5rem 0 2rem;
+}
+
+.party-notes {
+  padding-left: 1.1rem;
+  margin: 1rem 0 2.5rem;
+}
+.party-notes li {
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .party-facts { gap: 0.4rem 1rem; font-size: 0.72rem; }
+  .party-programme strong { font-size: 1.25rem; }
+  .party-limit { font-size: 1.25rem; }
+}
