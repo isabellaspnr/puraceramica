@@ -46,15 +46,31 @@ function switchMonth(month, btn) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ── LANGUAGE LINKS ──
+  // ── LANGUAGE LINKS ──
   const currentFile = location.pathname.split('/').pop() || 'index.html';
 
+  function getAlternateLanguagePath(lang) {
+    const alternate = document.querySelector(
+      `link[rel="alternate"][hreflang="${lang}"]`
+    );
+
+    if (alternate && alternate.href) {
+      return new URL(alternate.href).pathname;
+    }
+
+    // Fallback für Seiten ohne hreflang, z. B. membership.html
+    return `/${lang}/${currentFile}`;
+  }
+
+  const ptPath = getAlternateLanguagePath('pt');
+  const enPath = getAlternateLanguagePath('en');
+
   document.querySelectorAll('.lang-pt').forEach(link => {
-    link.setAttribute('href', '/pt/' + currentFile);
+    link.setAttribute('href', ptPath);
   });
 
   document.querySelectorAll('.lang-en').forEach(link => {
-    link.setAttribute('href', '/en/' + currentFile);
+    link.setAttribute('href', enPath);
   });
 
   // ── MOBILE LANGUAGE SWITCHER ──
