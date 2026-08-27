@@ -46,6 +46,26 @@ function switchMonth(month, btn) {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ── LANGUAGE LINKS ──
+  const currentFile = location.pathname.split('/').pop() || 'index.html';
+
+  document.querySelectorAll('.lang-pt').forEach(link => {
+    link.setAttribute('href', '/pt/' + currentFile);
+  });
+
+  document.querySelectorAll('.lang-en').forEach(link => {
+    link.setAttribute('href', '/en/' + currentFile);
+  });
+
+  // ── MOBILE LANGUAGE SWITCHER ──
+  const mobileLangToggle = document.querySelector('.mobile-lang-toggle');
+
+  if (mobileLangToggle) {
+    mobileLangToggle.addEventListener('click', () => {
+      toggleMobileLang(mobileLangToggle);
+    });
+  }
+
   // ── MOBILE NAVIGATION ──
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.querySelector('.nav-links');
