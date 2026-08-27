@@ -1,0 +1,425 @@
+/* Open Studio Styles */
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../img/studio/open-studio.jpg') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Intro Section */
+.intro-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.intro-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Category Sections */
+.category-section {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.category-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.category-description {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+/* Accordion Styles */
+.accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 0;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  padding: 1rem 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.accordion-header:hover {
+  opacity: 0.7;
+}
+
+.accordion-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.accordion-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+  color: #666;
+}
+
+.accordion-header.active .accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background: transparent;
+}
+
+.accordion-content.active {
+  max-height: 3000px;
+  transition: max-height 0.6s ease-in;
+}
+
+.accordion-body {
+  padding: 1.5rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.accordion-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.accordion-body ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.accordion-body ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.accordion-body strong {
+  color: #000;
+}
+
+.price-highlight {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0.75rem 0;
+}
+
+/* Stamp Card Packages */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.package-card {
+  text-align: center;
+  padding: 1rem 0.75rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.package-hours {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.4rem;
+}
+
+.package-price {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+.package-hourly {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.package-savings {
+  font-size: 0.85rem;
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* Benefits Grid - for other uses */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.benefit-item {
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Opening Hours Section */
+.hours-section {
+  background: #f9f9f9;
+  padding: 2.5rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.hours-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hours-content h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.hours-table {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-row strong {
+  color: #000;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.cta-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Rami-style Button */
+.rami-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.rami-button:hover {
+  background: #000;
+  color: white;
+}
+
+/* Good to Know FAQ Section */
+.good-to-know-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.good-to-know-section h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq-accordion-item {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 0;
+}
+
+.faq-accordion-item:last-child {
+  border-bottom: none;
+}
+
+.faq-accordion-header {
+  padding: 1rem 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.faq-accordion-header:hover {
+  opacity: 0.7;
+}
+
+.faq-question {
+  font-size: 1rem;
+  font-weight: 500;
+  flex: 1;
+}
+
+.faq-accordion-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.faq-accordion-header.active .faq-accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  background: transparent;
+}
+
+.faq-accordion-content.active {
+  max-height: 1000px;
+  transition: max-height 0.6s ease-in;
+}
+
+.faq-accordion-body {
+  padding: 1rem 0 1.5rem 2rem;
+}
+
+.faq-accordion-body p {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.faq-accordion-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section {
+    height: 300px;
+  }
+  
+  .intro-section h2,
+  .category-title,
+  .hours-content h2,
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .accordion-header {
+    padding: 0.75rem 0;
+  }
+  
+  .accordion-title {
+    font-size: 1rem;
+  }
+  
+  .accordion-body {
+    padding: 1.25rem 0;
+  }
+  
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  .package-card {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
