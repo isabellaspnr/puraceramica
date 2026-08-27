@@ -462,3 +462,115 @@
   .tb-form-section { padding: 4rem 1.5rem; }
   .tb-form-row { grid-template-columns: 1fr; gap: 1.25rem; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   POTTERY PAINTING (experiences.html) – Namensraum xp-
+   Ans Ende der styles.css anhängen. Nutzt hp- Bausteine mit
+   (hp-eyebrow, hp-btn, hp-arrow, hp-ph-label) von der Startseite.
+   ═══════════════════════════════════════════════════════════ */
+
+/* 01 HERO */
+.xp-hero { position: relative; height: 60vh; min-height: 420px; background: #e5e5e5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+.xp-hero-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem,6vw,4.6rem); line-height: 1.08; letter-spacing: -.01em; color: #2a2a2a; margin: 1rem 0 0; max-width: 16ch; }
+.xp-hero-sub { font-family: var(--sans); font-size: clamp(1rem,1.6vw,1.2rem); color: rgba(0,0,0,.55); margin-top: 1.3rem; max-width: 46ch; }
+.xp-hero .hp-btn { margin-top: 2.2rem; }
+
+/* 02 HOW IT WORKS */
+.xp-how { padding: 6.5rem 3rem; max-width: 1100px; margin: 0 auto; text-align: center; }
+.xp-how-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem,3vw,2.6rem); margin: 1rem 0 3rem; }
+.xp-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2.5rem; }
+.xp-step img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.2rem; }
+.xp-step-num { font-family: var(--serif); font-weight: 600; font-size: .9rem; color: #1B4C9C; display: block; margin-bottom: .5rem; }
+.xp-step h3 { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: .6rem; }
+.xp-step p { font-family: var(--sans); font-size: .9rem; font-weight: 400; line-height: 1.7; color: #7a7a7a; }
+
+/* 03 READY TO CREATE (weiß, dünne Trennlinien) */
+.xp-cta { text-align: center; padding: 6rem 2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.xp-cta-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem,3.5vw,3rem); margin: 1rem 0; }
+.xp-cta-text { font-family: var(--sans); font-size: 1.05rem; color: #7a7a7a; margin: 0 auto 2rem; max-width: 40ch; }
+
+/* 04 SOMETHING SPECIFIC */
+.xp-exp { padding: 7rem 3rem; max-width: 1300px; margin: 0 auto; }
+.xp-exp-head { text-align: center; margin-bottom: 3.5rem; }
+.xp-exp-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem,3vw,2.8rem); margin: 1rem 0 .8rem; }
+.xp-exp-sub { font-family: var(--sans); color: #7a7a7a; font-size: 1.05rem; max-width: 52ch; margin: 0 auto; }
+.xp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem 2rem; }
+.xp-card { text-decoration: none; color: inherit; display: block; }
+.xp-card-img { aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; }
+.xp-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.xp-card:hover .xp-card-img img { transform: scale(1.05); }
+.xp-card-num { font-family: var(--serif); font-weight: 600; font-size: .85rem; color: #c9c2b6; display: block; margin: 1rem 0 .2rem; }
+.xp-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.5rem; margin: .1rem 0 .5rem; }
+.xp-card p { font-family: var(--sans); font-size: .92rem; font-weight: 400; line-height: 1.6; color: #7a7a7a; margin-bottom: .9rem; }
+
+/* 05 FAQ */
+.xp-faq { text-align: center; padding: 6rem 2rem; border-top: 1px solid #eee; }
+.xp-faq h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem,2.6vw,2.2rem); margin-bottom: .8rem; }
+.xp-faq p { font-family: var(--sans); color: #7a7a7a; margin-bottom: 1.8rem; }
+
+@media (max-width: 900px) {
+  .xp-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
+  .xp-grid { grid-template-columns: 1fr 1fr; }
+  .xp-how, .xp-exp { padding: 4.5rem 1.6rem; }
+}
+@media (max-width: 560px) {
+  .xp-steps { grid-template-columns: 1fr; }
+  .xp-grid { grid-template-columns: 1fr; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   POTTERY PAINTING (experiences.html) – Namensraum xp-
+   Ans Ende der styles.css anhängen. Nutzt hp- Bausteine mit
+   (hp-eyebrow, hp-btn, hp-arrow, hp-ph-label) von der Startseite.
+   ═══════════════════════════════════════════════════════════ */
+
+/* 01 HERO */
+.xp-hero { position: relative; height: 60vh; min-height: 420px; background: #e5e5e5; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+.xp-hero-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2.6rem,6vw,4.6rem); line-height: 1.08; letter-spacing: -.01em; color: #2a2a2a; margin: 1rem 0 0; max-width: 16ch; }
+.xp-hero-sub { font-family: var(--sans); font-size: clamp(1rem,1.6vw,1.2rem); color: rgba(0,0,0,.55); margin-top: 1.3rem; max-width: 46ch; }
+.xp-hero .hp-btn { margin-top: 2.2rem; }
+
+/* 02 HOW IT WORKS */
+.xp-how { padding: 6.5rem 3rem; max-width: 1100px; margin: 0 auto; text-align: center; }
+.xp-how-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem,3vw,2.6rem); margin: 1rem 0 3rem; }
+.xp-steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 2.5rem; }
+.xp-step img { width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.2rem; }
+.xp-step-num { font-family: var(--serif); font-weight: 600; font-size: .9rem; color: #1B4C9C; display: block; margin-bottom: .5rem; }
+.xp-step h3 { font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: .6rem; }
+.xp-step p { font-family: var(--sans); font-size: .9rem; font-weight: 400; line-height: 1.7; color: #7a7a7a; }
+
+/* 03 READY TO CREATE (weiß, dünne Trennlinien) */
+.xp-cta { text-align: center; padding: 6rem 2rem; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+.xp-cta-title { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem,3.5vw,3rem); margin: 1rem 0; }
+.xp-cta-text { font-family: var(--sans); font-size: 1.05rem; color: #7a7a7a; margin: 0 auto 2rem; max-width: 40ch; }
+
+/* 04 SOMETHING SPECIFIC */
+.xp-exp { padding: 7rem 3rem; max-width: 1300px; margin: 0 auto; }
+.xp-exp-head { text-align: center; margin-bottom: 3.5rem; }
+.xp-exp-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem,3vw,2.8rem); margin: 1rem 0 .8rem; }
+.xp-exp-sub { font-family: var(--sans); color: #7a7a7a; font-size: 1.05rem; max-width: 52ch; margin: 0 auto; }
+.xp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem 2rem; }
+.xp-card { text-decoration: none; color: inherit; display: block; }
+.xp-card-img { aspect-ratio: 4/3; border-radius: 12px; overflow: hidden; }
+.xp-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.xp-card:hover .xp-card-img img { transform: scale(1.05); }
+.xp-card-num { font-family: var(--serif); font-weight: 600; font-size: .85rem; color: #c9c2b6; display: block; margin: 1rem 0 .2rem; }
+.xp-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.5rem; margin: .1rem 0 .5rem; }
+.xp-card p { font-family: var(--sans); font-size: .92rem; font-weight: 400; line-height: 1.6; color: #7a7a7a; margin-bottom: .9rem; }
+
+/* 05 FAQ */
+.xp-faq { text-align: center; padding: 6rem 2rem; border-top: 1px solid #eee; }
+.xp-faq h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem,2.6vw,2.2rem); margin-bottom: .8rem; }
+.xp-faq p { font-family: var(--sans); color: #7a7a7a; margin-bottom: 1.8rem; }
+
+@media (max-width: 900px) {
+  .xp-steps { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
+  .xp-grid { grid-template-columns: 1fr 1fr; }
+  .xp-how, .xp-exp { padding: 4.5rem 1.6rem; }
+}
+@media (max-width: 560px) {
+  .xp-steps { grid-template-columns: 1fr; }
+  .xp-grid { grid-template-columns: 1fr; }
+}
+
+

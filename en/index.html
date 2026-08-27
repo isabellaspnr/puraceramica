@@ -49,10 +49,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://puraceramicalisboa.simplybook.it">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- STYLESHEET -->
   <link rel="stylesheet" href="../assets/css/styles.css">
+
+  <script src="../assets/js/include.js" defer></script>
 
   <!-- SCHEMA.ORG STRUCTURED DATA -->
   <script type="application/ld+json">
@@ -188,370 +190,238 @@
 
 <body>
 
-  <!-- ══ HEADER ══ -->
-  <header class="main-header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA – Pottery Studio Lisbon" />
-      </a>
+ <div data-include="../partials/header-en.html"></div>
+
+
+<!-- ══ 01 HERO ══ -->
+<section class="hp-hero" id="hpHero" aria-label="Hero">
+  <div class="hp-slide hp-s1 on">
+    <span class="hp-ph-label">Foto: Bemalen / Studio</span>
+    <h1 class="hp-hero-title">Paint your own pottery in Lisbon.</h1>
+    <p class="hp-hero-sub">No experience needed. Pick a piece, choose your colours and make it yours.</p>
+    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="hp-btn hp-btn-light" target="_blank" rel="noopener">Book a session</a>
+  </div>
+  <div class="hp-slide hp-s2">
+    <span class="hp-ph-label">Foto: Töpferscheibe / Hände</span>
+    <h1 class="hp-hero-title">Make pottery from scratch.</h1>
+    <p class="hp-hero-sub">Learn wheel throwing or handbuilding in our Lisbon studio.</p>
+    <a href="/en/workshops.html" class="hp-btn hp-btn-light">Explore workshops</a>
+  </div>
+  <div class="hp-slide hp-s3">
+    <span class="hp-ph-label">Foto: Studio / Regale</span>
+    <h1 class="hp-hero-title">Make the studio your own.</h1>
+    <p class="hp-hero-sub">A space to work independently, meet other makers and keep creating.</p>
+    <a href="/en/membership.html" class="hp-btn hp-btn-light">Join the waitlist</a>
+  </div>
+
+  <div class="hp-hero-tabs">
+    <button class="hp-hero-tab active" data-i="0"><span>Paint</span></button>
+    <button class="hp-hero-tab" data-i="1"><span>Create</span></button>
+    <button class="hp-hero-tab" data-i="2"><span>Members</span></button>
+  </div>
+</section>
+
+<!-- ══ 02 INTRO ══ -->
+<section class="hp-intro">
+  <span class="hp-eyebrow">Welcome to our studio</span>
+  <h2 class="hp-intro-title">A pottery studio for everyone.</h2>
+  <p class="hp-intro-text">Two floors in Alcântara where you can paint a ready-made piece, learn to throw on the wheel, or make the studio your creative home. Whatever you come for, you leave with something made by you.</p>
+</section>
+
+<!-- ══ 03 TWO WAYS TO CREATE ══ -->
+<section class="hp-ways">
+  <a href="/en/experiences.html" class="hp-way">
+    <div class="hp-ph hp-way-img hp-t1"><span>Foto: Bemalen</span></div>
+    <div class="hp-way-body">
+      <h3>Pottery Painting</h3>
+      <p>Choose from 100+ pieces and bring your design to life. Walk-ins welcome.</p>
+      <span class="hp-arrow">Explore →</span>
     </div>
-
-    <nav class="navbar" aria-label="Main navigation">
-      <ul class="nav-links" id="nav">
-
-        <li class="mobile-menu-header" aria-hidden="true">
-          <img src="../assets/img/icons/LOGO.png" alt="PURACERÂMICA" class="mobile-logo" />
-        </li>
-
-        <li class="dropdown">
-          <a href="experiences.html" class="dropdown-toggle">POTTERY PAINTING</a>
-          <ul class="dropdown-menu">
-            <li><a href="experiences.html">EXPERIENCES</a></li>
-            <li><a href="ceramic-shop.html">OUR CERAMICS</a></li>
-            <li><a href="inspiration.html">INSPIRATION</a></li>
-            <li><a href="voucher.html">VOUCHER</a></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="workshops.html" class="dropdown-toggle">POTTERY WORKSHOPS</a>
-          <ul class="dropdown-menu">
-            <li><a href="workshops.html">ALL WORKSHOPS</a></li>
-            <li><a href="pottery-teambuilding.html">TEAMBUILDING</a></li>
-            <li><a href="voucher-pottery.html">VOUCHER</a></li>
-          </ul>
-        </li>
-
-        <li><a href="membership.html">MEMBERSHIP</a></li>
-
-        <li class="dropdown">
-          <a href="about.html" class="dropdown-toggle">ABOUT</a>
-          <ul class="dropdown-menu">
-            <li><a href="news.html">NEWS</a></li>
-            <li><a href="about.html">OUR STORY</a></li>
-          </ul>
-        </li>
-
-        <li><a href="faq.html">FAQ</a></li>
-
-        <li class="dropdown lang-switcher">
-          <a href="#" class="dropdown-toggle lang-toggle" onclick="return false;" aria-label="Select language">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="10"/>
-              <line x1="2" y1="12" x2="22" y2="12"/>
-              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-            </svg>
-          </a>
-          <ul class="dropdown-menu lang-menu">
-            <li><a href="../pt/index.html" hreflang="pt">PT – Português</a></li>
-            <li><a href="../en/index.html" class="active-lang" hreflang="en">EN – English</a></li>
-          </ul>
-        </li>
-
-      </ul>
-
-      <div class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" role="button" tabindex="0">
-        <span></span><span></span><span></span>
-      </div>
-
-      <div class="mobile-lang-switcher">
-        <button class="mobile-lang-toggle" onclick="toggleMobileLang(this)" aria-label="Select language">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="2" y1="12" x2="22" y2="12"/>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-          <span class="mobile-lang-arrow">↑</span>
-        </button>
-        <div class="mobile-lang-options">
-          <a href="../pt/index.html" hreflang="pt">PT – Português</a>
-          <a href="../en/index.html" class="active-lang" hreflang="en">EN – English</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-
-  <!-- ══ HERO ══ -->
-  <section class="hero" id="hero" aria-label="Hero slideshow">
-
-    <div class="hero-slide active">
-      <img src="../assets/img/studio/Space copy.jpg" alt="PURACERÂMICA studio interior in Alcântara, Lisbon" />
+  </a>
+  <a href="/en/workshops.html" class="hp-way">
+    <div class="hp-ph hp-way-img hp-t2"><span>Foto: Töpfern</span></div>
+    <div class="hp-way-body">
+      <h3>Pottery Workshops</h3>
+      <p>Learn to create with clay on the wheel or by hand, guided by our team.</p>
+      <span class="hp-arrow">Explore →</span>
     </div>
-    <div class="hero-slide">
-      <img src="../assets/img/studio/desk_with_paint copy.jpg" alt="Ceramic painting station with glazes and brushes" />
+  </a>
+</section>
+
+<!-- ══ 04 WHAT'S ON ══ -->
+<section class="hp-whatson">
+  <div class="hp-whatson-head">
+    <div>
+      <span class="hp-eyebrow">What's on</span>
+      <h2 class="hp-whatson-title">Upcoming workshops &amp; events</h2>
     </div>
-    <div class="hero-slide">
-      <img src="../assets/img/studio/balcony copy.jpg" alt="Studio balcony at PURACERÂMICA" />
-    </div>
-
-    <!-- Firing badge -->
-    <div class="circle-wrapper" aria-hidden="true">
-      <div class="circle-container">
-        <div class="rotating-text">
-          <svg width="100%" height="100%" viewBox="0 0 250 250" class="text-circle">
-            <defs>
-              <path id="textPath" fill="transparent"
-                d="M 125, 125 m -90, 0 a 90,90 0 1,1 180,0 a 90,90 0 1,1 -180,0" />
-            </defs>
-            <text font-size="27" font-family="Montserrat, sans-serif">
-              <textPath href="#textPath">
-                ALL FIRINGS COMPLETED UP TO <tspan font-weight="bold">04/08</tspan> ♥
-              </textPath>
-            </text>
-          </svg>
-        </div>
-        <div class="emblem"></div>
-      </div>
-    </div>
-
-    <!-- Text overlay -->
-    <div class="hero-text">
-      <span class="hero-eyebrow">Lisbon, Alcantâra·  Since 2022</span>
-      <h1 class="hero-title">
-        Paint your own<br><em>pottery in Lisbon.</em>
-      </h1>
-      <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="hero-cta" target="_blank" rel="noopener">
-        Book a session
-      </a>
-    </div>
-
-    <!-- Slide dots -->
-    <div class="hero-dots" aria-hidden="true">
-      <button class="hero-dot active" onclick="goToSlide(0)"></button>
-      <button class="hero-dot" onclick="goToSlide(1)"></button>
-      <button class="hero-dot" onclick="goToSlide(2)"></button>
-    </div>
-
-    <!-- Slide counter -->
-    <div class="hero-counter" id="heroCounter" aria-hidden="true">
-      <span>01</span> / 03
-    </div>
-
-  </section>
-
-  <!-- ══ SPECIAL OPENING HOURS NOTICE ══ -->
-  <section class="event-banner" aria-labelledby="hours-notice-heading">
-    <div class="event-banner-inner">
-      <span class="event-banner-date">Until 25 August</span>
-      <h2 class="event-banner-title" id="hours-notice-heading">Special opening<br><em>hours.</em></h2>
-      <p class="event-banner-text">For the next two weeks we're keeping shorter hours:<br>
-        Sunday to Wednesday — closed · Thursday &amp; Friday — 13:00 – 18:00 · Saturday — 10:00 – 16:00.</p>
-      <p class="event-banner-limit">We're back to our regular hours from 26 August.</p>
-    </div>
-  </section>
-
-  <!-- ══ INTRO ══ -->
-  <section class="intro-section" aria-labelledby="intro-heading">
-    <div class="intro-left">
-      <div class="intro-left-inner">
-        <span class="intro-tag">Welcome to our studio</span>
-        <h2 class="intro-heading" id="intro-heading">
-          A creative space<br><em>for everyone.</em>
-        </h2>
-        <p class="intro-body">
-          A date, a night out with friends, a team-building session or simply
-          a creative break: the studio is open to anyone who wants to come.
-          No experience needed. Come create with us.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══ HOW IT WORKS ══ -->
-  <section class="how-section" aria-labelledby="how-heading">
-    <div class="how-header">
-      <span class="how-tag">Pottery Painting</span>
-      <h2 class="how-title" id="how-heading">How it works</h2>
-    </div>
-
-    <div class="how-steps">
-      <div class="how-step">
-        <span class="how-step-num">01</span>
-        <img src="../assets/img/icons/Schritt1 copy.png" alt="Step 1 – Pick your ceramic piece" width="80" height="80" />
-        <h3>Pick your ceramic</h3>
-        <p>Choose from 100+ pieces: mugs, bowls, plates, vases and more.</p>
-      </div>
-      <div class="how-step">
-        <span class="how-step-num">02</span>
-        <img src="../assets/img/icons/Schritt2 copy.png" alt="Step 2 – Choose your colors and paint" width="80" height="80" />
-        <h3>Choose your colors</h3>
-        <p>Explore our glazes and materials and bring the design you imagined to life.</p>
-      </div>
-      <div class="how-step">
-        <span class="how-step-num">03</span>
-        <img src="../assets/img/icons/Schritt3 copy.png" alt="Step 3 – We glaze and fire your piece" width="80" height="80" />
-        <h3>We glaze & fire</h3>
-        <p>We take care of glazing and professional kiln firing for a vibrant, lasting result.</p>
-      </div>
-      <div class="how-step">
-        <span class="how-step-num">04</span>
-        <img src="../assets/img/icons/Schritt4 copy.png" alt="Step 4 – Pick up your finished piece" width="80" height="80" />
-        <h3>Pick up</h3>
-        <p>Ready within up to 15 days. Come by and take home something made by you.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══ OFFERINGS GRID ══ -->
-  <section class="offerings-grid" aria-labelledby="offerings-heading">
-
-    <div class="offerings-header">
-      <span class="how-tag">What we offer</span>
-      <h2 class="offerings-title" id="offerings-heading">Find your <em>creative experience.</em></h2>
-    </div>
-
-    <div class="grid-offerings">
-
-      <a href="experiences.html" class="offering-card">
-        <div class="offering-card-photo" style="background-image: url('../assets/img/studio/desk_with_paint copy.jpg');" role="img" aria-label="Pottery painting at PURACERÂMICA"></div>
-        <div class="offering-card-body">
-          <span class="offering-card-tag">No experience needed</span>
-          <h3 class="offering-card-title">Pottery<br><em>Painting</em></h3>
-          <p class="offering-card-desc">Choose from 100+ ceramic pieces and bring the design you imagined to life.</p>
-          <span class="offering-card-link">Explore →</span>
-        </div>
-      </a>
-
-      <a href="workshops.html" class="offering-card">
-        <div class="offering-card-photo" style="background-image: url('../assets/img/courses/handbuilding_stock.jpg');" role="img" aria-label="Clay workshops at PURACERÂMICA"></div>
-        <div class="offering-card-body">
-          <span class="offering-card-tag">Play with clay</span>
-          <h3 class="offering-card-title">Clay<br><em>Workshops</em></h3>
-          <p class="offering-card-desc">Learn to create with clay on the wheel or by hand, guided by our team.</p>
-          <span class="offering-card-link">Explore →</span>
-        </div>
-      </a>
-
-      <a href="membership.html" class="offering-card">
-        <div class="offering-card-photo" style="background-image: url(../assets/img/courses/pull.jpg)" role="img" aria-label="Studio Membership at PURACERÂMICA"></div>
-        <div class="offering-card-body">
-          <span class="offering-card-tag">Coming Soon</span>
-          <h3 class="offering-card-title">Studio<br><em>Membership</em></h3>
-          <p class="offering-card-desc">Your own space in the studio. Wheels, tools, clay and the full run of the place.</p>
-          <span class="offering-card-link">Join the waitlist →</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-
-  <!-- ══ BOOK CTA ══ -->
-  <section class="book-section" aria-labelledby="book-heading">
-    <span class="how-tag">Ready to create?</span>
-    <h2 class="book-title" id="book-heading">
-      Your session is<br><em>waiting for you.</em>
-    </h2>
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="book-btn" target="_blank" rel="noopener">
-      Book now
+    <a href="/en/workshops.html" class="hp-arrow">View all →</a>
+  </div>
+  <div class="hp-cards">
+    <a href="/en/workshops.html" class="hp-card">
+      <div class="hp-ph hp-card-img hp-t1"><span>Foto</span></div>
+      <span class="hp-card-cat">Wheel</span>
+      <h3>Pottery Wheel for Beginners</h3>
+      <div class="hp-card-meta">€65 <span>· 2h</span></div>
     </a>
-  </section>
+    <a href="/en/workshops.html" class="hp-card">
+      <div class="hp-ph hp-card-img hp-t2"><span>Foto</span></div>
+      <span class="hp-card-cat">Social</span>
+      <h3>Wine &amp; Clay Evening</h3>
+      <div class="hp-card-meta">€45 <span>· 2h</span></div>
+    </a>
+    <a href="/en/workshops.html" class="hp-card">
+      <div class="hp-ph hp-card-img hp-t3"><span>Foto</span></div>
+      <span class="hp-card-cat">Course</span>
+      <h3>4-Week Wheel Course</h3>
+      <div class="hp-card-meta">€220 <span>· 4 × 2h</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ══ 05 MEMBERSHIP ══ -->
+<section class="hp-member">
+  <div class="hp-member-body">
+    <span class="hp-eyebrow">Members</span>
+    <h2>Make the studio your own.</h2>
+    <p>Your own space in the studio: wheels, tools, glazes and the full run of the place. For makers who want to keep creating on their own schedule.</p>
+    <a href="/en/membership.html" class="hp-btn hp-btn-outline">Join the waitlist</a>
+  </div>
+  <div class="hp-ph hp-member-img hp-t3"><span>Foto: Mitglied bei der Arbeit</span></div>
+</section>
+
+<!-- ══ 06 PRIVATE EVENTS ══ -->
+<section class="hp-events">
+  <div class="hp-ph hp-events-img hp-t2"><span>Foto: Gruppe / Event</span></div>
+  <div class="hp-events-body">
+    <h2>Your event, made by hand.</h2>
+    <p>Birthdays, team building, hen parties. Take over the studio for a private creative session.</p>
+    <a href="/en/pottery-teambuilding.html" class="hp-btn hp-btn-light">Request an event</a>
+  </div>
+</section>
+
+<!-- ══ 07 VISIT US ══ -->
+<section class="hp-visit">
+  <div class="hp-visit-head">
+    <span class="hp-eyebrow">Come by</span>
+    <h2 class="hp-visit-title">Visit the studio.</h2>
+  </div>
+  <div class="hp-visit-grid">
+    <div class="hp-visit-info">
+      <p class="hp-visit-addr">Rua Jau 23a<br>1300-311 Lisboa, Alcântara</p>
+      <a href="https://maps.google.com/?cid=3458042851736995832" target="_blank" rel="noopener" class="hp-btn hp-btn-outline">Open in Maps</a>
+    </div>
+    <div class="hp-visit-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6635.497832040944!2d-9.183755560897314!3d38.704721719093975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1935310565b625%3A0x2ff8db9148d837f8!2sPURACER%C3%82MICA-LISBOA!5e0!3m2!1sen!2sat!4v1747118754743!5m2!1sen!2sat"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="PURACERÂMICA location"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Hero-Steuerung -->
+<script>
+  (function () {
+    var slides = document.querySelectorAll('#hpHero .hp-slide');
+    var tabs = document.querySelectorAll('#hpHero .hp-hero-tab');
+    if (!slides.length) return;
+    var i = 0, timer = null;
+    function show(n) {
+      slides.forEach(function (s, x) { s.classList.toggle('on', x === n); });
+      tabs.forEach(function (t, x) { t.classList.toggle('active', x === n); });
+      i = n;
+    }
+    function play() { timer = setInterval(function () { show((i + 1) % slides.length); }, 6000); }
+    function stop() { clearInterval(timer); }
+    tabs.forEach(function (t) { t.addEventListener('click', function () { stop(); show(+t.dataset.i); }); });
+    play();
+  })();
+</script>
 
 
+ <!-- ══ FOOTER (EN) – geteilter Baustein ══ -->
+<footer class="pcf">
+  <div class="pcf-inner">
 
+    <!-- Obere Ebene: Kontakt links | Öffnungszeiten rechts -->
+    <div class="pcf-top">
 
-  <!-- ══ FOOTER ══ -->
-  <footer>
-
-   <section class="vip-section" aria-labelledby="vip-heading">
-      <h2 id="vip-heading">VIP – Very Important Pottery</h2>
-      <p>Planning a private event? Take over the entire studio. Two floors of creative space, exclusively yours.</p>
-      <a href="viprequest.html" class="vip-button">Request now</a>
-    </section>
-
-    <section class="opening-sections" aria-label="Opening hours">
-      <div class="hours-box">
-        <div class="hours-inner">
-          <h2>Opening Hours</h2>
-          <p class="note" style="margin-bottom:1.25rem;">
-            <strong>Until 25 August — special hours:</strong><br>
-            Sun – Wed closed · Thu &amp; Fri 13:00 – 18:00 · Sat 10:00 – 16:00.<br>
-            Regular hours below resume from 26 August.
-          </p>
-          <div class="hours-list">
-            <div class="day"><span>Monday</span><span>Closed</span></div>
-            <div class="day"><span>Tuesday</span><span>Closed</span></div>
-            <div class="day"><span>Wednesday</span><span>13:00 – 20:00</span></div>
-            <div class="day"><span>Thursday</span><span>13:00 – 20:00</span></div>
-            <div class="day"><span>Friday</span><span>13:00 – 20:00</span></div>
-            <div class="day"><span>Saturday</span><span>10:00 – 20:00</span></div>
-            <div class="day"><span>Sunday</span><span>10:00 – 18:00</span></div>
-          </div>
-          <p class="note">Latest painting session starts 2 hours before closing.</p>
+      <div class="pcf-contact">
+        <div class="pcf-h">Get in touch</div>
+        <div class="pcf-contact-list">
+          <a class="pcf-ci" href="tel:+351932523750">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +351 932 523 750
+          </a>
+          <a class="pcf-ci" href="mailto:info@puraceramica.pt">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>
+            info@puraceramica.pt
+          </a>
+          <a class="pcf-ci" href="https://maps.google.com/?cid=3458042851736995832" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rua Jau 23a, Lisboa <span class="maps">Maps ↗</span>
+          </a>
         </div>
       </div>
-      <div class="hours-box">
-        <div class="hours-inner">
-          <h2>Pickup Hours</h2>
-          <div class="hours-list">
-            <div class="day"><span>Monday</span><span>Closed</span></div>
-            <div class="day"><span>Tuesday</span><span>Closed</span></div>
-            <div class="day"><span>Wednesday</span><span>14:00 – 18:00</span></div>
-            <div class="day"><span>Thursday</span><span>14:00 – 18:00</span></div>
-            <div class="day"><span>Friday</span><span>14:00 – 18:00</span></div>
-            <div class="day"><span>Saturday</span><span>11:00 – 16:00</span></div>
-            <div class="day"><span>Sunday</span><span>11:00 – 16:00</span></div>
-          </div>
-          <p class="note">
-            <strong>Help us reduce waste:</strong> Please bring a bag for your ceramics.<br><br>
-            Finished pieces can only be collected during pickup hours.
-          </p>
+
+      <div class="pcf-hours-block">
+        <div class="pcf-h">Opening hours</div>
+        <div class="pcf-hours">
+          <div class="pcf-hrow"><span>Wed – Fri</span><span>13:00 – 20:00</span></div>
+          <div class="pcf-hrow"><span>Saturday</span><span>10:00 – 20:00</span></div>
+          <div class="pcf-hrow"><span>Sunday</span><span>10:00 – 18:00</span></div>
+          <div class="pcf-hrow muted"><span>Mon – Tue</span><span>Closed</span></div>
         </div>
       </div>
-    </section>
 
- 
+    </div>
 
-    <section class="contact-block" id="contact-block" aria-labelledby="contact-heading">
-      <div class="contact-inner">
-        <h3 id="contact-heading">Contact us</h3>
-        <p class="address">
-          <a href="https://maps.google.com/?cid=3458042851736995832" target="_blank" rel="noopener" style="text-decoration:none; color:inherit;">
-            Rua Jau 23a<br>1300-311 Lisboa
-          </a>
-        </p>
-        <p class="contact-info">
-          <a href="tel:+351932523750">+351 932 523 750</a>
-          &nbsp;|&nbsp;
-          <a href="mailto:info@puraceramica.pt">info@puraceramica.pt</a>
-        </p>
-        <div class="footer-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6635.497832040944!2d-9.183755560897314!3d38.704721719093975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1935310565b625%3A0x2ff8db9148d837f8!2sPURACER%C3%82MICA-LISBOA!5e0!3m2!1sen!2sat!4v1747118754743!5m2!1sen!2sat"
-            width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-            title="PURACERÂMICA location – Rua Jau 23a, Lisbon"></iframe>
-        </div>
-        <div class="footer-social" aria-label="Social media">
-          <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/instadone copy.png" alt="Instagram" width="48" height="48" />
-            <span>Instagram</span>
-          </a>
-          <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/facebook copy.png" alt="Facebook" width="48" height="48" />
-            <span>Facebook</span>
-          </a>
-          <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">
-            <img src="../assets/img/icons/tiktok copy.png" alt="TikTok" width="48" height="48" />
-            <span>TikTok</span>
-          </a>
-        </div>
-        <div class="complaint-book">
-          <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" aria-label="Livro de Reclamações">
-            <img src="../assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" width="80" height="40" />
-          </a>
-        </div>
-        <div class="footer-bottom">
-          <p>© PURACERÂMICA • 2022 – 2026 | Handmade with ❤️ in Lisbon</p>
-        </div>
+    <!-- Untere Ebene: Marke + Navi -->
+    <div class="pcf-main">
+      <div class="pcf-brand">
+        <img src="/assets/img/icons/LOGO.png" alt="PURACERÂMICA" class="pcf-logo" />
+        <p class="pcf-tag">Lisbon's original pottery painting studio, in Alcântara since 2022.</p>
       </div>
-    </section>
+      <div class="pcf-col">
+        <div class="pcf-h">Explore</div>
+        <a href="/en/experiences.html">Pottery Painting</a>
+        <a href="/en/workshops.html">Workshops</a>
+        <a href="/en/membership.html">Members</a>
+        <a href="/en/voucher.html">Vouchers</a>
+      </div>
+      <div class="pcf-col">
+        <div class="pcf-h">Studio</div>
+        <a href="/en/about.html">Our Story</a>
+        <a href="/en/pottery-teambuilding.html">Private Events</a>
+        <a href="/en/news.html">News</a>
+        <a href="/en/faq.html">FAQ</a>
+      </div>
+      <div class="pcf-col">
+        <div class="pcf-h">Follow</div>
+        <a href="https://www.instagram.com/puraceramicalisboa/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@puraceramica" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.facebook.com/puraceramicalisboa" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
 
-  </footer>
+  </div>
+
+  <!-- Schwarze Leiste -->
+  <div class="pcf-bottom">
+    <div class="pcf-bottom-inner">
+      <div class="pcf-legal">
+        <a href="/en/terms.html">Terms &amp; Conditions</a>
+        <a href="/en/privacy.html">Privacy Policy</a>
+        <a href="https://www.livroreclamacoes.pt" target="_blank" rel="noopener" class="pcf-complaint" aria-label="Livro de Reclamações">
+          <img src="/assets/img/icons/LIVRO DE RECLAMAÇÕES.jpg" alt="Livro de Reclamações Electrónico" />
+        </a>
+      </div>
+      <p class="pcf-copy">© PURACERÂMICA · 2022–2026 · Handmade with ♥ in Lisbon</p>
+    </div>
+  </div>
+
+</footer>
 
   <script src="../assets/js/main.js"></script>
 
