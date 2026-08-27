@@ -1,0 +1,7 @@
+ RewriteEngine On
+
+RewriteRule ^$ /pt/index.html [R=301,L]
+
+# Fix Google's automatic sitelinks
+RewriteRule ^gallery/?$ /pt/inspiracao.html [R=301,L]
+RewriteRule ^products/?$ /pt/ceramica-shop.html [R=301,L]

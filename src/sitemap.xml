@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- ============================================ -->
+  <!-- HOMEPAGE - Both Languages -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/index.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.puraceramica.pt/en/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/index.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/index.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- ABOUT / SOBRE -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/sobre.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/sobre.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/about.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/sobre.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/about.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- EXPERIENCES / EXPERIENCIAS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/experiencias.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/experiences.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/experiences.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/experiencias.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/experiences.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- ADULTS / ADULTOS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/adultos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/adultos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/adults.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/adults.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/adultos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/adults.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- KIDS / CRIANCAS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/criancas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/criancas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kids.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/kids.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/criancas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kids.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- KIDS CERAMIC / CRIANCAS CERAMICA -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/criancas-ceramica.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/criancas-ceramica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kids-ceramic.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/kids-ceramic.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/criancas-ceramica.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kids-ceramic.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- PAINT TO GO / PINTURA PARA LEVAR -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/pintura-para-levar.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/pintura-para-levar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/painttogo.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/painttogo.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/pintura-para-levar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/painttogo.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- SCHOOLS / ESCOLAS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/escolas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/escolas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/schools.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/schools.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/escolas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/schools.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- TEAMBUILDING -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/teambuilding.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/teambuilding.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/teambuilding.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/teambuilding.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/teambuilding.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/teambuilding.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- SOCIAL INSTITUTIONS / SOCIAL -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/social.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/social.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/social.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/social.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/social.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/social.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- PET SPECIALS / ESPECIAIS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/especiais.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/especiais.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/specials.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/specials.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/especiais.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/specials.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- WORKSHOPS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/workshops.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshops.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/workshops.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshops.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshops.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Workshop Pages - Portuguese -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/workshop1.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop1.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/pt/workshop2.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop2.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/pt/workshop3.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop3.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop3.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Individual Workshop Pages - English -->
+  <url>
+    <loc>https://www.puraceramica.pt/en/workshop1.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop1.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/workshop2.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop2.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/workshop3.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/workshop3.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/workshop3.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- SHOP - Main Pages -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/shop.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/shop.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- CERAMIC SHOP / CERAMICA SHOP -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/ceramica-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/ceramica-shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/ceramic-shop.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/ceramic-shop.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/ceramica-shop.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/ceramic-shop.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- MUGS / CANECAS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/canecas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/canecas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/mugs.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/mugs.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/canecas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/mugs.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- PLATES / PRATOS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/pratos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/pratos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/plates.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/plates.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/pratos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/plates.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- BOWLS / TACAS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/tacas.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/tacas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/bowls.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/bowls.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/tacas.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/bowls.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- VASES / VASOS -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/vasos.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/vasos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/vases.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/vases.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/vasos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/vases.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- KITCHEN / COZINHA -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/cozinha.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/cozinha.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kitchen.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/kitchen.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/cozinha.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/kitchen.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- DECORATION / DECORACAO -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/decoracao.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/decoracao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/decoration.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/decoration.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/decoracao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/decoration.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- NEWS / NOVIDADES -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/novidades.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidades.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/news.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidades.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Individual News Pages - Portuguese -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/novidade1.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidade1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news1.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/pt/novidade2.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidade2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news2.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Individual News Pages - English -->
+  <url>
+    <loc>https://www.puraceramica.pt/en/news1.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidade1.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news1.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/news2.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/novidade2.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/news2.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- SEASONAL / SAZONAL -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/sazonal.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/sazonal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/seasonal.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/seasonal.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/sazonal.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/seasonal.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- GALLERY / INSPIRACAO -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/inspiracao.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/inspiracao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/inspiration.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/inspiration.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/inspiracao.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/inspiration.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- FAQ -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/faq.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/faq.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- VIP REQUEST / VIPREQUEST -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/viprequest.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/viprequest.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/viprequest.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/viprequest.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/viprequest.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/viprequest.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- ============================================ -->
+  <!-- VOUCHER -->
+  <!-- ============================================ -->
+  <url>
+    <loc>https://www.puraceramica.pt/pt/voucher.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/voucher.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/voucher.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.puraceramica.pt/en/voucher.html</loc>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.puraceramica.pt/pt/voucher.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.puraceramica.pt/en/voucher.html"/>
+    <lastmod>2025-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
