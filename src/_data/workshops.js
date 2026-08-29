@@ -23,6 +23,10 @@ module.exports = {
       shortTitle: "Handbuilding",
       pageTag: "Pottery Workshops · Single Session",
 
+      schedule: "Saturdays & selected Sundays · 15:00–17:30",
+levelLabel: "Beginner and intermediate friendly",
+languageLabel: "English",
+
       intro:
         "Discover the joy of handbuilding ceramics. Learn fundamental techniques and create your own piece with guidance from your instructor. No experience needed.",
 
@@ -35,6 +39,10 @@ module.exports = {
       title: "Workshop de Modelagem Manual",
       shortTitle: "Modelagem Manual",
       pageTag: "Workshops de Cerâmica · Sessão Única",
+
+      schedule: "Sábados e domingos selecionados · 15:00–17:30",
+levelLabel: "Adequado para iniciantes e nível intermédio",
+languageLabel: "Inglês",
 
       intro:
         "Descubra o prazer da modelagem manual em cerâmica. Aprenda técnicas fundamentais e crie a sua própria peça com o apoio do instrutor. Não é necessária experiência prévia.",

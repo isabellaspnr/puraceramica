@@ -1,5 +1,5 @@
- {% set workshop = workshops.handbuilding %}
- <!DOCTYPE html>
+{% set workshop = workshops.handbuilding %}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,8 +9,10 @@
 
   <!-- PRIMARY META TAGS -->
   <title>Handbuilding Pottery Class Lisbon – Learn Pinching, Coiling & Slab-Building | PURACERÂMICA</title>
-  <meta name="description" content="Learn handbuilding pottery techniques in Lisbon! 2.5-hour beginner-friendly workshop covering pinching, coiling & slab-building. Create your own ceramic pieces. €40 per person — all materials, glazing & firing included. Ages 14+. Book now in Alcântara.">
-  <meta name="keywords" content="handbuilding pottery Lisbon, pottery class beginners Lisbon, ceramic workshop Lisbon, pinching coiling slab-building, pottery techniques class, beginner ceramics Lisbon, clay pottery class Alcântara, learn pottery Lisbon">
+  <meta name="description"
+    content="Learn handbuilding pottery techniques in Lisbon! 2.5-hour beginner-friendly workshop covering pinching, coiling & slab-building. Create your own ceramic pieces. €40 per person — all materials, glazing & firing included. Ages 14+. Book now in Alcântara.">
+  <meta name="keywords"
+    content="handbuilding pottery Lisbon, pottery class beginners Lisbon, ceramic workshop Lisbon, pinching coiling slab-building, pottery techniques class, beginner ceramics Lisbon, clay pottery class Alcântara, learn pottery Lisbon">
   <meta name="language" content="English">
   <meta name="author" content="PURACERÂMICA">
 
@@ -23,8 +25,10 @@
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="product">
   <meta property="og:url" content="https://www.puraceramica.pt/en/handbuilding-workshop.html">
-  <meta property="og:title" content="Handbuilding Pottery Class – Pinching, Coiling & Slab-Building | PURACERÂMICA Lisbon">
-  <meta property="og:description" content="Learn handbuilding pottery techniques in a 2.5-hour beginner workshop. Pinching, coiling & slab-building. €40 per person. All materials & firing included. Alcântara, Lisbon.">
+  <meta property="og:title"
+    content="Handbuilding Pottery Class – Pinching, Coiling & Slab-Building | PURACERÂMICA Lisbon">
+  <meta property="og:description"
+    content="Learn handbuilding pottery techniques in a 2.5-hour beginner workshop. Pinching, coiling & slab-building. €40 per person. All materials & firing included. Alcântara, Lisbon.">
   <meta property="og:image" content="https://www.puraceramica.pt/assets/img/courses/handbuilding.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -36,7 +40,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://www.puraceramica.pt/en/handbuilding-workshop.html">
   <meta name="twitter:title" content="Handbuilding Pottery Class | PURACERÂMICA Lisbon">
-  <meta name="twitter:description" content="2.5-hour beginner pottery workshop. Learn pinching, coiling & slab-building. €40 per person. All materials & firing included.">
+  <meta name="twitter:description"
+    content="2.5-hour beginner pottery workshop. Learn pinching, coiling & slab-building. €40 per person. All materials & firing included.">
   <meta name="twitter:image" content="https://www.puraceramica.pt/assets/img/courses/handbuilding.jpg">
 
   <!-- ROBOTS -->
@@ -51,7 +56,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://puraceramicalisboa.simplybook.it">
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="../assets/css/styles.css">
@@ -151,8 +158,7 @@
       <!-- LEFT — IMAGE -->
       <div class="workshop-images">
         <div class="workshop-main-image">
-          <img src="../assets/img/courses/handbuilding.jpg"
-            alt="Handbuilding pottery workshop at PURACERÂMICA Lisbon"
+          <img src="../assets/img/courses/handbuilding.jpg" alt="Handbuilding pottery workshop at PURACERÂMICA Lisbon"
             width="900" height="600" loading="eager" />
         </div>
       </div>
@@ -160,77 +166,69 @@
       <!-- RIGHT — INFO PANEL -->
       <div class="workshop-info-panel">
 
-        <span class="page-tag">Pottery Workshops · Single Session</span>
-        <h1>Handbuilding <em>Pottery Class.</em></h1>
+       <span class="page-tag">{{ workshop.en.pageTag }}</span>
+<h1>{{ workshop.en.title }}</h1>
 
         <div class="workshop-price">
-<span class="price-amount">€{{ workshop.price }}</span>
+          <span class="price-amount">€{{ workshop.price }}</span>
           <span class="price-note">per person</span>
         </div>
 
-        <p class="workshop-intro">Discover the joy of handbuilding ceramics. Learn pinching, coiling, and slab-building in one hands-on session. No experience needed, just curiosity. <br><em>This course is taught in English.</em></p>
+       <p class="workshop-intro">
+  {{ workshop.en.intro }}
+  <br><em>{{ workshop.en.languageNote }}</em>
+</p>
 
-<!-- WORKSHOP DATES -->
-{% set months = workshop.dates | workshopMonths("en") %}
+        <!-- WORKSHOP DATES -->
+        {% set months = workshop.dates | workshopMonths("en") %}
 
-<div class="month-switcher">
+        <div class="month-switcher">
 
-  <!-- MONTH TABS -->
-  <div class="month-tabs">
-    {% for month in months %}
-      <button
-        type="button"
-        class="month-tab{% if loop.first %} active{% endif %}"
-        onclick="switchMonth('{{ month.key }}', this)"
-      >
-        {{ month.label }}
-      </button>
-    {% endfor %}
-  </div>
+          <!-- MONTH TABS -->
+          <div class="month-tabs">
+            {% for month in months %}
+            <button type="button" class="month-tab{% if loop.first %} active{% endif %}"
+              onclick="switchMonth('{{ month.key }}', this)">
+              {{ month.label }}
+            </button>
+            {% endfor %}
+          </div>
 
-  <!-- MONTH PANELS -->
-  {% for month in months %}
-    <div
-      class="month-panel{% if loop.first %} active{% endif %}"
-      id="month-{{ month.key }}"
-    >
-      <div class="dates-list">
+          <!-- MONTH PANELS -->
+          {% for month in months %}
+          <div class="month-panel{% if loop.first %} active{% endif %}" id="month-{{ month.key }}">
+            <div class="dates-list">
 
-        {% for session in month.sessions %}
-          <label class="date-block available">
-            <input
-              type="radio"
-              name="workshop-date"
-              value="{{ session.date }}"
-              data-time="{{ session.start }}"
-              data-end="{{ session.end }}"
-            >
+              {% for session in month.sessions %}
+              <label class="date-block available">
+                <input type="radio" name="workshop-date" value="{{ session.date }}" data-time="{{ session.start }}"
+                  data-end="{{ session.end }}">
 
-            <div class="date-content">
-              <span class="date-text">
-                {{ session.displayDate }} &nbsp;{{ session.start }}–{{ session.end }}
-              </span>
+                <div class="date-content">
+                  <span class="date-text">
+                    {{ session.displayDate }} &nbsp;{{ session.start }}–{{ session.end }}
+                  </span>
 
-              <span class="date-instructor">
-                &nbsp;·&nbsp; with {{ session.instructor }}
-              </span>
+                  <span class="date-instructor">
+                    &nbsp;·&nbsp; with {{ session.instructor }}
+                  </span>
+                </div>
+              </label>
+              {% endfor %}
+
             </div>
-          </label>
-        {% endfor %}
+          </div>
+          {% endfor %}
 
-      </div>
-    </div>
-  {% endfor %}
+        </div>
 
-</div>
-
-<!-- NO UPCOMING DATES -->
-<div class="workshop-no-dates" hidden>
-  <p>
-    <strong>New dates coming soon.</strong><br>
-    More workshop dates will be announced shortly.
-  </p>
-</div>
+        <!-- NO UPCOMING DATES -->
+        <div class="workshop-no-dates" hidden>
+          <p>
+            <strong>New dates coming soon.</strong><br>
+            More workshop dates will be announced shortly.
+          </p>
+        </div>
 
         <!-- QUANTITY -->
         <div class="quantity-section">
@@ -244,14 +242,14 @@
 
         <!-- BOOKING -->
         <a href="https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/"
-          class="workshop-book-btn" id="booking-btn"
-          data-category="2" data-provider="9"
-          target="_blank" rel="noopener noreferrer">
+          class="workshop-book-btn" id="booking-btn" data-category="2" data-provider="9" target="_blank"
+          rel="noopener noreferrer">
           Book now
         </a>
 
         <p class="booking-note">Booking completed on our secure booking page.</p>
-        <p class="shipping-note">All materials, glazing & firing included. Pieces ready for pickup 3–4 weeks after your workshop.</p>
+        <p class="shipping-note">All materials, glazing & firing included. Pieces ready for pickup 3–4 weeks after your
+          workshop.</p>
 
       </div>
     </div>
@@ -261,82 +259,133 @@
 
       <div class="wd-section">
         <h2>About this workshop</h2>
-        <p>Discover the joy of handbuilding ceramics in this creative workshop. We'll explore fundamental techniques such as pinching, coiling, and slab-building. No prior experience is required. Whether you come with a clear idea of what you'd like to create or simply a curiosity to try something new, everyone is welcome.</p>
-        <p>After shaping your pottery, you'll also have the chance to paint and decorate your piece, adding your own personal touch.</p>
+        <p>Discover the joy of handbuilding ceramics in this creative workshop. We'll explore fundamental techniques
+          such as pinching, coiling, and slab-building. No prior experience is required. Whether you come with a clear
+          idea of what you'd like to create or simply a curiosity to try something new, everyone is welcome.</p>
+        <p>After shaping your pottery, you'll also have the chance to paint and decorate your piece, adding your own
+          personal touch.</p>
       </div>
 
- <div class="wd-section">
-  <h3>What you'll learn</h3>
-  <div class="wd-weeks">
-    <div class="wd-week">
-      <span class="wd-week-num">—</span>
-      <div>
-        <strong>Pinch</strong>
-        <p>The most direct technique: press and shape a ball of clay with your fingers to create bowls, cups and organic forms.</p>
+      <div class="wd-section">
+        <h3>What you'll learn</h3>
+        <div class="wd-weeks">
+          <div class="wd-week">
+            <span class="wd-week-num">—</span>
+            <div>
+              <strong>Pinch</strong>
+              <p>The most direct technique: press and shape a ball of clay with your fingers to create bowls, cups and
+                organic forms.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/pinch.jpg" alt="Pinch technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">—</span>
+            <div>
+              <strong>Coil</strong>
+              <p>Roll clay into coils and build up walls layer by layer. Ideal for larger pieces and more sculptural
+                forms.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/coil.jpg" alt="Coil technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">—</span>
+            <div>
+              <strong>Slab</strong>
+              <p>Roll out flat sheets of clay and fold, cut and join them into shapes. Perfect for plates, tiles and
+                angular forms.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/slab.jpg" alt="Slab technique" loading="lazy" />
+            </div>
+          </div>
+          <div class="wd-week">
+            <span class="wd-week-num">—</span>
+            <div>
+              <strong>Decoration & painting</strong>
+              <p>Add textures, stamps and painted details to personalise your piece before it goes into the kiln.</p>
+            </div>
+            <div class="wd-week-img">
+              <img src="../assets/img/courses/pottery_painted_clay.jpg" alt="Decoration and painting" loading="lazy" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="wd-week-img">
-        <img src="../assets/img/courses/pinch.jpg" alt="Pinch technique" loading="lazy" />
-      </div>
-    </div>
-    <div class="wd-week">
-      <span class="wd-week-num">—</span>
-      <div>
-        <strong>Coil</strong>
-        <p>Roll clay into coils and build up walls layer by layer. Ideal for larger pieces and more sculptural forms.</p>
-      </div>
-      <div class="wd-week-img">
-        <img src="../assets/img/courses/coil.jpg" alt="Coil technique" loading="lazy" />
-      </div>
-    </div>
-    <div class="wd-week">
-      <span class="wd-week-num">—</span>
-      <div>
-        <strong>Slab</strong>
-        <p>Roll out flat sheets of clay and fold, cut and join them into shapes. Perfect for plates, tiles and angular forms.</p>
-      </div>
-      <div class="wd-week-img">
-        <img src="../assets/img/courses/slab.jpg" alt="Slab technique" loading="lazy" />
-      </div>
-    </div>
-    <div class="wd-week">
-      <span class="wd-week-num">—</span>
-      <div>
-        <strong>Decoration & painting</strong>
-        <p>Add textures, stamps and painted details to personalise your piece before it goes into the kiln.</p>
-      </div>
-      <div class="wd-week-img">
-        <img src="../assets/img/courses/pottery_painted_clay.jpg" alt="Decoration and painting" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</div>
 
       <div class="wd-section wd-included">
         <h3>What's included</h3>
         <div class="wd-included-grid">
           <div class="wd-included-item"><span class="wd-check">—</span><span>All clay and materials</span></div>
-          <div class="wd-included-item"><span class="wd-check">—</span><span>Professional instructor guidance</span></div>
-          <div class="wd-included-item"><span class="wd-check">—</span><span>Painting and decorating supplies</span></div>
-          <div class="wd-included-item"><span class="wd-check">—</span><span>Firing and glazing of your pieces</span></div>
+          <div class="wd-included-item"><span class="wd-check">—</span><span>Professional instructor guidance</span>
+          </div>
+          <div class="wd-included-item"><span class="wd-check">—</span><span>Painting and decorating supplies</span>
+          </div>
+          <div class="wd-included-item"><span class="wd-check">—</span><span>Firing and glazing of your pieces</span>
+          </div>
         </div>
       </div>
 
       <div class="wd-section">
         <h3>Important information</h3>
-        <div class="wd-info-grid">
-          <div class="wd-info-item"><span class="wd-info-label">Duration</span><span class="wd-info-value">2.5 hours</span></div>
-<div class="wd-info-item"><span class="wd-info-label">Price</span><span class="wd-info-value">€{{ workshop.price }} per person</span></div>          <div class="wd-info-item"><span class="wd-info-label">Schedule</span><span class="wd-info-value">Saturdays 15:00–17:30</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Level</span><span class="wd-info-value">Beginner and intermediate friendly</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Language</span><span class="wd-info-value">English</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Age</span><span class="wd-info-value">14+</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Group size</span><span class="wd-info-value">Maximum 10 participants</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Pickup</span><span class="wd-info-value">3–4 weeks after the workshop</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">What to bring</span><span class="wd-info-value">Just yourself and clothes you don't mind getting clay on</span></div>
-        </div>
-      </div>
+       <div class="wd-section">
+  <h3>Important information</h3>
+
+  <div class="wd-info-grid">
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Duration</span>
+      <span class="wd-info-value">{{ workshop.durationMinutes / 60 }} hours</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Price</span>
+      <span class="wd-info-value">€{{ workshop.price }} per person</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Schedule</span>
+      <span class="wd-info-value">{{ workshop.en.schedule }}</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Level</span>
+      <span class="wd-info-value">{{ workshop.en.levelLabel }}</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Language</span>
+      <span class="wd-info-value">{{ workshop.en.languageLabel }}</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Age</span>
+      <span class="wd-info-value">{{ workshop.ageMinimum }}+</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Group size</span>
+      <span class="wd-info-value">Maximum {{ workshop.capacity }} participants</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">Pickup</span>
+      <span class="wd-info-value">3–4 weeks after the workshop</span>
+    </div>
+
+    <div class="wd-info-item">
+      <span class="wd-info-label">What to bring</span>
+      <span class="wd-info-value">Just yourself and clothes you don't mind getting clay on</span>
+    </div>
+
+  </div>
+</div>
 
       <div class="wd-note-box">
-        <p><strong>Please note:</strong> Colors and sizes may change slightly during the drying and firing process. This is a natural part of working with clay — we'll guide you through what to expect.</p>
+        <p><strong>Please note:</strong> Colors and sizes may change slightly during the drying and firing process. This
+          is a natural part of working with clay — we'll guide you through what to expect.</p>
       </div>
 
     </div>
