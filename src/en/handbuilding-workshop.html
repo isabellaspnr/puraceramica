@@ -1,3 +1,4 @@
+ {% set workshop = workshops.handbuilding %}
  <!DOCTYPE html>
 <html lang="en">
 
@@ -163,90 +164,72 @@
         <h1>Handbuilding <em>Pottery Class.</em></h1>
 
         <div class="workshop-price">
-          <span class="price-amount">€40</span>
+<span class="price-amount">€{{ workshop.price }}</span>
           <span class="price-note">per person</span>
         </div>
 
         <p class="workshop-intro">Discover the joy of handbuilding ceramics. Learn pinching, coiling, and slab-building in one hands-on session. No experience needed, just curiosity. <br><em>This course is taught in English.</em></p>
 
-       <!-- MONTH SWITCHER -->
+<!-- WORKSHOP DATES -->
+{% set months = workshop.dates | workshopMonths("en") %}
+
 <div class="month-switcher">
+
+  <!-- MONTH TABS -->
   <div class="month-tabs">
-    <button class="month-tab active" onclick="switchMonth('june', this)">June</button>
-    <button class="month-tab" onclick="switchMonth('july', this)">July</button>
-    <button class="month-tab" onclick="switchMonth('august', this)">August</button>
+    {% for month in months %}
+      <button
+        type="button"
+        class="month-tab{% if loop.first %} active{% endif %}"
+        onclick="switchMonth('{{ month.key }}', this)"
+      >
+        {{ month.label }}
+      </button>
+    {% endfor %}
   </div>
 
-  <!-- JUNE -->
-  <div class="month-panel active" id="month-june">
-    <div class="dates-list">
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-06-06" data-time="15:00:00" checked>
-        <div class="date-content"><span class="date-text">Sat. 06.06. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-06-13" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 13.06. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-06-20" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 20.06. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-06-27" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 27.06. &nbsp;15:00–17:30</span></div>
-      </label>
+  <!-- MONTH PANELS -->
+  {% for month in months %}
+    <div
+      class="month-panel{% if loop.first %} active{% endif %}"
+      id="month-{{ month.key }}"
+    >
+      <div class="dates-list">
+
+        {% for session in month.sessions %}
+          <label class="date-block available">
+            <input
+              type="radio"
+              name="workshop-date"
+              value="{{ session.date }}"
+              data-time="{{ session.start }}"
+              data-end="{{ session.end }}"
+            >
+
+            <div class="date-content">
+              <span class="date-text">
+                {{ session.displayDate }} &nbsp;{{ session.start }}–{{ session.end }}
+              </span>
+
+              <span class="date-instructor">
+                &nbsp;·&nbsp; with {{ session.instructor }}
+              </span>
+            </div>
+          </label>
+        {% endfor %}
+
+      </div>
     </div>
-  </div>
+  {% endfor %}
 
-  <!-- JULY -->
-  <div class="month-panel" id="month-july">
-    <div class="dates-list">
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-07-04" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 04.07. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-07-11" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 11.07. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-07-18" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 18.07. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-07-25" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 25.07. &nbsp;15:00–17:30</span></div>
-      </label>
-    </div>
-  </div>
+</div>
 
-  <!-- AUGUST -->
-  <div class="month-panel" id="month-august">
-    <div class="dates-list">
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-08-01" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 01.08. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-08-08" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 08.08. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-08-15" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 15.08. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-08-22" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 22.08. &nbsp;15:00–17:30</span></div>
-      </label>
-      <label class="date-block available">
-        <input type="radio" name="workshop-date" value="2026-08-29" data-time="15:00:00">
-        <div class="date-content"><span class="date-text">Sat. 29.08. &nbsp;15:00–17:30</span></div>
-      </label>
-    </div>
-  </div>
-
+<!-- NO UPCOMING DATES -->
+<div class="workshop-no-dates" hidden>
+  <p>
+    <strong>New dates coming soon.</strong><br>
+    More workshop dates will be announced shortly.
+  </p>
 </div>
 
         <!-- QUANTITY -->
@@ -342,8 +325,7 @@
         <h3>Important information</h3>
         <div class="wd-info-grid">
           <div class="wd-info-item"><span class="wd-info-label">Duration</span><span class="wd-info-value">2.5 hours</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Price</span><span class="wd-info-value">€40 per person</span></div>
-          <div class="wd-info-item"><span class="wd-info-label">Schedule</span><span class="wd-info-value">Saturdays 15:00–17:30</span></div>
+<div class="wd-info-item"><span class="wd-info-label">Price</span><span class="wd-info-value">€{{ workshop.price }} per person</span></div>          <div class="wd-info-item"><span class="wd-info-label">Schedule</span><span class="wd-info-value">Saturdays 15:00–17:30</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Level</span><span class="wd-info-value">Beginner and intermediate friendly</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Language</span><span class="wd-info-value">English</span></div>
           <div class="wd-info-item"><span class="wd-info-label">Age</span><span class="wd-info-value">14+</span></div>

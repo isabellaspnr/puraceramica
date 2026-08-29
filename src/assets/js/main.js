@@ -520,3 +520,156 @@ function toggleFaqAccordion(header) {
   });
   if (!isActive) { header.classList.add('active'); content.classList.add('active'); }
 }
+
+// ── HIDE PAST WORKSHOP DATES ──
+document.addEventListener('DOMContentLoaded', () => {
+  const dateInputs = [
+    ...document.querySelectorAll(
+      'input[name="workshop-date"][data-end]'
+    )
+  ];
+
+  if (!dateInputs.length) return;
+
+  // Aktuelle Zeit in Lissabon
+  const parts = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Lisbon',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23'
+  }).formatToParts(new Date());
+
+  const now = {};
+
+  parts.forEach(part => {
+    if (part.type !== 'literal') {
+      now[part.type] = part.value;
+    }
+  });
+
+  const nowKey =
+    now.year +
+    now.month +
+    now.day +
+    now.hour +
+    now.minute;
+
+  let firstUpcoming = null;
+
+  dateInputs.forEach(input => {
+    const block = input.closest('.date-block');
+
+    if (!block) return;
+
+    const date = input.value.replaceAll('-', '');
+    const end = (input.dataset.end || '23:59').replace(':', '');
+
+    const sessionKey = date + end;
+
+    if (sessionKey < nowKey) {
+      block.hidden = true;
+      input.checked = false;
+      input.disabled = true;
+    } else if (!firstUpcoming) {
+      firstUpcoming = input;
+    }
+  });
+
+  // Falls der ursprünglich ausgewählte Termin inzwischen vorbei ist:
+  const selectedUpcoming = dateInputs.some(
+    input => input.checked && !input.disabled
+  );
+
+if (!selectedUpcoming && firstUpcoming) {
+  firstUpcoming.checked = true;
+}
+
+// Monate ohne zukünftige Termine ausblenden
+document.querySelectorAll('.month-switcher').forEach((switcher) => {
+  const tabs = [...switcher.querySelectorAll('.month-tab')];
+  const panels = [...switcher.querySelectorAll('.month-panel')];
+
+  let firstAvailableIndex = -1;
+
+  panels.forEach((panel, index) => {
+    const hasUpcomingDates = [...panel.querySelectorAll('.date-block')]
+      .some(block => !block.hidden);
+
+    if (!hasUpcomingDates) {
+      panel.hidden = true;
+      panel.classList.remove('active');
+
+      if (tabs[index]) {
+        tabs[index].hidden = true;
+        tabs[index].classList.remove('active');
+      }
+    } else if (firstAvailableIndex === -1) {
+      firstAvailableIndex = index;
+    }
+  });
+
+  // Falls der ursprünglich aktive Monat inzwischen vorbei ist,
+  // automatisch den nächsten verfügbaren Monat öffnen
+  const activePanel = panels.find(
+    panel => panel.classList.contains('active') && !panel.hidden
+  );
+
+  if (!activePanel && firstAvailableIndex !== -1) {
+    panels[firstAvailableIndex].classList.add('active');
+
+    if (tabs[firstAvailableIndex]) {
+      tabs[firstAvailableIndex].classList.add('active');
+    }
+  }
+});
+});
+
+// ── WORKSHOP EMPTY STATE ──
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.month-switcher').forEach((switcher) => {
+    const hasUpcomingDates = [...switcher.querySelectorAll('.date-block')]
+      .some(block => !block.hidden);
+
+    if (hasUpcomingDates) return;
+
+    const panel = switcher.closest('.workshop-info-panel');
+
+    if (!panel) return;
+
+    // Terminbereich ausblenden
+    switcher.hidden = true;
+
+    // Hinweis anzeigen
+    const emptyState = panel.querySelector('.workshop-no-dates');
+
+    if (emptyState) {
+      emptyState.hidden = false;
+    }
+
+    // Teilnehmerauswahl ausblenden
+    const quantity = panel.querySelector('.quantity-section');
+
+    if (quantity) {
+      quantity.hidden = true;
+    }
+
+    // Booking-Button deaktivieren
+    const bookingButton = panel.querySelector('.workshop-book-btn');
+
+    if (bookingButton) {
+      bookingButton.removeAttribute('href');
+      bookingButton.setAttribute('aria-disabled', 'true');
+      bookingButton.textContent = 'New dates coming soon';
+    }
+
+    // Booking-Hinweis ausblenden
+    const bookingNote = panel.querySelector('.booking-note');
+
+    if (bookingNote) {
+      bookingNote.hidden = true;
+    }
+  });
+});
