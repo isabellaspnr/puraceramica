@@ -1,0 +1,407 @@
+{% set workshop = workshops[workshopId] %}
+{% set t = workshop[lang] %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>{{ t.title }} | PURACERÂMICA</title>
+
+  <link rel="icon" href="/assets/img/icons/LOGO.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/workshop.css">
+</head>
+
+<body>
+
+  {% if lang == "pt" %}
+    {% include "header-pt.html" %}
+  {% else %}
+    {% include "header-en.html" %}
+  {% endif %}
+
+  <main>
+<!-- WORKSHOP DETAIL -->
+<div class="workshop-detail-container">
+
+  <div class="workshop-detail-grid">
+
+    <!-- IMAGE -->
+    <div class="workshop-images">
+      <div class="workshop-main-image">
+        <img
+          src="{{ workshop.image }}"
+          alt="{% if lang == 'pt' %}{{ workshop.ptImageAlt }}{% else %}{{ workshop.enImageAlt }}{% endif %}"
+          width="900"
+          height="600"
+          loading="eager"
+        >
+      </div>
+    </div>
+
+    <!-- INFO + BOOKING -->
+    <div class="workshop-info-panel">
+
+      <span class="page-tag">{{ t.pageTag }}</span>
+
+      <h1>{{ t.title }}</h1>
+
+      <p class="workshop-intro">
+        {{ t.intro }}
+        <br>
+        <em>{{ t.languageNote }}</em>
+      </p>
+
+      <!-- QUICK FACTS -->
+      <div class="workshop-quick-facts">
+
+        <div class="workshop-quick-fact">
+          <span class="workshop-quick-label">
+            {% if lang == "pt" %}Preço{% else %}Price{% endif %}
+          </span>
+          <strong>€{{ workshop.price }}</strong>
+        </div>
+
+        <div class="workshop-quick-fact">
+          <span class="workshop-quick-label">
+            {% if lang == "pt" %}Duração{% else %}Duration{% endif %}
+          </span>
+          <strong>{{ workshop.durationMinutes / 60 }} h</strong>
+        </div>
+
+        <div class="workshop-quick-fact">
+          <span class="workshop-quick-label">
+            {% if lang == "pt" %}Nível{% else %}Level{% endif %}
+          </span>
+          <strong>{{ t.levelLabel }}</strong>
+        </div>
+
+        <div class="workshop-quick-fact">
+          <span class="workshop-quick-label">
+            {% if lang == "pt" %}Idioma{% else %}Language{% endif %}
+          </span>
+          <strong>{{ t.languageLabel }}</strong>
+        </div>
+
+      </div>
+
+
+      <!-- UPCOMING DATES -->
+      {% set months = workshop.dates | workshopMonths(lang) %}
+
+      <div class="workshop-booking-section">
+
+        <div class="workshop-booking-heading">
+          {% if lang == "pt" %}
+            Próximas datas
+          {% else %}
+            Upcoming dates
+          {% endif %}
+        </div>
+
+        <div class="month-switcher">
+
+          <div class="month-tabs">
+            {% for month in months %}
+              <button
+                type="button"
+                class="month-tab{% if loop.first %} active{% endif %}"
+                onclick="switchMonth('{{ month.key }}', this)"
+              >
+                {{ month.label }}
+              </button>
+            {% endfor %}
+          </div>
+
+          {% for month in months %}
+            <div
+              class="month-panel{% if loop.first %} active{% endif %}"
+              id="month-{{ month.key }}"
+            >
+
+              <div class="dates-list">
+
+                {% for session in month.sessions %}
+                  <label class="date-block available">
+
+                    <input
+                      type="radio"
+                      name="workshop-date"
+                      value="{{ session.date }}"
+                      data-time="{{ session.start }}"
+                      data-end="{{ session.end }}"
+                    >
+
+                    <div class="date-content">
+
+                      <span class="date-text">
+                        {{ session.displayDate }}
+                        &nbsp;
+                        {{ session.start }}–{{ session.end }}
+                      </span>
+
+                      <span class="date-instructor">
+                        {% if lang == "pt" %}
+                          &nbsp;·&nbsp; com {{ session.instructor }}
+                        {% else %}
+                          &nbsp;·&nbsp; with {{ session.instructor }}
+                        {% endif %}
+                      </span>
+
+                    </div>
+
+                  </label>
+                {% endfor %}
+
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+
+        <!-- NO UPCOMING DATES -->
+        <div class="workshop-no-dates" hidden>
+          {% if lang == "pt" %}
+            <p>
+              <strong>Novas datas em breve.</strong><br>
+              Mais datas serão anunciadas em breve.
+            </p>
+          {% else %}
+            <p>
+              <strong>New dates coming soon.</strong><br>
+              More workshop dates will be announced shortly.
+            </p>
+          {% endif %}
+        </div>
+
+
+        <!-- QUANTITY -->
+        <div class="quantity-section">
+
+          <label for="quantity">
+            {% if lang == "pt" %}
+              Número de participantes
+            {% else %}
+              Number of participants
+            {% endif %}
+          </label>
+
+          <div class="quantity-selector">
+            <button
+              type="button"
+              class="qty-btn"
+              onclick="decrementQty()"
+              aria-label="Decrease quantity"
+            >−</button>
+
+            <input
+              type="text"
+              id="quantity"
+              value="1"
+              readonly
+              aria-label="Number of participants"
+            >
+
+            <button
+              type="button"
+              class="qty-btn"
+              onclick="incrementQty()"
+              aria-label="Increase quantity"
+            >+</button>
+          </div>
+
+        </div>
+
+
+        <!-- BOOK -->
+        <a
+          href="{{ workshop.booking.url }}"
+          class="workshop-book-btn"
+          id="booking-btn"
+          data-category="{{ workshop.booking.category }}"
+          data-provider="{{ workshop.booking.provider }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {% if lang == "pt" %}
+            Reservar agora
+          {% else %}
+            Book now
+          {% endif %}
+        </a>
+
+        <p class="booking-note">
+          {% if lang == "pt" %}
+            A reserva é concluída na nossa página de reservas segura.
+          {% else %}
+            Booking is completed on our secure booking page.
+          {% endif %}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ABOUT -->
+{% if t.about %}
+<section class="workshop-content-section workshop-about">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        Sobre o workshop
+      {% else %}
+        About this workshop
+      {% endif %}
+    </div>
+
+    <div class="workshop-about-text">
+      {% for paragraph in t.about %}
+        <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+
+<!-- WHAT YOU CAN MAKE -->
+{% if t.whatYouCanMake %}
+<section class="workshop-content-section workshop-make">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        O que pode criar
+      {% else %}
+        What you can make
+      {% endif %}
+    </div>
+
+    <div class="workshop-make-content">
+
+      <p class="workshop-make-intro">
+        {{ t.whatYouCanMake.intro }}
+      </p>
+
+      <div class="workshop-make-grid">
+        {% for example in t.whatYouCanMake.examples %}
+          <div class="workshop-make-item">
+            <span class="workshop-make-number">
+              0{{ loop.index }}
+            </span>
+
+            <h3>{{ example.title }}</h3>
+            <p>{{ example.text }}</p>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if t.whatYouCanMake.note %}
+        <p class="workshop-make-note">
+          {{ t.whatYouCanMake.note }}
+        </p>
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+ <!-- TECHNIQUES -->
+{% if t.techniques %}
+<section class="workshop-content-section workshop-techniques">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        Técnicas que pode explorar
+      {% else %}
+        Techniques you can explore
+      {% endif %}
+    </div>
+
+    <div class="workshop-techniques-content">
+
+      {% if t.techniques.intro %}
+        <p class="workshop-techniques-intro">
+          {{ t.techniques.intro }}
+        </p>
+      {% endif %}
+
+      <div class="workshop-techniques-list">
+
+        {% for technique in t.techniques.items %}
+          <article class="workshop-technique">
+
+            <div class="workshop-technique-image">
+              <img
+                src="{{ technique.image }}"
+                alt="{{ technique.imageAlt }}"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="workshop-technique-text">
+
+              <span class="workshop-technique-number">
+                0{{ loop.index }}
+              </span>
+
+              <h3>{{ technique.title }}</h3>
+
+              <p>{{ technique.text }}</p>
+
+            </div>
+
+          </article>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+  </main>
+
+  {% if lang == "pt" %}
+    {% include "footer-pt.html" %}
+  {% else %}
+    {% include "footer-en.html" %}
+  {% endif %}
+
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>
