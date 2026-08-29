@@ -33,6 +33,12 @@ booking: {
  en: {
   title: "Handbuilding Pottery Class",
   shortTitle: "Handbuilding",
+  seo: {
+  title: "Handbuilding Pottery Class in Lisbon | PURACERÂMICA",
+
+  description:
+    "Join a 2.5-hour handbuilding pottery class in Lisbon. Create your own ceramic piece with instructor guidance. Beginner-friendly and no experience required."
+},
   pageTag: "Pottery Workshops · Single Session",
 
   schedule: "Saturdays & selected Sundays · 15:00–17:30",
@@ -111,9 +117,53 @@ techniques: {
   ]
 },
 
+included: {
+  intro:
+    "Everything you need to create your piece is provided in the studio.",
 
+  items: [
+    {
+      title: "Clay & materials",
+      text: "All clay and basic materials needed during the session."
+    },
+    {
+      title: "Studio tools",
+      text: "Full use of our handbuilding tools and equipment during the workshop."
+    },
+    {
+      title: "Instructor guidance",
+      text: "Individual support with your idea, technique and construction throughout the session."
+    },
+    {
+      title: "Glazing & firing",
+      text: "Finishing and firing of your ceramic piece after the workshop."
+    }
+  ]
+},
 
+beforeYouCome: {
+  intro:
+    "A few practical things to know before your workshop.",
 
+  items: [
+    {
+      title: "What to wear",
+      text: "Clay can get messy, so we recommend comfortable clothes that you don't mind getting a little dirty."
+    },
+    {
+      title: "What to bring",
+      text: "You don't need to bring any materials or tools. If you already have an idea for your piece, you're welcome to bring reference images."
+    },
+    {
+      title: "Finished pieces",
+      text: "Your piece will stay with us after the workshop for drying, glazing and firing. It will usually be ready for collection within 3–4 weeks."
+    },
+    {
+      title: "Age",
+      text: "This workshop is suitable for participants aged 14 and over."
+    }
+  ]
+},
 
   url: "/en/handbuilding-workshop.html"
 
@@ -145,25 +195,23 @@ languageLabel: "Inglês",
         date: "2026-09-05",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
-      },
+instructor: "ebrahimElmoly"      },
       {
         date: "2026-09-12",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
-      },
+instructor: "ebrahimElmoly"      },
       {
         date: "2026-09-19",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-09-26",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
 
       // Sundays · Maasa Kakurai
@@ -171,13 +219,13 @@ languageLabel: "Inglês",
         date: "2026-09-06",
         start: "15:00",
         end: "17:30",
-        instructor: "Maasa Kakurai"
+        instructor: "maasaKakurai"
       },
       {
         date: "2026-09-27",
         start: "15:00",
         end: "17:30",
-        instructor: "Maasa Kakurai",
+        instructor: "maasaKakurai",
         internalNote: "May later become a Nerikomi workshop"
       },
 
@@ -186,37 +234,37 @@ languageLabel: "Inglês",
         date: "2026-10-03",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-10-04",
         start: "15:00",
         end: "17:30",
-        instructor: "Maasa Kakurai"
+        instructor: "maasaKakurai"
       },
       {
         date: "2026-10-10",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-10-17",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-10-24",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-10-31",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
 
       // November
@@ -224,31 +272,31 @@ languageLabel: "Inglês",
         date: "2026-11-07",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-11-08",
         start: "15:00",
         end: "17:30",
-        instructor: "Maasa Kakurai"
+        instructor: "maasaKakurai"
       },
       {
         date: "2026-11-14",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-11-21",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-11-28",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
 
       // December
@@ -256,25 +304,25 @@ languageLabel: "Inglês",
         date: "2026-12-05",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-12-06",
         start: "15:00",
         end: "17:30",
-        instructor: "Maasa Kakurai"
+        instructor: "maasaKakurai"
       },
       {
         date: "2026-12-12",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       },
       {
         date: "2026-12-19",
         start: "15:00",
         end: "17:30",
-        instructor: "Ebrahim Elmoly"
+        instructor: "ebrahimElmoly"
       }
     ]
   }

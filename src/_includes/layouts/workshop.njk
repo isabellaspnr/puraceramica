@@ -9,7 +9,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
 
+<!-- SEO -->
+{% if t.seo and t.seo.title %}
+  <title>{{ t.seo.title }}</title>
+{% else %}
   <title>{{ t.title }} | PURACERÂMICA</title>
+{% endif %}
+
+{% if t.seo and t.seo.description %}
+  <meta
+    name="description"
+    content="{{ t.seo.description }}"
+  >
+{% endif %}
+
+<!-- CANONICAL -->
+{% if t.url %}
+  <link
+    rel="canonical"
+    href="https://puraceramica.pt{{ t.url }}"
+  >
+{% endif %}
+
+<!-- LANGUAGE ALTERNATES -->
+{% if workshop.en and workshop.en.url %}
+  <link
+    rel="alternate"
+    hreflang="en"
+    href="https://puraceramica.pt{{ workshop.en.url }}"
+  >
+{% endif %}
+
+{% if workshop.pt and workshop.pt.url %}
+  <link
+    rel="alternate"
+    hreflang="pt"
+    href="https://puraceramica.pt{{ workshop.pt.url }}"
+  >
+{% endif %}
+
+{% if workshop.en and workshop.en.url %}
+  <link
+    rel="alternate"
+    hreflang="x-default"
+    href="https://puraceramica.pt{{ workshop.en.url }}"
+  >
+{% endif %}
+
+<!-- OPEN GRAPH -->
+<meta
+  property="og:title"
+  content="{% if t.seo and t.seo.title %}{{ t.seo.title }}{% else %}{{ t.title }} | PURACERÂMICA{% endif %}"
+>
+
+{% if t.seo and t.seo.description %}
+  <meta
+    property="og:description"
+    content="{{ t.seo.description }}"
+  >
+{% endif %}
+
+<meta property="og:type" content="website">
+
+{% if t.url %}
+  <meta
+    property="og:url"
+    content="https://puraceramica.pt{{ t.url }}"
+  >
+{% endif %}
+
+{% if workshop.image %}
+  <meta
+    property="og:image"
+    content="https://puraceramica.pt{{ workshop.image }}"
+  >
+{% endif %}
 
   <link rel="icon" href="/assets/img/icons/LOGO.png" type="image/png">
 
@@ -153,13 +227,18 @@
                         {{ session.start }}–{{ session.end }}
                       </span>
 
-                      <span class="date-instructor">
-                        {% if lang == "pt" %}
-                          &nbsp;·&nbsp; com {{ session.instructor }}
-                        {% else %}
-                          &nbsp;·&nbsp; with {{ session.instructor }}
-                        {% endif %}
-                      </span>
+                      {% set sessionInstructor = instructors[session.instructor] %}
+
+{% if sessionInstructor %}
+  <span class="date-instructor">
+    {% if lang == "pt" %}
+      &nbsp;·&nbsp; com {{ sessionInstructor.name }}
+    {% else %}
+      &nbsp;·&nbsp; with {{ sessionInstructor.name }}
+    {% endif %}
+  </span>
+{% endif %}
+
 
                     </div>
 
@@ -380,6 +459,147 @@
 
               <p>{{ technique.text }}</p>
 
+            </div>
+
+          </article>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+<!-- WHAT'S INCLUDED -->
+{% if t.included %}
+<section class="workshop-content-section workshop-included">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        O que está incluído
+      {% else %}
+        What's included
+      {% endif %}
+    </div>
+
+    <div class="workshop-included-content">
+
+      {% if t.included.intro %}
+        <p class="workshop-included-intro">
+          {{ t.included.intro }}
+        </p>
+      {% endif %}
+
+      <div class="workshop-included-list">
+
+        {% for item in t.included.items %}
+          <div class="workshop-included-item">
+
+            <span class="workshop-included-number">
+              0{{ loop.index }}
+            </span>
+
+            <div>
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.text }}</p>
+            </div>
+
+          </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+<!-- BEFORE YOU COME -->
+{% if t.beforeYouCome %}
+<section class="workshop-content-section workshop-before">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        Antes de vir
+      {% else %}
+        Before you come
+      {% endif %}
+    </div>
+
+    <div class="workshop-before-content">
+
+      {% if t.beforeYouCome.intro %}
+        <p class="workshop-before-intro">
+          {{ t.beforeYouCome.intro }}
+        </p>
+      {% endif %}
+
+      <div class="workshop-before-grid">
+
+        {% for item in t.beforeYouCome.items %}
+          <div class="workshop-before-item">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+          </div>
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
+<!-- INSTRUCTORS -->
+{% set workshopInstructorList = workshop.dates | workshopInstructors(instructors) %}
+
+{% if workshopInstructorList.length %}
+<section class="workshop-content-section workshop-instructors">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        {% if workshopInstructorList.length == 1 %}
+          O seu instrutor
+        {% else %}
+          Os seus instrutores
+        {% endif %}
+      {% else %}
+        {% if workshopInstructorList.length == 1 %}
+          Your instructor
+        {% else %}
+          Your instructors
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="workshop-instructors-content">
+
+      <div class="workshop-instructors-grid">
+
+        {% for instructor in workshopInstructorList %}
+          <article class="workshop-instructor">
+
+            <div class="workshop-instructor-heading">
+              <span class="workshop-instructor-number">
+                0{{ loop.index }}
+              </span>
+
+              <div>
+                <h3>{{ instructor.name }}</h3>
+
+                {% if instructor[lang] and instructor[lang].role %}
+                  <p class="workshop-instructor-role">
+                    {{ instructor[lang].role }}
+                  </p>
+                {% endif %}
+              </div>
             </div>
 
           </article>

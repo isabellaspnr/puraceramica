@@ -67,6 +67,24 @@
 
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
 
+  eleventyConfig.addFilter("workshopInstructors", function (sessions, instructorData) {
+  if (!Array.isArray(sessions) || !instructorData) return [];
+
+  const seen = new Set();
+
+  return sessions
+    .map(session => session.instructor)
+    .filter(Boolean)
+    .filter(instructorId => {
+      if (seen.has(instructorId)) return false;
+
+      seen.add(instructorId);
+      return true;
+    })
+    .map(instructorId => instructorData[instructorId])
+    .filter(Boolean);
+});
+
   // Bestehende .html-URLs während der Migration beibehalten
   eleventyConfig.addGlobalData("permalink", () => {
     return (data) =>
