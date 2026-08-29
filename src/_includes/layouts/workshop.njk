@@ -119,11 +119,11 @@
         ],
 
         "offers": {
-          "@type": "Offer",
-          "url": {{ workshop.booking.url | dump | safe }},
-          "price": "{{ workshop.price }}",
-          "priceCurrency": "{{ workshop.priceCurrency }}"
-        },
+  "@type": "Offer",
+  "price": "{{ workshop.price }}",
+  "priceCurrency": "{{ workshop.priceCurrency }}"{% if workshop.booking and workshop.booking.url %},
+  "url": {{ workshop.booking.url | dump | safe }}{% endif %}
+},
 
         "organizer": {
           "@type": "Organization",
@@ -170,18 +170,20 @@
 
   <div class="workshop-detail-grid">
 
-    <!-- IMAGE -->
-    <div class="workshop-images">
-      <div class="workshop-main-image">
-        <img
-          src="{{ workshop.image }}"
-          alt="{% if lang == 'pt' %}{{ workshop.ptImageAlt }}{% else %}{{ workshop.enImageAlt }}{% endif %}"
-          width="900"
-          height="600"
-          loading="eager"
-        >
-      </div>
+   <!-- IMAGE -->
+{% if workshop.image %}
+  <div class="workshop-images">
+    <div class="workshop-main-image">
+      <img
+        src="{{ workshop.image }}"
+        alt="{% if lang == 'pt' %}{{ workshop.ptImageAlt }}{% else %}{{ workshop.enImageAlt }}{% endif %}"
+        width="900"
+        height="600"
+        loading="eager"
+      >
     </div>
+  </div>
+{% endif %}
 
     <!-- INFO + BOOKING -->
     <div class="workshop-info-panel">
@@ -325,68 +327,71 @@
         </div>
 
 
-        <!-- QUANTITY -->
-        <div class="quantity-section">
+        {% if workshop.booking and workshop.booking.url %}
 
-          <label for="quantity">
-            {% if lang == "pt" %}
-              Número de participantes
-            {% else %}
-              Number of participants
-            {% endif %}
-          </label>
+  <!-- QUANTITY -->
+  <div class="quantity-section">
 
-          <div class="quantity-selector">
-            <button
-              type="button"
-              class="qty-btn"
-              onclick="decrementQty()"
-              aria-label="Decrease quantity"
-            >−</button>
+    <label for="quantity">
+      {% if lang == "pt" %}
+        Número de participantes
+      {% else %}
+        Number of participants
+      {% endif %}
+    </label>
 
-            <input
-              type="text"
-              id="quantity"
-              value="1"
-              readonly
-              aria-label="Number of participants"
-            >
+    <div class="quantity-selector">
+      <button
+        type="button"
+        class="qty-btn"
+        onclick="decrementQty()"
+        aria-label="Decrease quantity"
+      >−</button>
 
-            <button
-              type="button"
-              class="qty-btn"
-              onclick="incrementQty()"
-              aria-label="Increase quantity"
-            >+</button>
-          </div>
+      <input
+        type="text"
+        id="quantity"
+        value="1"
+        readonly
+        aria-label="Number of participants"
+      >
 
-        </div>
+      <button
+        type="button"
+        class="qty-btn"
+        onclick="incrementQty()"
+        aria-label="Increase quantity"
+      >+</button>
+    </div>
 
+  </div>
 
-        <!-- BOOK -->
-        <a
-          href="{{ workshop.booking.url }}"
-          class="workshop-book-btn"
-          id="booking-btn"
-          data-category="{{ workshop.booking.category }}"
-          data-provider="{{ workshop.booking.provider }}"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {% if lang == "pt" %}
-            Reservar agora
-          {% else %}
-            Book now
-          {% endif %}
-        </a>
+  <!-- BOOK -->
+  <a
+    href="{{ workshop.booking.url }}"
+    class="workshop-book-btn"
+    id="booking-btn"
+    data-category="{{ workshop.booking.category }}"
+    data-provider="{{ workshop.booking.provider }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    {% if lang == "pt" %}
+      Reservar agora
+    {% else %}
+      Book now
+    {% endif %}
+  </a>
 
-        <p class="booking-note">
-          {% if lang == "pt" %}
-            A reserva é concluída na nossa página de reservas segura.
-          {% else %}
-            Booking is completed on our secure booking page.
-          {% endif %}
-        </p>
+  <p class="booking-note">
+    {% if lang == "pt" %}
+      A reserva é concluída na nossa página de reservas segura.
+    {% else %}
+      Booking is completed on our secure booking page.
+    {% endif %}
+  </p>
+
+{% endif %}
 
       </div>
 
@@ -613,6 +618,35 @@
 </section>
 {% endif %}
 
+<!-- IMPORTANT NOTICE -->
+{% if t.notice %}
+<section class="workshop-content-section workshop-notice">
+  <div class="workshop-content-inner">
+
+    <div class="workshop-section-label">
+      {% if lang == "pt" %}
+        Informação importante
+      {% else %}
+        Important information
+      {% endif %}
+    </div>
+
+    <div class="workshop-notice-content">
+      <div class="workshop-notice-box">
+
+        {% if t.notice.title %}
+          <h3>{{ t.notice.title }}</h3>
+        {% endif %}
+
+        <p>{{ t.notice.text }}</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endif %}
+
 <!-- INSTRUCTORS -->
 {% set workshopInstructorList = workshop.dates | workshopInstructors(instructors) %}
 
@@ -667,6 +701,108 @@
     </div>
 
   </div>
+</section>
+{% endif %}
+
+<!-- RELATED WORKSHOPS -->
+{% set relatedWorkshopList = workshops | relatedWorkshops(workshopId, 3) %}
+
+{% if relatedWorkshopList.length %}
+<section class="workshop-related">
+
+  <div class="workshop-related-inner">
+
+    <div class="workshop-related-header">
+
+      <span class="workshop-section-label">
+        {% if lang == "pt" %}
+          Descubra mais
+        {% else %}
+          Explore more
+        {% endif %}
+      </span>
+
+      <h2>
+        {% if lang == "pt" %}
+          Também poderá gostar
+        {% else %}
+          You might also like
+        {% endif %}
+      </h2>
+
+    </div>
+
+
+    <div class="workshop-related-grid">
+
+      {% for relatedWorkshop in relatedWorkshopList %}
+
+        {% set relatedText = relatedWorkshop[lang] %}
+
+        {% if relatedText and relatedText.url %}
+
+          <a
+            href="{{ relatedText.url }}"
+            class="workshop-related-card"
+          >
+
+            {% if relatedWorkshop.image %}
+              <div class="workshop-related-image">
+                <img
+                  src="{{ relatedWorkshop.image }}"
+                  alt="{% if lang == 'pt' %}{{ relatedWorkshop.ptImageAlt or relatedText.title }}{% else %}{{ relatedWorkshop.enImageAlt or relatedText.title }}{% endif %}"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+
+
+            <div class="workshop-related-content">
+
+              {% if relatedText.pageTag %}
+                <span class="workshop-related-tag">
+                  {{ relatedText.pageTag }}
+                </span>
+              {% endif %}
+
+              <h3>{{ relatedText.title }}</h3>
+
+              <div class="workshop-related-meta">
+
+                {% if relatedWorkshop.durationMinutes %}
+                  <span>
+                    {{ relatedWorkshop.durationMinutes / 60 }} h
+                  </span>
+                {% endif %}
+
+                {% if relatedWorkshop.price %}
+                  <span>
+                    €{{ relatedWorkshop.price }}
+                  </span>
+                {% endif %}
+
+              </div>
+
+              <span class="workshop-related-link">
+                {% if lang == "pt" %}
+                  Ver workshop →
+                {% else %}
+                  View workshop →
+                {% endif %}
+              </span>
+
+            </div>
+
+          </a>
+
+        {% endif %}
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
 </section>
 {% endif %}
 

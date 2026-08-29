@@ -85,6 +85,34 @@
     .filter(Boolean);
 });
 
+  eleventyConfig.addFilter(
+    "relatedWorkshops",
+    function (allWorkshops, currentWorkshopId, limit = 3) {
+      if (!allWorkshops || !currentWorkshopId) return [];
+
+      const current = allWorkshops[currentWorkshopId];
+      if (!current) return [];
+
+      return Object.values(allWorkshops)
+        .filter(workshop => workshop && workshop.id !== currentWorkshopId)
+        .map(workshop => {
+          let score = 0;
+
+          if (workshop.medium === current.medium) score += 2;
+          if (workshop.type === current.type) score += 1;
+          if (workshop.level === current.level) score += 1;
+
+          return {
+            workshop,
+            score
+          };
+        })
+        .sort((a, b) => b.score - a.score)
+        .slice(0, limit)
+        .map(item => item.workshop);
+    }
+  );
+
   // Bestehende .html-URLs während der Migration beibehalten
   eleventyConfig.addGlobalData("permalink", () => {
     return (data) =>

@@ -325,5 +325,142 @@ instructor: "ebrahimElmoly"      },
         instructor: "ebrahimElmoly"
       }
     ]
+  }, 
+
+  kintsugi: {
+    id: "kintsugi",
+
+    medium: "ceramic-repair",
+    type: "special",
+    format: "single-session",
+
+    durationMinutes: 150,
+
+    price: 65,
+    priceCurrency: "EUR",
+    priceStatus: "confirmed",
+
+    image: "/assets/img/courses/kintsugi/Kintsugi_Workshop.jpg",
+enImageAlt: "Modern Kintsugi workshop at PURACERÂMICA in Lisbon",
+
+booking: {
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/38/count/1/",
+  category: "2",
+  service: "38"
+},
+
+    en: {
+      title: "Modern Kintsugi Workshop",
+      shortTitle: "Modern Kintsugi",
+      pageTag: "Special Workshops · Single Session",
+
+      seo: {
+        title: "Modern Kintsugi Workshop in Lisbon | PURACERÂMICA",
+
+        description:
+          "Discover modern Kintsugi in a 2.5-hour workshop in Lisbon. Learn how to repair broken ceramics while highlighting their history and imperfections."
+      },
+
+      schedule: "Selected dates · 16:00–18:30",
+      levelLabel: "Introduction",
+      languageLabel: "English",
+
+      intro:
+        "Discover the art of Kintsugi through an accessible modern approach. Learn how broken ceramics can be repaired while celebrating their cracks and history.",
+
+      languageNote:
+        "This workshop is taught in English.",
+
+about: [
+  "Kintsugi is the Japanese art of repairing broken ceramics while making the traces of repair visible rather than hiding them.",
+
+  "In this workshop, you'll explore an accessible modern approach to Kintsugi and learn the basic steps involved in reconnecting broken ceramic pieces and highlighting their cracks.",
+
+  "The session is designed as an introduction and does not require any previous experience."
+],
+
+beforeYouCome: {
+  intro:
+    "Please prepare your ceramic piece before coming to the workshop.",
+
+  items: [
+    {
+      title: "Bring your own piece",
+      text: "Please bring one or two broken ceramic pieces that you would like to work on."
+    },
+    {
+      title: "Keep it manageable",
+      text: "Pieces should be approximately hand-sized and ideally broken into two or three shards."
+    },
+    {
+      title: "Choose a simple form",
+      text: "Open or shallow ceramic forms with relatively smooth surfaces are generally easiest to work with."
+    },
+    {
+      title: "Practice piece",
+      text: "If needed, a practice ceramic piece can be provided in the studio."
+    }
+  ]
+},
+
+included: {
+  intro:
+    "The materials and tools required for the modern Kintsugi process are provided during the workshop.",
+
+  items: [
+    {
+      title: "Kintsugi materials",
+      text: "Materials required for the repair and finishing process."
+    },
+    {
+      title: "Studio tools",
+      text: "Use of the tools and equipment needed during the workshop."
+    },
+    {
+      title: "Instructor guidance",
+      text: "Step-by-step guidance throughout the repair process."
+    },
+    {
+      title: "Practice piece",
+      text: "A ceramic practice piece can be provided if required."
+    }
+  ]
+},
+
+notice: {
+  title: "Important to know",
+  text:
+    "This workshop uses a modern Kintsugi method and an alternative gold-coloured powder rather than the full traditional urushi process. Finished repairs are not guaranteed to be food-safe, so repaired pieces are recommended for decorative use."
+},
+
+url: "/en/kintsugi-workshop.html"
+},
+
+    dates: [
+      {
+        date: "2026-09-13",
+        start: "16:00",
+        end: "18:30",
+        instructor: "maasaKakurai"
+      },
+      {
+        date: "2026-10-10",
+        start: "16:00",
+        end: "18:30",
+        instructor: "maasaKakurai"
+      },
+      {
+        date: "2026-11-07",
+        start: "16:00",
+        end: "18:30",
+        instructor: "maasaKakurai"
+      },
+      {
+        date: "2026-12-13",
+        start: "16:00",
+        end: "18:30",
+        instructor: "maasaKakurai"
+      }
+    ]
   }
 };
