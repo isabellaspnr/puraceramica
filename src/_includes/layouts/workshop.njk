@@ -85,6 +85,63 @@
   >
 {% endif %}
 
+<!-- STRUCTURED DATA: WORKSHOP EVENTS -->
+{% if workshop.dates and workshop.dates.length %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {% for session in workshop.dates %}
+      {% set eventInstructor = instructors[session.instructor] %}
+      {
+        "@type": "Event",
+        "name": {{ t.title | dump | safe }},
+        "description": {{ t.seo.description | dump | safe }},
+        "startDate": "{{ session.date }}T{{ session.start }}",
+        "endDate": "{{ session.date }}T{{ session.end }}",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+
+        "location": {
+          "@type": "Place",
+          "name": {{ studio.location.name | dump | safe }},
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": {{ studio.location.streetAddress | dump | safe }},
+            "postalCode": {{ studio.location.postalCode | dump | safe }},
+            "addressLocality": {{ studio.location.city | dump | safe }},
+            "addressCountry": {{ studio.location.country | dump | safe }}
+          }
+        },
+
+        "image": [
+          "{{ studio.url }}{{ workshop.image }}"
+        ],
+
+        "offers": {
+          "@type": "Offer",
+          "url": {{ workshop.booking.url | dump | safe }},
+          "price": "{{ workshop.price }}",
+          "priceCurrency": "{{ workshop.priceCurrency }}"
+        },
+
+        "organizer": {
+          "@type": "Organization",
+          "name": {{ studio.name | dump | safe }},
+          "url": {{ studio.url | dump | safe }}
+        }{% if eventInstructor %},
+
+        "performer": {
+          "@type": "Person",
+          "name": {{ eventInstructor.name | dump | safe }}
+        }{% endif %}
+      }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
   <link rel="icon" href="/assets/img/icons/LOGO.png" type="image/png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
