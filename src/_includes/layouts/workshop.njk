@@ -279,14 +279,13 @@
 
           <div class="workshop-cohort-header">
 
-            <span class="workshop-cohort-label">
+ <span class="workshop-cohort-label">
   {% if lang == "pt" %}
-    Curso de {{ cohort.label }}
+    Curso de {{ cohort.startDate | workshopMonthName("pt") }}
   {% else %}
-    {{ cohort.label }} course
+    {{ cohort.startDate | workshopMonthName("en") }} course
   {% endif %}
 </span>
-
             <p>
               {% if lang == "pt" %}
                 Começa em
@@ -381,9 +380,70 @@
           {% endif %}
 
 
-          <div class="workshop-cohort-price">
+<div class="workshop-cohort-price">
 
-          <div class="workshop-cohort-price">
+  {% if workshop.pricePerSession %}
+
+    <strong>
+      €{{ workshop.pricePerSession }}
+      {% if lang == "pt" %}
+        / sessão
+      {% else %}
+        / session
+      {% endif %}
+    </strong>
+
+  {% else %}
+
+    <strong>
+      €{{ workshop.price }}
+      {% if lang == "pt" %}
+        no total
+      {% else %}
+        total
+      {% endif %}
+    </strong>
+
+  {% endif %}
+
+
+  <span>
+
+    {{ workshop.sessionCount }}
+
+    {% if lang == "pt" %}
+      sessões
+    {% else %}
+      sessions
+    {% endif %}
+
+
+    {% if workshop.totalDurationMinutes %}
+      &nbsp;·&nbsp;
+      {{ workshop.totalDurationMinutes / 60 }} h
+
+      {% if lang == "pt" %}
+        no total
+      {% else %}
+        total
+      {% endif %}
+    {% endif %}
+
+
+    {% if workshop.pricePerSession %}
+      &nbsp;·&nbsp;
+      €{{ workshop.price }}
+
+      {% if lang == "pt" %}
+        no total
+      {% else %}
+        total
+      {% endif %}
+    {% endif %}
+
+  </span>
+
+</div>
 
   {% if workshop.pricePerSession %}
     <strong>€{{ workshop.pricePerSession }} / session</strong>
@@ -416,11 +476,11 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            {% if lang == "pt" %}
-              Reservar turma de {{ cohort.label }}
-            {% else %}
-              Book {{ cohort.label }} course
-            {% endif %}
+           {% if lang == "pt" %}
+  Reservar curso de {{ cohort.startDate | workshopMonthName("pt") }}
+{% else %}
+  Book {{ cohort.startDate | workshopMonthName("en") }} course
+{% endif %}
           </a>
 
         </article>

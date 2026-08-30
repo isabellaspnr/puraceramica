@@ -129,6 +129,22 @@
   ).format(date);
 });
 
+eleventyConfig.addFilter("workshopMonthName", function (dateString, lang = "en") {
+  if (!dateString) return "";
+
+  const date = new Date(`${dateString}T12:00:00Z`);
+
+  return new Intl.DateTimeFormat(
+    lang === "pt" ? "pt-PT" : "en-GB",
+    {
+      month: "long",
+      timeZone: "UTC"
+    }
+  ).format(date);
+});
+
+
+
 // Alle Workshop-Termine für What's On / Kalender zusammenführen
 eleventyConfig.addFilter("workshopEvents", function (allWorkshops, lang = "en") {
   if (!allWorkshops) return [];
