@@ -1,0 +1,533 @@
+---
+permalink: /pt/agenda.html
+---
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agenda – Workshops e Eventos de Cerâmica em Lisboa | PURACERÂMICA</title>
+
+  <meta
+    name="description"
+    content="Descubra os próximos workshops, cursos e eventos especiais de cerâmica no estúdio PURACERÂMICA em Lisboa."
+  >
+
+  <link rel="canonical" href="https://puraceramica.pt/pt/agenda.html">
+
+  <link rel="alternate" hreflang="en" href="https://puraceramica.pt/en/whats-on.html">
+  <link rel="alternate" hreflang="pt" href="https://puraceramica.pt/pt/agenda.html">
+  <link rel="alternate" hreflang="x-default" href="https://puraceramica.pt/en/whats-on.html">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/whats-on.css">
+</head>
+
+<body>
+
+  {% include "header-pt.html" %}
+
+
+  {% set allEvents = workshops | workshopEvents("pt") %}
+  {% set events = allEvents | bookableWorkshopEvents %}
+  {% set months = events | workshopCalendarMonths("pt") %}
+
+
+  <main class="whats-on-page">
+
+    <header class="whats-on-intro">
+
+      <span class="whats-on-eyebrow">
+        PURACERÂMICA
+      </span>
+
+      <h1 class="whats-on-title">
+        Agenda
+      </h1>
+
+      <p>
+        Descubra os próximos workshops, cursos e eventos especiais
+        no nosso estúdio de cerâmica em Lisboa.
+      </p>
+
+    </header>
+
+
+    <!-- MONTH SELECTOR -->
+
+    <div class="calendar-month-tabs">
+
+      {% for month in months %}
+
+        <button
+          type="button"
+          class="calendar-month-tab{% if loop.first %} active{% endif %}"
+          data-calendar-target="{{ month.key }}"
+        >
+          {{ month.label }}
+        </button>
+
+      {% endfor %}
+
+    </div>
+
+
+    <!-- LEGEND -->
+
+    <div class="whats-on-legend">
+
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--wheel"></span>
+        Roda de Oleiro
+      </span>
+
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--handbuilding"></span>
+        Modelagem Manual
+      </span>
+
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--social"></span>
+        Eventos Sociais
+      </span>
+
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--special"></span>
+        Especiais
+      </span>
+
+    </div>
+
+
+    <!-- ======================================================
+         DESKTOP CALENDAR
+         ====================================================== -->
+
+    <section
+      class="whats-on-calendar"
+      aria-label="Calendário de workshops"
+    >
+
+      {% for month in months %}
+
+        <div
+          class="calendar-month{% if loop.first %} active{% endif %}"
+          data-calendar-month="{{ month.key }}"
+        >
+
+          <h2 class="calendar-month-heading">
+            {{ month.label }}
+          </h2>
+
+
+          <div class="calendar-weekdays" aria-hidden="true">
+
+            <div class="calendar-weekday">Seg</div>
+            <div class="calendar-weekday">Ter</div>
+            <div class="calendar-weekday">Qua</div>
+            <div class="calendar-weekday">Qui</div>
+            <div class="calendar-weekday">Sex</div>
+            <div class="calendar-weekday">Sáb</div>
+            <div class="calendar-weekday">Dom</div>
+
+          </div>
+
+
+          <div class="calendar-grid">
+
+            {% for day in month.cells %}
+
+              {% if day %}
+
+                <div
+                  class="calendar-day"
+                  data-date="{{ day.date }}"
+                >
+
+                  <span class="calendar-day-number">
+                    {{ day.day }}
+                  </span>
+
+                  {% if day.events.length %}
+
+                    <div class="calendar-events">
+
+                      {% for event in day.events %}
+
+                        <a
+                          href="{{ event.url }}"
+                          class="calendar-event calendar-event--{{ event.calendarCategory }}"
+                        >
+
+                          <span class="calendar-event-time">
+                            {{ event.start }}–{{ event.end }}
+                          </span>
+
+                          <span class="calendar-event-title">
+                            {{ event.shortTitle }}
+                          </span>
+
+                          {% if event.cohortLabel %}
+
+                            <span class="calendar-event-detail">
+                              Início do curso
+                            </span>
+
+                          {% endif %}
+
+                          {% if event.sessionLabel %}
+
+                            <span class="calendar-event-detail">
+                              {{ event.sessionLabel }}
+                            </span>
+
+                          {% endif %}
+
+                        </a>
+
+                      {% endfor %}
+
+                    </div>
+
+                  {% endif %}
+
+                </div>
+
+              {% else %}
+
+                <div class="calendar-day empty"></div>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </section>
+
+
+    <!-- ======================================================
+         MOBILE WEEK VIEW
+         ====================================================== -->
+
+    <section
+      class="whats-on-mobile-list"
+      aria-label="Próximos workshops"
+    >
+
+      {% for month in months %}
+
+        {% set weeks = month | workshopMonthWeeks("pt") %}
+
+        <div
+          class="mobile-month-panel{% if loop.first %} active{% endif %}"
+          data-mobile-month="{{ month.key }}"
+        >
+
+          <h2 class="mobile-month-heading">
+            {{ month.label }}
+          </h2>
+
+
+          <div class="mobile-week-switcher">
+
+            <button
+              type="button"
+              class="mobile-week-nav"
+              data-week-prev
+              aria-label="Semana anterior"
+            >
+              ‹
+            </button>
+
+            <span
+              class="mobile-week-label"
+              data-week-label
+            >
+              {% if weeks.length %}
+                {{ weeks[0].label }}
+              {% endif %}
+            </span>
+
+            <button
+              type="button"
+              class="mobile-week-nav"
+              data-week-next
+              aria-label="Semana seguinte"
+            >
+              ›
+            </button>
+
+          </div>
+
+
+          <div class="mobile-weeks">
+
+            {% for week in weeks %}
+
+              <div
+                class="mobile-week-panel{% if loop.first %} active{% endif %}"
+                data-mobile-week
+                data-week-index="{{ loop.index0 }}"
+                data-week-label="{{ week.label }}"
+              >
+
+                {% if week.events.length %}
+
+                  {% for event in week.events %}
+
+                    <article
+                      class="upcoming-event upcoming-event--{{ event.calendarCategory }}"
+                      data-date="{{ event.date }}"
+                    >
+
+                      <div class="upcoming-event-date">
+
+                        <strong>
+                          {{ event.date | workshopDate("pt") }}
+                        </strong>
+
+                        <br>
+
+                        {{ event.start }}–{{ event.end }}
+
+                      </div>
+
+
+                      <div class="upcoming-event-content">
+
+                        <a href="{{ event.url }}">
+                          <h3>{{ event.shortTitle }}</h3>
+                        </a>
+
+                        {% if event.cohortLabel %}
+
+                          <p>
+                            Início do curso
+                          </p>
+
+                        {% elif event.sessionLabel %}
+
+                          <p>
+                            {{ event.sessionLabel }}
+                          </p>
+
+                        {% elif event.language %}
+
+                          <p>
+                            {{ event.language }}
+                          </p>
+
+                        {% endif %}
+
+                      </div>
+
+                    </article>
+
+                  {% endfor %}
+
+                {% else %}
+
+                  <p class="mobile-week-empty">
+                    Não há workshops agendados para esta semana.
+                  </p>
+
+                {% endif %}
+
+              </div>
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </section>
+
+  </main>
+
+
+  {% include "footer-pt.html" %}
+
+
+  <script src="/assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const tabs = document.querySelectorAll(
+        "[data-calendar-target]"
+      );
+
+      const desktopMonths = document.querySelectorAll(
+        "[data-calendar-month]"
+      );
+
+      const mobileMonths = document.querySelectorAll(
+        "[data-mobile-month]"
+      );
+
+
+      function activateWeek(monthPanel, index) {
+
+        if (!monthPanel) return;
+
+        const weeks = Array.from(
+          monthPanel.querySelectorAll("[data-mobile-week]")
+        );
+
+        if (!weeks.length) return;
+
+        const newIndex = Math.max(
+          0,
+          Math.min(index, weeks.length - 1)
+        );
+
+        weeks.forEach((week) =>
+          week.classList.remove("active")
+        );
+
+        const activeWeek = weeks[newIndex];
+
+        activeWeek.classList.add("active");
+
+        monthPanel.dataset.activeWeek =
+          String(newIndex);
+
+
+        const label =
+          monthPanel.querySelector("[data-week-label]");
+
+        if (label) {
+          label.textContent =
+            activeWeek.dataset.weekLabel;
+        }
+
+
+        const previous =
+          monthPanel.querySelector("[data-week-prev]");
+
+        const next =
+          monthPanel.querySelector("[data-week-next]");
+
+        if (previous) {
+          previous.disabled = newIndex === 0;
+        }
+
+        if (next) {
+          next.disabled =
+            newIndex === weeks.length - 1;
+        }
+      }
+
+
+      function activateMonth(target) {
+
+        tabs.forEach((tab) =>
+          tab.classList.toggle(
+            "active",
+            tab.dataset.calendarTarget === target
+          )
+        );
+
+        desktopMonths.forEach((month) =>
+          month.classList.toggle(
+            "active",
+            month.dataset.calendarMonth === target
+          )
+        );
+
+        mobileMonths.forEach((month) => {
+
+          const isActive =
+            month.dataset.mobileMonth === target;
+
+          month.classList.toggle(
+            "active",
+            isActive
+          );
+
+          if (isActive) {
+            activateWeek(month, 0);
+          }
+
+        });
+
+      }
+
+
+      tabs.forEach((tab) => {
+
+        tab.addEventListener("click", () => {
+          activateMonth(
+            tab.dataset.calendarTarget
+          );
+        });
+
+      });
+
+
+      mobileMonths.forEach((month) => {
+
+        activateWeek(month, 0);
+
+        const previous =
+          month.querySelector("[data-week-prev]");
+
+        const next =
+          month.querySelector("[data-week-next]");
+
+
+        if (previous) {
+
+          previous.addEventListener("click", () => {
+
+            const current = parseInt(
+              month.dataset.activeWeek || "0",
+              10
+            );
+
+            activateWeek(
+              month,
+              current - 1
+            );
+
+          });
+
+        }
+
+
+        if (next) {
+
+          next.addEventListener("click", () => {
+
+            const current = parseInt(
+              month.dataset.activeWeek || "0",
+              10
+            );
+
+            activateWeek(
+              month,
+              current + 1
+            );
+
+          });
+
+        }
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
