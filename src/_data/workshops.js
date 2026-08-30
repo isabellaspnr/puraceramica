@@ -859,6 +859,11 @@ continuousHandbuilding: {
   priceCurrency: "EUR",
   priceStatus: "tentative",
 
+  booking: {
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/40",
+  service: "40"
+},
+
   en: {
     title: "Continuous Handbuilding Classes",
     shortTitle: "Continuous Handbuilding",
