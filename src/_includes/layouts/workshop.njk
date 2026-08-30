@@ -205,7 +205,10 @@
           <span class="workshop-quick-label">
             {% if lang == "pt" %}Preço{% else %}Price{% endif %}
           </span>
-<strong>
+<strong
+  id="workshop-price"
+  data-base-price="{{ workshop.price }}"
+>
   €{{ workshop.price }}
   {% if workshop.priceUnit == "for-two" %}
     {% if lang == "pt" %}
@@ -214,7 +217,7 @@
       for 2 people
     {% endif %}
   {% endif %}
-</strong>        </div>
+</strong>     </div>
 
         <div class="workshop-quick-fact">
           <span class="workshop-quick-label">
@@ -363,12 +366,14 @@
       >−</button>
 
       <input
-        type="text"
-        id="quantity"
-        value="1"
-        readonly
-        aria-label="Number of participants"
-      >
+  type="text"
+  id="quantity"
+  value="{% if workshop.participants and workshop.participants.min %}{{ workshop.participants.min }}{% else %}1{% endif %}"
+  data-min="{% if workshop.participants and workshop.participants.min %}{{ workshop.participants.min }}{% else %}1{% endif %}"
+  data-max="{% if workshop.participants and workshop.participants.max %}{{ workshop.participants.max }}{% else %}10{% endif %}"
+  readonly
+  aria-label="Number of participants"
+>
 
       <button
         type="button"

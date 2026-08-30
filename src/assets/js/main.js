@@ -369,13 +369,48 @@ document.addEventListener("DOMContentLoaded", () => {
 function incrementQty() {
   const input = document.getElementById('quantity');
   if (!input) return;
-  if (parseInt(input.value) < 10) { input.value = parseInt(input.value) + 1; updateBookingLink(); }
+
+  const current = parseInt(input.value, 10);
+  const max = parseInt(input.dataset.max || '10', 10);
+
+  if (current < max) {
+    input.value = current + 1;
+    updateBookingLink();
+  }
 }
 
 function decrementQty() {
   const input = document.getElementById('quantity');
   if (!input) return;
-  if (parseInt(input.value) > 1) { input.value = parseInt(input.value) - 1; updateBookingLink(); }
+
+  const current = parseInt(input.value, 10);
+  const min = parseInt(input.dataset.min || '1', 10);
+
+  if (current > min) {
+    input.value = current - 1;
+    updateBookingLink();
+  }
+}
+
+function updateWorkshopPrice() {
+  const priceElement = document.getElementById('workshop-price');
+  const quantity = document.getElementById('quantity');
+
+  // Fixed bookings such as Wheel for Two have no quantity selector.
+  if (!priceElement || !quantity) return;
+
+  const basePrice = parseFloat(priceElement.dataset.basePrice);
+  const count = parseInt(quantity.value, 10);
+
+  if (Number.isNaN(basePrice) || Number.isNaN(count)) return;
+
+  const total = basePrice * count;
+
+  const formattedPrice = Number.isInteger(total)
+    ? total.toFixed(0)
+    : total.toFixed(2);
+
+  priceElement.textContent = `€${formattedPrice}`;
 }
 
 function isPastDate(dateString) {
@@ -449,6 +484,8 @@ function initMonthSwitcher() {
 }
 
 function updateBookingLink() {
+    updateWorkshopPrice();
+
   const quantity = document.getElementById('quantity');
   const selectedDate = document.querySelector('input[name="workshop-date"]:checked');
   const bookingBtn = document.getElementById('booking-btn');
@@ -462,13 +499,23 @@ function updateBookingLink() {
 
   const serviceMatch = bookingBtn.getAttribute('href').match(/service\/(\d+)/);
   const serviceId = serviceMatch ? serviceMatch[1] : '26';
-  const category = bookingBtn.getAttribute('data-category') || '2';
-  const provider = bookingBtn.getAttribute('data-provider') || '9';
+  const category = bookingBtn.getAttribute('data-category');
+const provider = bookingBtn.getAttribute('data-provider');
   const count = quantity ? quantity.value : '1';
 
-  const url = `https://puraceramicalisboa.simplybook.it/v2/#book/category/${category}/service/${serviceId}/count/${count}/provider/${provider}/date/${dateValue}/time/${timeValue}/`;
-  bookingBtn.href = url;
-  if (floatingLink) floatingLink.href = url;
+let url = 'https://puraceramicalisboa.simplybook.it/v2/#book';
+
+if (category) {
+  url += `/category/${category}`;
+}
+
+url += `/service/${serviceId}/count/${count}`;
+
+if (provider) {
+  url += `/provider/${provider}`;
+}
+
+url += `/date/${dateValue}/time/${timeValue}/`;  if (floatingLink) floatingLink.href = url;
 }
 
 // ── FORM HANDLING ──

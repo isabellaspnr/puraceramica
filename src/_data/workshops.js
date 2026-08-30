@@ -722,6 +722,135 @@ beforeYouCome: {
 }
   })
 },
+
+intermediateWheel: {
+  id: "intermediateWheel",
+
+  medium: "clay",
+  type: "workshop",
+  format: "single-session",
+  level: "intermediate",
+
+  durationMinutes: 120,
+
+  price: 65,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+
+participants: {
+  min: 1,
+  max: 2,
+  fixed: false
+},
+
+  booking: {
+    url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/42",
+    service: "42"
+  },
+
+  en: {
+    title: "Intermediate Wheel",
+    shortTitle: "Intermediate Wheel",
+    pageTag: "Pottery Wheel · Intermediate",
+
+    seo: {
+      title: "Intermediate Pottery Wheel Workshop Lisbon | PURACERÂMICA",
+      description:
+        "Develop your wheel-throwing skills in a small intermediate pottery workshop in Lisbon. Maximum two participants with individual guidance."
+    },
+
+    schedule: "Selected Wednesdays · 18:00–20:00",
+
+    levelLabel: "Intermediate",
+    languageLabel: "Portuguese",
+
+    intro:
+      "Develop your wheel-throwing skills in a focused intermediate session with a maximum of two participants.",
+
+    about: [
+      "This workshop is designed for people who already have basic experience on the pottery wheel and want to improve their technique, gain more control and work more independently.",
+
+      "With only two pottery wheels and a maximum of two participants, Paulo can provide individual guidance throughout the session.",
+
+      "Previous wheel-throwing experience is required."
+    ],
+
+    beforeYouCome: {
+      intro:
+        "Intermediate Wheel is intended for participants who are already familiar with the basic steps of wheel throwing.",
+
+      items: [
+        {
+          title: "Previous experience required",
+          text: "You should already have basic experience with centering, opening and pulling clay on the pottery wheel."
+        },
+        {
+          title: "Maximum two participants",
+          text: "The session is limited to two participants so that each person has their own pottery wheel."
+        },
+        {
+          title: "What to wear",
+          text: "Wear comfortable clothes that you don't mind getting clay on. Short nails are recommended for wheel throwing."
+        }
+      ]
+    },
+
+    url: "/en/intermediate-wheel.html"
+  },
+
+  dates: [
+    {
+      date: "2026-09-23",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-10-07",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-10-21",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-11-04",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-11-18",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-12-02",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    },
+    {
+      date: "2026-12-16",
+      start: "18:00",
+      end: "20:00",
+      instructor: "pauloRosica",
+      language: "Portuguese"
+    }
+  ]
+},
+
 wineAndClay: {
   id: "wineAndClay",
 
