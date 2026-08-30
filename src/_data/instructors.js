@@ -23,5 +23,19 @@ module.exports = {
     pt: {
       role: "Instrutora de Cerâmica"
     }
+  }, 
+
+  pauloRosica: {
+  id: "pauloRosica",
+  name: "Paulo Rosica",
+
+  en: {
+    role: "Ceramics Instructor"
+  },
+
+  pt: {
+    role: "Instrutor de Cerâmica"
   }
+},
+
 };

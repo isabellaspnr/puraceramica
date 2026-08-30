@@ -1,3 +1,58 @@
+function buildRecurringSessions({
+  startDate,
+  endDate,
+  schedule,
+  instructor,
+  language,
+  exclude = [],
+  overrides = {}
+}) {
+  const sessions = [];
+  const excludedDates = new Set(exclude);
+
+  const start = new Date(`${startDate}T00:00:00Z`);
+  const end = new Date(`${endDate}T00:00:00Z`);
+
+  for (
+    let current = new Date(start);
+    current <= end;
+    current.setUTCDate(current.getUTCDate() + 1)
+  ) {
+    const weekday = current.getUTCDay();
+    const date = current.toISOString().slice(0, 10);
+
+    if (excludedDates.has(date)) continue;
+
+    schedule
+      .filter(slot => slot.weekday === weekday)
+      .forEach(slot => {
+      const overrideKey = `${date}|${slot.start}`;
+const override = overrides[overrideKey] || {};
+
+sessions.push({
+  date,
+  start: slot.start,
+  end: slot.end,
+  instructor:
+    override.instructor ||
+    slot.instructor ||
+    instructor,
+  language:
+    override.language ||
+    slot.language ||
+    language
+});
+      });
+  }
+
+  return sessions.sort((a, b) => {
+    const dateCompare = a.date.localeCompare(b.date);
+
+    if (dateCompare !== 0) return dateCompare;
+
+    return a.start.localeCompare(b.start);
+  });
+}
 module.exports = {
   handbuilding: {
     id: "handbuilding",
@@ -462,5 +517,209 @@ url: "/en/kintsugi-workshop.html"
         instructor: "maasaKakurai"
       }
     ]
+  },
+
+wheelForTwo: {
+  id: "wheelForTwo",
+
+  medium: "clay",
+  type: "workshop",
+  format: "single-session",
+  level: "beginner",
+
+  durationMinutes: 120,
+
+  price: 120,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+  priceUnit: "for-two",
+
+  participants: {
+  min: 2,
+  max: 2,
+  fixed: true
+},
+
+  image: "/assets/img/courses/couple_wheel.jpg",
+enImageAlt: "Pottery wheel workshop for two at PURACERÂMICA in Lisbon",
+
+booking: {
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/27/count/1/provider/10/",
+  category: "2",
+  service: "27",
+  provider: "10"
+},
+
+  en: {
+    title: "Wheel for Two",
+    shortTitle: "Wheel for Two",
+    pageTag: "Pottery Wheel · Private Session",
+
+    seo: {
+      title: "Pottery Wheel for Two in Lisbon | PURACERÂMICA",
+      description:
+        "Try the pottery wheel together in a private 2-hour session for two people in Lisbon. Beginner-friendly with individual instructor guidance."
+    },
+
+    schedule:
+      "Thursdays 17:30–19:30 · Saturdays 11:00–13:00 & 18:00–20:00",
+
+    levelLabel: "Beginner friendly",
+languageLabel: "English or Portuguese",
+    intro:
+      "Discover the pottery wheel together in a private session for two. Learn the basics of throwing clay and create your first pieces with individual guidance from your instructor.",
+
+    languageNote:
+  "The workshop language depends on the selected date. Please check the instructor and language shown for each session.",
+
+    about: [
+      "Wheel for Two is a private pottery experience designed for two people who want to discover the pottery wheel together.",
+
+      "Your instructor will guide you through the essential steps of wheel throwing, from preparing and centering the clay to shaping your first forms.",
+
+      "No previous pottery experience is required. The small private format gives you plenty of individual support throughout the session."
+    ], 
+
+techniques: {
+  intro:
+    "Your instructor will guide you through the essential steps of wheel throwing. You'll each work at your own wheel and learn the process together.",
+
+  items: [
+    {
+      title: "Centering",
+      text: "Learn how to center a lump of clay on the spinning wheel — the foundation of successful wheel throwing.",
+      image: "/assets/img/courses/center.jpg",
+      imageAlt: "Centering clay on the pottery wheel"
+    },
+    {
+      title: "Opening & pulling",
+      text: "Once the clay is centered, you'll open it and pull up the walls to create the basic cylinder used for many wheel-thrown forms.",
+      image: "/assets/img/courses/pull.jpg",
+      imageAlt: "Opening and pulling clay walls on the pottery wheel"
+    },
+    {
+      title: "Shaping",
+      text: "Guide and shape the walls of the clay to create a bowl, cup, small vase or another simple form.",
+      image: "/assets/img/courses/shape.jpg",
+      imageAlt: "Shaping a ceramic vessel on the pottery wheel"
+    }
+  ]
+},
+
+included: {
+  intro:
+    "Everything you need for the two-person wheel session is provided in the studio.",
+
+  items: [
+    {
+      title: "Two pottery wheels",
+      text: "You'll each have your own pottery wheel throughout the session."
+    },
+    {
+      title: "Clay & materials",
+      text: "All clay and basic materials required for both participants."
+    },
+    {
+      title: "Instructor guidance",
+      text: "Individual guidance for both of you throughout the two-hour session."
+    },
+    {
+      title: "Glazing & firing",
+      text: "Glazing and firing of two of your finished pieces is included."
+    }
+  ]
+},
+
+beforeYouCome: {
+  intro:
+    "A few practical things to know before your session.",
+
+  items: [
+    {
+      title: "No experience needed",
+      text: "This session is designed for beginners, so you don't need any previous pottery experience."
+    },
+    {
+      title: "Come as a pair",
+      text: "This workshop is designed for exactly two participants and the €120 price covers both people."
+    },
+    {
+      title: "What to wear",
+      text: "Wheel throwing can get messy, so we recommend comfortable clothes that you don't mind getting a little dirty."
+    },
+    {
+      title: "Finished pieces",
+      text: "Your selected pieces will stay with us for glazing and firing and are usually ready for collection within 3–4 weeks."
+    }
+  ]
+},
+
+  url: "/en/pottery-wheel-for-two.html"
+},
+
+  dates: buildRecurringSessions({
+    startDate: "2026-09-01",
+    endDate: "2026-12-31",
+
+    instructor: "ebrahimElmoly",
+    language: "English",
+
+    schedule: [
+      {
+        weekday: 4,
+        start: "17:30",
+        end: "19:30"
+      },
+      {
+        weekday: 6,
+        start: "11:00",
+        end: "13:00"
+      },
+      {
+        weekday: 6,
+        start: "18:00",
+        end: "20:00"
+      }
+    ],
+
+    exclude: [], 
+
+    overrides: {
+  "2026-09-03|17:30": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-05|11:00": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-05|18:00": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-10|17:30": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-12|11:00": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-12|18:00": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
+  },
+
+  "2026-09-17|17:30": {
+    instructor: "pauloRosica",
+    language: "Portuguese"
   }
+}
+  })
+}
 };

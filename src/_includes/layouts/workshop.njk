@@ -205,8 +205,16 @@
           <span class="workshop-quick-label">
             {% if lang == "pt" %}Preço{% else %}Price{% endif %}
           </span>
-          <strong>€{{ workshop.price }}</strong>
-        </div>
+<strong>
+  €{{ workshop.price }}
+  {% if workshop.priceUnit == "for-two" %}
+    {% if lang == "pt" %}
+      para 2 pessoas
+    {% else %}
+      for 2 people
+    {% endif %}
+  {% endif %}
+</strong>        </div>
 
         <div class="workshop-quick-fact">
           <span class="workshop-quick-label">
@@ -295,6 +303,10 @@
     {% else %}
       &nbsp;·&nbsp; with {{ sessionInstructor.name }}
     {% endif %}
+
+    {% if session.language %}
+      &nbsp;·&nbsp; {{ session.language }}
+    {% endif %}
   </span>
 {% endif %}
 
@@ -328,6 +340,8 @@
 
 
         {% if workshop.booking and workshop.booking.url %}
+
+ {% if not workshop.participants or not workshop.participants.fixed %}
 
   <!-- QUANTITY -->
   <div class="quantity-section">
@@ -365,6 +379,18 @@
     </div>
 
   </div>
+
+{% endif %}
+
+{% if workshop.participants and workshop.participants.fixed %}
+  <p class="workshop-fixed-participants">
+    {% if lang == "pt" %}
+      Esta reserva inclui exatamente {{ workshop.participants.max }} participantes.
+    {% else %}
+      This booking includes exactly {{ workshop.participants.max }} participants.
+    {% endif %}
+  </p>
+{% endif %}
 
   <!-- BOOK -->
   <a
