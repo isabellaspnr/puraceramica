@@ -914,5 +914,114 @@ continuousHandbuilding: {
 
     exclude: []
   })
-}
+},
+
+intermediateHandbuilding: {
+  id: "intermediateHandbuilding",
+
+  medium: "clay",
+  type: "workshop",
+  format: "single-session",
+  level: "intermediate",
+
+  durationMinutes: 120,
+
+  price: 45,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+
+  booking: {
+    url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/41",
+    service: "41"
+  },
+
+  en: {
+    title: "Intermediate Handbuilding",
+    shortTitle: "Intermediate Handbuilding",
+    pageTag: "Pottery Workshop · Handbuilding",
+
+    seo: {
+      title: "Intermediate Handbuilding Workshop Lisbon | PURACERÂMICA",
+      description:
+        "Develop your handbuilding skills in an intermediate pottery workshop in Lisbon. Refine your technique, explore more complex forms and work on your own ceramic projects."
+    },
+
+    schedule: "Selected Thursdays · 11:00–13:00",
+
+    levelLabel: "Intermediate",
+    languageLabel: "English",
+
+    intro:
+      "Take your handbuilding skills further in a focused intermediate pottery session with Maasa.",
+
+    about: [
+      "This workshop is designed for participants who already have some basic experience with clay and want to develop their technique, work more independently and explore more complex forms and construction methods.",
+
+      "With guidance from Maasa, you can refine your ideas, improve your building techniques and develop your own ceramic project in a small and supportive studio setting.",
+
+      "Previous handbuilding experience is recommended."
+    ],
+
+    beforeYouCome: {
+      intro:
+        "This workshop is intended for participants who already have some experience working with clay.",
+
+      items: [
+        {
+          title: "Previous experience",
+          text: "Basic handbuilding experience is recommended so you can work more independently during the session."
+        },
+        {
+          title: "Bring your ideas",
+          text: "You're welcome to come with a project or form you would like to explore."
+        },
+        {
+          title: "What to wear",
+          text: "Wear comfortable clothes that you don't mind getting a little clay on."
+        }
+      ]
+    },
+
+    url: "/en/intermediate-handbuilding.html"
+  },
+
+  dates: [
+    {
+      date: "2026-09-24",
+      start: "11:00",
+      end: "13:00",
+      instructor: "maasaKakurai",
+      language: "English"
+    },
+    {
+      date: "2026-10-08",
+      start: "11:00",
+      end: "13:00",
+      instructor: "maasaKakurai",
+      language: "English"
+    },
+    {
+      date: "2026-10-22",
+      start: "11:00",
+      end: "13:00",
+      instructor: "maasaKakurai",
+      language: "English"
+    },
+    {
+      date: "2026-11-05",
+      start: "11:00",
+      end: "13:00",
+      instructor: "maasaKakurai",
+      language: "English"
+    },
+    {
+      date: "2026-11-19",
+      start: "11:00",
+      end: "13:00",
+      instructor: "maasaKakurai",
+      language: "English"
+    }
+  ]
+},
+
 };
