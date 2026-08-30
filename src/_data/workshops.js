@@ -1311,4 +1311,143 @@ intermediateHandbuilding: {
   ]
 },
 
+shukiSakeWare: {
+  id: "shukiSakeWare",
+
+  medium: "clay",
+  type: "special",
+  format: "multi-session",
+  level: "beginner",
+
+  sessionCount: 3,
+  totalDurationMinutes: 360,
+
+  price: 140,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+
+  minimumToRun: 5,
+
+  participants: {
+    min: 1,
+    max: 8,
+    fixed: false
+  },
+  image: "/assets/img/courses/sake/Sake_Set.JPG",
+enImageAlt: "Handmade Japanese sake ware set for the Shuki workshop at PURACERÂMICA",
+
+  en: {
+    title: "Create Your Own Shuki",
+    shortTitle: "Shuki Sake Ware Workshop",
+    pageTag: "Japanese Sake Ware · 3-Part Workshop",
+
+    seo: {
+      title: "Japanese Sake Ware Workshop Lisbon | PURACERÂMICA",
+      description:
+        "Create your own Japanese sake ware in Lisbon across three ceramic sessions. Make, glaze and enjoy your finished pieces with a sake tasting."
+    },
+
+    schedule:
+      "3 sessions · 1, 22 & 29 November",
+
+    levelLabel: "Beginner friendly",
+    languageLabel: "English",
+
+    intro:
+      "Create your own Japanese sake ware across three sessions combining ceramics, traditional forms and a final sake tasting.",
+
+    about: [
+      "Across the workshop you will create two Guinomi sake cups and one Katakuchi pouring vessel.",
+
+      "You will explore Japanese handbuilding and surface techniques including Kurinuki, Tamazukuri, Mentori and Shinogi.",
+
+      "After making and glazing your pieces, the final session brings the group together for collection of the finished ceramics and a sake tasting."
+    ],
+
+    included: {
+      intro:
+        "The workshop includes the materials and finishing needed to complete your sake ware set.",
+
+      items: [
+        {
+          title: "Ceramic materials",
+          text: "Clay and materials used throughout the making and glazing sessions."
+        },
+        {
+          title: "Firing",
+          text: "Firing of the ceramic pieces created during the workshop."
+        },
+        {
+          title: "Three-piece sake ware set",
+          text: "Create two Guinomi cups and one Katakuchi pouring vessel."
+        },
+        {
+          title: "Sake tasting",
+          text: "A sake tasting is included in the final session."
+        }
+      ]
+    },
+
+    beforeYouCome: {
+      intro:
+        "This workshop takes place across three connected sessions.",
+
+      items: [
+        {
+          title: "All three sessions",
+          text: "Your booking includes all three dates and attendance at every session is required."
+        },
+        {
+          title: "Beginner friendly",
+          text: "No previous pottery experience is required."
+        },
+        {
+          title: "Minimum group size",
+          text: "The workshop runs with a minimum of 5 participants."
+        }
+      ]
+    },
+
+    url: "/en/shuki-sake-ware-workshop.html"
+  },
+
+  cohorts: [
+    {
+      id: "november-2026",
+      label: "November",
+      startDate: "2026-11-01",
+
+      instructor: "maasaKakurai",
+      language: "English",
+
+      booking: {
+        url:
+          "https://puraceramicalisboa.simplybook.it/v2/#book/service/46/date/2026-11-01/time/15:00/",
+        service: "46"
+      },
+
+      sessions: [
+        {
+          label: "Making",
+          date: "2026-11-01",
+          start: "15:00",
+          end: "17:30"
+        },
+        {
+          label: "Glazing",
+          date: "2026-11-22",
+          start: "15:00",
+          end: "17:30"
+        },
+        {
+          label: "Sake Tasting & Collection",
+          date: "2026-11-29",
+          start: "15:00",
+          end: "16:00"
+        }
+      ]
+    }
+  ]
+},
+
 };

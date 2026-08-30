@@ -232,8 +232,13 @@
           <span class="workshop-quick-label">
             {% if lang == "pt" %}Duração{% else %}Duration{% endif %}
           </span>
-          <strong>{{ workshop.durationMinutes / 60 }} h</strong>
-        </div>
+<strong>
+  {% if workshop.durationMinutes %}
+    {{ workshop.durationMinutes / 60 }} h
+  {% elif workshop.totalDurationMinutes %}
+    {{ workshop.totalDurationMinutes / 60 }} h total
+  {% endif %}
+</strong>        </div>
 
         <div class="workshop-quick-fact">
           <span class="workshop-quick-label">
@@ -267,8 +272,7 @@
       {% endif %}
     </div>
 
-    <div class="workshop-cohorts">
-
+<div class="workshop-cohorts{% if workshop.cohorts | length == 1 %} single-cohort{% endif %}">
       {% for cohort in workshop.cohorts %}
 
         <article class="workshop-cohort-card">
@@ -294,29 +298,71 @@
 
           </div>
 
+{% if cohort.sessions[0].label %}
 
-          <div class="dates-list">
+  <!-- MULTI-SESSION SCHEDULE -->
+  <div class="workshop-cohort-schedule">
 
-            {% for session in cohort.sessions %}
+    <span class="workshop-cohort-schedule-heading">
+      {% if lang == "pt" %}
+        Inclui {{ cohort.sessions | length }} sessões
+      {% else %}
+        Includes {{ cohort.sessions | length }} sessions
+      {% endif %}
+    </span>
 
-              <div class="date-block available">
+    <div class="workshop-cohort-schedule-list">
 
-                <div class="date-content">
+      {% for session in cohort.sessions %}
 
-                  <span class="date-text">
-                    {{ session.date | workshopDate(lang) }}
-                    &nbsp;
-                    {{ session.start }}–{{ session.end }}
-                  </span>
+        <div class="workshop-cohort-session">
 
-                </div>
+          <div class="workshop-cohort-session-main">
+            <strong>{{ session.label }}</strong>
 
-              </div>
-
-            {% endfor %}
-
+            <span>
+              {{ session.date | workshopDate(lang) }}
+            </span>
           </div>
 
+          <span class="workshop-cohort-session-time">
+            {{ session.start }}–{{ session.end }}
+          </span>
+
+        </div>
+
+      {% endfor %}
+
+    </div>
+
+  </div>
+
+{% else %}
+
+  <!-- REGULAR COHORT DATES -->
+  <div class="dates-list">
+
+    {% for session in cohort.sessions %}
+
+      <div class="date-block available">
+
+        <div class="date-content">
+
+          <span class="date-text">
+            {{ session.date | workshopDate(lang) }}
+            &nbsp;
+            {{ session.start }}–{{ session.end }}
+          </span>
+
+        </div>
+
+      </div>
+
+    {% endfor %}
+
+  </div>
+
+{% endif %}
 
           {% set cohortInstructor = instructors[cohort.instructor] %}
 
@@ -337,13 +383,29 @@
 
           <div class="workshop-cohort-price">
 
-            <strong>€{{ workshop.pricePerSession }} / session</strong>
+          <div class="workshop-cohort-price">
 
-            <span>
-              {{ workshop.sessionCount }} × {{ workshop.durationMinutes / 60 }} h
-              &nbsp;·&nbsp;
-              €{{ workshop.price }} total
-            </span>
+  {% if workshop.pricePerSession %}
+    <strong>€{{ workshop.pricePerSession }} / session</strong>
+  {% else %}
+    <strong>€{{ workshop.price }} total</strong>
+  {% endif %}
+
+  <span>
+    {{ workshop.sessionCount }} sessions
+
+    {% if workshop.totalDurationMinutes %}
+      &nbsp;·&nbsp;
+      {{ workshop.totalDurationMinutes / 60 }} h total
+    {% endif %}
+
+    {% if workshop.pricePerSession %}
+      &nbsp;·&nbsp;
+      €{{ workshop.price }} total
+    {% endif %}
+  </span>
+
+</div>
 
           </div>
 
@@ -369,10 +431,10 @@
 
     <p class="booking-note">
       {% if lang == "pt" %}
-        Uma reserva inclui as quatro sessões consecutivas.
-      {% else %}
-        One booking includes all four consecutive sessions.
-      {% endif %}
+  Uma reserva inclui todas as {{ workshop.sessionCount }} sessões.
+{% else %}
+  One booking includes all {{ workshop.sessionCount }} sessions.
+{% endif %}
     </p>
 
   </div>
