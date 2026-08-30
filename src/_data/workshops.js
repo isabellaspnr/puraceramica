@@ -57,6 +57,8 @@ module.exports = {
   handbuilding: {
     id: "handbuilding",
 
+      calendarCategory: "handbuilding",
+
     // Grundtyp
     medium: "clay",
     type: "workshop",
@@ -385,6 +387,8 @@ instructor: "ebrahimElmoly"      },
   kintsugi: {
     id: "kintsugi",
 
+    calendarCategory: "special",
+
     medium: "ceramic-repair",
     type: "special",
     format: "single-session",
@@ -521,6 +525,8 @@ url: "/en/kintsugi-workshop.html"
 
 wheelForTwo: {
   id: "wheelForTwo",
+
+  calendarCategory: "wheel",
 
   medium: "clay",
   type: "workshop",
@@ -726,6 +732,8 @@ beforeYouCome: {
 intermediateWheel: {
   id: "intermediateWheel",
 
+  calendarCategory: "wheel",
+
   medium: "clay",
   type: "workshop",
   format: "single-session",
@@ -853,6 +861,8 @@ participants: {
 
 fourWeekWheelCourse: {
   id: "fourWeekWheelCourse",
+
+  calendarCategory: "wheel",
 
   medium: "clay",
   type: "course",
@@ -1012,6 +1022,8 @@ enImageAlt: "Pottery wheel course at PURACERÂMICA in Lisbon",
 wineAndClay: {
   id: "wineAndClay",
 
+  calendarCategory: "social",
+
   medium: "clay",
   type: "social",
   format: "single-session",
@@ -1139,6 +1151,7 @@ continuousHandbuilding: {
   type: "course",
   format: "ongoing",
   level: "all-levels",
+  calendarCategory: "handbuilding",
 
   durationMinutes: 120,
 
@@ -1205,6 +1218,8 @@ continuousHandbuilding: {
 
 intermediateHandbuilding: {
   id: "intermediateHandbuilding",
+
+  calendarCategory: "handbuilding",
 
   medium: "clay",
   type: "workshop",
@@ -1313,6 +1328,8 @@ intermediateHandbuilding: {
 
 shukiSakeWare: {
   id: "shukiSakeWare",
+
+    calendarCategory: "special",
 
   medium: "clay",
   type: "special",

@@ -1,0 +1,512 @@
+---
+permalink: /en/whats-on.html
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What's On – Pottery Workshops & Events Lisbon | PURACERÂMICA</title>
+
+  <meta
+    name="description"
+    content="Discover upcoming pottery workshops, ceramic courses and special events at PURACERÂMICA in Lisbon."
+  >
+
+  <link rel="canonical" href="https://puraceramica.pt/en/whats-on.html">
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/whats-on.css">
+</head>
+
+<body>
+
+  {% include "header-en.html" %}
+
+
+  {% set allEvents = workshops | workshopEvents("en") %}
+  {% set events = allEvents | bookableWorkshopEvents %}
+  {% set months = events | workshopCalendarMonths("en") %}
+
+
+  <main class="whats-on-page">
+
+    <header class="whats-on-intro">
+
+      <span class="whats-on-eyebrow">
+        PURACERÂMICA
+      </span>
+
+      <h1 class="whats-on-title">
+        What's On
+      </h1>
+
+      <p>
+        Explore upcoming pottery workshops, courses and special events
+        at our studio in Lisbon.
+      </p>
+
+    </header>
+
+       <div class="calendar-month-tabs">
+
+        {% for month in months %}
+
+          <button
+            type="button"
+            class="calendar-month-tab{% if loop.first %} active{% endif %}"
+            data-calendar-target="{{ month.key }}"
+          >
+            {{ month.label }}
+          </button>
+
+        {% endfor %}
+
+      </div>
+
+      <div class="whats-on-legend">
+
+  <span class="legend-item">
+    <span class="legend-dot legend-dot--wheel"></span>
+    Pottery Wheel
+  </span>
+
+  <span class="legend-item">
+    <span class="legend-dot legend-dot--handbuilding"></span>
+    Handbuilding
+  </span>
+
+  <span class="legend-item">
+    <span class="legend-dot legend-dot--social"></span>
+    Social
+  </span>
+
+  <span class="legend-item">
+    <span class="legend-dot legend-dot--special"></span>
+    Special
+  </span>
+
+</div>
+
+    <!-- ======================================================
+         DESKTOP CALENDAR
+         ====================================================== -->
+
+    <section
+      class="whats-on-calendar"
+      aria-label="Workshop calendar"
+    >
+
+   
+
+
+      {% for month in months %}
+
+        <div
+          class="calendar-month{% if loop.first %} active{% endif %}"
+          data-calendar-month="{{ month.key }}"
+        >
+
+          <h2 class="calendar-month-heading">
+            {{ month.label }}
+          </h2>
+
+
+          <div class="calendar-weekdays" aria-hidden="true">
+
+            <div class="calendar-weekday">Mon</div>
+            <div class="calendar-weekday">Tue</div>
+            <div class="calendar-weekday">Wed</div>
+            <div class="calendar-weekday">Thu</div>
+            <div class="calendar-weekday">Fri</div>
+            <div class="calendar-weekday">Sat</div>
+            <div class="calendar-weekday">Sun</div>
+
+          </div>
+
+
+          <div class="calendar-grid">
+
+            {% for day in month.cells %}
+
+              {% if day %}
+
+                <div
+                  class="calendar-day"
+                  data-date="{{ day.date }}"
+                >
+
+                  <span class="calendar-day-number">
+                    {{ day.day }}
+                  </span>
+
+                  {% if day.events.length %}
+
+                    <div class="calendar-events">
+
+                      {% for event in day.events %}
+
+                       <a
+  href="{{ event.url }}"
+  class="calendar-event calendar-event--{{ event.calendarCategory }}"
+>
+
+                          <span class="calendar-event-time">
+                            {{ event.start }}–{{ event.end }}
+                          </span>
+
+                          <span class="calendar-event-title">
+                            {{ event.shortTitle }}
+                          </span>
+
+                          {% if event.cohortLabel %}
+                            <span class="calendar-event-detail">
+                              {{ event.cohortLabel }} course starts
+                            </span>
+                          {% endif %}
+
+                          {% if event.sessionLabel %}
+                            <span class="calendar-event-detail">
+                              {{ event.sessionLabel }}
+                            </span>
+                          {% endif %}
+
+                        </a>
+
+                      {% endfor %}
+
+                    </div>
+
+                  {% endif %}
+
+                </div>
+
+              {% else %}
+
+                <div class="calendar-day empty"></div>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </div>
+
+        </div>
+
+      {% endfor %}
+
+    </section>
+
+
+   <!-- ======================================================
+     MOBILE UPCOMING LIST
+     ====================================================== -->
+
+
+<section
+  class="whats-on-mobile-list"
+  aria-label="Upcoming workshops"
+>
+
+  {% for month in months %}
+
+    {% set weeks = month | workshopMonthWeeks("en") %}
+
+    <div
+      class="mobile-month-panel{% if loop.first %} active{% endif %}"
+      data-mobile-month="{{ month.key }}"
+    >
+
+      <h2 class="mobile-month-heading">
+        {{ month.label }}
+      </h2>
+
+
+      <div class="mobile-week-switcher">
+
+        <button
+          type="button"
+          class="mobile-week-nav"
+          data-week-prev
+          aria-label="Previous week"
+        >
+          ‹
+        </button>
+
+        <span
+          class="mobile-week-label"
+          data-week-label
+        >
+          {% if weeks.length %}
+            {{ weeks[0].label }}
+          {% endif %}
+        </span>
+
+        <button
+          type="button"
+          class="mobile-week-nav"
+          data-week-next
+          aria-label="Next week"
+        >
+          ›
+        </button>
+
+      </div>
+
+
+      <div class="mobile-weeks">
+
+        {% for week in weeks %}
+
+          <div
+            class="mobile-week-panel{% if loop.first %} active{% endif %}"
+            data-mobile-week
+            data-week-index="{{ loop.index0 }}"
+            data-week-label="{{ week.label }}"
+          >
+
+            {% if week.events.length %}
+
+              {% for event in week.events %}
+
+                <article
+                  class="upcoming-event upcoming-event--{{ event.calendarCategory }}"
+                  data-date="{{ event.date }}"
+                >
+
+                  <div class="upcoming-event-date">
+
+                    <strong>
+                      {{ event.date | workshopDate("en") }}
+                    </strong>
+
+                    <br>
+
+                    {{ event.start }}–{{ event.end }}
+
+                  </div>
+
+
+                  <div class="upcoming-event-content">
+
+                    <a href="{{ event.url }}">
+                      <h3>{{ event.shortTitle }}</h3>
+                    </a>
+
+                    {% if event.cohortLabel %}
+
+                      <p>
+                        {{ event.cohortLabel }} course starts
+                      </p>
+
+                    {% elif event.sessionLabel %}
+
+                      <p>
+                        {{ event.sessionLabel }}
+                      </p>
+
+                    {% elif event.language %}
+
+                      <p>
+                        {{ event.language }}
+                      </p>
+
+                    {% endif %}
+
+                  </div>
+
+                </article>
+
+              {% endfor %}
+
+            {% else %}
+
+              <p class="mobile-week-empty">
+                No workshops scheduled this week.
+              </p>
+
+            {% endif %}
+
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  {% endfor %}
+
+</section>
+
+  </main>
+
+
+  {% include "footer-en.html" %}
+
+
+  <script src="/assets/js/main.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const tabs = document.querySelectorAll(
+      "[data-calendar-target]"
+    );
+
+    const desktopMonths = document.querySelectorAll(
+      "[data-calendar-month]"
+    );
+
+    const mobileMonths = document.querySelectorAll(
+      "[data-mobile-month]"
+    );
+
+
+    function activateWeek(monthPanel, index) {
+
+      if (!monthPanel) return;
+
+      const weeks = Array.from(
+        monthPanel.querySelectorAll("[data-mobile-week]")
+      );
+
+      if (!weeks.length) return;
+
+      const newIndex = Math.max(
+        0,
+        Math.min(index, weeks.length - 1)
+      );
+
+      weeks.forEach((week) =>
+        week.classList.remove("active")
+      );
+
+      const activeWeek = weeks[newIndex];
+
+      activeWeek.classList.add("active");
+
+      monthPanel.dataset.activeWeek =
+        String(newIndex);
+
+
+      const label =
+        monthPanel.querySelector("[data-week-label]");
+
+      if (label) {
+        label.textContent =
+          activeWeek.dataset.weekLabel;
+      }
+
+
+      const previous =
+        monthPanel.querySelector("[data-week-prev]");
+
+      const next =
+        monthPanel.querySelector("[data-week-next]");
+
+      if (previous) {
+        previous.disabled = newIndex === 0;
+      }
+
+      if (next) {
+        next.disabled =
+          newIndex === weeks.length - 1;
+      }
+    }
+
+
+    function activateMonth(target) {
+
+      tabs.forEach((tab) =>
+        tab.classList.toggle(
+          "active",
+          tab.dataset.calendarTarget === target
+        )
+      );
+
+      desktopMonths.forEach((month) =>
+        month.classList.toggle(
+          "active",
+          month.dataset.calendarMonth === target
+        )
+      );
+
+      mobileMonths.forEach((month) => {
+
+        const isActive =
+          month.dataset.mobileMonth === target;
+
+        month.classList.toggle(
+          "active",
+          isActive
+        );
+
+        if (isActive) {
+          activateWeek(month, 0);
+        }
+
+      });
+
+    }
+
+
+    tabs.forEach((tab) => {
+
+      tab.addEventListener("click", () => {
+        activateMonth(
+          tab.dataset.calendarTarget
+        );
+      });
+
+    });
+
+
+    mobileMonths.forEach((month) => {
+
+      activateWeek(month, 0);
+
+      const previous =
+        month.querySelector("[data-week-prev]");
+
+      const next =
+        month.querySelector("[data-week-next]");
+
+
+      if (previous) {
+        previous.addEventListener("click", () => {
+
+          const current = parseInt(
+            month.dataset.activeWeek || "0",
+            10
+          );
+
+          activateWeek(month, current - 1);
+
+        });
+      }
+
+
+      if (next) {
+        next.addEventListener("click", () => {
+
+          const current = parseInt(
+            month.dataset.activeWeek || "0",
+            10
+          );
+
+          activateWeek(month, current + 1);
+
+        });
+      }
+
+    });
+
+  });
+</script>
+
+</body>
+</html>
