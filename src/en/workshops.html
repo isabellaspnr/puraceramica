@@ -56,107 +56,167 @@
   <link rel="stylesheet" href="../assets/css/styles.css">
   <link rel="stylesheet" href="../assets/css/workshops.css">
   <!-- SCHEMA.ORG -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://www.puraceramica.pt/en/workshops.html#collectionpage",
-        "url": "https://www.puraceramica.pt/en/workshops.html",
-        "name": "Pottery Workshops in Lisbon",
-        "description": "Pottery workshops at PURACERÂMICA Lisbon. Hand-building and pottery wheel classes for all skill levels.",
-        "inLanguage": "en-US",
-        "isPartOf": { "@id": "https://www.puraceramica.pt/#website" },
-        "about": { "@id": "https://www.puraceramica.pt/#business" },
-        "breadcrumb": { "@id": "https://www.puraceramica.pt/en/workshops.html#breadcrumb" }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.puraceramica.pt/en/workshops.html#collectionpage",
+      "url": "https://www.puraceramica.pt/en/workshops.html",
+      "name": "Pottery Workshops in Lisbon",
+      "description": "Pottery workshops, pottery wheel classes, ongoing courses and special ceramic workshops at PURACERÂMICA in Lisbon.",
+      "inLanguage": "en",
+      "isPartOf": {
+        "@id": "https://www.puraceramica.pt/#website"
       },
-      {
-        "@type": "ItemList",
-        "name": "PURACERÂMICA Workshops",
-        "numberOfItems": 4,
-        "itemListElement": [
-          {
-            "@type": "ListItem", "position": 1,
-            "item": {
-              "@type": "Course",
-              "name": "Hand-building Workshop",
-              "description": "Create something unique by hand-building with techniques like coiling, slab building or pinching. 2.5-hour beginner-friendly class.",
-              "provider": { "@id": "https://www.puraceramica.pt/#business" },
-              "url": "https://www.puraceramica.pt/en/handbuilding-workshop.html",
-              "offers": { "@type": "Offer", "price": "40.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
-              "duration": "PT2H30M", "educationalLevel": "Beginner"
-            }
-          },
-          {
-            "@type": "ListItem", "position": 2,
-            "item": {
-              "@type": "Course",
-              "name": "Pottery Wheel for Two",
-              "description": "Bring a friend or partner and discover the potter's wheel together. 2-hour workshop for 2 people.",
-              "provider": { "@id": "https://www.puraceramica.pt/#business" },
-              "url": "https://www.puraceramica.pt/en/pottery-wheel-for-two.html",
-              "offers": { "@type": "Offer", "price": "120.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
-              "duration": "PT2H", "educationalLevel": "Beginner", "maximumAttendeeCapacity": 2
-            }
-          },
-          {
-            "@type": "ListItem", "position": 3,
-            "item": {
-              "@type": "Course",
-              "name": "Pottery Wheel for One",
-              "description": "Experience the pottery wheel in a private 2-hour session with personalised guidance.",
-              "provider": { "@id": "https://www.puraceramica.pt/#business" },
-              "url": "https://www.puraceramica.pt/en/pottery-wheel-for-one.html",
-              "offers": { "@type": "Offer", "price": "75.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
-              "duration": "PT2H", "educationalLevel": "Beginner", "maximumAttendeeCapacity": 1
-            }
-          },
-          {
-            "@type": "ListItem", "position": 4,
-            "item": {
-              "@type": "Course",
-              "name": "4-Week Hand-building Course",
-              "description": "Develop your hand-building skills over 4 weekly sessions, exploring different techniques in depth.",
-              "provider": { "@id": "https://www.puraceramica.pt/#business" },
-              "url": "https://www.puraceramica.pt/en/4-week-handbuilding-course.html",
-              "offers": { "@type": "Offer", "price": "120.00", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" },
-              "duration": "PT8H", "educationalLevel": "Beginner"
-            }
-          }
-        ]
+      "about": {
+        "@id": "https://www.puraceramica.pt/#business"
       },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.puraceramica.pt/#business",
-        "name": "PURACERÂMICA",
-        "url": "https://www.puraceramica.pt",
-        "telephone": "+351932523750",
-        "email": "info@puraceramica.pt",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Jau 23a",
-          "addressLocality": "Lisboa",
-          "postalCode": "1300-311",
-          "addressCountry": "PT"
-        },
-        "sameAs": [
-          "https://www.instagram.com/puraceramicalisboa/",
-          "https://www.facebook.com/puraceramicalisboa",
-          "https://www.tiktok.com/@puraceramica"
-        ]
+      "mainEntity": {
+        "@id": "https://www.puraceramica.pt/en/workshops.html#workshop-list"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.puraceramica.pt/en/workshops.html#breadcrumb",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.puraceramica.pt/en/index.html" },
-          { "@type": "ListItem", "position": 2, "name": "Pottery Workshops", "item": "https://www.puraceramica.pt/en/workshops.html" }
-        ]
+      "breadcrumb": {
+        "@id": "https://www.puraceramica.pt/en/workshops.html#breadcrumb"
       }
-    ]
-  }
-  </script>
+    },
+
+    {
+      "@type": "ItemList",
+      "@id": "https://www.puraceramica.pt/en/workshops.html#workshop-list",
+      "name": "PURACERÂMICA Workshops",
+      "numberOfItems": 9,
+
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.handbuilding.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.handbuilding.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.wheelForTwo.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.wheelForTwo.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+"name": "{{ workshops.wineAndClay.en.title | safe }}",
+            "url": "https://www.puraceramica.pt{{ workshops.wineAndClay.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.continuousHandbuilding.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.continuousHandbuilding.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.intermediateHandbuilding.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.intermediateHandbuilding.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.intermediateWheel.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.intermediateWheel.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.fourWeekWheelCourse.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.fourWeekWheelCourse.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.kintsugi.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.kintsugi.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.shukiSakeWare.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.shukiSakeWare.en.url }}"
+          }
+        }
+      ]
+    },
+
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://www.puraceramica.pt/#business",
+      "name": "PURACERÂMICA",
+      "url": "https://www.puraceramica.pt",
+      "telephone": "+351932523750",
+      "email": "info@puraceramica.pt",
+
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jau 23A",
+        "addressLocality": "Lisboa",
+        "postalCode": "1300-311",
+        "addressCountry": "PT"
+      },
+
+      "sameAs": [
+        "https://www.instagram.com/puraceramicalisboa/",
+        "https://www.facebook.com/puraceramicalisboa",
+        "https://www.tiktok.com/@puraceramica"
+      ]
+    },
+
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.puraceramica.pt/en/workshops.html#breadcrumb",
+
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.puraceramica.pt/en/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pottery Workshops",
+          "item": "https://www.puraceramica.pt/en/workshops.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 
 <body>
@@ -184,112 +244,319 @@
   <span class="hp-eyebrow">Pottery Workshops</span>
   <h1 class="wh-hero-title">Make pottery from scratch.</h1>
   <p class="wh-hero-sub">Learn wheel throwing or handbuilding in our Lisbon studio, guided by our team.</p>
-  <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="hp-btn hp-btn-light" target="_blank" rel="noopener">Book a workshop</a>
+<a href="/en/whats-on.html" class="hp-btn hp-btn-light">
+  View upcoming workshops
+</a>
 </section>
 
 <!-- ══ 02 SPECIALS ══ -->
 <section class="wh-specials">
+
   <div class="wh-sp-head">
     <span class="hp-eyebrow">Don't miss</span>
     <h2 class="wh-sp-title">Special workshops</h2>
-    <p>Limited formats you won't find every day.</p>
+    <p>Limited workshops and special formats on selected dates.</p>
   </div>
+
   <div class="wh-sp-grid">
-    <!-- Detailseite später: /en/workshop-kintsugi.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-sp-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t3 wh-sp-img"><span>Foto: Kintsugi</span></div>
-      <div class="wh-sp-body">
-        <span class="wh-sp-tag">Special</span>
-        <h3>Kintsugi</h3>
-        <p>The Japanese art of mending ceramics with gold. Turn breakage into beauty.</p>
-        <div class="wh-sp-meta">€65 <span class="dur">· 2h</span></div>
+
+    <!-- KINTSUGI -->
+    <a href="{{ workshops.kintsugi.en.url }}" class="wh-sp-card">
+
+      <div class="hp-ph hp-t3 wh-sp-img">
+        <span>Kintsugi</span>
       </div>
-    </a>
-    <!-- Detailseite später: /en/workshop-sake-set.html -->
-    <a href="mailto:info@puraceramica.pt?subject=Sake%20Set%20%2B%20Tasting" class="wh-sp-card">
-      <div class="hp-ph hp-t2 wh-sp-img"><span>Foto: Sake Set</span></div>
+
       <div class="wh-sp-body">
+
         <span class="wh-sp-tag">Special</span>
-        <h3>Sake Set + Tasting</h3>
-        <p>Make your own sake set over two sessions, then a tasting evening to collect and toast.</p>
-        <div class="wh-sp-meta">Price on request <span class="dur">· 2×2h30 + tasting</span></div>
+
+        <h3>
+          {{ workshops.kintsugi.en.title }}
+        </h3>
+
+        <p>
+          Discover a modern approach to the Japanese art of repairing
+          broken ceramics and highlighting their history.
+        </p>
+
+        <div class="wh-sp-meta">
+          €{{ workshops.kintsugi.price }}
+          <span class="dur">· 2h30</span>
+        </div>
+
       </div>
+
     </a>
+
+
+    <!-- SHUKI / SAKE WARE -->
+    <a href="{{ workshops.shukiSakeWare.en.url }}" class="wh-sp-card">
+
+      <div class="hp-ph hp-t2 wh-sp-img">
+        <span>Shuki · Sake Ware</span>
+      </div>
+
+      <div class="wh-sp-body">
+
+        <span class="wh-sp-tag">Special</span>
+
+        <h3>
+          {{ workshops.shukiSakeWare.en.title }}
+        </h3>
+
+        <p>
+          Create your own Japanese sake set across three sessions,
+          from making and glazing to a final sake tasting.
+        </p>
+
+        <div class="wh-sp-meta">
+          €{{ workshops.shukiSakeWare.price }}
+          <span class="dur">· 3 sessions · 6h total</span>
+        </div>
+
+      </div>
+
+    </a>
+
   </div>
+
 </section>
+
 
 <!-- ══ 03 ALL WORKSHOPS ══ -->
 <div class="wh-grid-wrap">
+
   <div class="wh-grid-head">
-    <span class="hp-eyebrow">All workshops</span>
-    <h2 class="wh-grid-title">Find your format</h2>
+
+    <span class="hp-eyebrow">
+      All workshops
+    </span>
+
+    <h2 class="wh-grid-title">
+      Find your format
+    </h2>
+
+    <p>
+      From first-time pottery sessions to ongoing classes
+      and multi-week courses.
+    </p>
+
   </div>
+
+
   <div class="wh-grid">
 
-    <!-- Detailseite später: /en/workshop-handbuilding-beginner.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t3 wh-card-img"><span>Foto</span><span class="wh-cat">Handbuilding</span></div>
-      <h3>Handbuilding Beginner</h3><p class="desc">Your first pieces by hand, fully guided.</p>
-      <div class="meta">€40 <span class="dur">· 2h30</span></div>
+
+    <!-- HANDBUILDING -->
+    <a
+      href="{{ workshops.handbuilding.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t3 wh-card-img">
+        <span>Handbuilding</span>
+        <span class="wh-cat">Handbuilding</span>
+      </div>
+
+      <h3>
+        {{ workshops.handbuilding.en.title }}
+      </h3>
+
+      <p class="desc">
+        Learn the foundations of handbuilding and create
+        your own ceramic piece from scratch.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.handbuilding.price }}
+        <span class="dur">· 2h30</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-handbuilding-intermediate.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t3 wh-card-img"><span>Foto</span><span class="wh-cat">Handbuilding</span></div>
-      <h3>Handbuilding Intermediate</h3><p class="desc">Build on the basics and refine your technique.</p>
-      <div class="meta">€40 <span class="dur">· 3h</span></div>
+
+    <!-- WHEEL FOR TWO -->
+    <a
+      href="{{ workshops.wheelForTwo.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t2 wh-card-img">
+        <span>Pottery Wheel</span>
+        <span class="wh-cat">Wheel</span>
+      </div>
+
+      <h3>
+        {{ workshops.wheelForTwo.en.title }}
+      </h3>
+
+      <p class="desc">
+        A private introduction to the pottery wheel,
+        designed for exactly two people.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.wheelForTwo.price }}
+        <span class="dur">· 2h · for two</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-handbuilding-course.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t3 wh-card-img"><span>Foto</span><span class="wh-cat">Course</span></div>
-      <h3>Handbuilding · 4 Weeks</h3><p class="desc">A month of handbuilding, from basics to glazing.</p>
-      <div class="meta">€120 <span class="dur">· 4×2h</span></div>
+
+    <!-- WINE & CLAY -->
+    <a
+      href="{{ workshops.wineAndClay.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t1 wh-card-img">
+        <span>Wine &amp; Clay</span>
+        <span class="wh-cat">Social</span>
+      </div>
+
+      <h3>
+        {{ workshops.wineAndClay.en.title }}
+      </h3>
+
+      <p class="desc">
+        A relaxed Friday evening of handbuilding,
+        wine and good company.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.wineAndClay.price }}
+        <span class="dur">· 2h</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-wheel-for-2.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t2 wh-card-img"><span>Foto</span><span class="wh-cat">Wheel</span></div>
-      <h3>Wheel for 2</h3><p class="desc">Bring a friend and learn the wheel together.</p>
-      <div class="meta">€120 <span class="dur">· 2h · for two</span></div>
+
+    <!-- CONTINUOUS HANDBUILDING -->
+    <a
+      href="{{ workshops.continuousHandbuilding.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t3 wh-card-img">
+        <span>Handbuilding</span>
+        <span class="wh-cat">Ongoing</span>
+      </div>
+
+      <h3>
+        {{ workshops.continuousHandbuilding.en.title }}
+      </h3>
+
+      <p class="desc">
+        Develop your ceramic practice through ongoing
+        projects, technique and experimentation.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.continuousHandbuilding.price }}
+        <span class="dur">· 2h</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-wheel-intermediate.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t2 wh-card-img"><span>Foto</span><span class="wh-cat">Wheel · Private</span></div>
-      <h3>Wheel Intermediate · Private</h3><p class="desc">One-on-one time at the wheel to level up.</p>
-      <div class="meta">from €120 <span class="dur">· 3h · 1 person</span></div>
+
+    <!-- INTERMEDIATE HANDBUILDING -->
+    <a
+      href="{{ workshops.intermediateHandbuilding.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t3 wh-card-img">
+        <span>Handbuilding</span>
+        <span class="wh-cat">Intermediate</span>
+      </div>
+
+      <h3>
+        {{ workshops.intermediateHandbuilding.en.title }}
+      </h3>
+
+      <p class="desc">
+        Build on your existing handbuilding skills
+        and work on more advanced forms and projects.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.intermediateHandbuilding.price }}
+        <span class="dur">· 2h</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-wheel-course.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t2 wh-card-img"><span>Foto</span><span class="wh-cat">Course</span></div>
-      <h3>Wheel · 4 Weeks</h3><p class="desc">Go from a lump of clay to finished pieces over a month.</p>
-      <div class="meta">€120 <span class="dur">· 4×2h</span></div>
+
+    <!-- INTERMEDIATE WHEEL -->
+    <a
+      href="{{ workshops.intermediateWheel.en.url }}"
+      class="wh-card"
+    >
+
+      <div class="hp-ph hp-t2 wh-card-img">
+        <span>Pottery Wheel</span>
+        <span class="wh-cat">Intermediate</span>
+      </div>
+
+      <h3>
+        {{ workshops.intermediateWheel.en.title }}
+      </h3>
+
+      <p class="desc">
+        Refine your wheel throwing skills in a focused
+        session with a maximum of two participants.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.intermediateWheel.price }}
+        <span class="dur">· 2h · per person</span>
+      </div>
+
     </a>
 
-    <!-- Detailseite später: /en/workshop-sip-and-spin.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t1 wh-card-img"><span>Foto</span><span class="wh-cat">Social</span></div>
-      <h3>Sip &amp; Spin</h3><p class="desc">Two at the wheel with a drink in hand.</p>
-      <div class="meta">€130 <span class="dur">· 2h · for two</span></div>
-    </a>
 
-    <!-- Detailseite später: /en/workshop-wine-and-clay.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t1 wh-card-img"><span>Foto</span><span class="wh-cat">Social</span></div>
-      <h3>Wine &amp; Clay</h3><p class="desc">Clay, a glass of wine and good company.</p>
-      <div class="meta">€40 <span class="dur">· 2h</span></div>
-    </a>
+    <!-- 4-WEEK WHEEL COURSE -->
+    <a
+      href="{{ workshops.fourWeekWheelCourse.en.url }}"
+      class="wh-card"
+    >
 
-    <!-- Detailseite später: /en/workshop-clayground.html -->
-    <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="wh-card" target="_blank" rel="noopener">
-      <div class="hp-ph hp-t1 wh-card-img"><span>Foto</span><span class="wh-cat">Social</span></div>
-      <h3>Clayground Social Club</h3><p class="desc">Drop in, work with the community. Free entry, pay only for clay.</p>
-      <div class="meta">Free <span class="dur">· 2h · clay extra</span></div>
+      <div class="hp-ph hp-t2 wh-card-img">
+        <span>Pottery Wheel</span>
+        <span class="wh-cat">4-week course</span>
+      </div>
+
+      <h3>
+        {{ workshops.fourWeekWheelCourse.en.title }}
+      </h3>
+
+      <p class="desc">
+        Build a solid foundation at the pottery wheel
+        over four consecutive weekly sessions.
+      </p>
+
+      <div class="meta">
+        €{{ workshops.fourWeekWheelCourse.price }}
+        <span class="dur">· 4×2h</span>
+      </div>
+
     </a>
 
   </div>
+
+
+  <div class="wh-grid-head">
+
+    <a
+      href="/en/whats-on.html"
+      class="hp-btn hp-btn-outline"
+    >
+      See all upcoming dates
+    </a>
+
+  </div>
+
 </div>
 
 <!-- ══ 04 PRIVATE EVENTS ══ -->
