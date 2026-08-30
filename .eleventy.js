@@ -113,6 +113,22 @@
     }
   );
 
+  eleventyConfig.addFilter("workshopDate", function (dateString, lang = "en") {
+  if (!dateString) return "";
+
+  const date = new Date(`${dateString}T12:00:00Z`);
+
+  return new Intl.DateTimeFormat(
+    lang === "pt" ? "pt-PT" : "en-GB",
+    {
+      weekday: "short",
+      day: "numeric",
+      month: "long",
+      timeZone: "UTC"
+    }
+  ).format(date);
+});
+
   // Bestehende .html-URLs während der Migration beibehalten
   eleventyConfig.addGlobalData("permalink", () => {
     return (data) =>

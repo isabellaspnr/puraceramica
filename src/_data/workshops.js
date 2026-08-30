@@ -851,6 +851,164 @@ participants: {
   ]
 },
 
+fourWeekWheelCourse: {
+  id: "fourWeekWheelCourse",
+
+  medium: "clay",
+  type: "course",
+  format: "multi-session",
+  level: "beginner",
+
+  sessionCount: 4,
+  durationMinutes: 120,
+  totalDurationMinutes: 480,
+
+  price: 190,
+  pricePerSession: 47.5,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+
+  participants: {
+    min: 1,
+    max: 2,
+    fixed: false
+  },
+
+  image: "/assets/img/courses/couple_wheel.jpg",
+enImageAlt: "Pottery wheel course at PURACERÂMICA in Lisbon",
+
+  en: {
+    title: "4-Week Pottery Wheel Course",
+    shortTitle: "4-Week Wheel Course",
+    pageTag: "Pottery Wheel · 4-Week Course",
+
+    seo: {
+      title: "4-Week Pottery Wheel Course Lisbon | PURACERÂMICA",
+      description:
+        "Learn pottery wheel techniques in Lisbon in a four-week course with a maximum of two participants. Four 2-hour sessions with individual guidance."
+    },
+
+    schedule:
+      "Wednesdays · 11:00–13:00 · 4 consecutive weeks",
+
+    levelLabel: "Beginner",
+    languageLabel: "Portuguese",
+
+    intro:
+      "Build a solid foundation on the pottery wheel across four consecutive weeks in a small course with a maximum of two participants.",
+
+    about: [
+      "Across four 2-hour sessions, you will learn and practise the essential steps of wheel throwing, including centering, opening, pulling and shaping clay.",
+
+      "With only two pottery wheels and a maximum of two participants, each person works on their own wheel and receives close individual guidance throughout the course.",
+
+      "The course is designed for beginners who want more time to practise and develop their skills than a single introductory workshop can offer."
+    ],
+
+    beforeYouCome: {
+      intro:
+        "This is a four-week course and your booking includes all four consecutive sessions.",
+
+      items: [
+        {
+          title: "Start with the first session",
+          text: "Participation from the first session of your selected course is required."
+        },
+        {
+          title: "Four consecutive weeks",
+          text: "Your booking includes four 2-hour sessions on consecutive Wednesdays."
+        },
+        {
+          title: "Maximum two participants",
+          text: "The course is limited to two participants so that each person has their own pottery wheel."
+        },
+        {
+          title: "What to wear",
+          text: "Wear comfortable clothes that you don't mind getting clay on. Short nails are recommended for wheel throwing."
+        }
+      ]
+    },
+
+    url: "/en/4-week-pottery-wheel-course.html"
+  },
+
+  cohorts: [
+    {
+      id: "october-2026",
+      label: "October",
+      startDate: "2026-10-07",
+      instructor: "pauloRosica",
+      language: "Portuguese",
+
+      booking: {
+        url:
+          "https://puraceramicalisboa.simplybook.it/v2/#book-class/service/43/date/2026-10-07/time/11:00/",
+        service: "43"
+      },
+
+      sessions: [
+        {
+          date: "2026-10-07",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-10-14",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-10-21",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-10-28",
+          start: "11:00",
+          end: "13:00"
+        }
+      ]
+    },
+
+    {
+      id: "november-2026",
+      label: "November",
+      startDate: "2026-11-04",
+      instructor: "pauloRosica",
+      language: "Portuguese",
+
+      booking: {
+        url:
+          "https://puraceramicalisboa.simplybook.it/v2/#book-class/service/44/date/2026-11-04/time/11:00/",
+        service: "44"
+      },
+
+      sessions: [
+        {
+          date: "2026-11-04",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-11-11",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-11-18",
+          start: "11:00",
+          end: "13:00"
+        },
+        {
+          date: "2026-11-25",
+          start: "11:00",
+          end: "13:00"
+        }
+      ]
+    }
+  ]
+},
+
 wineAndClay: {
   id: "wineAndClay",
 

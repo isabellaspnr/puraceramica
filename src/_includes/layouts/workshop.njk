@@ -205,19 +205,28 @@
           <span class="workshop-quick-label">
             {% if lang == "pt" %}Preço{% else %}Price{% endif %}
           </span>
-<strong
-  id="workshop-price"
-  data-base-price="{{ workshop.price }}"
->
-  €{{ workshop.price }}
-  {% if workshop.priceUnit == "for-two" %}
-    {% if lang == "pt" %}
-      para 2 pessoas
-    {% else %}
-      for 2 people
+{% if workshop.cohorts and workshop.pricePerSession %}
+  <strong>
+    €{{ workshop.pricePerSession }}0 / session
+    <small class="workshop-price-total">
+      €{{ workshop.price }} total
+    </small>
+  </strong>
+{% else %}
+  <strong
+    id="workshop-price"
+    data-base-price="{{ workshop.price }}"
+  >
+    €{{ workshop.price }}
+    {% if workshop.priceUnit == "for-two" %}
+      {% if lang == "pt" %}
+        para 2 pessoas
+      {% else %}
+        for 2 people
+      {% endif %}
     {% endif %}
-  {% endif %}
-</strong>     </div>
+  </strong>
+{% endif %}   </div>
 
         <div class="workshop-quick-fact">
           <span class="workshop-quick-label">
@@ -244,7 +253,133 @@
 
 
       <!-- UPCOMING DATES -->
-      {% set months = workshop.dates | workshopMonths(lang) %}
+<!-- UPCOMING DATES / COURSE COHORTS -->
+
+{% if workshop.cohorts %}
+
+  <div class="workshop-booking-section workshop-cohorts-section">
+
+    <div class="workshop-booking-heading">
+      {% if lang == "pt" %}
+        Escolha a sua turma
+      {% else %}
+        Choose your course start
+      {% endif %}
+    </div>
+
+    <div class="workshop-cohorts">
+
+      {% for cohort in workshop.cohorts %}
+
+        <article class="workshop-cohort-card">
+
+          <div class="workshop-cohort-header">
+
+            <span class="workshop-cohort-label">
+  {% if lang == "pt" %}
+    Curso de {{ cohort.label }}
+  {% else %}
+    {{ cohort.label }} course
+  {% endif %}
+</span>
+
+            <p>
+              {% if lang == "pt" %}
+                Começa em
+              {% else %}
+                Starts
+              {% endif %}
+              <strong>{{ cohort.startDate | workshopDate(lang) }}</strong>
+            </p>
+
+          </div>
+
+
+          <div class="dates-list">
+
+            {% for session in cohort.sessions %}
+
+              <div class="date-block available">
+
+                <div class="date-content">
+
+                  <span class="date-text">
+                    {{ session.date | workshopDate(lang) }}
+                    &nbsp;
+                    {{ session.start }}–{{ session.end }}
+                  </span>
+
+                </div>
+
+              </div>
+
+            {% endfor %}
+
+          </div>
+
+
+          {% set cohortInstructor = instructors[cohort.instructor] %}
+
+          {% if cohortInstructor %}
+            <p class="workshop-cohort-instructor">
+              {% if lang == "pt" %}
+                com {{ cohortInstructor.name }}
+              {% else %}
+                with {{ cohortInstructor.name }}
+              {% endif %}
+
+              {% if cohort.language %}
+                &nbsp;·&nbsp; {{ cohort.language }}
+              {% endif %}
+            </p>
+          {% endif %}
+
+
+          <div class="workshop-cohort-price">
+
+            <strong>€{{ workshop.pricePerSession }} / session</strong>
+
+            <span>
+              {{ workshop.sessionCount }} × {{ workshop.durationMinutes / 60 }} h
+              &nbsp;·&nbsp;
+              €{{ workshop.price }} total
+            </span>
+
+          </div>
+
+
+          <a
+            href="{{ cohort.booking.url }}"
+            class="workshop-book-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {% if lang == "pt" %}
+              Reservar turma de {{ cohort.label }}
+            {% else %}
+              Book {{ cohort.label }} course
+            {% endif %}
+          </a>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+    <p class="booking-note">
+      {% if lang == "pt" %}
+        Uma reserva inclui as quatro sessões consecutivas.
+      {% else %}
+        One booking includes all four consecutive sessions.
+      {% endif %}
+    </p>
+
+  </div>
+
+{% else %}
+
+{% set months = workshop.dates | workshopMonths(lang) %}
 
       <div class="workshop-booking-section">
 
@@ -425,6 +560,8 @@
 {% endif %}
 
       </div>
+
+{% endif %}
 
     </div>
 

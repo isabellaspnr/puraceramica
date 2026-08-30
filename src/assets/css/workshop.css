@@ -1831,3 +1831,96 @@
   }
 
 }
+
+/* ============================================================
+   COURSE COHORTS
+   ============================================================ */
+
+.workshop-cohorts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 20npx;
+}
+
+.workshop-cohort-card {
+  border: 1px solid #dedede;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fff;
+}
+
+.workshop-cohort-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.workshop-cohort-header p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.workshop-cohort-card .dates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.workshop-cohort-card .date-block {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.workshop-cohort-instructor {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.workshop-cohort-price {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.workshop-cohort-price strong {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.workshop-cohort-price span {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.workshop-cohort-card .workshop-book-btn {
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.workshop-price-total {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .workshop-cohorts {
+    grid-template-columns: 1fr;
+  }
+
+  .workshop-cohort-card {
+    padding: 22px;
+  }
+}
