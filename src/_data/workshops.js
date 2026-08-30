@@ -721,5 +721,193 @@ beforeYouCome: {
   }
 }
   })
+},
+wineAndClay: {
+  id: "wineAndClay",
+
+  medium: "clay",
+  type: "social",
+  format: "single-session",
+  level: "beginner",
+
+  durationMinutes: 120,
+
+  price: 50,
+  priceCurrency: "EUR",
+  priceStatus: "confirmed",
+
+  ageMinimum: 18,
+
+  image: "/assets/img/courses/wine-clay.jpg",
+enImageAlt: "Wine and Clay handbuilding evening at PURACERÂMICA in Lisbon",
+
+  booking: {
+    url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/39",
+    service: "39"
+  },
+
+  en: {
+    title: "Wine & Clay",
+    shortTitle: "Wine & Clay",
+    pageTag: "Pottery Social · Handbuilding",
+
+    seo: {
+      title: "Wine & Clay in Lisbon | PURACERÂMICA",
+      description:
+        "Spend a creative Friday evening handbuilding with clay in Lisbon. A relaxed two-hour pottery social with instructor guidance, wine and good company."
+    },
+
+    schedule: "Fridays · 19:00–21:00",
+
+    levelLabel: "Beginner friendly",
+languageLabel: "Portuguese & English",
+
+    intro:
+      "Slow down, get your hands in clay and enjoy a relaxed Friday evening in the studio. Wine & Clay combines free handbuilding, instructor support and a social atmosphere.",
+
+   languageNote:
+  "This event is hosted in Portuguese and English.",
+
+    about: [
+      "Wine & Clay is a relaxed social pottery session rather than a structured pottery class. You'll have time to explore handbuilding freely, work on your own idea and enjoy the evening with other makers.",
+
+      "Your instructor is there to help with techniques, construction and creative ideas whenever you need support.",
+
+      "No previous pottery experience is required. Come on your own, with a friend or as a small group."
+    ],
+
+    included: {
+  intro:
+    "Everything you need for a relaxed creative evening is provided in the studio.",
+
+  items: [
+    {
+      title: "Clay & materials",
+      text: "Clay and the basic materials needed for your handbuilding project."
+    },
+    {
+      title: "Studio tools",
+      text: "Use of our handbuilding tools and equipment throughout the session."
+    },
+    {
+      title: "Instructor guidance",
+      text: "Amanda will be available throughout the evening to help with techniques, construction and creative ideas."
+    },
+    {
+      title: "Wine",
+      text: "Wine is included as part of the evening. A non-alcoholic option is also available."
+    }
+  ]
+},
+
+beforeYouCome: {
+  intro:
+    "A few practical things to know before joining Wine & Clay.",
+
+  items: [
+    {
+      title: "18+ only",
+      text: "Wine & Clay is an adults-only event for participants aged 18 and over."
+    },
+    {
+      title: "No experience needed",
+      text: "You don't need any previous pottery experience. The session is beginner friendly."
+    },
+    {
+      title: "What to wear",
+      text: "Clay can get messy, so we recommend comfortable clothes that you don't mind getting a little dirty."
+    },
+    {
+      title: "Come your way",
+      text: "You're welcome to come on your own, with a friend or as a small group."
+    }
+  ]
+},
+
+    url: "/en/wine-and-clay.html"
+  },
+
+ dates: buildRecurringSessions({
+  startDate: "2026-09-04",
+  endDate: "2026-12-18",
+
+  instructor: "amanda",
+  language: "Portuguese & English",
+
+  schedule: [
+    {
+      weekday: 5,
+      start: "19:00",
+      end: "21:00"
+    }
+  ],
+
+  exclude: []
+})
+},
+continuousHandbuilding: {
+  id: "continuousHandbuilding",
+
+  medium: "clay",
+  type: "course",
+  format: "ongoing",
+  level: "all-levels",
+
+  durationMinutes: 120,
+
+  price: 45,
+  priceCurrency: "EUR",
+  priceStatus: "tentative",
+
+  en: {
+    title: "Continuous Handbuilding Classes",
+    shortTitle: "Continuous Handbuilding",
+    pageTag: "Pottery Classes · Ongoing",
+
+    seo: {
+      title: "Continuous Handbuilding Classes in Lisbon | PURACERÂMICA",
+      description:
+        "Develop your handbuilding skills in ongoing ceramic classes in Lisbon. Explore construction techniques, personal projects, engobes, textures and surface decoration."
+    },
+
+    schedule: "Wednesdays · 18:00–20:00",
+
+    levelLabel: "All levels",
+    languageLabel: "Portuguese & English",
+
+    intro:
+      "Develop your ceramic practice through ongoing handbuilding classes focused on technique, experimentation and personal projects.",
+
+    languageNote:
+      "Classes are taught in Portuguese and English.",
+
+    about: [
+      "In these ongoing ceramic classes, participants explore clay through a range of handbuilding techniques, from developing an artistic idea and planning a project to creating the finished piece.",
+
+      "Throughout the sessions, you'll also have the opportunity to prepare and apply engobes, experimenting with different colours, textures and surfaces.",
+
+      "The continuous format gives you space to develop creativity, artistic expression and technical skills through experimentation, ongoing learning and exchange with others."
+    ],
+
+    url: "/en/continuous-handbuilding.html"
+  },
+
+  dates: buildRecurringSessions({
+    startDate: "2026-10-07",
+    endDate: "2026-12-16",
+
+    instructor: "amanda",
+    language: "Portuguese & English",
+
+    schedule: [
+      {
+        weekday: 3,
+        start: "18:00",
+        end: "20:00"
+      }
+    ],
+
+    exclude: []
+  })
 }
 };

@@ -37,5 +37,17 @@ module.exports = {
     role: "Instrutor de Cerâmica"
   }
 },
+amanda: {
+  id: "amanda",
+  name: "Amanda",
+
+  en: {
+    role: "Ceramics Instructor"
+  },
+
+  pt: {
+    role: "Instrutora de Cerâmica"
+  }
+},
 
 };
