@@ -791,10 +791,9 @@ wheelForTwo: {
 enImageAlt: "Pottery wheel workshop for two at PURACERÂMICA in Lisbon",
 
 booking: {
-  url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/27/count/1/provider/10/",
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/7",
   category: "2",
-  service: "27",
-  provider: "10"
+  service: "7"
 },
 
   en: {
