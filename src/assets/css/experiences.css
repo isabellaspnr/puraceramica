@@ -66,6 +66,8 @@
 }
 
 
+
+
 /* ══════════════════════════════════
    EXPERIENCES GRID
    ══════════════════════════════════ */
@@ -574,3 +576,24 @@
 }
 
 
+/* Pottery Painting hero – final image */
+.xp-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.32),
+      rgba(0, 0, 0, 0.32)
+    ),
+    url("/assets/img/pottery-painting-hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.xp-hero-title {
+  color: #fff;
+}
+
+.xp-hero-sub {
+  color: rgba(255, 255, 255, 0.9);
+}
