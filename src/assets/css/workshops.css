@@ -83,3 +83,34 @@
 @media (max-width: 560px) {
   .wh-grid { grid-template-columns: 1fr; }
 }
+
+/* Final workshop overview imagery */
+
+.wh-hero {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.28)
+    ),
+    url("/assets/img/pottery-workshops-hero.jpg");
+
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+}
+
+.wh-hero .hp-eyebrow,
+.wh-hero-title {
+  color: #fff;
+}
+
+.wh-hero-sub {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.wh-events-photo {
+  background-image: url("/assets/img/experience/Bachelorette.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
