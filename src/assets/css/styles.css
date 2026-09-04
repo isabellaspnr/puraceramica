@@ -2145,6 +2145,23 @@
 .hp-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem 1.8rem; }
 .hp-card { text-decoration: none; color: inherit; display: block; }
 .hp-card-img { aspect-ratio: 4/5; border-radius: 12px; overflow: hidden; transition: transform .5s cubic-bezier(.4,0,.2,1); }
+.hp-card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hp-card-handbuilding {
+  background-image: url("/assets/img/courses/cards/handbuilding-card.jpg");
+}
+
+.hp-card-wheel-two {
+  background-image: url("/assets/img/courses/cards/wheel-for-two-card.jpg");
+}
+
+.hp-card-four-week {
+  background-image: url("/assets/img/courses/cards/four-week-wheel-card.jpg");
+}
 .hp-card:hover .hp-card-img { transform: translateY(-4px); }
 .hp-card-cat { display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #1B4C9C; }
 .hp-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; margin: .35rem 0; line-height: 1.25; }
@@ -2158,6 +2175,19 @@
 .hp-member-body p { font-family: var(--sans); font-weight: 400; color: #5a5651; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; max-width: 42ch; }
 .hp-member-body .hp-btn { align-self: flex-start; }
 .hp-member-img { min-height: 480px; }
+.hp-member-photo {
+  background-image: url("/assets/img/studio/Ceramicshelf_with_desk copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hp-events-photo {
+  background-image: url("/assets/img/experience/Bachelorette.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 /* ── 06 PRIVATE EVENTS ── */
 .hp-events { position: relative; height: 66vh; min-height: 440px; overflow: hidden; }

@@ -254,24 +254,34 @@
     <a href="/en/workshops.html" class="hp-arrow">View all →</a>
   </div>
   <div class="hp-cards">
-    <a href="/en/workshops.html" class="hp-card">
-      <div class="hp-ph hp-card-img hp-t1"><span>Foto</span></div>
+
+    <a href="{{ workshops.handbuilding.en.url }}" class="hp-card">
+      <div class="hp-card-img hp-card-handbuilding" aria-hidden="true"></div>
+      <span class="hp-card-cat">Handbuilding</span>
+      <h3>{{ workshops.handbuilding.en.title }}</h3>
+      <div class="hp-card-meta">
+        €{{ workshops.handbuilding.price }} <span>· 2h30</span>
+      </div>
+    </a>
+
+    <a href="{{ workshops.wheelForTwo.en.url }}" class="hp-card">
+      <div class="hp-card-img hp-card-wheel-two" aria-hidden="true"></div>
       <span class="hp-card-cat">Wheel</span>
-      <h3>Pottery Wheel for Beginners</h3>
-      <div class="hp-card-meta">€65 <span>· 2h</span></div>
+      <h3>{{ workshops.wheelForTwo.en.title }}</h3>
+      <div class="hp-card-meta">
+        €{{ workshops.wheelForTwo.price }} <span>· 2h · for two</span>
+      </div>
     </a>
-    <a href="/en/workshops.html" class="hp-card">
-      <div class="hp-ph hp-card-img hp-t2"><span>Foto</span></div>
-      <span class="hp-card-cat">Social</span>
-      <h3>Wine &amp; Clay Evening</h3>
-      <div class="hp-card-meta">€45 <span>· 2h</span></div>
-    </a>
-    <a href="/en/workshops.html" class="hp-card">
-      <div class="hp-ph hp-card-img hp-t3"><span>Foto</span></div>
+
+    <a href="{{ workshops.fourWeekWheelCourse.en.url }}" class="hp-card">
+      <div class="hp-card-img hp-card-four-week" aria-hidden="true"></div>
       <span class="hp-card-cat">Course</span>
-      <h3>4-Week Wheel Course</h3>
-      <div class="hp-card-meta">€220 <span>· 4 × 2h</span></div>
+      <h3>{{ workshops.fourWeekWheelCourse.en.title }}</h3>
+      <div class="hp-card-meta">
+        €{{ workshops.fourWeekWheelCourse.price }} <span>· 4 × 2h</span>
+      </div>
     </a>
+
   </div>
 </section>
 
@@ -283,12 +293,12 @@
     <p>Your own space in the studio: wheels, tools, glazes and the full run of the place. For makers who want to keep creating on their own schedule.</p>
     <a href="/en/membership.html" class="hp-btn hp-btn-outline">Join the waitlist</a>
   </div>
-  <div class="hp-ph hp-member-img hp-t3"><span>Foto: Mitglied bei der Arbeit</span></div>
+<div class="hp-member-img hp-member-photo" aria-hidden="true"></div>
 </section>
 
 <!-- ══ 06 PRIVATE EVENTS ══ -->
 <section class="hp-events">
-  <div class="hp-ph hp-events-img hp-t2"><span>Foto: Gruppe / Event</span></div>
+<div class="hp-events-img hp-events-photo" aria-hidden="true"></div>
   <div class="hp-events-body">
     <h2>Your event, made by hand.</h2>
     <p>Birthdays, team building, hen parties. Take over the studio for a private creative session.</p>
