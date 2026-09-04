@@ -1,0 +1,131 @@
+/* ============================================================
+   PURACERÂMICA – Legal Pages
+   Terms & Conditions / Privacy Policy
+   ============================================================ */
+
+.legal-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 70px 32px 110px;
+}
+
+.legal-header {
+  max-width: 760px;
+  margin-bottom: 64px;
+}
+
+.legal-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.legal-header h1 {
+  margin: 0 0 20px;
+
+  font-family: var(--serif);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.legal-intro {
+  margin: 0;
+
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #5f564d;
+}
+
+.legal-updated {
+  margin-top: 18px;
+
+  font-size: 0.85rem;
+  color: #7c746c;
+}
+
+.legal-content {
+  max-width: 760px;
+}
+
+.legal-section {
+  padding: 32px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.legal-section:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.legal-section h2 {
+  margin: 0 0 16px;
+
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.legal-section h3 {
+  margin: 26px 0 10px;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.legal-section p,
+.legal-section li {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: #4f4943;
+}
+
+.legal-section p {
+  margin: 0 0 14px;
+}
+
+.legal-section ul {
+  margin: 12px 0 18px;
+  padding-left: 20px;
+}
+
+.legal-section li + li {
+  margin-top: 8px;
+}
+
+.legal-section a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-contact {
+  margin-top: 16px;
+  padding: 22px 24px;
+  background: #f5f3ef;
+}
+
+.legal-contact p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+  .legal-page {
+    padding: 48px 20px 80px;
+  }
+
+  .legal-header {
+    margin-bottom: 44px;
+  }
+
+  .legal-section {
+    padding: 26px 0;
+  }
+
+}

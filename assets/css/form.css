@@ -1,0 +1,269 @@
+/* ======================
+   EVENT REQUEST FORM
+   ====================== */
+
+.event-form-section {
+  max-width: 800px;
+  margin: 4rem auto 3rem;
+  padding: 3rem 2.5rem;
+  background: #fafafa;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 8px;
+}
+
+.event-form-section h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #000;
+  margin: 0 0 0.8rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.form-intro {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  background: #fff;
+  border: 1.5px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 300;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+/* Select Arrow Styling */
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23000' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 10px;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-submit {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.form-button {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-button:active {
+  transform: translateY(0);
+}
+
+.form-note {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Success/Error Messages */
+.form-message {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-message.success {
+  background-color: #d4edda;
+  border: 1.5px solid #28a745;
+  color: #155724;
+}
+
+.form-message.error {
+  background-color: #f8d7da;
+  border: 1.5px solid #dc3545;
+  color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .event-form-section {
+    padding: 2rem 1.5rem;
+    margin: 3rem auto 2rem;
+  }
+
+  .event-form-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .form-intro {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .form-button {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Thank You Overlay */
+.thankyou-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 78, 157, 0.2);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Thank You Card */
+.thankyou-card {
+  background: #fff;
+  color: #134E9D;
+  text-align: center;
+  border-radius: 16px;
+  padding: 50px 30px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease;
+}
+
+.thankyou-logo {
+  width: 80px;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.thankyou-card h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  margin-bottom: 10px;
+}
+
+.thankyou-card p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.thankyou-btn {
+  background-color: #134E9D;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
+  transition: 0.3s;
+}
+.thankyou-btn:hover {
+  background-color: #0f3b7d;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
