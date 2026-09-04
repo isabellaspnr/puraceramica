@@ -1717,111 +1717,202 @@ beforeYouCome: {
 })
 },
 continuousHandbuilding: {
-  id: "continuousHandbuilding",
+    id: "continuousHandbuilding",
 
-  medium: "clay",
-  type: "course",
-  format: "ongoing",
-  level: "all-levels",
-  calendarCategory: "handbuilding",
+    medium: "clay",
+    type: "course",
+    format: "ongoing",
+    level: "all-levels",
+    calendarCategory: "handbuilding",
 
-  durationMinutes: 120,
+    durationMinutes: 120,
 
-  price: 45,
-  priceCurrency: "EUR",
-  priceStatus: "tentative",
+    price: 40,
+    priceCurrency: "EUR",
+    priceStatus: "confirmed",
 
-  booking: {
-  url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/40",
-  service: "40"
-},
+    capacity: 10,
 
-  en: {
-    title: "Continuous Handbuilding Classes",
-    shortTitle: "Continuous Handbuilding",
-    pageTag: "Pottery Classes · Ongoing",
+    image: "/assets/img/courses/continuous-handbuilding.jpg",
+    enImageAlt: "Handbuilding pottery class at PURACERÂMICA in Lisbon",
 
-    seo: {
-      title: "Continuous Handbuilding Classes in Lisbon | PURACERÂMICA",
-      description:
-        "Develop your handbuilding skills in ongoing ceramic classes in Lisbon. Explore construction techniques, personal projects, engobes, textures and surface decoration."
+    booking: {
+      url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/40",
+      service: "40",
     },
 
-    schedule: "Wednesdays · 18:00–20:00",
+    en: {
+      title: "Continuous Handbuilding Classes",
+      shortTitle: "Continuous Handbuilding",
+      pageTag: "Pottery Classes · Ongoing",
 
-    levelLabel: "All levels",
-    languageLabel: "Portuguese & English",
+      seo: {
+        title: "Continuous Handbuilding Classes in Lisbon | PURACERÂMICA",
+        description:
+          "Join ongoing handbuilding pottery classes in Lisbon. Develop your technique, work on personal ceramic projects and receive individual instructor guidance.",
+      },
 
-    intro:
-      "Develop your ceramic practice through ongoing handbuilding classes focused on technique, experimentation and personal projects.",
+      schedule: "Wednesdays · 18:00–20:00",
 
-    languageNote:
-      "Classes are taught in Portuguese and English.",
+      levelLabel: "Beginner-friendly · All levels",
+      languageLabel: "Portuguese & English",
 
-    about: [
-      "In these ongoing ceramic classes, participants explore clay through a range of handbuilding techniques, from developing an artistic idea and planning a project to creating the finished piece.",
+      intro:
+        "Develop your ceramic practice through guided weekly handbuilding sessions, with space to work on your own ideas and projects.",
 
-      "Throughout the sessions, you'll also have the opportunity to prepare and apply engobes, experimenting with different colours, textures and surfaces.",
+      languageNote: "Classes are taught in Portuguese and English.",
 
-      "The continuous format gives you space to develop creativity, artistic expression and technical skills through experimentation, ongoing learning and exchange with others."
-    ],
+      about: [
+        "Continuous Handbuilding is a guided weekly class for anyone who wants to build confidence with clay, develop their technique and work on personal ceramic projects at their own pace.",
 
-    url: "/en/continuous-handbuilding.html"
+        "Your instructor is there throughout the session to demonstrate techniques, help you plan and construct your pieces, answer questions and give individual feedback as your work develops.",
+
+        "There is no fixed project that everyone has to follow. You can explore techniques such as pinching, coiling, slab building, joining, texture and surface decoration while developing ideas that are your own.",
+
+        "Beginners are welcome, as are participants with previous experience who want regular studio time with more structured guidance and support.",
+      ],
+
+      included: {
+        intro:
+          "Everything you need for your session and the finishing of your work is included.",
+
+        items: [
+          {
+            title: "Clay & materials",
+            text: "Up to 1 kg of clay per session, together with the basic materials needed for your project.",
+          },
+          {
+            title: "Studio tools",
+            text: "Full use of our handbuilding tools and studio equipment during the class.",
+          },
+          {
+            title: "Instructor guidance",
+            text: "Active support with techniques, construction, project planning and individual questions throughout the session.",
+          },
+          {
+            title: "Glazing & firing",
+            text: "Glazing and firing of finished work made during the session are included for regular studio-sized projects.",
+          },
+        ],
+      },
+
+      beforeYouCome: {
+        intro: "A few practical things to know before your class.",
+
+        items: [
+          {
+            title: "Come with an idea — or without one",
+            text: "You are welcome to bring reference images or a project idea, but your instructor can also help you decide what to make.",
+          },
+          {
+            title: "Ongoing projects",
+            text: "Projects can be developed over more than one session when the ceramic process allows it.",
+          },
+          {
+            title: "What to wear",
+            text: "Clay can get messy, so we recommend comfortable clothes that you don't mind getting a little dirty.",
+          },
+        ],
+      },
+
+      url: "/en/continuous-handbuilding.html",
+    },
+
+    pt: {
+      title: "Aulas Contínuas de Modelagem Manual",
+      shortTitle: "Modelagem Manual Contínua",
+      pageTag: "Aulas de Cerâmica · Formato Contínuo",
+
+      seo: {
+        title: "Aulas Contínuas de Modelagem Manual em Lisboa | PURACERÂMICA",
+        description:
+          "Participe em aulas contínuas de modelagem manual em Lisboa. Desenvolva a sua técnica, trabalhe em projetos pessoais e receba acompanhamento individual durante a sessão.",
+      },
+
+      schedule: "Quartas-feiras · 18:00–20:00",
+
+      levelLabel: "Adequado para principiantes · Todos os níveis",
+      languageLabel: "Português e Inglês",
+
+      intro:
+        "Desenvolva a sua prática de cerâmica através de sessões semanais orientadas, com espaço para trabalhar nas suas próprias ideias e projetos.",
+
+      languageNote: "As aulas são realizadas em português e inglês.",
+
+      about: [
+        "As Aulas Contínuas de Modelagem Manual são sessões semanais orientadas para quem quer ganhar confiança no trabalho com barro, desenvolver a técnica e trabalhar em projetos pessoais ao seu próprio ritmo.",
+
+        "A pessoa responsável pela aula acompanha a sessão, demonstra técnicas, ajuda no planeamento e construção das peças, esclarece dúvidas e dá apoio individual à medida que o trabalho evolui.",
+
+        "Não existe um projeto fixo que todos tenham de seguir. Pode explorar técnicas como pinch, coil, slab building, união de elementos, texturas e decoração de superfícies enquanto desenvolve as suas próprias ideias.",
+
+        "Principiantes são bem-vindos, assim como participantes com experiência anterior que procurem prática regular com orientação e acompanhamento.",
+      ],
+
+      included: {
+        intro:
+          "Tudo o que precisa para a sessão e para a finalização do seu trabalho está incluído.",
+
+        items: [
+          {
+            title: "Barro e materiais",
+            text: "Até 1 kg de barro por sessão, juntamente com os materiais básicos necessários para o seu projeto.",
+          },
+          {
+            title: "Ferramentas do estúdio",
+            text: "Utilização das ferramentas de modelagem manual e do equipamento do estúdio durante a aula.",
+          },
+          {
+            title: "Acompanhamento",
+            text: "Apoio ativo com técnicas, construção, planeamento do projeto e dúvidas individuais ao longo da sessão.",
+          },
+          {
+            title: "Vidrado e cozeduras",
+            text: "O vidrado e as cozeduras dos trabalhos realizados durante a sessão estão incluídos para projetos de dimensão habitual no estúdio.",
+          },
+        ],
+      },
+
+      beforeYouCome: {
+        intro: "Algumas informações práticas antes da sua aula.",
+
+        items: [
+          {
+            title: "Venha com uma ideia — ou sem ela",
+            text: "Pode trazer imagens de referência ou uma ideia para um projeto, mas também podemos ajudá-lo a decidir o que criar.",
+          },
+          {
+            title: "Projetos contínuos",
+            text: "Os projetos podem ser desenvolvidos ao longo de várias sessões quando o processo cerâmico o permitir.",
+          },
+          {
+            title: "O que vestir",
+            text: "Trabalhar com barro pode sujar, por isso recomendamos roupa confortável que não se importe de sujar um pouco.",
+          },
+        ],
+      },
+
+      url: "/pt/aulas-continuas-modelagem-manual.html",
+    },
+
+    dates: buildRecurringSessions({
+      startDate: "2026-10-07",
+      endDate: "2026-12-16",
+
+      instructor: "amanda",
+      language: "Portuguese & English",
+
+      schedule: [
+        {
+          weekday: 3,
+          start: "18:00",
+          end: "20:00",
+        },
+      ],
+
+      exclude: [],
+    }),
   },
-
-  pt: {
-  title: "Aulas Contínuas de Modelagem Manual",
-  shortTitle: "Modelagem Manual Contínua",
-  pageTag: "Aulas de Cerâmica · Formato Contínuo",
-
-  seo: {
-    title: "Aulas Contínuas de Modelagem Manual em Lisboa | PURACERÂMICA",
-    description:
-      "Desenvolva a sua prática de cerâmica em aulas contínuas de modelagem manual em Lisboa. Explore técnicas de construção, projetos pessoais, engobes, cores e texturas."
-  },
-
-  schedule: "Quartas-feiras · 18:00–20:00",
-
-  levelLabel: "Todos os níveis",
-  languageLabel: "Português e Inglês",
-
-  intro:
-    "Desenvolva a sua prática de cerâmica através de aulas contínuas de modelagem manual, com foco em técnica, experimentação e projetos pessoais.",
-
-  languageNote:
-    "As aulas são realizadas em português e inglês.",
-
-  about: [
-    "Ao longo das aulas, irá explorar diferentes técnicas de construção, desde a conceção da ideia e o planeamento do projeto até à execução da peça.",
-
-    "Terá também a oportunidade de preparar e aplicar engobes, experimentando diferentes cores, texturas e superfícies.",
-
-    "As aulas contínuas promovem o desenvolvimento da criatividade, da expressão artística e das competências técnicas num ambiente de experimentação, aprendizagem contínua e partilha."
-  ],
-
-  url: "/pt/aulas-continuas-modelagem-manual.html"
-},
-
-  
-
-  dates: buildRecurringSessions({
-    startDate: "2026-10-07",
-    endDate: "2026-12-16",
-
-    instructor: "amanda",
-    language: "Portuguese & English",
-
-    schedule: [
-      {
-        weekday: 3,
-        start: "18:00",
-        end: "20:00"
-      }
-    ],
-
-    exclude: []
-  })
-},
 
 intermediateHandbuilding: {
   id: "intermediateHandbuilding",
