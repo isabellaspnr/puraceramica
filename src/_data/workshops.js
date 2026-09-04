@@ -1922,121 +1922,182 @@ intermediateHandbuilding: {
 
   durationMinutes: 120,
 
-  price: 45,
-  priceCurrency: "EUR",
-  priceStatus: "confirmed",
+ price: 30,
+priceCurrency: "EUR",
+priceStatus: "confirmed",
 
   booking: {
     url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/41",
     service: "41"
   },
 
-  en: {
-    title: "Intermediate Handbuilding",
-    shortTitle: "Intermediate Handbuilding",
-    pageTag: "Pottery Workshop · Handbuilding",
-
-    seo: {
-      title: "Intermediate Handbuilding Workshop Lisbon | PURACERÂMICA",
-      description:
-        "Develop your handbuilding skills in an intermediate pottery workshop in Lisbon. Refine your technique, explore more complex forms and work on your own ceramic projects."
-    },
-
-    schedule: "Selected Thursdays · 11:00–13:00",
-
-    levelLabel: "Intermediate",
-    languageLabel: "English",
-
-    intro:
-      "Take your handbuilding skills further in a focused intermediate pottery session with Maasa.",
-
-    about: [
-      "This workshop is designed for participants who already have some basic experience with clay and want to develop their technique, work more independently and explore more complex forms and construction methods.",
-
-      "With guidance from Maasa, you can refine your ideas, improve your building techniques and develop your own ceramic project in a small and supportive studio setting.",
-
-      "Previous handbuilding experience is recommended."
-    ],
-
-    beforeYouCome: {
-      intro:
-        "This workshop is intended for participants who already have some experience working with clay.",
-
-      items: [
-        {
-          title: "Previous experience",
-          text: "Basic handbuilding experience is recommended so you can work more independently during the session."
-        },
-        {
-          title: "Bring your ideas",
-          text: "You're welcome to come with a project or form you would like to explore."
-        },
-        {
-          title: "What to wear",
-          text: "Wear comfortable clothes that you don't mind getting a little clay on."
-        }
-      ]
-    },
-
-    url: "/en/intermediate-handbuilding.html"
-  },
-
- pt: {
-  title: "Modelagem Manual Intermédia",
-  shortTitle: "Modelagem Intermédia",
-  pageTag: "Workshop de Cerâmica · Modelagem Manual",
+   en: {
+  title: "Clay Social Club",
+  shortTitle: "Clay Social Club",
+  pageTag: "Supported Studio Time · Handbuilding",
 
   seo: {
-    title: "Workshop de Modelagem Manual Intermédia em Lisboa | PURACERÂMICA",
+    title: "Clay Social Club – Supported Pottery Studio Time Lisbon | PURACERÂMICA",
     description:
-      "Desenvolva as suas competências de modelagem manual num workshop intermédio de cerâmica em Lisboa. Aperfeiçoe a técnica, explore formas mais complexas e desenvolva os seus próprios projetos."
+      "Join the Clay Social Club in Lisbon for two hours of supported independent pottery studio time. For makers with basic handbuilding experience. Includes up to 1 kg of clay and firing of one standard-sized piece."
   },
 
-  schedule:
-    "Quintas-feiras selecionadas · 11:00–13:00",
+  schedule: "Selected Thursdays · 11:00–13:00",
 
-  levelLabel: "Intermédio",
-  languageLabel: "Inglês",
+  levelLabel: "Basic handbuilding experience required",
+  languageLabel: "English",
 
   intro:
-    "Aprofunde as suas competências de modelagem manual numa sessão intermédia orientada por Maasa.",
+    "Independent studio time for makers who already know the basics and want to develop their own ceramic projects, with technical support available when needed.",
 
   languageNote:
-    "Este workshop é lecionado em inglês.",
+    "Support during this session is available in English.",
 
   about: [
-    "Este workshop destina-se a participantes que já tenham alguma experiência básica com barro e que pretendam desenvolver a técnica, trabalhar com maior autonomia e explorar formas e métodos de construção mais complexos.",
+    "Clay Social Club is a relaxed supported studio session for people who already have basic handbuilding experience and want dedicated time to work on their own ceramic projects.",
 
-    "Com o acompanhamento de Maasa, poderá aperfeiçoar as suas ideias, melhorar as técnicas de construção e desenvolver o seu próprio projeto de cerâmica num ambiente de estúdio pequeno e acolhedor.",
+    "There is no fixed project or step-by-step class. You work independently on your own ideas while an experienced ceramicist is available to answer questions, help with construction problems and offer technical guidance when needed.",
 
-    "É recomendada experiência prévia em modelagem manual."
+    "The session is also a chance to work alongside other makers and studio members in a relaxed community setting."
   ],
+
+  included: {
+    intro:
+      "Your session includes the essentials for working independently in the studio.",
+
+    items: [
+      {
+        title: "2 hours of studio time",
+        text:
+          "Use the handbuilding workspace and studio tools for your own ceramic project."
+      },
+      {
+        title: "Up to 1 kg of clay",
+        text:
+          "Up to 1 kg of studio clay is included with each session."
+      },
+      {
+        title: "Technical support",
+        text:
+          "An experienced ceramicist is available for questions, construction problems and short technical guidance when needed."
+      },
+      {
+        title: "Firing of one piece",
+        text:
+          "Firing of one standard-sized ceramic piece made during the session is included."
+      }
+    ]
+  },
 
   beforeYouCome: {
     intro:
-      "Este workshop destina-se a participantes que já tenham alguma experiência a trabalhar com barro.",
+      "Clay Social Club is supported independent studio practice rather than a beginner pottery class.",
+
+    items: [
+      {
+        title: "Previous experience",
+        text:
+          "You should already feel comfortable with basic handbuilding techniques and be able to work independently with clay."
+      },
+      {
+        title: "Bring your own project",
+        text:
+          "Come with an idea or an ongoing ceramic project that you would like to develop during the session."
+      },
+      {
+        title: "Additional clay & firing",
+        text:
+          "The session includes up to 1 kg of clay and firing of one standard-sized piece. Additional clay or firing is charged separately."
+      }
+    ]
+  },
+
+  url: "/en/intermediate-handbuilding.html"
+},
+
+ pt: {
+  title: "Clay Social Club",
+  shortTitle: "Clay Social Club",
+  pageTag: "Tempo de Estúdio Acompanhado · Modelagem Manual",
+
+  seo: {
+    title: "Clay Social Club – Tempo de Estúdio de Cerâmica em Lisboa | PURACERÂMICA",
+    description:
+      "Participe no Clay Social Club em Lisboa: duas horas de prática autónoma de cerâmica com apoio técnico disponível. Inclui até 1 kg de barro e a cozedura de uma peça de dimensão regular."
+  },
+
+  schedule: "Quintas-feiras selecionadas · 11:00–13:00",
+
+  levelLabel: "Requer experiência básica em modelagem manual",
+  languageLabel: "Inglês",
+
+  intro:
+    "Tempo de estúdio para quem já domina as bases da modelagem manual e quer desenvolver os seus próprios projetos de forma autónoma, com apoio técnico disponível sempre que necessário.",
+
+  languageNote:
+    "O apoio durante esta sessão está disponível em inglês.",
+
+  about: [
+    "O Clay Social Club é uma sessão de estúdio acompanhada e descontraída, pensada para quem já tem experiência básica em modelagem manual e quer dedicar tempo aos seus próprios projetos de cerâmica.",
+
+    "Não existe um projeto comum nem uma aula passo a passo. Cada participante trabalha de forma autónoma nas suas próprias ideias, enquanto uma pessoa com experiência em cerâmica está disponível para esclarecer dúvidas, ajudar com questões de construção e dar apoio técnico quando necessário.",
+
+    "A sessão é também uma oportunidade para trabalhar ao lado de outros participantes e membros do estúdio num ambiente descontraído e comunitário."
+  ],
+
+  included: {
+    intro:
+      "A sessão inclui o essencial para trabalhar de forma autónoma no estúdio.",
+
+    items: [
+      {
+        title: "2 horas de utilização do estúdio",
+        text:
+          "Utilize o espaço de modelagem manual e as ferramentas do estúdio para desenvolver o seu próprio projeto."
+      },
+      {
+        title: "Até 1 kg de barro",
+        text:
+          "Cada sessão inclui até 1 kg de barro do estúdio."
+      },
+      {
+        title: "Apoio técnico",
+        text:
+          "Uma pessoa com experiência em cerâmica estará disponível para esclarecer dúvidas, ajudar com problemas de construção e dar orientação técnica pontual."
+      },
+      {
+        title: "Cozedura de uma peça",
+        text:
+          "Está incluída a cozedura de uma peça de cerâmica de dimensão regular realizada durante a sessão."
+      }
+    ]
+  },
+
+  beforeYouCome: {
+    intro:
+      "O Clay Social Club é um formato de prática autónoma acompanhada e não uma aula de cerâmica para principiantes.",
 
     items: [
       {
         title: "Experiência prévia",
         text:
-          "É recomendada experiência básica em modelagem manual para que possa trabalhar com maior autonomia durante a sessão."
+          "É necessário sentir-se confortável com as técnicas básicas de modelagem manual e conseguir trabalhar com alguma autonomia."
       },
       {
-        title: "Traga as suas ideias",
+        title: "Traga o seu projeto",
         text:
-          "Pode trazer consigo uma ideia de projeto ou uma forma que gostaria de explorar."
+          "Pode trazer uma ideia ou um projeto de cerâmica em curso para desenvolver durante a sessão."
       },
       {
-        title: "O que vestir",
+        title: "Barro e cozeduras adicionais",
         text:
-          "Use roupa confortável que não se importe de sujar um pouco com barro."
+          "A sessão inclui até 1 kg de barro e a cozedura de uma peça de dimensão regular. Barro ou cozeduras adicionais são cobrados separadamente."
       }
     ]
   },
 
   url: "/pt/modelagem-manual-intermedia.html"
-}, 
+},
 
   dates: [
     {
