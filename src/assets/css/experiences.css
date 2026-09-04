@@ -91,9 +91,9 @@
 
 .service-card:first-child { padding-left: 0; }
 .service-card:nth-child(3n) { border-right: none; padding-right: 0; }
-.service-card:nth-child(n+4) { 
-  border-top: 1px solid #eee; 
-  padding-top: 3rem; 
+.service-card:nth-child(n+4) {
+  border-top: 1px solid #eee;
+  padding-top: 3rem;
 }
 
 /* Image */
@@ -251,20 +251,20 @@
     padding: 4rem 2rem;
   }
 
-  .service-card:nth-child(3n) { 
-    border-right: 1px solid #eee; 
+  .service-card:nth-child(3n) {
+    border-right: 1px solid #eee;
     padding-right: 2rem;
   }
-  .service-card:nth-child(2n) { 
-    border-right: none; 
+  .service-card:nth-child(2n) {
+    border-right: none;
     padding-right: 0;
   }
-  .service-card:nth-child(n+3) { 
-    border-top: 1px solid #eee; 
-    padding-top: 3rem; 
+  .service-card:nth-child(n+3) {
+    border-top: 1px solid #eee;
+    padding-top: 3rem;
   }
-  .service-card:nth-child(n+4) { 
-    border-top: 1px solid #eee; 
+  .service-card:nth-child(n+4) {
+    border-top: 1px solid #eee;
   }
   .service-card:first-child { padding-left: 0; }
   .service-card:nth-child(2) { padding-right: 0; }
