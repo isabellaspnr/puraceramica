@@ -106,18 +106,10 @@
             "url": "https://www.puraceramica.pt{{ workshops.wheelForTwo.en.url }}"
           }
         },
+
         {
           "@type": "ListItem",
           "position": 3,
-          "item": {
-            "@type": "WebPage",
-"name": "{{ workshops.wineAndClay.en.title | safe }}",
-            "url": "https://www.puraceramica.pt{{ workshops.wineAndClay.en.url }}"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.continuousHandbuilding.en.title }}",
@@ -126,7 +118,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 5,
+          "position": 4,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.intermediateHandbuilding.en.title }}",
@@ -135,7 +127,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 6,
+          "position": 5,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.intermediateWheel.en.title }}",
@@ -144,7 +136,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 7,
+          "position": 6,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.fourWeekWheelCourse.en.title }}",
@@ -153,7 +145,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 8,
+          "position": 7,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.kintsugi.en.title }}",
@@ -162,7 +154,7 @@
         },
         {
           "@type": "ListItem",
-          "position": 9,
+          "position": 8,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.shukiSakeWare.en.title }}",
@@ -404,32 +396,6 @@
     </a>
 
 
-    <!-- WINE & CLAY -->
-    <a
-      href="{{ workshops.wineAndClay.en.url }}"
-      class="wh-card"
-    >
-
-      <div class="hp-ph hp-t1 wh-card-img">
-        <span>Wine &amp; Clay</span>
-        <span class="wh-cat">Social</span>
-      </div>
-
-      <h3>
-        {{ workshops.wineAndClay.en.title }}
-      </h3>
-
-      <p class="desc">
-        A relaxed Friday evening of handbuilding,
-        wine and good company.
-      </p>
-
-      <div class="meta">
-        €{{ workshops.wineAndClay.price }}
-        <span class="dur">· 2h</span>
-      </div>
-
-    </a>
 
 
     <!-- CONTINUOUS HANDBUILDING -->
@@ -576,7 +542,7 @@
 </section>
 
   {% include "footer-en.html" %}
-  
+
   <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -1599,23 +1599,27 @@ module.exports = {
       url: "/pt/wine-and-clay.html",
     },
 
-    dates: buildRecurringSessions({
-      startDate: "2026-09-04",
-      endDate: "2026-12-18",
+  // Paused for launch.
+// Keep the original schedule here so the format can be reactivated later.
+pausedDates: buildRecurringSessions({
+  startDate: "2026-09-04",
+  endDate: "2026-12-18",
 
-      instructor: "amanda",
-      language: "Portuguese & English",
+  instructor: "amanda",
+  language: "Portuguese & English",
 
-      schedule: [
-        {
-          weekday: 5,
-          start: "19:00",
-          end: "21:00",
-        },
-      ],
+  schedule: [
+    {
+      weekday: 5,
+      start: "19:00",
+      end: "21:00",
+    },
+  ],
 
-      exclude: [],
-    }),
+  exclude: [],
+}),
+
+dates: [],
   },
   continuousHandbuilding: {
     id: "continuousHandbuilding",
