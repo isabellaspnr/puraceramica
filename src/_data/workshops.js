@@ -82,7 +82,6 @@ ptImageAlt: "Workshop de modelagem manual na PURACERÂMICA em Lisboa",
 booking: {
   url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/6",
   service: "6",
-  provider: "9"
 },
 
     // Sprachabhängige Inhalte
@@ -544,12 +543,11 @@ instructor: "ebrahimElmoly"      },
     priceCurrency: "EUR",
     priceStatus: "confirmed",
 
-    image: "/assets/img/courses/kintsugi/Kintsugi_Workshop.jpg",
+image: "/assets/img/courses/kintsugi/Kintsugi_Workshop.jpg",
 enImageAlt: "Modern Kintsugi workshop at PURACERÂMICA in Lisbon",
 
 booking: {
-  url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/38/count/1/",
-  category: "2",
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/38",
   service: "38"
 },
 
