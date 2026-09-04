@@ -81,7 +81,8 @@ ptImageAlt: "Workshop de modelagem manual na PURACERÂMICA em Lisboa",
 
 booking: {
   url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/6",
-  service: "6"
+  service: "6",
+  provider: "9"
 },
 
     // Sprachabhängige Inhalte
