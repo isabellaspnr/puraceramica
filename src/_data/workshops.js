@@ -746,8 +746,9 @@ module.exports = {
       fixed: true,
     },
 
-    image: "/assets/img/courses/couple_wheel.jpg",
-    enImageAlt: "Pottery wheel workshop for two at PURACERÂMICA in Lisbon",
+    image: "/assets/img/courses/cards/wheel-for-two-card.jpg",
+    enImageAlt: "Two people working side by side at pottery wheels at PURACERÂMICA in Lisbon",
+    ptImageAlt: "Duas pessoas a trabalhar lado a lado em rodas de oleiro na PURACERÂMICA em Lisboa",
 
     booking: {
       url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/7",
@@ -1055,6 +1056,10 @@ module.exports = {
       fixed: false,
     },
 
+        image: "/assets/img/courses/cards/intermediate-wheel-card.jpg",
+    enImageAlt: "Intermediate pottery wheel workshop at PURACERÂMICA in Lisbon",
+    ptImageAlt: "Workshop intermédio de roda de oleiro na PURACERÂMICA em Lisboa",
+
     booking: {
       url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/42",
       service: "42",
@@ -1226,8 +1231,9 @@ module.exports = {
       fixed: false,
     },
 
-    image: "/assets/img/courses/couple_wheel.jpg",
-    enImageAlt: "Pottery wheel course at PURACERÂMICA in Lisbon",
+    image: "/assets/img/courses/four-week-wheel-detail.jpg",
+    enImageAlt: "4-week pottery wheel course at PURACERÂMICA in Lisbon",
+    ptImageAlt: "Curso de roda de oleiro de 4 semanas na PURACERÂMICA em Lisboa",
 
     en: {
       title: "4-Week Pottery Wheel Course",
@@ -1834,6 +1840,10 @@ dates: [],
     price: 30,
     priceCurrency: "EUR",
     priceStatus: "confirmed",
+
+    image: "/assets/img/courses/clay-social-club-detail.jpg",
+    enImageAlt: "Clay Social Club handbuilding session at PURACERÂMICA in Lisbon",
+    ptImageAlt: "Sessão de modelagem manual Clay Social Club na PURACERÂMICA em Lisboa",
 
     booking: {
       url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/41",
