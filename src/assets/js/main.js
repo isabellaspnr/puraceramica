@@ -498,7 +498,10 @@ function updateBookingLink() {
   if (!timeValue) return;
 
   const serviceMatch = bookingBtn.getAttribute('href').match(/service\/(\d+)/);
-  const serviceId = serviceMatch ? serviceMatch[1] : '26';
+
+if (!serviceMatch) return;
+
+const serviceId = serviceMatch[1];
   const category = bookingBtn.getAttribute('data-category');
 const provider = bookingBtn.getAttribute('data-provider');
   const count = quantity ? quantity.value : '1';
@@ -515,8 +518,13 @@ if (provider) {
   url += `/provider/${provider}`;
 }
 
-url += `/date/${dateValue}/time/${timeValue}/`;  if (floatingLink) floatingLink.href = url;
-}
+url += `/date/${dateValue}/time/${timeValue}/`;
+
+bookingBtn.href = url;
+
+if (floatingLink) {
+  floatingLink.href = url;
+}}
 
 // ── FORM HANDLING ──
 const form = document.querySelector('.event-form');
