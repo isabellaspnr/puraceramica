@@ -2002,3 +2002,102 @@
 .workshop-cohorts.single-cohort .workshop-cohort-card {
   width: 100%;
 }
+
+/* ============================================================
+   WORKSHOP DETAIL – MOBILE LAYOUT FIX
+   ============================================================ */
+
+/* width:100% must include padding + borders */
+.workshop-book-btn {
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+  .workshop-detail-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 2rem 1rem 1.25rem;
+    box-sizing: border-box;
+  }
+
+  .workshop-detail-grid,
+  .workshop-images,
+  .workshop-info-panel,
+  .workshop-booking-section,
+  .month-switcher,
+  .month-panel,
+  .dates-list {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* Month navigation may scroll instead of forcing the page wider */
+  .month-tabs {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Date options stay inside the viewport */
+  .date-block {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .date-content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .date-text,
+  .date-instructor {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Quantity */
+  .quantity-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .quantity-selector {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Booking CTA */
+  .workshop-book-btn {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .booking-note {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Reduce the oversized gap before About */
+  .workshop-content-section {
+    padding: 40px 1rem 56px;
+    box-sizing: border-box;
+  }
+
+  .workshop-content-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 22px;
+    padding-top: 26px;
+  }
+}
