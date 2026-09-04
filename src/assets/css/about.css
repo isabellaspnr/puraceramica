@@ -392,9 +392,11 @@ p.highlight {
     font-size: 1.8rem;
   }
 
-  .experience-image img {
-    height: 240px;
-  }
+.experience-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
   .faq {
     padding: 4rem 1.5rem;
