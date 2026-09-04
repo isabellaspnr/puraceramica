@@ -207,9 +207,11 @@
           </span>
 {% if workshop.cohorts and workshop.pricePerSession %}
   <strong>
-    €{{ workshop.pricePerSession }}0 / session
+    €{{ workshop.pricePerSession | money }}
+    {% if lang == "pt" %}/ sessão{% else %}/ session{% endif %}
     <small class="workshop-price-total">
-      €{{ workshop.price }} total
+      €{{ workshop.price }}
+      {% if lang == "pt" %}no total{% else %}total{% endif %}
     </small>
   </strong>
 {% else %}
@@ -385,7 +387,7 @@
   {% if workshop.pricePerSession %}
 
     <strong>
-      €{{ workshop.pricePerSession }}
+      €{{ workshop.pricePerSession | money }}
       {% if lang == "pt" %}
         / sessão
       {% else %}
@@ -445,27 +447,7 @@
 
 </div>
 
-  {% if workshop.pricePerSession %}
-    <strong>€{{ workshop.pricePerSession }} / session</strong>
-  {% else %}
-    <strong>€{{ workshop.price }} total</strong>
-  {% endif %}
 
-  <span>
-    {{ workshop.sessionCount }} sessions
-
-    {% if workshop.totalDurationMinutes %}
-      &nbsp;·&nbsp;
-      {{ workshop.totalDurationMinutes / 60 }} h total
-    {% endif %}
-
-    {% if workshop.pricePerSession %}
-      &nbsp;·&nbsp;
-      €{{ workshop.price }} total
-    {% endif %}
-  </span>
-
-</div>
 
           </div>
 

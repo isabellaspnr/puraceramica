@@ -22,9 +22,16 @@
       pt: ["Dom.", "Seg.", "Ter.", "Qua.", "Qui.", "Sex.", "Sáb."]
     };
 
-    const sorted = [...sessions].sort((a, b) =>
-      a.date.localeCompare(b.date)
-    );
+   const today = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Lisbon",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+}).format(new Date());
+
+const sorted = [...sessions]
+  .filter((session) => session.date && session.date >= today)
+  .sort((a, b) => a.date.localeCompare(b.date));
 
     const groups = [];
 
@@ -151,6 +158,20 @@ eleventyConfig.addFilter("workshopEvents", function (allWorkshops, lang = "en") 
 
   const events = [];
 
+  const now = new Date();
+
+const lisbonParts = new Intl.DateTimeFormat("en-GB", {
+  timeZone: "Europe/Lisbon",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit"
+}).formatToParts(now);
+
+const part = (type) =>
+  lisbonParts.find((item) => item.type === type)?.value;
+
+const today = `${part("year")}-${part("month")}-${part("day")}`;
+
   Object.values(allWorkshops).forEach((workshop) => {
     if (!workshop) return;
 
@@ -162,6 +183,7 @@ eleventyConfig.addFilter("workshopEvents", function (allWorkshops, lang = "en") 
     // Normale einzelne Workshop-Termine
     if (Array.isArray(workshop.dates)) {
       workshop.dates.forEach((session) => {
+        if (!session.date || session.date < today) return;
         events.push({
           workshopId: workshop.id,
           title: t.title,
@@ -197,7 +219,9 @@ language:
         if (!Array.isArray(cohort.sessions)) return;
 
         cohort.sessions.forEach((session) => {
-          events.push({
+         if (!session.date || session.date < today) return;
+
+           events.push({
             workshopId: workshop.id,
             title: t.title,
             shortTitle: t.shortTitle || t.title,
@@ -450,6 +474,10 @@ eleventyConfig.addFilter("workshopMonthWeeks", function (month, lang = "en") {
   }
 
   return weeks;
+});
+
+eleventyConfig.addFilter("money", function (value) {
+  return Number(value).toFixed(2);
 });
 
   // Bestehende .html-URLs während der Migration beibehalten
