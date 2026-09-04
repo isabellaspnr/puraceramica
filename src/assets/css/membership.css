@@ -386,39 +386,39 @@
   .hero-content h1 {
     font-size: 2rem;
   }
-  
+
   .hero-section {
     height: 300px;
   }
-  
+
   .intro-section h2,
   .category-title,
   .hours-content h2,
   .cta-section h2 {
     font-size: 1.5rem;
   }
-  
+
   .accordion-header {
     padding: 0.75rem 0;
   }
-  
+
   .accordion-title {
     font-size: 1rem;
   }
-  
+
   .accordion-body {
     padding: 1.25rem 0;
   }
-  
+
   .packages-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.75rem;
   }
-  
+
   .package-card {
     padding: 0.75rem 0.5rem;
   }
-  
+
   .benefits-grid {
     grid-template-columns: 1fr;
   }
