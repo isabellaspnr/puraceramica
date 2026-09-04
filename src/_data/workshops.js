@@ -80,10 +80,8 @@ enImageAlt: "Handbuilding pottery workshop at PURACERÂMICA Lisbon",
 ptImageAlt: "Workshop de modelagem manual na PURACERÂMICA em Lisboa",
 
 booking: {
-  url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/2/service/26/count/1/provider/9/",
-  category: "2",
-  service: "26",
-  provider: "9"
+  url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/6",
+  service: "6"
 },
 
     // Sprachabhängige Inhalte
