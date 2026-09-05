@@ -2343,3 +2343,52 @@
 }
 
 /* === END MOBILE HOMEPAGE LCP IMAGE === */
+
+/* === HOMEPAGE IMAGE LOADING HOTFIX === */
+/* Restore reliable CSS backgrounds. */
+
+.hp-s2 {
+  background-image:
+    linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,.16)),
+    url("/assets/img/pottery-workshops-hero.jpg");
+}
+
+.hp-s3 {
+  background-image:
+    linear-gradient(rgba(0,0,0,.28), rgba(0,0,0,.28)),
+    url("/assets/img/members-hero.jpg");
+}
+
+.hp-way-painting {
+  background-image: url("/assets/img/pottery-painting-card.jpg");
+}
+
+.hp-way-workshops {
+  background-image: url("/assets/img/pottery-workshops-card.jpg");
+}
+
+.hp-card-handbuilding {
+  background-image: url("/assets/img/courses/cards/handbuilding-card.jpg");
+}
+
+.hp-card-wheel-two {
+  background-image: url("/assets/img/courses/cards/wheel-for-two-card.jpg");
+}
+
+.hp-card-four-week {
+  background-image: url("/assets/img/courses/cards/four-week-wheel-card.jpg");
+}
+
+.hp-card-continuous {
+  background-image: url("/assets/img/courses/cards/continuous-handbuilding-card.jpg");
+}
+
+.hp-member-photo {
+  background-image: url("/assets/img/studio/Ceramicshelf_with_desk copy.jpg");
+}
+
+.hp-events-photo {
+  background-image: url("/assets/img/experience/Bachelorette.jpg");
+}
+
+/* === END HOMEPAGE IMAGE LOADING HOTFIX === */
