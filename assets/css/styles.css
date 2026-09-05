@@ -131,10 +131,11 @@
    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
  }
 
- .logo img {
-   height: 60px;
-   transition: opacity 0.3s ease;
- }
+.logo img {
+  height: 60px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
 
  .logo:hover img {
    opacity: 0.8;
@@ -318,9 +319,10 @@
      padding: 1rem 1.5rem;
    }
 
-   .logo img {
-     height: 50px;
-   }
+    .logo img {
+    height: 50px;
+    width: auto;
+  }
 
    .navbar {
      display: flex;
@@ -2142,8 +2144,9 @@
 .hp-whatson { padding: 0 3rem 7rem; max-width: 1300px; margin: 0 auto; }
 .hp-whatson-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; }
 .hp-whatson-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.9rem,3vw,2.6rem); margin: .4rem 0 0; }
-.hp-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem 1.8rem; }
-.hp-card { text-decoration: none; color: inherit; display: block; }
+.hp-cards {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}.hp-card { text-decoration: none; color: inherit; display: block; }
 .hp-card-img { aspect-ratio: 4/5; border-radius: 12px; overflow: hidden; transition: transform .5s cubic-bezier(.4,0,.2,1); }
 .hp-card-img {
   background-size: cover;
@@ -2162,6 +2165,14 @@
 .hp-card-four-week {
   background-image: url("/assets/img/courses/cards/four-week-wheel-card.jpg");
 }
+
+.hp-card-continuous {
+  background-image: url("/assets/img/courses/cards/continuous-handbuilding-card.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .hp-card:hover .hp-card-img { transform: translateY(-4px); }
 .hp-card-cat { display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #1B4C9C; }
 .hp-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; margin: .35rem 0; line-height: 1.25; }
@@ -2218,7 +2229,52 @@
   .hp-intro { padding: 4.5rem 1.6rem; }
 }
 @media (max-width: 560px) {
-  .hp-cards { grid-template-columns: 1fr; }
-  .hp-hero-tab span { font-size: 11px; }
+  .hp-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .hp-hero-tab span {
+    font-size: 11px;
+  }
 }
 
+/* === HOMEPAGE WORKSHOP GRID FINAL === */
+
+.hp-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .hp-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .hp-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+}
+
+/* === END HOMEPAGE WORKSHOP GRID FINAL === */
+
+/* === HOMEPAGE VIEW ALL FINAL === */
+
+.hp-whatson-viewall {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+@media (max-width: 560px) {
+  .hp-whatson-viewall {
+    margin-top: 3.5rem;
+  }
+}
+
+/* === END HOMEPAGE VIEW ALL FINAL === */
