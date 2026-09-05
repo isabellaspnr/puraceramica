@@ -2280,3 +2280,39 @@
 }
 
 /* === END HOMEPAGE VIEW ALL FINAL === */
+
+/* === HOMEPAGE LAZY BACKGROUNDS === */
+
+/* Hero 1 remains normal and is the LCP image. */
+
+.hp-s2 {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.16),
+      rgba(0, 0, 0, 0.16)
+    ),
+    var(--hp-bg, none);
+}
+
+.hp-s3 {
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.28),
+      rgba(0, 0, 0, 0.28)
+    ),
+    var(--hp-bg, none);
+}
+
+/* Images below the initial viewport */
+.hp-way-painting,
+.hp-way-workshops,
+.hp-card-handbuilding,
+.hp-card-wheel-two,
+.hp-card-four-week,
+.hp-card-continuous,
+.hp-member-photo,
+.hp-events-photo {
+  background-image: var(--hp-bg, none);
+}
+
+/* === END HOMEPAGE LAZY BACKGROUNDS === */

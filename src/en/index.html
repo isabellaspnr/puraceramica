@@ -59,7 +59,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600&family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- STYLESHEET -->
-  <link rel="stylesheet" href="../assets/css/styles.css?v=20260905-2">
+  <link rel="stylesheet" href="../assets/css/styles.css?v=20260905-3">
 
 
   <!-- SCHEMA.ORG STRUCTURED DATA -->
@@ -206,12 +206,12 @@
     <p class="hp-hero-sub">No experience needed. Pick a piece, choose your colours and make it yours.</p>
     <a href="https://puraceramicalisboa.simplybook.it/v2/#book" class="hp-btn hp-btn-light" target="_blank" rel="noopener">Book a session</a>
   </div>
-  <div class="hp-slide hp-s2">
+  <div class="hp-slide hp-s2" data-bg="/assets/img/pottery-workshops-hero.jpg">
     <h1 class="hp-hero-title">Make pottery from scratch.</h1>
     <p class="hp-hero-sub">Learn wheel throwing or handbuilding in our Lisbon studio.</p>
     <a href="/en/workshops.html" class="hp-btn hp-btn-light">Explore workshops</a>
   </div>
-  <div class="hp-slide hp-s3">
+  <div class="hp-slide hp-s3" data-bg="/assets/img/members-hero.jpg">
     <h1 class="hp-hero-title">Make the studio your own.</h1>
     <p class="hp-hero-sub">A space to work independently, meet other makers and keep creating.</p>
     <a href="/en/membership.html" class="hp-btn hp-btn-light">Join the waitlist</a>
@@ -234,7 +234,7 @@
 <!-- ══ 03 TWO WAYS TO CREATE ══ -->
 <section class="hp-ways">
   <a href="/en/experiences.html" class="hp-way">
-<div class="hp-way-img hp-way-painting" aria-hidden="true"></div>
+<div class="hp-way-img hp-way-painting" aria-hidden="true" data-bg="/assets/img/pottery-painting-card.jpg"></div>
     <div class="hp-way-body">
       <h3>Pottery Painting</h3>
       <p>Choose from 100+ pieces and bring your design to life. Walk-ins welcome.</p>
@@ -242,7 +242,7 @@
     </div>
   </a>
   <a href="/en/workshops.html" class="hp-way">
-<div class="hp-way-img hp-way-workshops" aria-hidden="true"></div>
+<div class="hp-way-img hp-way-workshops" aria-hidden="true" data-bg="/assets/img/pottery-workshops-card.jpg"></div>
     <div class="hp-way-body">
       <h3>Pottery Workshops</h3>
       <p>Learn to create with clay on the wheel or by hand, guided by our team.</p>
@@ -263,7 +263,7 @@
   <div class="hp-cards">
 
     <a href="{{ workshops.handbuilding.en.url }}" class="hp-card">
-      <div class="hp-card-img hp-card-handbuilding" aria-hidden="true"></div>
+      <div class="hp-card-img hp-card-handbuilding" aria-hidden="true" data-bg="/assets/img/courses/cards/handbuilding-card.jpg"></div>
       <span class="hp-card-cat">Handbuilding</span>
       <h3>{{ workshops.handbuilding.en.title }}</h3>
       <div class="hp-card-meta">
@@ -272,7 +272,7 @@
     </a>
 
     <a href="{{ workshops.wheelForTwo.en.url }}" class="hp-card">
-      <div class="hp-card-img hp-card-wheel-two" aria-hidden="true"></div>
+      <div class="hp-card-img hp-card-wheel-two" aria-hidden="true" data-bg="/assets/img/courses/cards/wheel-for-two-card.jpg"></div>
       <span class="hp-card-cat">Wheel</span>
       <h3>{{ workshops.wheelForTwo.en.title }}</h3>
       <div class="hp-card-meta">
@@ -281,7 +281,7 @@
     </a>
 
     <a href="{{ workshops.fourWeekWheelCourse.en.url }}" class="hp-card">
-      <div class="hp-card-img hp-card-four-week" aria-hidden="true"></div>
+      <div class="hp-card-img hp-card-four-week" aria-hidden="true" data-bg="/assets/img/courses/cards/four-week-wheel-card.jpg"></div>
       <span class="hp-card-cat">Course</span>
       <h3>{{ workshops.fourWeekWheelCourse.en.title }}</h3>
       <div class="hp-card-meta">
@@ -290,7 +290,7 @@
     </a>
 
     <a href="{{ workshops.continuousHandbuilding.en.url }}" class="hp-card">
-  <div class="hp-card-img hp-card-continuous" aria-hidden="true"></div>
+  <div class="hp-card-img hp-card-continuous" aria-hidden="true" data-bg="/assets/img/courses/cards/continuous-handbuilding-card.jpg"></div>
   <span class="hp-card-cat">Handbuilding</span>
   <h3>{{ workshops.continuousHandbuilding.en.title }}</h3>
   <div class="hp-card-meta">
@@ -313,12 +313,12 @@
     <p>Your own space in the studio: wheels, tools, glazes and the full run of the place. For makers who want to keep creating on their own schedule.</p>
     <a href="/en/membership.html" class="hp-btn hp-btn-outline">Join the waitlist</a>
   </div>
-<div class="hp-member-img hp-member-photo" aria-hidden="true"></div>
+<div class="hp-member-img hp-member-photo" aria-hidden="true" data-bg="/assets/img/studio/Ceramicshelf_with_desk copy.jpg"></div>
 </section>
 
 <!-- ══ 06 PRIVATE EVENTS ══ -->
 <section class="hp-events">
-<div class="hp-events-img hp-events-photo" aria-hidden="true"></div>
+<div class="hp-events-img hp-events-photo" aria-hidden="true" data-bg="/assets/img/experience/Bachelorette.jpg"></div>
   <div class="hp-events-body">
     <h2>Your event, made by hand.</h2>
     <p>Birthdays, team building, hen parties. Take over the studio for a private creative session.</p>
@@ -346,6 +346,92 @@
   </div>
 </section>
 
+<!-- Homepage lazy background loading -->
+<script>
+(function () {
+  function loadBackground(el) {
+    if (!el || !el.dataset.bg) return;
+
+    el.style.setProperty(
+      '--hp-bg',
+      'url("' + el.dataset.bg + '")'
+    );
+
+    el.removeAttribute('data-bg');
+  }
+
+  window.hpLoadBackground = loadBackground;
+
+  const allLazy = Array.from(
+    document.querySelectorAll('[data-bg]')
+  );
+
+  /* Everything below the hero loads shortly before entering view. */
+  const belowFold = allLazy.filter(function (el) {
+    return !el.classList.contains('hp-s2') &&
+           !el.classList.contains('hp-s3');
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+
+        loadBackground(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, {
+      rootMargin: '300px 0px'
+    });
+
+    belowFold.forEach(function (el) {
+      observer.observe(el);
+    });
+  } else {
+    belowFold.forEach(loadBackground);
+  }
+
+  /*
+   * Hero 2 is needed automatically after 6 s.
+   * Give it ~1.5 s head start.
+   */
+  const slide2 = document.querySelector('#hpHero .hp-s2');
+  const slide3 = document.querySelector('#hpHero .hp-s3');
+
+  if (slide2) {
+    setTimeout(function () {
+      loadBackground(slide2);
+    }, 4500);
+  }
+
+  /*
+   * Hero 3 is not shown automatically until ~12 s.
+   */
+  if (slide3) {
+    setTimeout(function () {
+      loadBackground(slide3);
+    }, 9500);
+  }
+
+  /* Preload immediately when a user intends to select a slide. */
+  const slides = document.querySelectorAll('#hpHero .hp-slide');
+
+  document.querySelectorAll('#hpHero .hp-hero-tab').forEach(function (tab) {
+    function preloadTarget() {
+      const index = Number(tab.dataset.i);
+      if (slides[index]) loadBackground(slides[index]);
+    }
+
+    tab.addEventListener('pointerenter', preloadTarget, { once: true });
+    tab.addEventListener('touchstart', preloadTarget, {
+      once: true,
+      passive: true
+    });
+    tab.addEventListener('focus', preloadTarget, { once: true });
+  });
+})();
+</script>
+
 <!-- Hero-Steuerung -->
 <script>
   (function () {
@@ -354,6 +440,10 @@
     if (!slides.length) return;
     var i = 0, timer = null;
     function show(n) {
+      if (window.hpLoadBackground) {
+        window.hpLoadBackground(slides[n]);
+      }
+
       slides.forEach(function (s, x) { s.classList.toggle('on', x === n); });
       tabs.forEach(function (t, x) { t.classList.toggle('active', x === n); });
       i = n;
