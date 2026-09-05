@@ -1859,6 +1859,8 @@
 
  .pcf-logo {
    height: 44px;
+   width: auto;
+   display: block;
    margin-bottom: 1rem;
  }
 
