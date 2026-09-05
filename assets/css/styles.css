@@ -2316,3 +2316,30 @@
 }
 
 /* === END HOMEPAGE LAZY BACKGROUNDS === */
+
+/* === MOBILE HOMEPAGE LCP IMAGE === */
+@media (max-width: 768px) {
+  .hp-s1 {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.34),
+        rgba(0, 0, 0, 0.34)
+      ),
+      url("/assets/img/pottery-painting-hero-mobile.jpg");
+  }
+}
+
+/* === MOBILE HOMEPAGE LCP IMAGE === */
+
+@media (max-width: 768px) {
+  .hp-s1 {
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.34),
+        rgba(0, 0, 0, 0.34)
+      ),
+      url("/assets/img/pottery-painting-hero-mobile.jpg");
+  }
+}
+
+/* === END MOBILE HOMEPAGE LCP IMAGE === */
