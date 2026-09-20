@@ -161,9 +161,18 @@
             "url": "https://www.puraceramica.pt{{ workshops.kintsugi.pt.url }}"
           }
         },
-        {
+              {
           "@type": "ListItem",
           "position": 8,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.nerikomiWorkshop.pt.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.nerikomiWorkshop.pt.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.shukiSakeWare.pt.title }}",
@@ -300,6 +309,36 @@
 
     </a>
 
+<!-- NERIKOMI -->
+<a href="{{ workshops.nerikomiWorkshop.pt.url }}" class="wh-sp-card">
+
+  <div class="wh-sp-img">
+    <img
+      src="{{ workshops.nerikomiWorkshop.image }}"
+      alt="{{ workshops.nerikomiWorkshop.enImageAlt }}"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="wh-sp-body">
+
+    <span class="wh-sp-tag">Especial</span>
+
+    <h3>{{ workshops.nerikomiWorkshop.pt.title }}</h3>
+
+    <p>
+      Descubra a técnica japonesa de criar padrões no interior da argila
+      colorida e modele os seus próprios pratos de cerâmica.
+    </p>
+
+    <div class="wh-sp-meta">
+      €{{ workshops.nerikomiWorkshop.price }}
+      <span class="dur">· 3h · 4 de outubro</span>
+    </div>
+
+  </div>
+
+</a>
 
     <!-- SHUKI -->
     <a href="{{ workshops.shukiSakeWare.pt.url }}" class="wh-sp-card">
@@ -425,7 +464,38 @@
     </a>
 
 
+<!-- NERIKOMI -->
+<a
+  href="{{ workshops.nerikomiWorkshop.pt.url }}"
+  class="wh-card"
+>
 
+  <div class="wh-card-img">
+    <img
+      src="{{ workshops.nerikomiWorkshop.image }}"
+      alt="{{ workshops.nerikomiWorkshop.enImageAlt }}"
+      loading="lazy"
+      width="1600"
+      height="1067"
+    >
+    <span class="wh-cat">Workshop Especial</span>
+  </div>
+
+  <h3>
+    {{ workshops.nerikomiWorkshop.pt.title }}
+  </h3>
+
+  <p class="desc">
+    Crie padrões únicos no interior da argila colorida através
+    da técnica tradicional japonesa de Nerikomi.
+  </p>
+
+  <div class="meta">
+    €{{ workshops.nerikomiWorkshop.price }}
+    <span class="dur">· 3h · 4 de outubro</span>
+  </div>
+
+</a>
 
 
     <!-- AULAS CONTÍNUAS -->

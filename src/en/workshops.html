@@ -160,9 +160,18 @@
             "url": "https://www.puraceramica.pt{{ workshops.kintsugi.en.url }}"
           }
         },
-        {
+                {
           "@type": "ListItem",
           "position": 8,
+          "item": {
+            "@type": "WebPage",
+            "name": "{{ workshops.nerikomiWorkshop.en.title }}",
+            "url": "https://www.puraceramica.pt{{ workshops.nerikomiWorkshop.en.url }}"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.shukiSakeWare.en.title }}",
@@ -300,7 +309,36 @@
     </a>
 
 
+<!-- NERIKOMI -->
+<a href="{{ workshops.nerikomiWorkshop.en.url }}" class="wh-sp-card">
 
+  <div class="wh-sp-img">
+    <img
+      src="{{ workshops.nerikomiWorkshop.image }}"
+      alt="{{ workshops.nerikomiWorkshop.enImageAlt }}"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="wh-sp-body">
+
+    <span class="wh-sp-tag">Special</span>
+
+    <h3>{{ workshops.nerikomiWorkshop.en.title }}</h3>
+
+    <p>
+      Explore the Japanese art of creating patterns within coloured clay
+      and shape your own unique ceramic plates.
+    </p>
+
+    <div class="wh-sp-meta">
+      €{{ workshops.nerikomiWorkshop.price }}
+      <span class="dur">· 3h · 4 October</span>
+    </div>
+
+  </div>
+
+</a>
 
 <!-- SHUKI / SAKE WARE -->
 <a href="{{ workshops.shukiSakeWare.en.url }}" class="wh-sp-card">
@@ -426,7 +464,38 @@
     </a>
 
 
+<!-- NERIKOMI -->
+<a
+  href="{{ workshops.nerikomiWorkshop.en.url }}"
+  class="wh-card"
+>
 
+  <div class="wh-card-img">
+    <img
+      src="{{ workshops.nerikomiWorkshop.image }}"
+      alt="{{ workshops.nerikomiWorkshop.enImageAlt }}"
+      loading="lazy"
+      width="1600"
+      height="1067"
+    >
+    <span class="wh-cat">Special Workshop</span>
+  </div>
+
+  <h3>
+    {{ workshops.nerikomiWorkshop.en.title }}
+  </h3>
+
+  <p class="desc">
+    Create unique patterns within coloured clay using the
+    traditional Japanese Nerikomi technique.
+  </p>
+
+  <div class="meta">
+    €{{ workshops.nerikomiWorkshop.price }}
+    <span class="dur">· 3h · 4 October</span>
+  </div>
+
+</a>
 
     <!-- CONTINUOUS HANDBUILDING -->
     <a

@@ -1825,6 +1825,199 @@ dates: [],
     }),
   },
 
+  nerikomiWorkshop: {
+    id: "nerikomiWorkshop",
+
+    medium: "clay",
+    type: "workshop",
+    format: "single-session",
+    level: "all-levels",
+    calendarCategory: "handbuilding",
+
+    durationMinutes: 180,
+
+    price: 70,
+    priceCurrency: "EUR",
+    priceStatus: "confirmed",
+
+    capacity: 8,
+    minParticipants: 2,
+
+    image: "/assets/img/nerikomi-workshop-lisbon.webp",
+    enImageAlt:
+      "Handmade ceramic plates created with the Japanese Nerikomi technique",
+
+    booking: {
+      url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/14/service/49/count/1/provider/any/date/2026-10-04/time/10:00:00/",
+      service: "49",
+    },
+
+    en: {
+      title: "Nerikomi Workshop",
+      shortTitle: "Nerikomi",
+      pageTag: "Ceramic Workshop · Special Edition",
+
+      seo: {
+        title: "Nerikomi Ceramic Workshop in Lisbon | PURACERÂMICA",
+        description:
+          "Discover the Japanese Nerikomi technique in a 3-hour ceramic workshop in Lisbon. Create unique patterned clay plates using coloured clays.",
+      },
+
+      schedule: "Sunday · 4 October 2026 · 10:00–13:00",
+
+      levelLabel: "Beginner-friendly · All levels",
+      languageLabel: "English",
+
+      intro:
+        "Discover Nerikomi, a traditional Japanese ceramic technique in which unique patterns are created within the clay itself.",
+
+      languageNote: "The workshop is taught in English.",
+
+      about: [
+        "Nerikomi is a traditional Japanese ceramic technique that creates patterns by combining clays of different colours. Through layering, shaping and slicing the clay, the patterns emerge within the material and continue throughout the finished piece.",
+
+        "During this 3-hour hands-on workshop, you will prepare coloured clay using ceramic pigments and explore how different colour combinations, layers and cuts can create unique Nerikomi patterns.",
+
+        "You will then reveal the patterns by slicing the prepared clay and use plaster moulds to shape your own small ceramic plates. Every pattern develops differently, making each finished piece completely unique.",
+
+        "The workshop is suitable for complete beginners as well as participants who already have experience with ceramics.",
+      ],
+
+      included: {
+        intro:
+          "Everything needed to create and finish your ceramic pieces is included.",
+
+        items: [
+          {
+            title: "Clay & pigments",
+            text: "Clay and ceramic pigments for preparing and combining different coloured clays.",
+          },
+          {
+            title: "Tools & plaster moulds",
+            text: "Use of the studio tools and plaster moulds required to create and shape your pieces.",
+          },
+          {
+            title: "Guidance & handout",
+            text: "Step-by-step instruction throughout the workshop together with a workshop handout.",
+          },
+          {
+            title: "Transparent glaze & two firings",
+            text: "Your finished pieces will receive a transparent glaze and two ceramic firings.",
+          },
+        ],
+      },
+
+      beforeYouCome: {
+        intro: "A few practical things to know before the workshop.",
+
+        items: [
+          {
+            title: "No previous experience required",
+            text: "The workshop is suitable for all levels, including complete beginners.",
+          },
+          {
+            title: "What you will make",
+            text: "You will use the prepared patterned clay to create your own small ceramic plates.",
+          },
+          {
+            title: "What to wear",
+            text: "Working with clay can get messy, so we recommend comfortable clothes that you don't mind getting a little dirty.",
+          },
+        ],
+      },
+
+      url: "/en/nerikomi-workshop.html",
+    },
+
+    pt: {
+      title: "Workshop de Nerikomi",
+      shortTitle: "Nerikomi",
+      pageTag: "Workshop de Cerâmica · Edição Especial",
+
+      seo: {
+        title: "Workshop de Nerikomi em Lisboa | PURACERÂMICA",
+        description:
+          "Descubra a técnica japonesa de Nerikomi num workshop de cerâmica de 3 horas em Lisboa e crie pequenos pratos com padrões únicos.",
+      },
+
+      schedule: "Domingo · 4 de outubro de 2026 · 10:00–13:00",
+
+      levelLabel: "Adequado para principiantes · Todos os níveis",
+      languageLabel: "Inglês",
+
+      intro:
+        "Descubra o Nerikomi, uma técnica tradicional japonesa de cerâmica em que os padrões são criados no interior da própria argila.",
+
+      languageNote: "O workshop é realizado em inglês.",
+
+      about: [
+        "O Nerikomi é uma técnica tradicional japonesa de cerâmica que cria padrões através da combinação de argilas de diferentes cores. Através da sobreposição, modelação e corte da argila, os padrões surgem no interior do material e mantêm-se ao longo de toda a peça.",
+
+        "Neste workshop prático de 3 horas, irá preparar argila colorida utilizando pigmentos cerâmicos e explorar como diferentes combinações de cores, camadas e cortes podem criar padrões únicos de Nerikomi.",
+
+        "Depois de revelar os padrões através do corte da argila, utilizará moldes de gesso para criar os seus próprios pequenos pratos. Cada padrão desenvolve-se de forma diferente, tornando cada peça completamente única.",
+
+        "O workshop é adequado tanto para principiantes como para participantes que já tenham experiência com cerâmica.",
+      ],
+
+      included: {
+        intro:
+          "Tudo o que precisa para criar e finalizar as suas peças está incluído.",
+
+        items: [
+          {
+            title: "Argila e pigmentos",
+            text: "Argila e pigmentos cerâmicos para preparar e combinar argilas de diferentes cores.",
+          },
+          {
+            title: "Ferramentas e moldes de gesso",
+            text: "Utilização das ferramentas do estúdio e dos moldes de gesso necessários para criar e modelar as peças.",
+          },
+          {
+            title: "Orientação e material de apoio",
+            text: "Orientação passo a passo durante o workshop e material de apoio sobre a técnica.",
+          },
+          {
+            title: "Vidrado transparente e duas cozeduras",
+            text: "As peças finalizadas recebem vidrado transparente e duas cozeduras cerâmicas.",
+          },
+        ],
+      },
+
+      beforeYouCome: {
+        intro: "Algumas informações práticas antes do workshop.",
+
+        items: [
+          {
+            title: "Não é necessária experiência",
+            text: "O workshop é adequado para todos os níveis, incluindo principiantes.",
+          },
+          {
+            title: "O que irá criar",
+            text: "Utilizará a argila com padrões para criar os seus próprios pequenos pratos de cerâmica.",
+          },
+          {
+            title: "O que vestir",
+            text: "Trabalhar com argila pode sujar, por isso recomendamos roupa confortável que não se importe de sujar um pouco.",
+          },
+        ],
+      },
+
+      url: "/pt/workshop-nerikomi.html",
+    },
+
+    dates: [
+      {
+        date: "2026-10-04",
+        start: "10:00",
+        end: "13:00",
+        instructor: "maasaKakurai",
+        language: "English",
+      },
+    ],
+  },
+
+
   intermediateHandbuilding: {
     id: "intermediateHandbuilding",
 
