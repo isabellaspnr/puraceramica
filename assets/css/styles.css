@@ -2178,6 +2178,11 @@
   background-repeat: no-repeat;
 }
 
+.hp-card-nerikomi {
+  background-image: url("/assets/img/nerikomi-workshop-lisbon.webp");
+  background-position: center;
+}
+
 .hp-card:hover .hp-card-img { transform: translateY(-4px); }
 .hp-card-cat { display: inline-block; margin-top: 1rem; font-family: var(--sans); font-size: 9.5px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #1B4C9C; }
 .hp-card h3 { font-family: var(--serif); font-weight: 500; font-size: 1.25rem; margin: .35rem 0; line-height: 1.25; }
