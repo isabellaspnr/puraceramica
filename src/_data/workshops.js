@@ -1843,7 +1843,7 @@ dates: [],
     capacity: 8,
     minParticipants: 2,
 
-    image: "/assets/img/nerikomi-workshop-lisbon.webp",
+    image: "/assets/img/nerikomi-workshop-lisbon.webp?v=20260920-2",
     enImageAlt:
       "Handmade ceramic plates created with the Japanese Nerikomi technique",
 
