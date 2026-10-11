@@ -445,6 +445,12 @@ module.exports = {
 
       // November
       {
+        date: "2026-11-01",
+        start: "15:00",
+        end: "17:30",
+        instructor: "maasaKakurai",
+      },
+      {
         date: "2026-11-07",
         start: "15:00",
         end: "17:30",
@@ -474,6 +480,12 @@ module.exports = {
         end: "17:30",
         instructor: "ebrahimElmoly",
       },
+      {
+        date: "2026-11-29",
+        start: "15:00",
+        end: "17:30",
+        instructor: "maasaKakurai",
+      },
 
       // December
       {
@@ -482,17 +494,18 @@ module.exports = {
         end: "17:30",
         instructor: "ebrahimElmoly",
       },
-      {
-        date: "2026-12-06",
-        start: "15:00",
-        end: "17:30",
-        instructor: "maasaKakurai",
-      },
+      // 2026-12-06 abgesagt (Okt 2026)
       {
         date: "2026-12-12",
         start: "15:00",
         end: "17:30",
         instructor: "ebrahimElmoly",
+      },
+      {
+        date: "2026-12-13",
+        start: "15:00",
+        end: "17:30",
+        instructor: "maasaKakurai",
       },
       {
         date: "2026-12-19",
@@ -538,7 +551,7 @@ module.exports = {
           "Discover modern Kintsugi in a 2.5-hour workshop in Lisbon. Learn how to repair broken ceramics while highlighting their history and imperfections.",
       },
 
-      schedule: "Selected dates · 16:00–18:30",
+      schedule: "Selected dates · 10:30–13:00",
       levelLabel: "Introduction",
       languageLabel: "English",
 
@@ -622,7 +635,7 @@ module.exports = {
           "Descubra o Kintsugi moderno num workshop de 2h30 em Lisboa. Aprenda a reparar cerâmica partida, valorizando as fissuras, a história e as imperfeições de cada peça.",
       },
 
-      schedule: "Datas selecionadas · 16:00–18:30",
+      schedule: "Datas selecionadas · 10:30–13:00",
 
       levelLabel: "Introdução",
       languageLabel: "Inglês",
@@ -709,15 +722,15 @@ module.exports = {
         instructor: "maasaKakurai",
       },
       {
-        date: "2026-11-07",
-        start: "16:00",
-        end: "18:30",
+        date: "2026-11-08",
+        start: "10:30",
+        end: "13:00",
         instructor: "maasaKakurai",
       },
       {
         date: "2026-12-13",
-        start: "16:00",
-        end: "18:30",
+        start: "10:30",
+        end: "13:00",
         instructor: "maasaKakurai",
       },
     ],
@@ -1848,7 +1861,7 @@ dates: [],
       "Handmade ceramic plates created with the Japanese Nerikomi technique",
 
     booking: {
-      url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/14/service/49/count/1/provider/any/date/2026-10-04/time/10:00:00/",
+      url: "https://puraceramicalisboa.simplybook.it/v2/#book/category/14/service/49",
       service: "49",
     },
 
@@ -1863,7 +1876,10 @@ dates: [],
           "Discover the Japanese Nerikomi technique in a 3-hour ceramic workshop in Lisbon. Create unique patterned clay plates using coloured clays.",
       },
 
-      schedule: "Sunday · 4 October 2026 · 10:00–13:00",
+      schedule: "Sundays · 1 & 22 November 2026 · 10:00–13:00",
+
+      // Kurzes Datum für die Workshop-Übersicht (workshops.html)
+      dateLabel: "1 & 22 November",
 
       levelLabel: "Beginner-friendly · All levels",
       languageLabel: "English",
@@ -1940,7 +1956,10 @@ dates: [],
           "Descubra a técnica japonesa de Nerikomi num workshop de cerâmica de 3 horas em Lisboa e crie pequenos pratos com padrões únicos.",
       },
 
-      schedule: "Domingo · 4 de outubro de 2026 · 10:00–13:00",
+      schedule: "Domingos · 1 e 22 de novembro de 2026 · 10:00–13:00",
+
+      // Kurzes Datum für die Workshop-Übersicht (workshops.html)
+      dateLabel: "1 e 22 de novembro",
 
       levelLabel: "Adequado para principiantes · Todos os níveis",
       languageLabel: "Inglês",
@@ -2009,6 +2028,20 @@ dates: [],
     dates: [
       {
         date: "2026-10-04",
+        start: "10:00",
+        end: "13:00",
+        instructor: "maasaKakurai",
+        language: "English",
+      },
+      {
+        date: "2026-11-01",
+        start: "10:00",
+        end: "13:00",
+        instructor: "maasaKakurai",
+        language: "English",
+      },
+      {
+        date: "2026-11-22",
         start: "10:00",
         end: "13:00",
         instructor: "maasaKakurai",
@@ -2232,222 +2265,6 @@ dates: [],
         end: "13:00",
         instructor: "maasaKakurai",
         language: "English",
-      },
-    ],
-  },
-
-  shukiSakeWare: {
-    id: "shukiSakeWare",
-
-    calendarCategory: "special",
-
-    medium: "clay",
-    type: "special",
-    format: "multi-session",
-    level: "beginner",
-
-    sessionCount: 3,
-    totalDurationMinutes: 360,
-
-    price: 140,
-    priceCurrency: "EUR",
-    priceStatus: "confirmed",
-
-    minimumToRun: 5,
-
-    participants: {
-      min: 1,
-      max: 8,
-      fixed: false,
-    },
-    image: "/assets/img/courses/sake/Sake_Set.JPG",
-    enImageAlt:
-      "Handmade Japanese sake ware set for the Shuki workshop at PURACERÂMICA",
-
-    en: {
-      title: "Create Your Own Shuki",
-      shortTitle: "Shuki Sake Ware Workshop",
-      pageTag: "Japanese Sake Ware · 3-Part Workshop",
-
-      seo: {
-        title: "Japanese Sake Ware Workshop Lisbon | PURACERÂMICA",
-        description:
-          "Create your own Japanese sake ware in Lisbon across three ceramic sessions. Make, glaze and enjoy your finished pieces with a sake tasting.",
-      },
-
-      schedule: "3 sessions · 1, 22 & 29 November",
-
-      levelLabel: "Beginner friendly",
-      languageLabel: "English",
-
-      intro:
-        "Create your own Japanese sake ware across three sessions combining ceramics, traditional forms and a final sake tasting.",
-
-      about: [
-        "Across the workshop you will create two Guinomi sake cups and one Katakuchi pouring vessel.",
-
-        "You will explore Japanese handbuilding and surface techniques including Kurinuki, Tamazukuri, Mentori and Shinogi.",
-
-        "After making and glazing your pieces, the final session brings the group together for collection of the finished ceramics and a sake tasting.",
-      ],
-
-      included: {
-        intro:
-          "The workshop includes the materials and finishing needed to complete your sake ware set.",
-
-        items: [
-          {
-            title: "Ceramic materials",
-            text: "Clay and materials used throughout the making and glazing sessions.",
-          },
-          {
-            title: "Firing",
-            text: "Firing of the ceramic pieces created during the workshop.",
-          },
-          {
-            title: "Three-piece sake ware set",
-            text: "Create two Guinomi cups and one Katakuchi pouring vessel.",
-          },
-          {
-            title: "Sake tasting",
-            text: "A sake tasting is included in the final session.",
-          },
-        ],
-      },
-
-      beforeYouCome: {
-        intro: "This workshop takes place across three connected sessions.",
-
-        items: [
-          {
-            title: "All three sessions",
-            text: "Your booking includes all three dates and attendance at every session is required.",
-          },
-          {
-            title: "Beginner friendly",
-            text: "No previous pottery experience is required.",
-          },
-          {
-            title: "Minimum group size",
-            text: "The workshop runs with a minimum of 5 participants.",
-          },
-        ],
-      },
-
-      url: "/en/shuki-sake-ware-workshop.html",
-    },
-
-    pt: {
-      title: "Crie o Seu Próprio Shuki",
-      shortTitle: "Workshop de Shuki",
-      pageTag: "Cerâmica Japonesa para Sake · Workshop em 3 Sessões",
-
-      seo: {
-        title:
-          "Workshop de Cerâmica Japonesa para Sake em Lisboa | PURACERÂMICA",
-        description:
-          "Crie o seu próprio conjunto de cerâmica japonesa para sake em Lisboa ao longo de três sessões. Modele, esmalte e termine a experiência com uma prova de sake.",
-      },
-
-      schedule: "3 sessões · 1, 22 e 29 de novembro",
-
-      levelLabel: "Adequado para principiantes",
-      languageLabel: "Inglês",
-
-      intro:
-        "Crie o seu próprio conjunto de cerâmica japonesa para sake ao longo de três sessões que combinam cerâmica, formas tradicionais e uma prova de sake no encontro final.",
-
-      languageNote: "Este workshop é lecionado em inglês.",
-
-      about: [
-        "Ao longo do workshop, irá criar duas chávenas Guinomi e um recipiente Katakuchi para servir sake.",
-
-        "Irá explorar técnicas japonesas de modelagem manual e decoração de superfície, incluindo Kurinuki, Tamazukuri, Mentori e Shinogi.",
-
-        "Depois da criação e esmaltagem das peças, a última sessão reúne o grupo para o levantamento das cerâmicas terminadas e uma prova de sake.",
-      ],
-
-      included: {
-        intro:
-          "O workshop inclui os materiais e acabamentos necessários para completar o seu conjunto de cerâmica para sake.",
-
-        items: [
-          {
-            title: "Materiais de cerâmica",
-            text: "Barro e materiais utilizados durante as sessões de modelagem e esmaltagem.",
-          },
-          {
-            title: "Cozedura",
-            text: "Cozedura das peças de cerâmica criadas durante o workshop.",
-          },
-          {
-            title: "Conjunto de três peças",
-            text: "Crie duas chávenas Guinomi e um recipiente Katakuchi para servir sake.",
-          },
-          {
-            title: "Prova de sake",
-            text: "A sessão final inclui uma prova de sake.",
-          },
-        ],
-      },
-
-      beforeYouCome: {
-        intro:
-          "Este workshop decorre ao longo de três sessões ligadas entre si.",
-
-        items: [
-          {
-            title: "As três sessões",
-            text: "A sua reserva inclui as três datas e é necessária a participação em todas as sessões.",
-          },
-          {
-            title: "Adequado para principiantes",
-            text: "Não é necessária experiência prévia em cerâmica.",
-          },
-          {
-            title: "Número mínimo de participantes",
-            text: "O workshop realiza-se com um mínimo de 5 participantes.",
-          },
-        ],
-      },
-
-      url: "/pt/workshop-shuki-ceramica-sake.html",
-    },
-
-    cohorts: [
-      {
-        id: "november-2026",
-        label: "November",
-        startDate: "2026-11-01",
-
-        instructor: "maasaKakurai",
-        language: "English",
-
-        booking: {
-          url: "https://puraceramicalisboa.simplybook.it/v2/#book/service/46/date/2026-11-01/time/15:00/",
-          service: "46",
-        },
-
-        sessions: [
-          {
-            label: "Making",
-            date: "2026-11-01",
-            start: "15:00",
-            end: "17:30",
-          },
-          {
-            label: "Glazing",
-            date: "2026-11-22",
-            start: "15:00",
-            end: "17:30",
-          },
-          {
-            label: "Sake Tasting & Collection",
-            date: "2026-11-29",
-            start: "15:00",
-            end: "16:00",
-          },
-        ],
       },
     ],
   },

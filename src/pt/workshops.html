@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 
 <head>
@@ -94,7 +94,7 @@
       "@type": "ItemList",
       "@id": "https://www.puraceramica.pt/pt/workshops.html#workshop-list",
       "name": "Workshops PURACERÂMICA",
-      "numberOfItems": 9,
+      "numberOfItems": 8,
 
       "itemListElement": [
         {
@@ -161,22 +161,13 @@
             "url": "https://www.puraceramica.pt{{ workshops.kintsugi.pt.url }}"
           }
         },
-              {
+        {
           "@type": "ListItem",
           "position": 8,
           "item": {
             "@type": "WebPage",
             "name": "{{ workshops.nerikomiWorkshop.pt.title }}",
             "url": "https://www.puraceramica.pt{{ workshops.nerikomiWorkshop.pt.url }}"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 9,
-          "item": {
-            "@type": "WebPage",
-            "name": "{{ workshops.shukiSakeWare.pt.title }}",
-            "url": "https://www.puraceramica.pt{{ workshops.shukiSakeWare.pt.url }}"
           }
         }
       ]
@@ -333,45 +324,13 @@
 
     <div class="wh-sp-meta">
       €{{ workshops.nerikomiWorkshop.price }}
-      <span class="dur">· 3h · 4 de outubro</span>
+      <span class="dur">· 3h · {{ workshops.nerikomiWorkshop.pt.dateLabel }}</span>
     </div>
 
   </div>
 
 </a>
 
-    <!-- SHUKI -->
-    <a href="{{ workshops.shukiSakeWare.pt.url }}" class="wh-sp-card">
-
-      <div class="wh-sp-img">
-        <img
-          src="{{ workshops.shukiSakeWare.image }}"
-          alt="{{ workshops.shukiSakeWare.enImageAlt }}"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="wh-sp-body">
-
-        <span class="wh-sp-tag">Especial</span>
-
-        <h3>
-          {{ workshops.shukiSakeWare.pt.title }}
-        </h3>
-
-        <p>
-          Crie o seu próprio conjunto japonês para sake ao longo de três
-          sessões, desde a modelagem e esmaltagem até à prova final de sake.
-        </p>
-
-        <div class="wh-sp-meta">
-          €{{ workshops.shukiSakeWare.price }}
-          <span class="dur">· 3 sessões · 6h no total</span>
-        </div>
-
-      </div>
-
-    </a>
 
   </div>
 
@@ -492,7 +451,7 @@
 
   <div class="meta">
     €{{ workshops.nerikomiWorkshop.price }}
-    <span class="dur">· 3h · 4 de outubro</span>
+    <span class="dur">· 3h · {{ workshops.nerikomiWorkshop.pt.dateLabel }}</span>
   </div>
 
 </a>
