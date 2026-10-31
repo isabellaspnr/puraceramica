@@ -5,3 +5,10 @@ RewriteRule ^$ /pt/index.html [R=301,L]
 # Fix Google's automatic sitelinks
 RewriteRule ^gallery/?$ /pt/inspiracao.html [R=301,L]
 RewriteRule ^products/?$ /pt/ceramica-shop.html [R=301,L]
+# HTML vor erneuter Verwendung auf Aktualität prüfen
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header onsuccess unset Cache-Control
+    Header always set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
