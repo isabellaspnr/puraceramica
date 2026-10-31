@@ -2269,3 +2269,79 @@ dates: [],
     ],
   },
 };
+
+
+// November 2026 schedule update
+{
+  const workshops = module.exports;
+  const isNovember = session => session.date.startsWith("2026-11-");
+
+  // Wheel for Two: Novemberzeiten anpassen.
+  const wheel = workshops.wheelForTwo;
+  wheel.dates = wheel.dates.map(session => {
+    if (!isNovember(session)) return session;
+
+    const weekday = new Date(session.date + "T00:00:00Z").getUTCDay();
+
+    if (weekday === 4) {
+      return { ...session, start: "18:00", end: "20:00" };
+    }
+
+    if (weekday === 6 && session.start !== "11:00") {
+      return { ...session, start: "17:30", end: "19:30" };
+    }
+
+    return session;
+  });
+
+  wheel.en.schedule =
+    "November: Thursdays 18:00–20:00 · Saturdays 11:00–13:00 & 17:30–19:30. Other months: see calendar.";
+  wheel.pt.schedule =
+    "Novembro: quintas-feiras 18:00–20:00 · sábados 11:00–13:00 e 17:30–19:30. Outros meses: consulte o calendário.";
+
+  // Ongoing Handbuilding: im November freitags statt mittwochs.
+  const ongoing = workshops.continuousHandbuilding;
+  const novemberTemplate = ongoing.dates.find(isNovember);
+  if (!novemberTemplate) {
+    throw new Error("Keine November-Vorlage für Ongoing Handbuilding gefunden.");
+  }
+
+  ongoing.dates = [
+    ...ongoing.dates.filter(session => !isNovember(session)),
+    ...["06", "13", "20", "27"].map(day => ({
+      ...novemberTemplate,
+      date: "2026-11-" + day,
+      start: "18:00",
+      end: "20:00",
+    })),
+  ].sort((a, b) =>
+    a.date.localeCompare(b.date) || a.start.localeCompare(b.start)
+  );
+
+  ongoing.en.schedule =
+    "November: Fridays · 18:00–20:00. Other months: see calendar.";
+  ongoing.pt.schedule =
+    "Novembro: sextas-feiras · 18:00–20:00. Outros meses: consulte o calendário.";
+
+  // Kintsugi: 15. statt 8. November.
+  workshops.kintsugi.dates = workshops.kintsugi.dates.map(session =>
+    session.date === "2026-11-08"
+      ? { ...session, date: "2026-11-15" }
+      : session
+  );
+
+  // Nerikomi: 29. statt 22. November.
+  const nerikomi = workshops.nerikomiWorkshop;
+  nerikomi.dates = nerikomi.dates.map(session =>
+    session.date === "2026-11-22"
+      ? { ...session, date: "2026-11-29" }
+      : session
+  );
+
+  nerikomi.en.schedule =
+    "Sundays · 1 & 29 November 2026 · 10:00–13:00";
+  nerikomi.en.dateLabel = "1 & 29 November";
+  nerikomi.pt.schedule =
+    "Domingos · 1 e 29 de novembro de 2026 · 10:00–13:00";
+  nerikomi.pt.dateLabel = "1 e 29 de novembro";
+}

@@ -183,7 +183,7 @@ const today = `${part("year")}-${part("month")}-${part("day")}`;
     // Normale einzelne Workshop-Termine
     if (Array.isArray(workshop.dates)) {
       workshop.dates.forEach((session) => {
-        if (!session.date || session.date < today) return;
+        if (!session.date || session.date < today.slice(0, 7) + "-01") return;
         events.push({
           workshopId: workshop.id,
           title: t.title,
@@ -219,7 +219,7 @@ language:
         if (!Array.isArray(cohort.sessions)) return;
 
         cohort.sessions.forEach((session) => {
-         if (!session.date || session.date < today) return;
+         if (!session.date || session.date < today.slice(0, 7) + "-01") return;
 
            events.push({
             workshopId: workshop.id,

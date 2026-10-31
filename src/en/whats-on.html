@@ -30,6 +30,13 @@ permalink: /en/whats-on.html
     fetchpriority="high"
   >
 
+
+<style>
+[data-calendar-target][hidden],
+[data-calendar-month][hidden],
+[data-mobile-month][hidden] { display: none !important; }
+</style>
+
 </head>
 
 <body>
@@ -161,7 +168,7 @@ permalink: /en/whats-on.html
 
                        <a
   href="{{ event.url }}"
-  class="calendar-event calendar-event--{{ event.calendarCategory }}"
+  class="calendar-event calendar-event--{{ event.calendarCategory }}" data-pc-calendar-end="{{ event.date }}T{{ event.end or '23:59' }}:00"
 >
 
                           <span class="calendar-event-time">
@@ -283,7 +290,7 @@ permalink: /en/whats-on.html
               {% for event in week.events %}
 
                 <article
-                  class="upcoming-event upcoming-event--{{ event.calendarCategory }}"
+                  class="upcoming-event upcoming-event--{{ event.calendarCategory }}" data-pc-calendar-end="{{ event.date }}T{{ event.end or '23:59' }}:00"
                   data-date="{{ event.date }}"
                 >
 
@@ -516,6 +523,163 @@ permalink: /en/whats-on.html
     });
 
   });
+</script>
+
+
+<!-- PURACERAMICA automatic event status -->
+<style>
+  [data-pc-expiry][hidden],
+  .pc-expiry-empty[hidden] { display: none !important; }
+
+  .pc-event-past {
+    opacity: .55;
+    filter: saturate(.45);
+  }
+
+  .pc-event-status {
+    display: block;
+    margin-top: .3rem;
+    font-size: .75rem;
+    line-height: 1.35;
+    font-weight: 600;
+  }
+</style>
+<script>
+(() => {
+  const pt = document.documentElement.lang.startsWith("pt");
+
+  function lisbonNow() {
+    const parts = new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Europe/Lisbon",
+      year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", second: "2-digit",
+      hourCycle: "h23"
+    }).formatToParts(new Date());
+
+    const part = key => parts.find(p => p.type === key).value;
+    return `${part("year")}-${part("month")}-${part("day")}T` +
+      `${part("hour")}:${part("minute")}:${part("second")}`;
+  }
+
+  function update() {
+    const now = lisbonNow();
+
+    // Automatically hide past calendar months
+    const currentMonth = now.slice(0, 7);
+    const monthTabs = [
+      ...document.querySelectorAll("[data-calendar-target]")
+    ];
+
+    monthTabs.forEach(tab => {
+      tab.hidden = tab.dataset.calendarTarget < currentMonth;
+    });
+
+    document.querySelectorAll(
+      "[data-calendar-month], [data-mobile-month]"
+    ).forEach(panel => {
+      const key = panel.dataset.calendarMonth || panel.dataset.mobileMonth;
+      panel.hidden = key < currentMonth;
+    });
+
+    const visibleTabs = monthTabs.filter(tab => !tab.hidden);
+    const activeTab = monthTabs.find(tab => tab.classList.contains("active"));
+
+    if (visibleTabs.length && (!activeTab || activeTab.hidden)) {
+      const target = visibleTabs.find(
+        tab => tab.dataset.calendarTarget === currentMonth
+      ) || visibleTabs[0];
+      target.click();
+    }
+
+
+    document.querySelectorAll("[data-pc-expiry]").forEach(element => {
+      element.hidden = element.dataset.pcExpiry <= now;
+      if (element.hidden) {
+        element.querySelectorAll("input").forEach(input => {
+          const wasChecked = input.checked;
+          input.checked = false;
+          input.disabled = true;
+          if (wasChecked) {
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+        });
+      }
+    });
+
+    document.querySelectorAll("[data-pc-calendar-end]").forEach(element => {
+      const past = element.dataset.pcCalendarEnd <= now;
+      element.classList.toggle("pc-event-past", past);
+
+      if (past && !element.querySelector(".pc-event-status")) {
+        const status = document.createElement("span");
+        status.className = "pc-event-status";
+        status.textContent = pt ? "Já realizado" : "Already took place";
+        element.append(status);
+      }
+    });
+
+    // Leere Monatsauswahl auf Workshop-Detailseiten entfernen.
+    document.querySelectorAll(".month-switcher").forEach(switcher => {
+      switcher.querySelectorAll(".month-panel").forEach(panel => {
+        const available = panel.querySelector(
+          "[data-pc-expiry]:not([hidden])"
+        );
+        if (!available) {
+          panel.hidden = true;
+          panel.classList.remove("active");
+          const key = panel.id.replace(/^month-/, "");
+          switcher.querySelectorAll(".month-tab").forEach(tab => {
+            if ((tab.getAttribute("onclick") || "").includes(key)) {
+              tab.hidden = true;
+              tab.classList.remove("active");
+            }
+          });
+        }
+      });
+
+      const tabs = [...switcher.querySelectorAll(".month-tab")]
+        .filter(tab => !tab.hidden);
+      if (tabs.length && !tabs.some(tab => tab.classList.contains("active"))) {
+        tabs[0].click();
+      }
+
+      const section = switcher.closest(".workshop-booking-section");
+      const empty = section && section.querySelector(".workshop-no-dates");
+      if (empty) empty.hidden = tabs.length > 0;
+    });
+
+    document.querySelectorAll(".workshop-cohorts").forEach(container => {
+      const cards = [...container.querySelectorAll(".workshop-cohort-card")];
+      const remaining = cards.filter(card => !card.hidden);
+      container.classList.toggle("single-cohort", remaining.length === 1);
+
+      const section = container.closest(".workshop-booking-section");
+      if (!section) return;
+
+      let empty = section.querySelector(".pc-expiry-empty");
+      if (!empty) {
+        empty = document.createElement("p");
+        empty.className = "pc-expiry-empty";
+        empty.textContent = pt
+          ? "Novas datas em breve."
+          : "New course dates coming soon.";
+        container.after(empty);
+      }
+      empty.hidden = remaining.length > 0;
+
+      const note = section.querySelector(".booking-note");
+      if (note) note.hidden = remaining.length === 0;
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", update);
+  } else {
+    update();
+  }
+  setInterval(update, 30000);
+  window.addEventListener("pageshow", update);
+})();
 </script>
 
 </body>
